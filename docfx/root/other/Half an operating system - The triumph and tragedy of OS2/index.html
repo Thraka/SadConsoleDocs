@@ -1,0 +1,3692 @@
+<!DOCTYPE html>
+<!-- saved from url=(0161)read://https_arstechnica.com/?url=https%3A%2F%2Farstechnica.com%2Finformation-technology%2F2019%2F11%2Fhalf-an-operating-system-the-triumph-and-tragedy-of-os2%2F -->
+<html class="ms-fontsize-medium textSpacingOff ms-fonttype-sitka ms-theme-sepia" dir="auto"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">                          <title>Immersive Reader</title>             <!--<base id="content_base" target="_top">--><base href="." target="_top">         <style id="content_document_common_stylesheet">:root {
+--sepia-color:#F9F5E9;
+--sepia_default-link-color:#0072C9;
+--sepia_active-link-color:#097DD5;
+--light-color:#FCFCFC;
+--light_default-link-color:#0075CF;
+--light_active-link-color:#0D7FD6;
+--light-yellow-color:#eceb8b;
+--light-yellow_default-link-color:#0069B9;
+--light-yellow_active-link-color:#0075CF;
+--lime-color:#b8d686;
+--lime_default-link-color:#005699;
+--lime_active-link-color:#0063AE;
+--light-green-color:#a5da90;
+--light-green_default-link-color:#005699;
+--light-green_active-link-color:#0063AE;
+--light-teal-color:#94e2be;
+--light-teal_default-link-color:#005CA3;
+--light-teal_active-link-color:#0069B9;
+--turquoise-color:#89e1dd;
+--turquoise_default-link-color:#005CA3;
+--turquoise_active-link-color:#0069B9;
+--teal-color:#8ed5de;
+--teal_default-link-color:#005699;
+--teal_active-link-color:#0063AE;
+--sky-blue-color:#a3cfe4;
+--sky-blue_default-link-color:#005699;
+--sky-blue_active-link-color:#0063AE;
+--light-blue-color:#b3caec;
+--light-blue_default-link-color:#005699;
+--light-blue_active-link-color:#0063AE;
+--lavender-color:#d1bfeb;
+--lavender_default-link-color:#005393;
+--lavender_active-link-color:#0060A9;
+--orchid-color:#edb5f3;
+--orchid_default-link-color:#005393;
+--orchid_active-link-color:#0060A9;
+--grey-color:#E6E6E6;
+--grey_default-link-color:#0069B9;
+--grey_active-link-color:#0075CF;
+--pink-color:#f6b6d9;
+--pink_default-link-color:#005699;
+--pink_active-link-color:#0063AE;
+--carnation-color:#fdacc3;
+--carnation_default-link-color:#00508E;
+--carnation_active-link-color:#005CA3;
+--dark-grey-color:#242424;
+--dark-grey_default-link-color:#3091DC;
+--dark-grey_active-link-color:#1E88D9;
+--black-color:#000000;
+--black_default-link-color:#0078D4;
+--black_active-link-color:#006CBE;
+--green-color:#91ffa6;
+--green_default-link-color:#0069B9;
+--green_active-link-color:#0075CF;
+--blue-color:#87faff;
+--blue_default-link-color:#0069B9;
+--blue_active-link-color:#0075CF;
+--yellow-color:#feff5c;
+--yellow_default-link-color:#0072C9;
+--yellow_active-link-color:#097DD5;
+--rose-color:#febaba;
+--rose_default-link-color:#005699;
+--rose_active-link-color:#0063AE;
+--apricot-color:#f1bfa9;
+--apricot_default-link-color:#005699;
+--apricot_active-link-color:#0063AE;
+--light-orange-color:#f0d592;
+--light-orange_default-link-color:#0060A9;
+--light-orange_active-link-color:#006CBE;
+}
+
+.ms-fontsize-extraextrasmall {
+  font-size: 82%;
+}
+.ms-fontsize-extrasmall {
+  font-size: 91%;
+}
+.ms-fontsize-small {
+  font-size: 100%;
+}
+.ms-fontsize-medium {
+  font-size: 114%;
+}
+.ms-fontsize-large {
+  font-size: 136%;
+}
+.ms-fontsize-extralarge {
+  font-size: 182%;
+}
+.ms-fontsize-extraextralarge {
+  font-size: 341%;
+}
+.ms-theme-sepia body {
+  background: var(--sepia-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-sepia .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-sepia .__reading_mode_infobox_and_collapse_button_container, .ms-theme-sepia .__reading_mode_table_and_collapse_button_container, .ms-theme-sepia th, .ms-theme-sepia td, .ms-theme-sepia caption {
+  border-color: #E6E1CF !important;
+}
+.ms-theme-sepia .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #E6E1CF;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-sepia .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-sepia .__reading_mode_data_table_class thead {
+  background-color: #E6E1CF;
+}
+.ms-theme-sepia .__reading_mode_data_table_class thead th, .ms-theme-sepia .__reading_mode_data_table_class thead td {
+  border-color: var(--sepia-color,#F9F5E9) !important;
+}
+.ms-theme-sepia #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-sepia .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-sepia .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-sepia .__reading__mode__feedback__button:hover {
+  background: #E6E1CF;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-sepia .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-sepia .__reading__mode__feedback__separator {
+  border-top: 1px solid #E6E1CF;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-sepia .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-sepia div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-sepia div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-sepia a {
+  color: var(--sepia_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-sepia a:visited {
+  color: var(--sepia_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-sepia a:hover {
+  color: var(--sepia_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-sepia a:active {
+  color: var(--sepia_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-light body {
+  background: var(--light-color,#FCFCFC);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-light .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-light .__reading_mode_infobox_and_collapse_button_container, .ms-theme-light .__reading_mode_table_and_collapse_button_container, .ms-theme-light th, .ms-theme-light td, .ms-theme-light caption {
+  border-color: #ECECEC !important;
+}
+.ms-theme-light .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #ECECEC;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-light .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-light .__reading_mode_data_table_class thead {
+  background-color: #ECECEC;
+}
+.ms-theme-light .__reading_mode_data_table_class thead th, .ms-theme-light .__reading_mode_data_table_class thead td {
+  border-color: var(--light-color,#FCFCFC) !important;
+}
+.ms-theme-light #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-light .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-light .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-light .__reading__mode__feedback__button:hover {
+  background: #ECECEC;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-light .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-light .__reading__mode__feedback__separator {
+  border-top: 1px solid #ECECEC;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-light .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-light div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-light div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-light a {
+  color: var(--light_default-link-color,#0075CF) !important;
+  text-decoration: none !important;
+}
+.ms-theme-light a:visited {
+  color: var(--light_default-link-color,#0075CF) !important;
+  text-decoration: none !important;
+}
+.ms-theme-light a:hover {
+  color: var(--light_default-link-color,#0075CF) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-light a:active {
+  color: var(--light_active-link-color,#0D7FD6) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-grey body {
+  background: var(--grey-color,#E6E6E6);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-grey .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-grey .__reading_mode_infobox_and_collapse_button_container, .ms-theme-grey .__reading_mode_table_and_collapse_button_container, .ms-theme-grey th, .ms-theme-grey td, .ms-theme-grey caption {
+  border-color: #C8C7C7 !important;
+}
+.ms-theme-grey .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #C8C7C7;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-grey .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-grey .__reading_mode_data_table_class thead {
+  background-color: #C8C7C7;
+}
+.ms-theme-grey .__reading_mode_data_table_class thead th, .ms-theme-grey .__reading_mode_data_table_class thead td {
+  border-color: var(--grey-color,#E6E6E6) !important;
+}
+.ms-theme-grey #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-grey .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-grey .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-grey .__reading__mode__feedback__button:hover {
+  background: #C8C7C7;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-grey .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-grey .__reading__mode__feedback__separator {
+  border-top: 1px solid #C8C7C7;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-grey .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-grey div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-grey div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-grey a {
+  color: var(--grey_default-link-color,#0069B9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-grey a:visited {
+  color: var(--grey_default-link-color,#0069B9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-grey a:hover {
+  color: var(--grey_default-link-color,#0069B9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-grey a:active {
+  color: var(--grey_active-link-color,#0075CF) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-black body {
+  background: var(--black-color,#000000);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-black .contentBody {
+  color: #EDEDED !important;
+}
+.ms-theme-black .__reading_mode_infobox_and_collapse_button_container, .ms-theme-black .__reading_mode_table_and_collapse_button_container, .ms-theme-black th, .ms-theme-black td, .ms-theme-black caption {
+  border-color: #404040 !important;
+}
+.ms-theme-black .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #404040;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-black .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-black .__reading_mode_data_table_class thead {
+  background-color: #404040;
+}
+.ms-theme-black .__reading_mode_data_table_class thead th, .ms-theme-black .__reading_mode_data_table_class thead td {
+  border-color: var(--black-color,#000000) !important;
+}
+.ms-theme-black #__reading__mode__sendfeedback {
+  color: #EDEDED !important;
+}
+.ms-theme-black .__reading__mode__feedback__button path {
+  fill: #EDEDED !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-black .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-black .__reading__mode__feedback__button:hover {
+  background: #404040;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-black .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-black .__reading__mode__feedback__separator {
+  border-top: 1px solid #404040;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-black .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-black div::-webkit-scrollbar-thumb {
+  background: #7D7D7D;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-black div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-black a {
+  color: var(--black_default-link-color,#0078D4) !important;
+  text-decoration: none !important;
+}
+.ms-theme-black a:visited {
+  color: var(--black_default-link-color,#0078D4) !important;
+  text-decoration: none !important;
+}
+.ms-theme-black a:hover {
+  color: var(--black_default-link-color,#0078D4) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-black a:active {
+  color: var(--black_active-link-color,#006CBE) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-black .progress_pages_pending {
+  color: #FFFFFF !important;
+}
+.ms-theme-black #source {
+  text-decoration: none !important;
+}
+.ms-theme-black #source:hover {
+  text-decoration: underline !important;
+}
+.ms-theme-green body {
+  background: var(--green-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-green .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-green .__reading_mode_infobox_and_collapse_button_container, .ms-theme-green .__reading_mode_table_and_collapse_button_container, .ms-theme-green th, .ms-theme-green td, .ms-theme-green caption {
+  border-color: #78ED8F !important;
+}
+.ms-theme-green .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #78ED8F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-green .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-green .__reading_mode_data_table_class thead {
+  background-color: #78ED8F;
+}
+.ms-theme-green .__reading_mode_data_table_class thead th, .ms-theme-green .__reading_mode_data_table_class thead td {
+  border-color: var(--green-color,#F9F5E9) !important;
+}
+.ms-theme-green #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-green .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-green .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-green .__reading__mode__feedback__button:hover {
+  background: #78ED8F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-green .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-green .__reading__mode__feedback__separator {
+  border-top: 1px solid #78ED8F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-green .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-green div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-green div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-green a {
+  color: var(--green_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-green a:visited {
+  color: var(--green_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-green a:hover {
+  color: var(--green_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-green a:active {
+  color: var(--green_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-blue body {
+  background: var(--blue-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-blue .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-blue .__reading_mode_infobox_and_collapse_button_container, .ms-theme-blue .__reading_mode_table_and_collapse_button_container, .ms-theme-blue th, .ms-theme-blue td, .ms-theme-blue caption {
+  border-color: #68E6EB !important;
+}
+.ms-theme-blue .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #68E6EB;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-blue .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-blue .__reading_mode_data_table_class thead {
+  background-color: #68E6EB;
+}
+.ms-theme-blue .__reading_mode_data_table_class thead th, .ms-theme-blue .__reading_mode_data_table_class thead td {
+  border-color: var(--blue-color,#F9F5E9) !important;
+}
+.ms-theme-blue #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-blue .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-blue .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-blue .__reading__mode__feedback__button:hover {
+  background: #68E6EB;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-blue .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-blue .__reading__mode__feedback__separator {
+  border-top: 1px solid #68E6EB;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-blue .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-blue div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-blue div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-blue a {
+  color: var(--blue_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-blue a:visited {
+  color: var(--blue_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-blue a:hover {
+  color: var(--blue_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-blue a:active {
+  color: var(--blue_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-yellow body {
+  background: var(--yellow-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-yellow .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-yellow .__reading_mode_infobox_and_collapse_button_container, .ms-theme-yellow .__reading_mode_table_and_collapse_button_container, .ms-theme-yellow th, .ms-theme-yellow td, .ms-theme-yellow caption {
+  border-color: #F1EF5F !important;
+}
+.ms-theme-yellow .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #F1EF5F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-yellow .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-yellow .__reading_mode_data_table_class thead {
+  background-color: #F1EF5F;
+}
+.ms-theme-yellow .__reading_mode_data_table_class thead th, .ms-theme-yellow .__reading_mode_data_table_class thead td {
+  border-color: var(--yellow-color,#F9F5E9) !important;
+}
+.ms-theme-yellow #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-yellow .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-yellow .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-yellow .__reading__mode__feedback__button:hover {
+  background: #F1EF5F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-yellow .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-yellow .__reading__mode__feedback__separator {
+  border-top: 1px solid #F1EF5F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-yellow .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-yellow div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-yellow div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-yellow a {
+  color: var(--yellow_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-yellow a:visited {
+  color: var(--yellow_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-yellow a:hover {
+  color: var(--yellow_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-yellow a:active {
+  color: var(--yellow_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-rose body {
+  background: var(--rose-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-rose .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-rose .__reading_mode_infobox_and_collapse_button_container, .ms-theme-rose .__reading_mode_table_and_collapse_button_container, .ms-theme-rose th, .ms-theme-rose td, .ms-theme-rose caption {
+  border-color: #F89F9F !important;
+}
+.ms-theme-rose .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #F89F9F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-rose .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-rose .__reading_mode_data_table_class thead {
+  background-color: #F89F9F;
+}
+.ms-theme-rose .__reading_mode_data_table_class thead th, .ms-theme-rose .__reading_mode_data_table_class thead td {
+  border-color: var(--rose-color,#F9F5E9) !important;
+}
+.ms-theme-rose #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-rose .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-rose .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-rose .__reading__mode__feedback__button:hover {
+  background: #F89F9F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-rose .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-rose .__reading__mode__feedback__separator {
+  border-top: 1px solid #F89F9F;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-rose .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-rose div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-rose div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-rose a {
+  color: var(--rose_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-rose a:visited {
+  color: var(--rose_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-rose a:hover {
+  color: var(--rose_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-rose a:active {
+  color: var(--rose_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-apricot body {
+  background: var(--apricot-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-apricot .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-apricot .__reading_mode_infobox_and_collapse_button_container, .ms-theme-apricot .__reading_mode_table_and_collapse_button_container, .ms-theme-apricot th, .ms-theme-apricot td, .ms-theme-apricot caption {
+  border-color: #ECA788 !important;
+}
+.ms-theme-apricot .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #ECA788;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-apricot .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-apricot .__reading_mode_data_table_class thead {
+  background-color: #ECA788;
+}
+.ms-theme-apricot .__reading_mode_data_table_class thead th, .ms-theme-apricot .__reading_mode_data_table_class thead td {
+  border-color: var(--apricot-color,#F9F5E9) !important;
+}
+.ms-theme-apricot #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-apricot .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-apricot .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-apricot .__reading__mode__feedback__button:hover {
+  background: #ECA788;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-apricot .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-apricot .__reading__mode__feedback__separator {
+  border-top: 1px solid #ECA788;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-apricot .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-apricot div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-apricot div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-apricot a {
+  color: var(--apricot_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-apricot a:visited {
+  color: var(--apricot_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-apricot a:hover {
+  color: var(--apricot_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-apricot a:active {
+  color: var(--apricot_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightorange body {
+  background: var(--light-orange-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-lightorange .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-lightorange .__reading_mode_infobox_and_collapse_button_container, .ms-theme-lightorange .__reading_mode_table_and_collapse_button_container, .ms-theme-lightorange th, .ms-theme-lightorange td, .ms-theme-lightorange caption {
+  border-color: #E4C066 !important;
+}
+.ms-theme-lightorange .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #E4C066;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightorange .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-lightorange .__reading_mode_data_table_class thead {
+  background-color: #E4C066;
+}
+.ms-theme-lightorange .__reading_mode_data_table_class thead th, .ms-theme-lightorange .__reading_mode_data_table_class thead td {
+  border-color: var(--light-orange-color,#F9F5E9) !important;
+}
+.ms-theme-lightorange #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-lightorange .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightorange .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-lightorange .__reading__mode__feedback__button:hover {
+  background: #E4C066;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightorange .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-lightorange .__reading__mode__feedback__separator {
+  border-top: 1px solid #E4C066;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightorange .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-lightorange div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightorange div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-lightorange a {
+  color: var(--light-orange_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightorange a:visited {
+  color: var(--light-orange_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightorange a:hover {
+  color: var(--light-orange_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightorange a:active {
+  color: var(--light-orange_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightyellow body {
+  background: var(--light-yellow-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-lightyellow .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-lightyellow .__reading_mode_infobox_and_collapse_button_container, .ms-theme-lightyellow .__reading_mode_table_and_collapse_button_container, .ms-theme-lightyellow th, .ms-theme-lightyellow td, .ms-theme-lightyellow caption {
+  border-color: #E0DE6E !important;
+}
+.ms-theme-lightyellow .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #E0DE6E;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightyellow .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-lightyellow .__reading_mode_data_table_class thead {
+  background-color: #E0DE6E;
+}
+.ms-theme-lightyellow .__reading_mode_data_table_class thead th, .ms-theme-lightyellow .__reading_mode_data_table_class thead td {
+  border-color: var(--light-yellow-color,#F9F5E9) !important;
+}
+.ms-theme-lightyellow #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-lightyellow .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightyellow .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-lightyellow .__reading__mode__feedback__button:hover {
+  background: #E0DE6E;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightyellow .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-lightyellow .__reading__mode__feedback__separator {
+  border-top: 1px solid #E0DE6E;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightyellow .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-lightyellow div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightyellow div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-lightyellow a {
+  color: var(--light-yellow_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightyellow a:visited {
+  color: var(--light-yellow_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightyellow a:hover {
+  color: var(--light-yellow_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightyellow a:active {
+  color: var(--light-yellow_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lime body {
+  background: var(--lime-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-lime .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-lime .__reading_mode_infobox_and_collapse_button_container, .ms-theme-lime .__reading_mode_table_and_collapse_button_container, .ms-theme-lime th, .ms-theme-lime td, .ms-theme-lime caption {
+  border-color: #A8C775 !important;
+}
+.ms-theme-lime .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #A8C775;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lime .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-lime .__reading_mode_data_table_class thead {
+  background-color: #A8C775;
+}
+.ms-theme-lime .__reading_mode_data_table_class thead th, .ms-theme-lime .__reading_mode_data_table_class thead td {
+  border-color: var(--lime-color,#F9F5E9) !important;
+}
+.ms-theme-lime #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-lime .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lime .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-lime .__reading__mode__feedback__button:hover {
+  background: #A8C775;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lime .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-lime .__reading__mode__feedback__separator {
+  border-top: 1px solid #A8C775;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lime .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-lime div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lime div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-lime a {
+  color: var(--lime_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lime a:visited {
+  color: var(--lime_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lime a:hover {
+  color: var(--lime_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lime a:active {
+  color: var(--lime_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightgreen body {
+  background: var(--light-green-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-lightgreen .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-lightgreen .__reading_mode_infobox_and_collapse_button_container, .ms-theme-lightgreen .__reading_mode_table_and_collapse_button_container, .ms-theme-lightgreen th, .ms-theme-lightgreen td, .ms-theme-lightgreen caption {
+  border-color: #94CF7D !important;
+}
+.ms-theme-lightgreen .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #94CF7D;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightgreen .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-lightgreen .__reading_mode_data_table_class thead {
+  background-color: #94CF7D;
+}
+.ms-theme-lightgreen .__reading_mode_data_table_class thead th, .ms-theme-lightgreen .__reading_mode_data_table_class thead td {
+  border-color: var(--light-green-color,#F9F5E9) !important;
+}
+.ms-theme-lightgreen #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-lightgreen .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightgreen .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-lightgreen .__reading__mode__feedback__button:hover {
+  background: #94CF7D;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightgreen .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-lightgreen .__reading__mode__feedback__separator {
+  border-top: 1px solid #94CF7D;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightgreen .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-lightgreen div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightgreen div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-lightgreen a {
+  color: var(--light-green_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightgreen a:visited {
+  color: var(--light-green_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightgreen a:hover {
+  color: var(--light-green_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightgreen a:active {
+  color: var(--light-green_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightteal body {
+  background: var(--light-teal-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-lightteal .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-lightteal .__reading_mode_infobox_and_collapse_button_container, .ms-theme-lightteal .__reading_mode_table_and_collapse_button_container, .ms-theme-lightteal th, .ms-theme-lightteal td, .ms-theme-lightteal caption {
+  border-color: #70D8A8 !important;
+}
+.ms-theme-lightteal .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #70D8A8;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightteal .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-lightteal .__reading_mode_data_table_class thead {
+  background-color: #70D8A8;
+}
+.ms-theme-lightteal .__reading_mode_data_table_class thead th, .ms-theme-lightteal .__reading_mode_data_table_class thead td {
+  border-color: var(--light-teal-color,#F9F5E9) !important;
+}
+.ms-theme-lightteal #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-lightteal .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightteal .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-lightteal .__reading__mode__feedback__button:hover {
+  background: #70D8A8;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightteal .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-lightteal .__reading__mode__feedback__separator {
+  border-top: 1px solid #70D8A8;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightteal .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-lightteal div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightteal div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-lightteal a {
+  color: var(--light-teal_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightteal a:visited {
+  color: var(--light-teal_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightteal a:hover {
+  color: var(--light-teal_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightteal a:active {
+  color: var(--light-teal_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-turquoise body {
+  background: var(--turquoise-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-turquoise .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-turquoise .__reading_mode_infobox_and_collapse_button_container, .ms-theme-turquoise .__reading_mode_table_and_collapse_button_container, .ms-theme-turquoise th, .ms-theme-turquoise td, .ms-theme-turquoise caption {
+  border-color: #70D5D0 !important;
+}
+.ms-theme-turquoise .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #70D5D0;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-turquoise .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-turquoise .__reading_mode_data_table_class thead {
+  background-color: #70D5D0;
+}
+.ms-theme-turquoise .__reading_mode_data_table_class thead th, .ms-theme-turquoise .__reading_mode_data_table_class thead td {
+  border-color: var(--turquoise-color,#F9F5E9) !important;
+}
+.ms-theme-turquoise #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-turquoise .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-turquoise .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-turquoise .__reading__mode__feedback__button:hover {
+  background: #70D5D0;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-turquoise .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-turquoise .__reading__mode__feedback__separator {
+  border-top: 1px solid #70D5D0;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-turquoise .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-turquoise div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-turquoise div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-turquoise a {
+  color: var(--turquoise_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-turquoise a:visited {
+  color: var(--turquoise_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-turquoise a:hover {
+  color: var(--turquoise_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-turquoise a:active {
+  color: var(--turquoise_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-teal body {
+  background: var(--teal-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-teal .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-teal .__reading_mode_infobox_and_collapse_button_container, .ms-theme-teal .__reading_mode_table_and_collapse_button_container, .ms-theme-teal th, .ms-theme-teal td, .ms-theme-teal caption {
+  border-color: #72C6D1 !important;
+}
+.ms-theme-teal .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #72C6D1;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-teal .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-teal .__reading_mode_data_table_class thead {
+  background-color: #72C6D1;
+}
+.ms-theme-teal .__reading_mode_data_table_class thead th, .ms-theme-teal .__reading_mode_data_table_class thead td {
+  border-color: var(--teal-color,#F9F5E9) !important;
+}
+.ms-theme-teal #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-teal .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-teal .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-teal .__reading__mode__feedback__button:hover {
+  background: #72C6D1;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-teal .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-teal .__reading__mode__feedback__separator {
+  border-top: 1px solid #72C6D1;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-teal .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-teal div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-teal div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-teal a {
+  color: var(--teal_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-teal a:visited {
+  color: var(--teal_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-teal a:hover {
+  color: var(--teal_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-teal a:active {
+  color: var(--teal_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-skyblue body {
+  background: var(--sky-blue-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-skyblue .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-skyblue .__reading_mode_infobox_and_collapse_button_container, .ms-theme-skyblue .__reading_mode_table_and_collapse_button_container, .ms-theme-skyblue th, .ms-theme-skyblue td, .ms-theme-skyblue caption {
+  border-color: #8AC1DB !important;
+}
+.ms-theme-skyblue .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #8AC1DB;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-skyblue .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-skyblue .__reading_mode_data_table_class thead {
+  background-color: #8AC1DB;
+}
+.ms-theme-skyblue .__reading_mode_data_table_class thead th, .ms-theme-skyblue .__reading_mode_data_table_class thead td {
+  border-color: var(--sky-blue-color,#F9F5E9) !important;
+}
+.ms-theme-skyblue #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-skyblue .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-skyblue .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-skyblue .__reading__mode__feedback__button:hover {
+  background: #8AC1DB;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-skyblue .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-skyblue .__reading__mode__feedback__separator {
+  border-top: 1px solid #8AC1DB;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-skyblue .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-skyblue div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-skyblue div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-skyblue a {
+  color: var(--sky-blue_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-skyblue a:visited {
+  color: var(--sky-blue_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-skyblue a:hover {
+  color: var(--sky-blue_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-skyblue a:active {
+  color: var(--sky-blue_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightblue body {
+  background: var(--light-blue-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-lightblue .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-lightblue .__reading_mode_infobox_and_collapse_button_container, .ms-theme-lightblue .__reading_mode_table_and_collapse_button_container, .ms-theme-lightblue th, .ms-theme-lightblue td, .ms-theme-lightblue caption {
+  border-color: #9EB7DC !important;
+}
+.ms-theme-lightblue .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #9EB7DC;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightblue .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-lightblue .__reading_mode_data_table_class thead {
+  background-color: #9EB7DC;
+}
+.ms-theme-lightblue .__reading_mode_data_table_class thead th, .ms-theme-lightblue .__reading_mode_data_table_class thead td {
+  border-color: var(--light-blue-color,#F9F5E9) !important;
+}
+.ms-theme-lightblue #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-lightblue .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightblue .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-lightblue .__reading__mode__feedback__button:hover {
+  background: #9EB7DC;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightblue .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-lightblue .__reading__mode__feedback__separator {
+  border-top: 1px solid #9EB7DC;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightblue .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-lightblue div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lightblue div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-lightblue a {
+  color: var(--light-blue_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightblue a:visited {
+  color: var(--light-blue_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lightblue a:hover {
+  color: var(--light-blue_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lightblue a:active {
+  color: var(--light-blue_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lavender body {
+  background: var(--lavender-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-lavender .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-lavender .__reading_mode_infobox_and_collapse_button_container, .ms-theme-lavender .__reading_mode_table_and_collapse_button_container, .ms-theme-lavender th, .ms-theme-lavender td, .ms-theme-lavender caption {
+  border-color: #C0A9E3 !important;
+}
+.ms-theme-lavender .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #C0A9E3;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lavender .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-lavender .__reading_mode_data_table_class thead {
+  background-color: #C0A9E3;
+}
+.ms-theme-lavender .__reading_mode_data_table_class thead th, .ms-theme-lavender .__reading_mode_data_table_class thead td {
+  border-color: var(--lavender-color,#F9F5E9) !important;
+}
+.ms-theme-lavender #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-lavender .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lavender .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-lavender .__reading__mode__feedback__button:hover {
+  background: #C0A9E3;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lavender .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-lavender .__reading__mode__feedback__separator {
+  border-top: 1px solid #C0A9E3;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lavender .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-lavender div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-lavender div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-lavender a {
+  color: var(--lavender_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lavender a:visited {
+  color: var(--lavender_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-lavender a:hover {
+  color: var(--lavender_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-lavender a:active {
+  color: var(--lavender_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-orchid body {
+  background: var(--orchid-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-orchid .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-orchid .__reading_mode_infobox_and_collapse_button_container, .ms-theme-orchid .__reading_mode_table_and_collapse_button_container, .ms-theme-orchid th, .ms-theme-orchid td, .ms-theme-orchid caption {
+  border-color: #E09CE7 !important;
+}
+.ms-theme-orchid .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #E09CE7;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-orchid .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-orchid .__reading_mode_data_table_class thead {
+  background-color: #E09CE7;
+}
+.ms-theme-orchid .__reading_mode_data_table_class thead th, .ms-theme-orchid .__reading_mode_data_table_class thead td {
+  border-color: var(--orchid-color,#F9F5E9) !important;
+}
+.ms-theme-orchid #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-orchid .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-orchid .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-orchid .__reading__mode__feedback__button:hover {
+  background: #E09CE7;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-orchid .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-orchid .__reading__mode__feedback__separator {
+  border-top: 1px solid #E09CE7;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-orchid .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-orchid div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-orchid div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-orchid a {
+  color: var(--orchid_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-orchid a:visited {
+  color: var(--orchid_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-orchid a:hover {
+  color: var(--orchid_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-orchid a:active {
+  color: var(--orchid_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-pink body {
+  background: var(--pink-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-pink .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-pink .__reading_mode_infobox_and_collapse_button_container, .ms-theme-pink .__reading_mode_table_and_collapse_button_container, .ms-theme-pink th, .ms-theme-pink td, .ms-theme-pink caption {
+  border-color: #F89BCE !important;
+}
+.ms-theme-pink .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #F89BCE;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-pink .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-pink .__reading_mode_data_table_class thead {
+  background-color: #F89BCE;
+}
+.ms-theme-pink .__reading_mode_data_table_class thead th, .ms-theme-pink .__reading_mode_data_table_class thead td {
+  border-color: var(--pink-color,#F9F5E9) !important;
+}
+.ms-theme-pink #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-pink .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-pink .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-pink .__reading__mode__feedback__button:hover {
+  background: #F89BCE;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-pink .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-pink .__reading__mode__feedback__separator {
+  border-top: 1px solid #F89BCE;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-pink .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-pink div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-pink div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-pink a {
+  color: var(--pink_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-pink a:visited {
+  color: var(--pink_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-pink a:hover {
+  color: var(--pink_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-pink a:active {
+  color: var(--pink_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-carnation body {
+  background: var(--carnation-color,#F9F5E9);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-carnation .contentBody {
+  color: #333333 !important;
+}
+.ms-theme-carnation .__reading_mode_infobox_and_collapse_button_container, .ms-theme-carnation .__reading_mode_table_and_collapse_button_container, .ms-theme-carnation th, .ms-theme-carnation td, .ms-theme-carnation caption {
+  border-color: #F692AE !important;
+}
+.ms-theme-carnation .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #F692AE;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-carnation .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-carnation .__reading_mode_data_table_class thead {
+  background-color: #F692AE;
+}
+.ms-theme-carnation .__reading_mode_data_table_class thead th, .ms-theme-carnation .__reading_mode_data_table_class thead td {
+  border-color: var(--carnation-color,#F9F5E9) !important;
+}
+.ms-theme-carnation #__reading__mode__sendfeedback {
+  color: #333333 !important;
+}
+.ms-theme-carnation .__reading__mode__feedback__button path {
+  fill: #333333 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-carnation .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-carnation .__reading__mode__feedback__button:hover {
+  background: #F692AE;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-carnation .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-carnation .__reading__mode__feedback__separator {
+  border-top: 1px solid #F692AE;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-carnation .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-carnation div::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-carnation div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-carnation a {
+  color: var(--carnation_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-carnation a:visited {
+  color: var(--carnation_default-link-color,#0072C9) !important;
+  text-decoration: none !important;
+}
+.ms-theme-carnation a:hover {
+  color: var(--carnation_default-link-color,#0072C9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-carnation a:active {
+  color: var(--carnation_active-link-color,#097DD5) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-darkgrey body {
+  background: var(--dark-grey-color,#242424);
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.ms-theme-darkgrey .contentBody {
+  color: #B2B2B2 !important;
+}
+.ms-theme-darkgrey .__reading_mode_infobox_and_collapse_button_container, .ms-theme-darkgrey .__reading_mode_table_and_collapse_button_container, .ms-theme-darkgrey th, .ms-theme-darkgrey td, .ms-theme-darkgrey caption {
+  border-color: #404040 !important;
+}
+.ms-theme-darkgrey .__reading_mode_table_and_collapse_button_container {
+  box-shadow: 0 0 0 0.5pt #404040;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-darkgrey .__reading_mode_table_and_collapse_button_container {
+    outline: 1px solid;
+  }
+}
+.ms-theme-darkgrey .__reading_mode_data_table_class thead {
+  background-color: #404040;
+}
+.ms-theme-darkgrey .__reading_mode_data_table_class thead th, .ms-theme-darkgrey .__reading_mode_data_table_class thead td {
+  border-color: var(--dark-grey-color,#242424) !important;
+}
+.ms-theme-darkgrey #__reading__mode__sendfeedback {
+  color: #B2B2B2 !important;
+}
+.ms-theme-darkgrey .__reading__mode__feedback__button path {
+  fill: #B2B2B2 !important;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-darkgrey .__reading__mode__feedback__button path {
+    fill: ButtonText !important;
+  }
+}
+.ms-theme-darkgrey .__reading__mode__feedback__button:hover {
+  background: #404040;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-darkgrey .__reading__mode__feedback__button:hover {
+    background: Highlight;
+  }
+}
+.ms-theme-darkgrey .__reading__mode__feedback__separator {
+  border-top: 1px solid #404040;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-darkgrey .__reading__mode__feedback__separator {
+    border-top: 1px solid ButtonText;
+  }
+}
+.ms-theme-darkgrey div::-webkit-scrollbar-thumb {
+  background: #7D7D7D;
+}
+@media (-ms-high-contrast:active) {
+  .ms-theme-darkgrey div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.ms-theme-darkgrey a {
+  color: var(--dark-grey_default-link-color,#3091DC) !important;
+  text-decoration: none !important;
+}
+.ms-theme-darkgrey a:visited {
+  color: var(--dark-grey_default-link-color,#3091DC) !important;
+  text-decoration: none !important;
+}
+.ms-theme-darkgrey a:hover {
+  color: var(--dark-grey_default-link-color,#3091DC) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-darkgrey a:active {
+  color: var(--dark-grey_active-link-color,#1E88D9) !important;
+  text-decoration: underline !important;
+}
+.ms-theme-darkgrey .progress_pages_pending {
+  color: #FFFFFF !important;
+}
+.ms-theme-darkgrey #source {
+  text-decoration: none !important;
+}
+.ms-theme-darkgrey #source:hover {
+  text-decoration: underline !important;
+}
+.ms-fonttype-sitka body {
+  font-family: "Sitka Text",Georgia, Cambria, Calibri;
+  line-height: 160%;
+}
+.ms-fonttype-sitka #mainContentTitle {
+  font-size: 2.412rem;
+  font-family: "Sitka Heading",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka h1 {
+  font-size: 2.412rem;
+  font-family: "Sitka Heading",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka h2 {
+  font-size: 1.754rem;
+  font-family: "Sitka Heading",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka h3 {
+  font-size: 1.535rem;
+  font-family: "Sitka Heading",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka h4 {
+  font-size: 1.315rem;
+  font-family: "Sitka Heading",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka h5 {
+  font-size: 1.096rem;
+  font-family: "Sitka Heading",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka h6 {
+  font-size: 1.096rem;
+  font-family: "Sitka Heading",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka figcaption {
+  font-family: "Sitka Small",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-sitka table {
+  font-size: 0.877rem;
+}
+.ms-fonttype-sitka .__reading_mode_infobox_header {
+  font-size: 1.315rem;
+  line-height: normal;
+}
+.ms-fonttype-sitka .__reading_mode_infobox_segment_header {
+  font-size: 1.315rem;
+  line-height: normal;
+}
+.ms-fonttype-sitka .__reading_mode_caption_container {
+  font-size: 0.877rem;
+  line-height: 1.151rem;
+}
+.ms-fonttype-sitka .__reading_mode_wiki_infobox td {
+  padding-bottom: 8px;
+}
+.ms-fonttype-sitka .__reading_mode_wiki_infobox th {
+  padding-bottom: 8px;
+}
+.ms-fonttype-sitka .ms-linefocus-active * {
+  font-family: "Sitka Text",Georgia, Cambria, Calibri;
+}
+.ms-fonttype-calibri body {
+  font-family: "Calibri",sans-serif, Georgia, Cambria;
+  line-height: 160%;
+}
+.ms-fonttype-calibri #mainContentTitle {
+  font-size: 2.412rem;
+}
+.ms-fonttype-calibri h1 {
+  font-size: 2.412rem;
+}
+.ms-fonttype-calibri h2 {
+  font-size: 1.754rem;
+}
+.ms-fonttype-calibri h3 {
+  font-size: 1.535rem;
+}
+.ms-fonttype-calibri h4 {
+  font-size: 1.315rem;
+}
+.ms-fonttype-calibri h5 {
+  font-size: 1.096rem;
+}
+.ms-fonttype-calibri h6 {
+  font-size: 1.096rem;
+}
+.ms-fonttype-calibri figcaption {
+  font-family: "Calibri",sans-serif, Georgia, Cambria;
+  line-height: 160%;
+}
+.ms-fonttype-calibri table {
+  font-size: 1rem;
+}
+.ms-fonttype-calibri .__reading_mode_infobox_header {
+  font-size: 1.206rem;
+  line-height: normal;
+}
+.ms-fonttype-calibri .__reading_mode_infobox_segment_header {
+  font-size: 1.206rem;
+  line-height: normal;
+}
+.ms-fonttype-calibri .__reading_mode_caption_container {
+  font-size: 0.877rem;
+  line-height: 1.151rem;
+}
+.ms-fonttype-calibri .__reading_mode_wiki_infobox td {
+  padding-bottom: 8px;
+}
+.ms-fonttype-calibri .__reading_mode_wiki_infobox th {
+  padding-bottom: 8px;
+}
+.ms-fonttype-calibri .ms-linefocus-active * {
+  font-family: "Calibri",sans-serif, Georgia, Cambria;
+}
+.ms-fonttype-comicsans body {
+  font-family: "Comic Sans MS",Georgia, Cambria, Calibri;
+  line-height: 170%;
+}
+.ms-fonttype-comicsans #mainContentTitle {
+  font-size: 2.138rem;
+}
+.ms-fonttype-comicsans h1 {
+  font-size: 2.138rem;
+}
+.ms-fonttype-comicsans h2 {
+  font-size: 1.5899rem;
+}
+.ms-fonttype-comicsans h3 {
+  font-size: 1.425rem;
+}
+.ms-fonttype-comicsans h4 {
+  font-size: 1.206rem;
+}
+.ms-fonttype-comicsans h5 {
+  font-size: 1.042rem;
+}
+.ms-fonttype-comicsans h6 {
+  font-size: 1.042rem;
+}
+.ms-fonttype-comicsans figcaption {
+  font-family: "Comic Sans MS",Georgia, Cambria, Calibri;
+  line-height: 170%;
+}
+.ms-fonttype-comicsans table {
+  font-size: 0.877rem;
+}
+.ms-fonttype-comicsans .__reading_mode_infobox_header {
+  font-size: 1.206rem;
+  line-height: normal;
+}
+.ms-fonttype-comicsans .__reading_mode_infobox_segment_header {
+  font-size: 1.206rem;
+  line-height: normal;
+}
+.ms-fonttype-comicsans .__reading_mode_caption_container {
+  font-size: 0.877rem;
+  line-height: 1.261rem;
+}
+.ms-fonttype-comicsans .__reading_mode_wiki_infobox td {
+  padding-bottom: 16px;
+}
+.ms-fonttype-comicsans .__reading_mode_wiki_infobox th {
+  padding-bottom: 16px;
+}
+.ms-fonttype-comicsans .ms-linefocus-active * {
+  font-family: "Comic Sans MS",Georgia, Cambria, Calibri;
+}
+.ms-column-type-narrow {
+  max-width: 35rem;
+}
+.ms-column-type-medium {
+  max-width: 45rem;
+}
+.ms-column-type-wide {
+  max-width: 55rem;
+}</style><style id="content_document_stylesheet">html {
+  margin: 0 !important;
+  height: 100%;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  overflow-wrap: break-word;
+  transition-property: background, color;
+  transition-duration: .8s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.__reading_mode_caption_container {
+  width: 12.555rem;
+  margin-left: 1.096rem;
+  font-weight: 400;
+}
+.__reading_mode_caption_container .__reading_mode_collapse_button {
+  padding: initial;
+  padding-top: 0.219rem;
+}
+.__reading_mode_image_and_caption_container {
+  display: flex;
+  margin-top: 1.0964rem;
+}
+.__reading_mode_image_and_caption_container p, .__reading_mode_image_and_caption_container img {
+  margin: 0px !important;
+}
+.__reading_mode_image_and_caption_container img {
+  width: 11.404rem;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  background: white;
+}
+.__reading_mode_gallery {
+  padding: initial;
+  list-style: none;
+}
+.__reading_mode_gallery li {
+  text-align: start;
+}
+.__reading__mode__mainbody {
+  margin: 0;
+  padding: 0;
+}
+.__reading__mode__extracted__article__body p, .__reading__mode__extracted__article__body dl {
+  padding: 0;
+  hyphens: manual;
+  margin-top: 1.096rem;
+}
+.header_container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contentBody {
+  width: auto;
+  color: #333333;
+  padding-top: 1.973rem !important;
+  margin-left: auto;
+  padding-left: 2.444rem;
+  margin-right: auto;
+  padding-right: 2.444rem;
+  padding-bottom: 2.444rem;
+}
+.progress_pages_pending {
+  color: #000002;
+  margin-left: calc(50% - 10px);
+  margin-right: auto;
+}
+.__reading__mode__bylineentries {
+  margin: 0 0 36px 0;
+  font-size: .66rem;
+}
+.__reading__mode__extracted__bylineentry {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: 160%;
+}
+#metaDivider {
+  top: -1px;
+  color: #333;
+  position: relative;
+  font-size: 0.8rem;
+}
+#source a {
+  text-decoration: none;
+}
+body * {
+  margin-block-end: 0;
+  margin-inline-end: 0;
+  margin-block-start: 0;
+  margin-inline-start: 0;
+}
+blockquote {
+  margin: 1.3rem 0;
+  padding: 0 2rem 0 1.3rem;
+  font-size: 0.9868rem;
+  font-style: italic;
+}
+ol {
+  margin: 1rem 2rem 1.3rem 0;
+}
+ul {
+  margin: 1rem 2rem 1.3rem 0;
+}
+.__reading_mode_collapse_button {
+  fill: #0078D4;
+  color: #0078D4 !important;
+  border: none;
+  display: flex;
+  font-size: 0.768rem;
+  background: transparent;
+  align-items: center;
+  line-height: 1.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+  justify-content: center;
+}
+.__reading_mode_collapse_button .__reading_mode_collapse_button_chevron_up {
+  transform: rotate(180deg);
+}
+.__reading_mode_collapse_button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: flex;
+  margin-left: 6px;
+  align-items: center;
+  margin-right: 6px;
+  justify-content: center;
+  forced-color-adjust: auto;
+}
+.__reading_mode_collapse_button:hover {
+  fill: #0066B4;
+  color: #0066B4 !important;
+  cursor: pointer;
+  text-decoration: underline;
+}
+sup {
+  line-height: 1;
+  font-variant-numeric: lining-nums;
+}
+td {
+  text-align: start;
+  vertical-align: top;
+}
+th {
+  text-align: start;
+  vertical-align: top;
+}
+table {
+  line-height: 1.3157rem;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+table img {
+  width: auto;
+  margin: 0px !important;
+  display: initial !important;
+}
+table ol, table ul {
+  margin: 0px;
+  padding-inline-start: 1rem;
+}
+table p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.__reading_mode_data_table_class {
+  border-spacing: 0px;
+  border-collapse: collapse !important;
+}
+.__reading_mode_data_table_class td:first-child, .__reading_mode_data_table_class th:first-child {
+  border-inline-start: 0px;
+}
+.__reading_mode_data_table_class td:last-child, .__reading_mode_data_table_class th:last-child {
+  border-inline-end: 0px;
+}
+.__reading_mode_data_table_class td, .__reading_mode_data_table_class th {
+  border: 1px solid;
+  padding: 10px;
+}
+.__reading_mode_data_table_class table td, .__reading_mode_data_table_class table th {
+  border: 0px;
+  padding: 0px;
+}
+.__reading_mode_data_table_class tr:last-child td, .__reading_mode_data_table_class tr:last-child th {
+  border-bottom: 0px;
+}
+.__reading_mode_data_table_class tr:first-child td, .__reading_mode_data_table_class tr:first-child th {
+  border-top: 0px;
+}
+.__reading_mode_wiki_infobox {
+  box-sizing: border-box;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.__reading_mode_wiki_infobox th {
+  width: 50%;
+  border: none !important;
+  padding-inline-end: 12px;
+}
+.__reading_mode_wiki_infobox td {
+  width: 50%;
+  border: none !important;
+  padding-inline-start: 12px;
+}
+.__reading_mode_wiki_infobox th[colspan], .__reading_mode_wiki_infobox td[colspan], .__reading_mode_wiki_infobox td:first-child {
+  padding-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+.__reading_mode_wiki_infobox .__reading_mode_image_section_table_data_parent {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.__reading_mode_wiki_infobox .__reading_mode_infobox_header {
+  font-weight: bold;
+  padding-top: 0px !important;
+  padding-bottom: 12px;
+}
+.__reading_mode_wiki_infobox .__reading_mode_infobox_segment_header {
+  padding-top: 32px;
+  font-weight: bold;
+}
+.__reading_mode_wiki_infobox table {
+  border-collapse: collapse;
+}
+.__reading_mode_wiki_infobox table td, .__reading_mode_wiki_infobox tableth {
+  padding: 0px;
+}
+.__reading_mode_table_and_collapse_button_container {
+  box-sizing: border-box;
+  margin-top: 1.0964rem;
+  border-radius: 4px;
+}
+.__reading_mode_table_and_collapse_button_container .__reading_mode_collapse_button {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.__reading_mode_table_and_collapse_button_container .__reading_mode_table_collapsed_class, .__reading_mode_table_and_collapse_button_container .__reading_mode_table_expanded_table_class {
+  box-sizing: border-box;
+  border-color: inherit !important;
+  border-bottom: 1px solid;
+}
+.__reading_mode_table_and_collapse_button_container caption {
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+div::-webkit-scrollbar {
+  height: 12px;
+}
+div::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  box-sizing: border-box;
+  border-radius: 11px;
+  background-clip: padding-box !important;
+}
+@media (-ms-high-contrast:active) {
+  div::-webkit-scrollbar-thumb {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+}
+.__reading_mode_infobox_and_collapse_button_container {
+  border-top: 4px solid;
+  margin-top: 1.0964rem;
+  padding-top: 24px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  margin-bottom: 2.631rem;
+  border-radius: 4px;
+}
+.__reading_mode_infobox_and_collapse_button_container .__reading_mode_collapse_button {
+  margin-top: 10px !important;
+  margin-left: 24px;
+  margin-bottom: 10px !important;
+}
+.__reading_mode_infobox_and_collapse_button_container .__reading_mode_infobox_image_container {
+  gap: 1.3157rem;
+  display: flex;
+  font-size: 0.8771rem;
+  line-height: 1.0964rem;
+  margin-bottom: 16px;
+}
+.__reading_mode_infobox_and_collapse_button_container .__reading_mode_table_collapsed_class {
+  border-color: inherit !important;
+  border-bottom: 1px solid;
+}
+.__reading_mode_infobox_and_collapse_button_container .__reading_mode_table_expanded_table_class {
+  border-color: inherit !important;
+  border-bottom: 1px solid;
+}
+.__reading_mode_infobox_and_collapse_button_container .__reading_mode_table_expanded_table_class .__reading_mode_infobox_image_container img {
+  width: 14.418rem;
+  max-width: 14.418rem;
+}
+.__reading_mode_infobox_and_collapse_button_container .__reading_mode_table_collapsed_class .__reading_mode_infobox_image_container img {
+  width: 6.5789rem;
+}
+.__reading_mode_infobox_and_collapse_button_container .__reading_mode_infobox_image_container img {
+  max-width: 6.578rem;
+  max-height: 100% !important;
+}
+button:focus {
+  outline: none;
+}
+button:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+#copyright {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+#__reading__mode__content_container {
+  position: relative;
+  min-height: 100vh;
+}
+#__reading__mode__sendfeedback {
+  width: 100%;
+  height: auto;
+  bottom: 0px;
+  position: absolute;
+}
+#__reading__mode__feedback__message__id {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+#__reading__mode__feedback__inner__message__id {
+  margin: auto ! important;
+  display: inline-flex;
+  font-size: 14px;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+}
+.__reading__mode__feedback__text {
+  margin: auto 8px ! important;
+}
+.__reading__mode__feedback__button {
+  width: 40px;
+  border: none;
+  margin: auto;
+  height: 32px;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  border-radius: 2px;
+  justify-content: center;
+}
+.__reading__mode__feedback__button svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.__reading__mode__feedback__separator {
+  height: 0;
+  margin: 0;
+  border: none;
+  box-sizing: content-box;
+  transition: all 0.2s ease-in-out;
+}
+h1 {
+  padding: 0;
+  margin-top: 2.192rem;
+  font-weight: bold;
+  line-height: normal;
+}
+h2 {
+  padding: 0;
+  margin-top: 2.192rem;
+  font-weight: bold;
+  line-height: normal;
+}
+h3 {
+  padding: 0;
+  margin-top: 2.192rem;
+  font-weight: bold;
+  line-height: normal;
+}
+h4 {
+  padding: 0;
+  margin-top: 2.192rem;
+  font-weight: bold;
+  line-height: normal;
+}
+h5 {
+  padding: 0;
+  margin-top: 2.192rem;
+  font-weight: bold;
+  line-height: normal;
+}
+h6 {
+  padding: 0;
+  margin-top: 2.192rem;
+  font-weight: bold;
+  line-height: normal;
+}
+#mainContentTitle {
+  margin-top: 0px !important;
+  font-weight: bold;
+  margin-bottom: 1.535rem;
+}
+#subtitle:lang(en) {
+  line-height: 1.2;
+}
+#subtitle {
+  margin: 0 0 .4rem 0;
+  line-height: 1.2rem;
+}
+#content_end_mark_icon_id {
+  display: none;
+}
+#content_end_mark_icon_id:before {
+  content: "\25FC";
+  font-size: 1rem;
+  font-style: normal;
+  font-family: Segoe MDL2 Assets;
+}
+#__reading__mode__content_end_mark_container_id {
+  margin-bottom: 25px;
+}
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+a {
+  color: #0072C9;
+  text-decoration: none;
+}
+a:visited {
+  color: #0072C9;
+  text-decoration: none;
+}
+a:hover {
+  color: #0072C9;
+  text-decoration: underline;
+}
+a:active {
+  color: #097DD5;
+  text-decoration: underline;
+}
+#author {
+  color: #666666;
+}
+@media print {
+  .__reading_mode_collapse_button {
+    display: none !important;
+  }
+}
+.c004 {
+  opacity: 0;
+  transform: translateY(80px);
+}
+.c005 {
+  margin-top: 41px;
+}
+.c006 {
+  transition-property: opacity, transform;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0.25,0.10,0.25,1.00);
+}
+.c007 {
+  display: block;
+  min-width: 100px;
+  font-size: 0.667rem;
+  margin-top: 0.45rem;
+  font-style: italic;
+  text-align: left;
+  line-height: 160%;
+  break-before: avoid-column;
+}
+.c008 {
+  height: auto;
+  display: block;
+  max-width: 100%;
+  margin-top: 1.0964rem;
+  max-height: 50%;
+  break-inside: avoid-column;
+}
+.c009 {
+  width: auto;
+  height: auto;
+  display: inherit;
+}
+.c0010 {
+  display: none;
+}
+.c0011 {
+  display: block ! important;
+}
+.c0012 {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 300ms, opacity 300ms cubic-bezier(0.25, 0.10, 0.25, 1.00);
+}
+.c0013:focus {
+  outline: none;
+}
+@media screen and (max-width: 42rem) {
+  .c0014 {
+    screen and (max-width: 42rem);
+  }
+  .c0015 {
+    width: auto;
+    padding: 0.667rem;
+  }
+  .c0016 {
+    font-size: 1.667rem;
+  }
+  .c0017 {
+    font-size: 1.333rem;
+  }
+}
+@media screen and (max-width: 801px) {
+  .c0014 {
+    screen and (max-width: 801px);
+  }
+  .c0018 {
+    background: #faf7ee;
+  }
+}</style></head>         <body>             <div id="__reading__mode__content_container">
+            <div id="Top">
+                <!-- This div is used to scroll to the top of the article. -->
+            </div>
+            <!-- Multicolumn containing all of the result -->             <div id="contentContainer" class="contentBody ms-column-type-medium" role="main">                         <!-- Main header containing title, dominant image and meta data -->                 <div class="header_container" id="__reading__mode__header__container">                     <div id="header_content_id" class="header_content">                        
+              <p>https://arstechnica.com/information-technology/2019/11/half-an-operating-system-the-triumph-and-tragedy-of-os2/</p>
+              <h1 class="__reading__mode__extracted__title c0011" id="mainContentTitle">Half an operating system: The triumph and tragedy of OS/2</h1>                        <h4 class="__reading__mode__extracted__subtitle c0010" id="subtitle"></h4>                        <div class="__reading__mode__bylineentries c0010">                            <div class="__reading__mode__extracted__bylineentry c0010" id="author"></div>                            <div class="__reading__mode__extracted__bylineentry c0010" id="metaData">                                <a id="source"></a>                                <span id="metaDivider" class="c0010">|</span>                                <span class="__reading__mode__extracted__date" id="publishdate"></span>                            </div>                        </div>                    </div>                </div>                <div class="__reading__mode__mainbody" id="__reading__mode__mainbody__id">                    <div class="__reading__mode__extracted__article__body" id="mainContainer"><div><article class="double-column h-entry post-371837 post type-post status-publish format-standard has-post-thumbnail hentry category-information-technology tag-ibm-2 tag-microsoft-3 tag-operating-systems tag-os2">
+  
+  <header><div class="dusk:bg-gray-700 my-4 bg-white py-4 dark:bg-gray-700 md:my-10 md:py-8"><div class="mx-auto max-w-2xl px-4 md:px-8 lg:grid lg:max-w-6xl"><div class="relative"><div class="ars-lightbox"><div class="ars-lightbox-item"><a href="./article-banner1.jpg" class="cursor-zoom-in"><img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/article-banner1.jpg 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/article-banner1-300x101.jpg 300w, " fetchpriority="high" decoding="async" loading="eager" alt="" class="intro-image c008" src="./article-banner1.jpg"></a></div></div></div></div></div></header>
+<div class="text-settings-dropdown-story mdl:absolute mdl:z-10 mdl:mb-0 mdl:mt-1 relative -mt-4 mb-2">
+  <div x-id="[&#39;dropdown-button&#39;]" @focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()" @keydown.escape.prevent.stop="close($refs.button)" x-data="{
+      open: false,
+      toggle() {
+          if (this.open) {
+              return this.close()
+          }
+          // If we&#39;re inside main header, add a data attribute to the header
+          if (this.$el.closest(&#39;#site-header&#39;)) {
+              this.$el.closest(&#39;#site-header&#39;).dataset.dropdownOpen = &#39;true&#39;;
+          }
+          this.open = true
+      },
+      close() {
+          if (!this.open) {
+              return;
+          }
+          // If we&#39;re inside main header, add a data attribute to the header
+          if (this.$el.closest(&#39;#site-header&#39;)) {
+              this.$el.closest(&#39;#site-header&#39;).dataset.dropdownOpen = &#39;false&#39;;
+          }
+          this.open = false
+      }
+  }">
+
+    
+    
+
+    
+    
+  </div>
+</div>
+
+  
+
+  
+      
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+                      
+          <div class="page-anchor-wrapper"><a name="page-1" class=""></a></div>
+<p></p>
+<p>It was a cloudy Seattle day in late 1980, and Bill Gates, the young chairman of a tiny company called Microsoft, had an appointment with IBM that would shape the destiny of the industry for decades to come.</p>
+<p>He went into a room full of IBM lawyers, all dressed in immaculately tailored suits. Bill’s suit was rumpled and ill-fitting, but it didn’t matter. He wasn’t here to win a fashion competition.</p>
+<p>Over the course of the day, a <a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">contract</a> was worked out whereby IBM would purchase, for a one-time fee of about $80,000, perpetual rights to Gates’ MS-DOS operating system for its upcoming PC. IBM also licensed Microsoft’s BASIC programming language, all that company's other languages, and several of its fledging applications. The smart move would have been for Gates to insist on a royalty so that his company would make a small amount of money for every PC that IBM sold.</p>
+<p>But Gates wasn’t smart. He was <i>smarter</i>.</p>
+<p>In exchange for giving up perpetual royalties on MS-DOS, which would be called IBM PC-DOS, Gates insisted on retaining the rights to sell DOS to other companies. The lawyers looked at each other and smiled. Other companies? Who were they going to be? IBM was the only company making the PC. Other personal computers of the day either came with their own built-in operating system or licensed Digital Research’s CP/M, which was the established standard at the time.</p>
+<div class="ars-interlude-container in-content-interlude mx-auto max-w-xl my-5">
+            </div><p>Gates wasn’t thinking of the present, though. “The lesson of the computer industry, in mainframes, was that over time people built compatible machines,” Gates explained in an <a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">interview</a> for the 1996 PBS documentary&nbsp;<a href="http://arstechnica.com/business/2013/11/half-an-operating-system-the-triumph-and-tragedy-of-os2/#footnote"><em>Triumph of the Nerds</em></a>. As the leading manufacturer of mainframes, IBM experienced this phenomenon, but the company was always able to stay ahead of the pack by releasing new machines and relying on the power of its marketing and sales force to relegate the cloners to also-ran status.</p>
+
+          
+                      
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>The personal computer market, however, ended up working a little differently. PC Cloners were smaller, faster, and hungrier companies than their mainframe counterparts. They didn’t need as much startup capital to start building their own machines, especially after Phoenix and other companies did legal, clean-room, reverse-engineered implementations of the BIOS (Basic Input/Output System) that was the only proprietary chip in the IBM PC’s architecture. To make a PC clone, all you needed to do was put a Phoenix BIOS chip into your own motherboard design, design and manufacture a case, buy a power supply, keyboard, and floppy drive, and license an operating system. And Bill Gates was ready and willing to license you that operating system.</p>
+<figure class="ars-img-shortcode id-372013 align-center">
+    <div>
+                        <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/compaq-portable.png 508w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/compaq-portable-300x145.png 300w, " alt="" class="center full c008" src="./compaq-portable.png" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      The Compaq Portable was the first of many IBM PC clones.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          oldcomputers.net
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>IBM went ahead and tried to produce a new model computer to stay ahead of the cloners, but the PC/AT’s day in the sun was short-lived. Intel was doing a great business selling 286 chips to clone companies, and buyers were excited to snap up 100 percent compatible AT clones at a fraction of IBM’s price.</p>
+<p>Intel and Microsoft were getting rich, but IBM’s share of the PC pie was getting smaller and smaller each year. Something had to be done—the seeds were sown for the giant company to fight an epic battle to regain control of the computing landscape from the tiny upstarts.</p>
+<h2>The dawn of OS/2</h2>
+<p>IBM had only gone to Microsoft for an operating system in the first place because it was pressed for time. By 1980, the personal computing industry was taking off, causing a tiny revolution in businesses all over the world. Most big companies had, or had access to, IBM mainframes. But these were slow and clunky machines, guarded by a priesthood of technical administrators and unavailable for personal use. People would slyly bring personal computers like the TRS-80, Osborne, and Apple II into work to help them get ahead of their coworkers, and they were often religious fanatics about them. “The concern was that we were losing the hearts and minds,” former IBM executive Jack Sams said in an <a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">interview</a>. “So the order came down from on high: give us a machine to win us back the hearts and minds.” But the chairman of IBM worried that his company’s massive bureaucracy would make any internal PC project take years to produce, by which time the personal computer industry might already be completely taken over by non-IBM machines.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>So a rogue group in Boca Raton, Florida—far away from IBM headquarters—was allowed to use a radical strategy to design and produce a machine using largely off-the-shelf parts and a third-party CPU, operating system, and programming languages. It went to Microsoft to get the last two, but Microsoft didn’t have the rights to sell them an OS and directed the group to Digital Research, who was preparing a 16-bit version of CP/M that would run on the 8088 CPU that IBM was putting into the PC. In what has become a legendary <a rel="noopener" href="http://www.amazon.com/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO">story</a>, Digital Research sent IBM’s people away when Digital Research’s lawyers refused to sign a non-disclosure agreement. Microsoft, worried that the whole deal would fall apart, frantically purchased the rights to Tim Patterson’s QDOS (“Quick and Dirty Operating System”) from Seattle Computer Products. Microsoft “cleaned up” QDOS for IBM, getting rid of the unfortunate name and allowing the IBM PC to launch on schedule. Everyone was happy, except perhaps Digital Research’s founder, Gary Kildall.</p>
+<p>But that was all in the past. It was now 1984, and IBM had a different problem: DOS was pretty much still a quick and dirty hack. The only real new thing that had been added to it was directory support so that files could be organized a bit better on the IBM PC/AT’s new hard disk. And thanks to the deal that IBM signed in 1980, the cloners could get the exact same copy of DOS and run exactly the same software. IBM needed to design a brand new operating system to differentiate the company from the clones. Committees were formed and meetings were held, and the new operating system was graced with a name: OS/2.</p>
+<p>Long before operating systems got exciting names based on giant cats and towns in California named after dogs, most of their names were pretty boring. IBM would design a brand new mainframe and release an operating system with a similar moniker. So the new System/360 mainframe line would run the also brand-new OS/360. It was neat and tidy, just like an IBM suit and jacket.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>IBM wanted to make a new kind of PC that couldn’t be as easily cloned as its first attempt, and the company also wanted to tie it, in a marketing kind of way, to its mainframes. So instead of a Personal Computer or PC, you would have a Personal System (PS), and since it was the successor to the PC, it would be called the PS/2. The new advanced operating system would be called OS/2.</p>
+<div class="page-anchor-wrapper"><a name="page-2" class="record-pageview"></a></div>
+<h2>Riding the Bear</h2>
+<figure class="ars-img-shortcode id-372009 align-center">
+    <div>
+                        <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/ridingbear-med.jpg 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ridingbear-med-300x225.jpg 300w, " alt="" class="center full c008" src="./ridingbear-med.jpg" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      Artist's impression of Microsoft and IBM's relationship.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          Flickr user: Marshmallow (Bear only)
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>Naming an OS was a lot easier than writing it, however, and IBM management still worried about the length of time that it would take to write such a thing itself. So instead, the group decided that IBM would design OS/2 but Microsoft would write most of the actual code. Unlike last time, IBM would fully own the rights to the product and only IBM could license it to third parties.</p>
+<p>Why would Microsoft management agree to develop a project designed to eliminate the very cash cow that made them billionaires? Steve Ballmer <a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">explained</a>:</p>
+<p>“It was what we used to call at the time ‘Riding the Bear.' You just had to try to stay on the bear’s back, and the bear would twist and turn and try to throw you off, but we were going to stay on the bear, because the bear was the biggest, the most important… you just had to be with the bear, otherwise you would be <i>under</i> the bear.”</p>
+<p>IBM was a somewhat angry bear at the time as the tiny ferrets of the clone industry continued to eat its lunch, and many industry people started taking OS/2 very, very seriously before it was even written. What it didn’t know was that events were going to conspire to make OS/2 a gigantic failure right out of the gate.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<h4><a name="footnote"></a>Footnote:</h4>
+<p><em>This article references a lot of information from the 1996 PBS documentary&nbsp;</em>Triumph of Nerds.&nbsp;<em>The film is available on <a href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">Amazon</a>, and the author viewed it multiple times during research.</em></p>
+<h2>The brain-damaged chip</h2>
+<p>In 1984, IBM released the PC/AT, which sported Intel’s 80286 central processor. The very next year, however, Intel released a new chip, the 80386, that was better than the 286 in almost every way.</p>
+<p>The 286 was a 16-bit CPU that could address up to 16 megabytes of random access memory (RAM) through a 24-bit address bus. It addressed this memory in a slightly different way from its older, slower cousin the 8086, and the 286 was the first Intel chip to have memory management tools built in. To use these tools, you had to enter what Intel called “protected mode," in which the 286 opened up all 24 bits of its memory lines and went full speed. If it wasn’t in protected mode, it was in “real” mode, where it acted like a faster 8086 chip and was limited to only one megabyte of RAM (the 640KB limit was an arbitrary choice by IBM to allow for the original PC to use the extra bits of memory for graphics and other operations).</p>
+<p>The trouble with protected mode in the 286 was that when you were in it, you couldn’t get back to real mode without a reboot. Without real mode it was very difficult to run MS-DOS programs, which expected to have full access and control of the computer at all times. Bill Gates knew everything about the 286 chip and called it “<a rel="noopener" href="http://en.wikipedia.org/wiki/Intel_80286#cite_note-11">brain-damaged</a>," but for Intel, it was a transitional CPU that led to many of the design decisions of its successor.</p>
+<p>The 386 was Intel’s first truly modern CPU. Not only could it access a staggering 4GB of RAM in 32-bit protected mode, but it also added a “Virtual 8086” mode that could run at the same time, allowing many full instances of MS-DOS applications to operate simultaneously without interfering with each other. Today we take virtualization for granted and happily run entire banks of operating systems at once on a single machine, but in 1985 the concept seemed like it was from the future. And for IBM, this future was scary.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>The 386 was an expensive chip when it was introduced, but IBM’s experience with the PC/AT told the company that the price would clearly come down over time. And a PC with a 386 chip and a proper 386-optimized operating system, running multiple virtualized applications in a huge memory space… that sounded an awful lot like a mainframe, only at PC clone prices. So should OS/2 be designed for the 386? IBM’s mainframe division came down on this idea like a ton of bricks. Why design a system that could potentially render mainframes obsolete?</p>
+<p>So OS/2 was to run on the 286, and DOS programs would have to run one at a time in a “compatibility box” if they could be run at all. This wasn’t such a bad thing from IBM’s perspective, as it would force people to move to OS/2-native apps that much faster. So the decision was made, and Microsoft and Bill Gates would just have to live with it.</p>
+<h2>GUI woes</h2>
+<figure class="ars-img-shortcode id-372065 align-center">
+    <div>
+                        <img alt="" class="center full c008" src="./bouncing.gif" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      Don't tell anyone at Microsoft or IBM that the pre-emptively multitasking AmigaOS ran fine in half a MB of RAM.
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>There was another problem that was happening in 1985, and both IBM and Microsoft were painfully aware of it. The launch of the Macintosh in ’84 and the Amiga and Atari ST in ’85 showed that reasonably priced personal computers were now expected to come with a graphical user interface (GUI) built in. Microsoft rushed to release the laughably underpowered Windows 1.0 in the same year so that it could have a stake in the GUI game. IBM would have to do the same or fall behind.</p>
+<p>The trouble was that GUIs took a while to develop, and they took up more resources than their non-GUI counterparts. In a world where most 286 clones came with only 1MB RAM standard, this was going to pose a problem. Some GUIs, like the Workbench that ran on the highly advanced Amiga OS, could squeeze into a small amount of RAM, but AmigaOS was designed by a tiny group of <a rel="noopener" href="http://arstechnica.com/gadgets/2007/08/a-history-of-the-amiga-part-3/2/">crazy geniuses</a>. OS/2 was being designed by a giant IBM committee. The end result was never going to be pretty.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<h2>The RAM crunch</h2>
+<p>OS/2 was plagued by delays and bureaucratic infighting. IBM rules about confidentiality meant that some Microsoft employees were unable to talk to other Microsoft employees without a legal translator between them. IBM also <a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">insisted</a> that Microsoft would get paid by the company's standard contractor rates, which were calculated by “kLOCs," or a thousand lines of code. As many programmers know, given two routines that can accomplish the same feat, the one with fewer lines of code is generally superior—it will tend to use less CPU, take up less RAM, and be easier to debug and maintain. But IBM insisted on the kLOC methodology.</p>
+<p>All these problems meant that when OS/2 1.0 was released in December 1987, it was not exactly the leanest operating system on the block. Worse than that, the GUI wasn’t even ready yet, so in a world of Macs and Amigas and even Microsoft Windows, OS/2 came out proudly dressed up in black-and-white, 80-column, monospaced text.</p>
+<figure class="ars-img-shortcode id-372017 align-center">
+    <div>
+                        <div class="ars-lightbox">
+            <div class="ars-lightbox-item">
+              <a class="cursor-zoom-in" href="./os2-1-screenshot.png">
+                <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-1-screenshot.png 720w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-1-screenshot-300x167.png 300w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-1-screenshot-640x356.png 640w, " alt="" class="attachment-full size-full c008" src="./os2-1-screenshot.png" decoding="async">
+              </a>
+              <div id="caption-372017" class="pswp-caption-content">
+                OS/2 1.0 in all its glory.
+                                  <div class="ars-gallery-caption-credit">
+                    Credit:
+                                          os2museum.com
+                                      </div>
+                              </div>
+            </div>
+          </div>
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      OS/2 1.0 in all its glory.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          os2museum.com
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>OS/2 did have some advantages over the DOS it was meant to replace—it could multitask its own applications, and each application would have a modicum of protection from the others thanks to the 286’s memory management facilities. But OS/2 applications were rather thin on the ground at launch, because despite the monumental hype over the OS, it was still starting out at ground zero in terms of market share. Even this might have been something that could be overcome were it not for the RAM crisis.</p>
+<p>RAM prices had been trending down for years, from <a rel="noopener" href="http://www.jcmit.com/memoryprice.htm">$880 per MB in 1985 to a low of $133 per MB in 1987</a>. This trend sharply reversed in 1988 when demand for RAM and production difficulties in making larger RAM chips caused a <a rel="noopener" href="http://articles.chicagotribune.com/1988-11-20/business/8802180788_1_megabit-256k-chips-rounds-of-price-increases/2">sudden shortfall in the market</a>. With greater demand and constricted supply, RAM prices shot up to over $500 per MB and stayed there for two years.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>Buyers of clone computers had a choice: they could stick with the standard 1MB of RAM and be very happy running DOS programs and maybe even a Windows app (Windows 2.0 had come out in December of 1987 and while it wasn’t great, it was at least reasonable, and it did barely manage to run with that much memory). Or they could buy a copy of OS/2 1.0 Standard Edition from IBM for $325 and then pay an extra $1,000 to bump up to 3MB of RAM, which was necessary to run both OS/2 and its applications comfortably.</p>
+<p>Needless to say, OS/2 was not an instant smash hit in the marketplace.</p>
+<p>But wait. Wasn’t OS/2 supposed to be a differentiator for IBM to sell its shiny new PS/2 computers? Why would IBM want to sell it to the owners of clone computers anyway? Wasn’t it necessary to own a PS/2 in order to run OS/2 in the first place?</p>
+<p>This confusion wasn’t an accident. IBM <i>wanted</i> people to think this way.</p>
+<div class="page-anchor-wrapper"><a name="page-3" class="record-pageview"></a></div>
+<h2>IBM’s Clone War</h2>
+<figure class="ars-img-shortcode id-372019 align-center">
+    <div>
+                        <div class="ars-lightbox">
+            <div class="ars-lightbox-item">
+              <a class="cursor-zoom-in" href="./ibm-ps2-30.jpg">
+                <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-30.jpg 1000w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-30-300x261.jpg 300w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-30-640x557.jpg 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-30-768x668.jpg 768w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-30-980x853.jpg 980w, " alt="" class="attachment-full size-full c008" src="./ibm-ps2-30.jpg" decoding="async">
+              </a>
+              <div id="caption-372019" class="pswp-caption-content">
+                The low-end PS/2s were the most crippled. No Micro Channel, slow CPU speeds, and 256 colors only in very low resolution (as you can see from the text).
+                              </div>
+            </div>
+          </div>
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      The low-end PS/2s were the most crippled. No Micro Channel, slow CPU speeds, and 256 colors only in very low resolution (as you can see from the text).
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>IBM had spent a lot of time and money developing the PS/2 line of computers, which was released in 1987, slightly before OS/2 first became available. The company ditched the old 16-bit Industry Standard Architecture (ISA), which had become the standard among all clone computers, and replaced it with its proprietary Micro Channel Architecture (MCA), a 32-bit bus that was theoretically faster. To stymie the clone makers, IBM infused MCA with the most advanced legal technology available, so much so that third-party makers of MCA expansion cards actually had to pay IBM a royalty for every card sold. In fact, IBM even tried to collect back-pay royalties for ISA cards that had been sold in the past.</p>
+<p>The PS/2s also were the first PCs to switch over to 3.5-inch floppy drives, and they also pioneered the little round connectors for the keyboard and mouse that remain on some motherboards to this day. They were attractively packaged and fairly reasonably priced at the low end, but the performance just wasn’t there. The PS/2 line started with the Models 25 and 30, which had no Micro Channel and only a lowly 8086 running at conservatively slow clock speeds. They were meant to get buyers interested in moving up to the Models 50 and 60, which used 286 chips and had MCA slots, and the high-end Models 70 and 80, which came with a 386 chip and a jaw-droppingly high price tag to go with it. You could order the Model 50 and higher with OS/2 once it became available. You didn’t just have to stick with the “Standard Edition" either. IBM also offered an “Extended Edition” of OS/2 that came equipped with a communications suite, networking tools, and an SQL manager. The Extended Edition would only run on true-blue IBM PS/2 computers—no clones were allowed to that fancy dress party.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>These machines were meant to wrestle control of the PC industry away from the clone makers, but they were also meant to subtly push people back toward a world where PCs were the servants and mainframes were the masters. They were never allowed to be too fast or run a proper operating system that would take advantage of the 32-bit computing power available with the 386 chip. In trying to do two contradictory things at once, they failed at both.</p>
+<p>The clone industry decided not to bother tangling with IBM’s massive legal department and simply didn’t try to clone the PS/2 on anything other than a cosmetic level. Sure, they couldn’t have the shiny new MCA expansion slots, but since MCA cards were rare and expensive and the performance was throttled back anyway, it wasn’t so bad to stick with ISA slots instead. Compaq even brought together a consortium of PC clone vendors to create a new standard bus called EISA, which filled in the gaps at the high end until other standards became available. And the crown jewel of the PS/2, the OS/2 operating system, was late. It was also initially GUI-less, and when the GUI did come with the release of OS/2 1.1 in 1988, it required too much RAM to be economically viable for most users.</p>
+<figure class="ars-img-shortcode id-372029 align-center">
+    <div>
+                        <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/os211_screenshot.png 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os211_screenshot-300x225.png 300w, " alt="" class="center full c008" src="./os211_screenshot.png" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      OS/2 Version 1.1. Even though it finally had a GUI, it didn't do very much.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          os2museum.com
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>As the market shifted and the clone makers started selling more and more fast and cheap 386 boxes with ISA slots, Bill Gates took one of his famous “<a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">reading week</a>” vacations and emerged with the idea that OS/2 probably didn’t have a great future. Maybe the IBM Bear was getting ready to ride straight off a cliff. But how does one disentangle from riding a bear, anyway? The answer was "very, very carefully."</p>
+<h2>The Microsoft-IBM divorce</h2>
+<p>It was late 1989, and Microsoft was hard at work putting the final touches on what the company knew was the best release of Windows yet. Version 3.0 was going to up the graphical ante with an exciting new 3D beveled design (which had first appeared with OS/2 1.2) and shiny new icons, and it would support Virtual 8086 mode on a 386, making it easier for people to spend more time in Windows and less time in DOS. It was going to be an exciting product, and Microsoft told IBM so.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<figure class="ars-img-shortcode id-372023 align-center">
+    <div>
+                        <img alt="" class="center full c008" src="./os212_screenshot.gif" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      OS/2 version 1.2, released in late 1989.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          os2museum.com
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<figure class="ars-img-shortcode id-372025 align-center">
+    <div>
+                        <img alt="" class="center full c008" src="./win30-screenshot.gif" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      Windows 3.0, released mid-1990.
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>IBM still saw Microsoft as a partner in the operating systems business, and it&nbsp;<a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">offered</a> to help the smaller company by doing a full promotional rollout of Windows 3.0. But in exchange, IBM wanted to buy out the rights to the software itself, nullifying the DOS agreement that let Microsoft license to third parties. Bill Gates looked at this and thought about it carefully—and he decided to walk away from the deal.</p>
+<p>IBM saw this as a betrayal and circulated <a rel="noopener" href="http://www.amazon.com/gp/product/Triumph-Nerds-Bob-Cringely/dp/B00006FXQO/arstech-20">internal memos</a> that the company would no longer be writing any third-party applications for Windows. The separation was about to get nasty.</p>
+<p>Unfortunately, Microsoft still had contractual obligations for developing OS/2. IBM, in a fit of pique, decided that it no longer needed the software company’s help. In an apt twist given the operating system’s name, the two companies decided to split OS/2 down the middle. At the time, this parting of the ways was compared to a <a rel="noopener" href="http://news.google.com/newspapers?nid=1309&amp;dat=19920702&amp;id=7ZVUAAAAIBAJ&amp;sjid=CJADAAAAIBAJ&amp;pg=5782,884728">divorce</a>.</p>
+<p>IBM would take over the development of OS/2 1.x, including the upcoming 1.3 release that was intended to lower RAM requirements. It would also take over the work that had already been done on OS/2 2.0, which was the long-awaited 32-bit rewrite. By this time, IBM finally bowed to the inevitable and admitted its flagship OS really needed to be detached from the 286 chip.</p>
+<p>Microsoft would retain its existing rights to Windows, minus IBM’s marketing support, and the company would also take over the rights to develop OS/2 3.0. This was known internally as OS/2 NT, a pie-in-the-sky rewrite of the operating system that would have some unspecified “New Technology” in it and be really advanced and platform-independent. It might have seemed that IBM was happy to get rid of the new high-end variant of OS/2 given that it would also encroach on mainframe territory, but in fact IBM had high-end plans of its own.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>OS/2 1.3 was released in 1991 to modest success, partly because RAM prices finally declined and the new version didn’t demand quite so much of it. However, by this time Windows 3 had taken off like a rocket. It looked a lot like OS/2 on the surface, but it cost less, took fewer resources, and didn’t have a funny kind-of-but-not-really tie-in to the PS/2 line of computers. Microsoft also aggressively courted the clone manufacturers with incredibly attractive bundling deals, putting Windows 3 on most new computers sold.</p>
+<p>IBM was losing control of the PC industry all over again. The market hadn’t swung away from the clones, and it was Windows, not OS/2, that was the true successor to DOS. If the bear had been angry before, now it was outraged. It was going to fight Microsoft on its own turf, hoping to destroy the Windows upstart forever. The stage was set for an epic battle.</p>
+<h2>Building the beast</h2>
+<p>IBM had actually been working on OS/2 2.0 for a long time in conjunction with Microsoft, and a lot of code was already written by the time the two companies split up in 1990. This enabled IBM to release OS/2 2.0 in April of 1992, a month after Microsoft launched Windows 3.1. Game on.</p>
+<figure class="ars-img-shortcode id-372031 align-center">
+    <div>
+                        <img alt="" class="center full c008" src="./os2ga_desk.gif" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      OS/2 2.0 was a big step forward for the operating system.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          os2museum.com
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>OS/2 2.0 was a 32-bit operating system, but it still contained large portions of 16-bit code from its 1.x predecessors. The High Performance File System (HPFS) was one of the subsystems that was still 16-bit, along with many device drivers and the Graphics Engine that ran the GUI. Still, the things that needed to be in 32-bit code were, like the kernel and the memory manager.</p>
+<p>IBM had also gone on a major shopping expedition for any kind of new technologies that might help make OS/2 fancier and shinier. It had partnered with Apple to work on next-generation OS technologies and licensed NeXTStep from Steve Jobs. While technology from these two platforms didn’t directly make it into OS/2, a portion of code from the Amiga did: IBM gave Commodore a license to its REXX scripting language in exchange for some Amiga technology and GUI ideas, and included them with OS/2 2.0.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>At the time, the hottest industry buzzword was “object-oriented.” While object-oriented programming had been around for many years, it was just starting to gain traction on personal computers. IBM itself was a veteran of object-oriented technology, having developed its own Smalltalk implementation called Visual Age in the 1980s. So it made sense that IBM would want to trumpet OS/2 as being more object-oriented than anything else. The tricky part of this task is that object orientation is mostly an internal technical matter of how program code is constructed and isn’t visible by end users.</p>
+<p>IBM decided to make the user interface of OS/2 2.0 behave in a manner that was “object oriented.” This project ended up being called the Workplace Shell, and it became, simultaneously, the number one feature that OS/2 fans both adored and despised.</p>
+<div class="page-anchor-wrapper"><a name="page-4" class="record-pageview"></a></div>
+<h2>There’s no room for a shell in the workplace</h2>
+<p>As the default desktop of OS/2, 2.0 was rather plain and the icons weren’t especially striking, it was not immediately obvious what was new and different about the Workplace Shell. As soon as you started using it, however, you saw that it was very different from other GUIs. Right-clicking on any icon brought up a contextual menu, something that hadn’t been seen before. Icons were considered to be “objects,” and you could do things with them that were vaguely object-like. Drag an icon to the printer icon and it printed. Drag an icon to the shredder and it was deleted (yes, permanently!) There was a strange icon called “Templates” that you could open up and then “drag off” blank sheets that, if you clicked on them, would open up various applications (the Apple Lisa had done something similar in 1983). Was that object-y enough for OS/2? No. Not nearly enough.</p>
+<p>Each folder window could have various things dragged to it, and they would have different actions. If you dragged in a color from the color palette, the folder would now have that background color. You could do the same with wallpaper bitmaps. And fonts. In fact, you could do all three and quickly change any folder to a hideous combination, and each folder could be differently styled in this fashion.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<figure class="ars-img-shortcode id-372037 align-center">
+    <div>
+                        <div class="ars-lightbox">
+            <div class="ars-lightbox-item">
+              <a class="cursor-zoom-in" href="./os2-drool.gif">
+                <img alt="" class="attachment-full size-full c008" src="./os2-drool.gif" decoding="async">
+              </a>
+              <div id="caption-372037" class="pswp-caption-content">
+                You could totally do this, and much worse. It didn't mean it was a good idea.
+                                  <div class="ars-gallery-caption-credit">
+                    Credit:
+                                          os2ezine.com
+                                      </div>
+                              </div>
+            </div>
+          </div>
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      You could totally do this, and much worse. It didn't mean it was a good idea.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          os2ezine.com
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>In practice, this was something you either did by accident and then didn’t know how to fix or did once to demo it to a friend and then never did it again. These kinds of features were flashy, but they took up a lot of memory, and computers in 1992 were still typically sold with 2MB or 4MB of RAM.</p>
+<p>The minimum requirement of OS/2 2.0, as displayed on the box (and a heavy box it was, coming with no less than 21 3.5-inch floppy disks!), was 4MB of RAM. I once witnessed my local Egghead dealer trying to boot up OS/2 on a system with that much RAM. It wasn’t pretty. The operating system started thrashing to disk to swap out RAM before it was even finished booting. Then it would try to boot some more. And swap. And boot. And swap. It probably took over 10 minutes to get to a functional desktop, and guess what happened if you right-clicked a single icon? It swapped. Basically, OS/2 2.0 in this amount of RAM was unusable.</p>
+<p>At 8MB the system worked as advertised, and at 16MB it would run comfortably without excessive thrashing. Fortunately, RAM was down to around $30 per MB by this time, so upgrading wasn’t as huge a deal as it was in the OS/2 1.x days. Still, it was a barrier to adoption, especially as Windows 3.1 ran happily in 2MB.</p>
+<p>But Windows 3.1 was also a crash-happy, cooperative multitasking facade of an operating system with a strange, bifurcated user interface that only Bill Gates could love. OS/2 aspired to do something better. And in many ways, it did.</p>
+<h2>A better DOS than DOS, a better Windows than Windows</h2>
+<p>Despite the success of the original PC, IBM was never really a consumer company and never really understood marketing to individual people. The PS/2 launch, for example, was accompanied by an advertising push that featured the aging and somewhat befuddled cast of the 1970s TV series<em> M*A*S*H.</em></p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<figure class="ars-img-shortcode id-372059 align-center">
+    <div>
+                        <div class="ars-lightbox">
+            <div class="ars-lightbox-item">
+              <a class="cursor-zoom-in" href="./ibm-ps2-ad-mash.jpg">
+                <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-ad-mash.jpg 1000w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-ad-mash-300x218.jpg 300w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-ad-mash-640x466.jpg 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-ad-mash-768x559.jpg 768w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibm-ps2-ad-mash-980x713.jpg 980w, " alt="" class="attachment-full size-full c008" src="./ibm-ps2-ad-mash.jpg" decoding="async">
+              </a>
+              <div id="caption-372059" class="pswp-caption-content">
+                Wait, I thought we were doctors! Why are we opening all these boxes of computers again?
+                              </div>
+            </div>
+          </div>
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      Wait, I thought we were doctors! Why are we opening all these boxes of computers again?
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>This tone-deaf approach to marketing continued with OS/2. Exactly what was it, and how did it make your computer better? Was it enough to justify the extra cost of the OS and the RAM to run it well? Superior multitasking was one answer, but it was hard to understand the benefits by watching a <a rel="noopener" href="http://www.youtube.com/watch?v=ykEBlTzGjYg">long and boring shot of a man playing snooker</a>. The choice of advertising spending was also somewhat curious. For years, IBM paid to sponsor the Fiesta Bowl, and it spent most of OS/2’s yearly ad budget on that one venue. Were college football fans really the best audience for multitasking operating systems?</p>
+<p>Eventually IBM settled on a tagline for OS/2 2.0: “A better DOS than DOS, and a better Windows than Windows.” This was definitely true for the first claim and arguably true for the second. It was also a tagline that ultimately doomed the operating system.</p>
+<p>OS/2 had the best DOS virtual machine ever seen at the time. It was so good that you could easily run DOS games fullscreen while multitasking in the background, and many games (like <em>Wing Commander</em>) even worked in a 320x200 window. OS/2’s DOS box was so good that you could run an entire copy of Windows inside it, and thanks to IBM’s separation agreement with Microsoft, each copy of OS/2 came bundled with something IBM called “Win-OS2.” It was essentially a free copy of Windows that ran either full-screen or windowed. If you had enough RAM, you could run each Windows app in a completely separate virtual machine running its own copy of Windows, so a single app crash wouldn’t take down any of the others.</p>
+<p>This was a really cool feature, but it made it simple for GUI application developers to decide which operating system to support. OS/2 ran Windows apps really well out of the box, so they could just write a Windows app and both platforms would be able to run that app. On the other hand, writing a native OS/2 application was a lot of work for Windows developers. The underlying application programming interfaces (APIs) were very different between the two: Windows used a barebones set of APIs called Win16, while OS/2 had a more expansive set with the unwieldy name of Presentation Manager. The two differed in many ways, even in terms of whether you counted the number of pixels to position a window from the top or from the bottom of the screen.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>Some companies did end up making native OS/2 Presentation Manager applications, but they were few and far between. IBM was one, of course, and it was joined by Lotus, who was still angry at Microsoft for its alleged efforts against the company in the past. Really, though, what angered Lotus (and others, like Corel) about Microsoft was the sudden success of Windows and the skyrocketing sales of Microsoft applications that ran on it: Word, Excel, and PowerPoint. In the DOS days, Microsoft made the operating system for PCs, but it was an also-ran in the application side of things. As the world shifted to Windows, Microsoft was pushing application developers aside. Writing apps for OS/2 was one way to fight back.</p>
+<p>It was also an opening for startup companies who didn’t want to struggle against Microsoft for a share of the application pie. One of these companies was DeScribe, who made a very good word processor for OS/2 (that I once purchased with my own money on a student budget). For an aspiring writer, DeScribe offered a nice clean writing slate that supported long filenames. Word for Windows, like Windows itself, was still limited to eight characters.</p>
+<figure class="ars-img-shortcode id-372041 align-center">
+    <div>
+                        <img alt="" class="center full c008" src="./os2-describe.gif" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      DeScribe was a neat word processor that I really liked. Sadly, the company couldn't make enough money selling it to survive.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          os2museum.com
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>Unfortunately, the tiny companies like DeScribe ended up doing a much better job with their applications than the established giants like Lotus and Corel. The OS/2 versions of 1-2-3 and Draw were slow, memory-hogging, and buggy. This put an even bigger wet blanket over the native OS/2 applications market. Why buy a native app when the Windows version ran faster and better and could run seamlessly in Win-OS2?</p>
+<p>As things got more desperate on the native applications front, IBM even started paying developers to write OS/2 apps. (Borland was the biggest name in this effort.) This worked about as well as you might expect: Borland had no incentive to make its apps fast or bug-free, just to ship them as quickly as possible. They barely made&nbsp;a dent in the market.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>Still, although OS/2’s native app situation was looking dire, the operating system itself was selling quite well, reaching one million sales and hitting many software best-seller charts. Many users became religious fanatics about how the operating system could transform the way you used your computer. And compared to Windows 3.1, it was indeed a transformation. But there was another shadow lurking on the horizon.</p>
+<div class="page-anchor-wrapper"><a name="page-5" class="record-pageview"></a></div>
+<h2>Arrive in Chicago earlier than expected</h2>
+<p>When faced with a bear attack, most people would run away. Microsoft’s reaction to IBM’s challenge was to run away, build a fort, then build a bigger fort, then build a giant metal fortress armed with automatic weapons and laser cannons.</p>
+<p>In 1993, Microsoft released Windows for Workgroups 3.11, which bundled small business networking with a bunch of small fixes and improvements, including some 32-bit code. While it did not sell well immediately (a Microsoft manager once joked that the internal name for the product was "<a rel="noopener" href="http://www.pcmag.com/article2/0,2817,1162605,00.asp">Windows for Warehouses</a>"), it was a significant step forward for the product. Microsoft was also working on Windows 4.0, which was going to feature much more 32-bit code, a new user interface, and pre-emptive multitasking. It was codenamed Chicago.</p>
+<p>Finally, and most importantly for the future of the company, Bill Gates hired the architect of the industrial-strength minicomputer operating system VMS and put him in charge of the OS/2 3.0 NT group. Dave Cutler’s first directive was to throw away all the old OS/2 code and start from scratch. The company wanted to build a high-performance, fault-tolerant, platform-independent, and fully networkable operating system. It would be known as <a rel="noopener" href="http://www.amazon.com/Showstopper-G-Pascal-Zachary-ebook/dp/B003XRET4K">Windows NT</a>.</p>
+<p>IBM was aware of Microsoft’s plans and started preparing a new major release of OS/2 aimed squarely at them. Windows 4.0 was experiencing several public delays, so IBM decided to take a friendly bear swipe at its opponent. The third beta of OS/2 3.0 (thankfully, now delivered on a CD-ROM) was emblazoned with the words “Arrive in Chicago earlier than expected.”</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>OS/2 version 3.0 would also come with a new name, and unlike codenames in the past, IBM decided to put it right on the box. It was to be called OS/2 Warp. Warp stood for "warp speed," and this was meant to evoke power and velocity. Unfortunately, IBM’s famous lawyers were <a rel="noopener" href="https://web.archive.org/web/20171029031903/https://www.insearchofstupidity.com/ch6.htm">asleep on the job</a> and forgot to run this by Paramount, owners of the <em>Star Trek</em> license. It turns out that IBM would need permission to simulate even a generic “jump to warp speed” on advertising for a consumer product, and Paramount wouldn’t give it. IBM was in a quandary. The name was already public, and the company couldn’t use Warp in any sense related to spaceships. IBM had to settle for the more classic meaning of Warp—something bent or twisted. This, needless to say, isn’t exactly the impression you want to give for a new product. At the launch of OS/2 Warp in 1994, Patrick Stewart was supposed to be the master of ceremonies, but he backed down and IBM was forced to settle for <em>Voyager</em> captain Kate Mulgrew.</p>
+<p>OS/2 Warp came in two versions: one with a blue spine on the box that contained a copy of Win-OS2 and one with a red spine that required the user to use the copy of Windows that they probably already had to run Windows applications. The red-spined box was considerably cheaper and became the best-selling version of OS/2 yet.</p>
+<figure class="ars-img-shortcode id-372045 align-center">
+    <div>
+                        <div class="ars-lightbox">
+            <div class="ars-lightbox-item">
+              <a class="cursor-zoom-in" href="./os2-box-contentes.jpg">
+                <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-box-contentes.jpg 1024w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-box-contentes-300x225.jpg 300w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-box-contentes-640x480.jpg 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-box-contentes-768x576.jpg 768w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-box-contentes-980x735.jpg 980w, " alt="" class="attachment-full size-full c008" src="./os2-box-contentes.jpg" decoding="async">
+              </a>
+              <div id="caption-372045" class="pswp-caption-content">
+                These are the contents of my copy of OS/2 Warp, Red Spine Edition. Yes, those are floppy disks.
+                              </div>
+            </div>
+          </div>
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      These are the contents of my copy of OS/2 Warp, Red Spine Edition. Yes, those are floppy disks.
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>However, Chicago, now called Windows 95, was rapidly approaching, and it was going to be nothing but bad news for IBM. It would be easy to assume, but not entirely correct, that Windows won over OS/2 because of IBM’s poor marketing efforts. It would be somewhat more correct to assume that Windows won out because of Microsoft’s aggressive courting of the clone computer companies. But the brutal, painful truth, at least for an OS/2 zealot like me, was that Windows 95 was simply a <em>better</em> product.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>For several months, I dual-booted both OS/2 Warp and a late beta of Windows 95 on the same computer: a 486 with 16MB of RAM. After extensive testing, I was forced to conclude that Windows 95, <i>even in beta form</i>, was faster and smoother. It also had better native applications and (this was the real kicker) crashed less often.</p>
+<p>How could this be? OS/2 Warp was now a fully 32-bit operating system with memory protection and preemptive multitasking, whereas Windows 95 was still a horrible mutant hybrid of 16-bit Windows with 32-bit code. By all rights, OS/2 shouldn’t have crashed—<em>ever</em>. And yet it did. All the time.</p>
+<h2>Why OS/2 got SIQ</h2>
+<p>Unfortunately, OS/2 had a crucial flaw in its design: a Synchronous Input Queue (SIQ). What this meant was that all messages to the GUI window server went through a single tollbooth. If <i>any</i> OS/2 native GUI app ever stopped servicing its window messages, the entire GUI would get stuck and the system froze. OK, technically the operating system was still running. Background tasks continued to execute just fine. You just couldn’t see them or interact with them or do anything, because the entire GUI was hung. Some enterprising OS/2 fan wrote an application that polled the joystick port and was supposed to unstick things when the user pressed a button. It rarely worked.</p>
+<p>Ironically, if you never ran native OS/2 applications and just ran DOS and Windows apps in a VM, the operating system was much more stable.</p>
+<p>OS/2’s fortune wasn’t helped by reports that users of IBM’s own Aptiva series had trouble installing it on their computers. IBM’s PC division also needed licenses from Microsoft to bundle Windows 95 with its systems, and Microsoft got quite petulant with its former partner, even demanding at one point that IBM stop all development on OS/2. IBM’s PC division ended up signing a license the same day that Windows 95 was released.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>Microsoft really didn’t need to stoop to these levels. Windows 95 was a smash success, breaking all previous records for sales of operating systems. It changed the entire landscape of computing. Commodore and Atari were now out of the picture, and Apple was sent reeling by Windows 95’s success. IBM was in for the fight of its life, and its main weapon wasn’t up to snuff.</p>
+<h2>The future would be POWERed by IBM</h2>
+<p>IBM wouldn’t give up the fight just yet, however. Big Blue had plans for taking back its rightful place at the head of the computing industry, and it was going to ally with everyone who wasn’t Microsoft if it could help it.</p>
+<p>First up on its list of companies to crush: Intel. IBM, along with Sun, had been an early pioneer of a new type of microprocessor design called Reduced Instruction Set Computing (RISC). Basically, the idea was to cut out long and complicated instructions in favor of simpler tasks that could be done more quickly. IBM created a CPU called POWER (Performance Optimization With Enhanced RISC) and used it in its line of very expensive workstations.</p>
+<figure class="ars-img-shortcode id-372047 align-center">
+    <div>
+                        <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibmpower.jpg 550w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/ibmpower-300x232.jpg 300w, " alt="" class="center full c008" src="./ibmpower.jpg" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      All the POWER! ALL THE POWER!
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>IBM had already started a collaboration with Apple and Motorola to bring its groundbreaking POWER RISC processor technology to the desktop, and it used this influence to join Apple’s new operating system development project, which was then codenamed “Pink." The new OS venture was renamed Taligent, and the prospective kernel changed from an Apple-designed microkernel called Opus to a microkernel that IBM was developing for an even grander operating system that it named Workplace OS.</p>
+<p>Workplace OS was to be the Ultimate Operating System, the OS to end all OSes. It would run on the Mach 3.0 microkernel developed at Carnegie Mellon University, and on top of that, the OS would run various “personalities,” including DOS, Windows, Macintosh, OS/400, AIX, and of course OS/2. It would run on every processor architecture under the sun, but it would mostly showcase the power of POWER. It would be all-singing and all-dancing.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>And IBM never quite got around to finishing it.</p>
+<p>Meanwhile, Dave Cutler’s team at Microsoft already shipped the first version of Windows NT (version 3.1) in July of 1993. It had higher resource requirements than OS/2, but it also did a lot more: it supported multiple CPUs, and it was multiplatform, ridiculously stable and fault-tolerant, fully 32-bit with an advanced 64-bit file system, and compatible with Windows applications. (It even&nbsp;had networking built in.) Windows NT 3.5 was released a year later, and a major new release with the Windows 95 user interface was planned for 1996. While Windows NT struggled to find a market in the early days of its life, it did everything it was advertised to do and ended up merging with the consumer Windows 9x series by 2001 with the release of Windows XP.</p>
+<p>In the meantime, the PowerPC chip, which was based on IBM’s POWER designs (but was much cheaper), was released in partnership with Motorola and ended up saving Apple’s Macintosh division. However, plans to release consumer PowerPC machines to run other operating systems were perpetually delayed. One of the main problems was a lack of alternate operating systems. Taligent ran into development hell, was repositioned as a development environment, and was then canned completely. IBM hastily wrote <a rel="noopener" href="http://www.os2museum.com/wp/?page_id=30">an experimental port of OS/2 Warp for PowerPC</a>, but abandoned it before it was finished. Workplace OS never got out of early alpha stages. Ironically, Windows NT was the only non-Macintosh consumer operating system to ship with PowerPC support. But the advantages of running a PowerPC system with Windows NT over an Intel system running Windows NT were few. The PowerPC chip was slightly faster, but it required native applications to be recompiled for its instruction set. Windows application vendors saw no reason to recompile their apps for a new platform, and most of them didn’t.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<figure class="ars-img-shortcode id-372049 align-center">
+    <div>
+                        <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/windowsnt-31.jpg 372w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/windowsnt-31-300x272.jpg 300w, " alt="Windows NT 3.1 install disc" class="center full c008" src="./windowsnt-31.jpg" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      Unlike Workplace OS, the multi-platform version of Windows actually shipped. PowerPC support was added in NT 3.51 and then dropped in 4.0.
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<p>So to sum up: the new PowerPC was meant to take out Intel, but it didn’t do anything beyond saving the Macintosh. The new Workplace OS was meant to take out Windows NT, but IBM couldn’t finish it. And OS/2 was meant to take out Windows 95, but the exact opposite happened.</p>
+<p>In 1996, IBM released OS/2 Warp 4, which included a revamped Workplace Shell, bundled Java and development tools, and a long-awaited fix for the Synchronous Input Queue. It wasn’t nearly enough. Sales of OS/2 dwindled while sales of Windows 95 continued to rise. IBM commissioned an internal study to reevaluate the commercial potential of OS/2 versus Windows, and the results weren’t pretty. The order came down from the top of the company: the OS/2 development lab in Boca Raton would be eliminated, Workplace OS would be killed, and over 1,300 people would lose their jobs. The Bear, beaten and bloodied, had left the field.</p>
+<div class="page-anchor-wrapper"><a name="page-6" class="record-pageview"></a></div>
+<figure class="ars-img-shortcode id-372051 align-center">
+    <div>
+                        <div class="ars-lightbox">
+            <div class="ars-lightbox-item">
+              <a class="cursor-zoom-in" href="./os2-warp-4.png">
+                <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-warp-4.png 1064w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-warp-4-300x240.png 300w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-warp-4-640x512.png 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-warp-4-768x615.png 768w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-warp-4-980x785.png 980w, " alt="The final major IBM release of OS/2, Warp version 4.0, as seen running in an emulator." class="attachment-full size-full c008" src="./os2-warp-4.png" decoding="async">
+              </a>
+              <div id="caption-372051" class="pswp-caption-content">
+                The final release of OS/2, version 4.0. Even colored tabs and wavy logos weren't enough to save it. 
+                                  <div class="ars-gallery-caption-credit">
+                    Credit:
+                                          os2museum.com
+                                      </div>
+                              </div>
+            </div>
+          </div>
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      The final release of OS/2, version 4.0. Even colored tabs and wavy logos weren't enough to save it. 
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          os2museum.com
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<h2>The long twilight struggle</h2>
+<p>IBM would no longer develop new versions of OS/2, although it continued selling it until 2001. Who was buying it? Mostly banks, who were still wedded to IBM’s mainframes. The banks mostly used it in their automated teller machines, but Windows NT eventually took over this tiny market as well. After 2001, IBM stopped selling OS/2 directly and instead utilized Serenity Systems, one of its authorized business dealers, who rechristened the operating system as eComStation. You can still purchase eComStation today (some people do), but copies are very, very rare. Serenity Systems continues to release updates that add driver support for modern hardware, but the company is not actively developing the operating system itself. There simply isn’t enough demand to make such an enterprise profitable.</p>
+<p>In December 2004, IBM <a rel="noopener" href="http://arstechnica.com/uncategorized/2004/12/4444-2/">announced</a> that it was selling its entire PC division to the Chinese company Lenovo, marking the definitive end of a 23-year reign of selling personal computers. For nearly 10 of those 23 years, IBM tried in vain to replace the PC’s Microsoft-owned operating system with one of its own. Ultimately, it failed.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>Many OS/2 fans petitioned IBM&nbsp;for years&nbsp;to free up the operating system’s code base to an open source license, but IBM has steadily refused. The company is probably unable to, as OS/2 still contains large chunks of proprietary code belonging to other companies—most significantly, Microsoft.</p>
+<p>Most people who want to use OS/2 today are coming from a historical interest only, and their task is made more difficult by the fact that OS/2 has difficulty running under virtual machines such as VMWare. A Russian company was <a rel="noopener" href="http://www.itjungle.com/breaking/bn090705-story01.html">hired</a> by a major bank in Moscow in the late 1990s to find a solution for their legacy OS/2 applications. It ended up writing its own virtual machine solution that became Parallels, a popular application that today allows Macintosh users to run Windows apps on OSX. In an eerie way, running Parallels today reminds me a lot of running Win-OS2 on OS/2 in the mid-1990s. Apple, perhaps wisely, has never bundled Parallels with its Mac computers.</p>
+<figure class="ars-img-shortcode id-372055 align-center">
+    <div>
+                        <div class="ars-lightbox">
+            <div class="ars-lightbox-item">
+              <a class="cursor-zoom-in" href="./Atm_os2warp.jpg">
+                <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/Atm_os2warp.jpg 1024w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/Atm_os2warp-300x212.jpg 300w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/Atm_os2warp-640x453.jpg 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/Atm_os2warp-768x543.jpg 768w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/Atm_os2warp-980x693.jpg 980w, " alt="" class="attachment-full size-full c008" src="./Atm_os2warp.jpg" decoding="async">
+              </a>
+              <div id="caption-372055" class="pswp-caption-content">
+                The last place most people ever saw OS/2—an ATM in Australia.
+                                  <div class="ars-gallery-caption-credit">
+                    Credit:
+                                          Wikipedia
+                                      </div>
+                              </div>
+            </div>
+          </div>
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      The last place most people ever saw OS/2—an ATM in Australia.
+
+              <span class="caption-credit mt-2 text-xs">
+          Credit:
+
+          
+          Wikipedia
+
+                  </span>
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+<h2>Lessons learned</h2>
+<p>So why did IBM fail so badly with OS/2? Why was Microsoft able to deftly cut IBM out of the picture and then beat it to death with Windows? And more importantly, are there any lessons from this story that might apply to hardware and software companies today?</p>
+<p>IBM ignored the personal computer industry long enough that it was forced to rush out a PC design that was easy (and legal) to clone. Having done so, the company immediately wanted to put the genie back in the bottle and take the industry back from the copycats. When IBM announced the PS/2 and OS/2, many industry pundits seriously thought the company could do it.</p>
+<p>Unfortunately, IBM was being pulled in two directions. The company's legacy mainframe division didn’t want any PCs that were too powerful, lest they take away the market for big iron. The PC division just wanted to sell lots of personal computers and didn’t care what it had to do in order to meet that goal. This fighting went back and forth, resulting in agonizing situations such as IBM’s own low-end Aptivas being unable to run OS/2 properly and the PC division promoting Windows instead.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="my-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>IBM always thought that PCs would be best utilized as terminals that served the big mainframes it knew and loved. OS/2’s networking tools, available only in the Extended Edition, were mostly based on the assumption that PCs would connect to big iron servers that did the heavy lifting. This was a “top-down” approach to connecting computers together. In contrast, Microsoft approached networking from a “bottom-up” approach where the server was just another PC running Windows. As personal computing power grew and more robust versions of Windows like NT became available, this bottom-up approach became more and more viable. It's certainly much less expensive.</p>
+<p>IBM also made a crucial error in promoting OS/2 as a “better DOS than DOS and a better Windows than Windows.” Having such amazing compatibility with other popular operating systems out of the box meant that the market for native OS/2 apps never had a chance to develop. Many people bought OS/2. Very few people bought OS/2 applications.</p>
+<p>The book <em><a rel="noopener" href="http://www.amazon.com/The-Innovators-Dilemma-Revolutionary-Business/dp/0062060244">The Innovator’s Dilemma</a></em> makes a very good case that big companies with dominant positions in legacy markets are institutionally incapable of shifting over to a new disruptive technology, even though those companies frequently invent said technologies themselves. IBM invented more computer technologies and holds more patents than any other computer company in history. Still, when push came to shove, it gave up the personal computer in favor of hanging on to the mainframe. IBM still sells mainframes today and makes good money doing so, but the company is no longer a force in personal computers.</p>
+<p>Today, many people have observed that Microsoft is the new dominant force in legacy computing, with legacy redefined as a personal computer running Windows. The new disruptive force is smartphones and tablets, an area in which Apple and Google have become the new dominant forces. Microsoft, to its credit, responded as quickly as it was able to meet this new disruption. The company even re-designed its legacy user interface (the Windows desktop) to be more suited to tablets.</p>
+
+          
+                  </div>
+
+              </div>
+
+      
+      
+    </div>
+                    
+        
+          
+    
+    <div class="mt-2.5 mx-auto px-[15px] sm:px-5 lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-6 lg:px-8 xl:px-0">
+      <div class="relative lg:col-span-2">
+
+        
+        <div class="post-content post-content-double">
+          
+          
+<p>It could be argued that Microsoft was slow to act, just as IBM was. It could also be argued that Windows Phone and Surface tablets have failed to capture market share against iOS and Android in the same way that OS/2 failed to beat back Windows. However, there is one difference that separates Microsoft from most legacy companies: the company doesn’t give up. IBM threw in the towel on OS/2 and then on PCs in general. Microsoft is willing to spend as many billions as it takes in order to claw its way back to a position of power in the new mobile landscape. Microsoft still might not succeed, but for now at least, it's going to keep trying.</p>
+<p>The second lesson of OS/2—to not be too compatible out of the box with rival operating systems—is a lesson that today’s phone and tablet makers should take seriously. Blackberry once touted that you could easily run Android apps on its BB10 operating system, but that ended up not helping the company at all. Alternative phone operating system vendors should think very carefully before building in Android app compatibility, lest they suffer the same fate as OS/2.</p>
+<p>The story of OS/2 is now fading into the past. In today’s fast-paced computing environment, it may not seem particularly relevant. But it remains a story of how a giant, global mega-corporation tried to take on a young and feisty upstart and ended up retreating in utter defeat. Such stories are rare, and because of that rarity they become more precious. It’s important to remember that IBM was not the underdog. It had the resources, the technology, and the talent to crush the much smaller Microsoft. What it didn’t have was the will.</p>
+<figure class="ars-img-shortcode id-372271 align-center">
+    <div>
+                        <img srcset="https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-timeline.png 640w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-timeline-300x169.png 300w, https://cdn.arstechnica.net/wp-content/uploads/2013/11/os2-timeline-384x216.png 384w, " alt="" class="center full c008" src="./os2-timeline.png" decoding="async">
+                  </div>
+                  <figcaption class="c007">
+          <div class="caption font-impact dusk:text-gray-300 mb-4 mt-2 inline-flex flex-row items-stretch gap-1 text-base leading-tight text-gray-400 dark:text-gray-300">
+    
+    <div class="caption-content">
+      Timeline for Microsoft and IBM in the PC era.
+
+          </div>
+  </div>
+        </figcaption>
+            </figure>
+
+
+
+          
+                  </div>
+
+                  
+          <div class="-mx-2.5 sm:mx-0">
+  </div>
+
+
+  <div class="listing-credit my-2">
+      </div>
+
+
+
+
+  
+
+              </div>
+
+      
+      
+    </div>
+  </article></div></div>                    <div id="__reading__mode__content_end_mark_container_id">                    <span id="content_end_mark_icon_id" style="display: block;"></span>                    </div>                    <div id="pages_pending_container_id" class="pages_pending_container_class">                        <progress class="progress_pages_pending c0010">                    </progress></div>                    <div class="__reading__mode__copyright c0010" id="copyright"></div>                </div>             </div>            <div id="__reading__mode__sendfeedback" dir="ltr"></div>            </div>
+        </body></html>

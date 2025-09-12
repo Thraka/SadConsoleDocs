@@ -1,0 +1,71 @@
+items:
+- name: Introduction
+  href: index.md
+- name: Getting started
+  expanded: true
+  items:
+  - name: Create a project via command line
+    href: getting-started-cli.md
+  - name: Create a project in Visual Studio
+    href: getting-started-visualstudio.md
+- name: Tutorials
+  expanded: true
+  items:
+  - name: Getting started
+    expanded: false
+    items:
+    - name: 1) First console
+      href: tutorials/getting-started/part-1-drawing.md
+    - name: 2) Cursor and parenting
+      href: tutorials/getting-started/part-2-cursor-parents.md
+    - name: 3) Keyboard input
+      href: tutorials/getting-started/part-3-input.md
+    - name: 4) A proper map
+      href: tutorials/getting-started/part-4-mapobject.md
+    - name: 5) More game objects
+      href: tutorials/getting-started/part-5-more-objects.md
+- name: How to...
+  expanded: true
+  items:
+  - name: Resize a console when the window is resized
+    href: how-to-resize-a-console-with-the-window.md
+  - name: Connect boxes and lines together
+    href: how-to-connect-lines.md
+  - name: Apply a shader
+    href: how-to-apply-shader.md
+  - name: Enable ImGui
+    href: how-to-use-imgui.md
+- name: Systems
+  expanded: true
+  items:
+  - name: Startup Configuration
+    href: systems/config.md
+  - name: Use the Debugger
+    href: how-to-use-debugger.md
+  - name: Fonts
+    href: systems/fonts.md
+  - name: Controls
+    expanded: false
+    items:
+    - name: Overview
+      href: systems/controls.md
+    - name: List of controls
+      href: systems/controls.md#reference-built-in-controls
+    - name: How to create and show controls
+      href: systems/controls.md#create-and-show-controls
+    - name: How to change a control's colors
+      href: how-to-change-control-colors.md
+  - name: Host
+    expanded: false
+    items:
+    - name: What is the host
+      href: systems/host.md
+    - name: Host 'Screen' object
+      href: systems/host-screen.md
+- name: String parser
+  expanded: true
+  items:
+  - name: Overview
+    href: stringparser/index.md
+  - name: Built-in command syntax
+    href: stringparser/syntax.md
