@@ -28,12 +28,24 @@ if (!Directory.Exists(srcRoot))
 Directory.CreateDirectory(dstRoot);
 
 var mdFiles = Directory.GetFiles(srcRoot, "*.md", SearchOption.AllDirectories);
-var unresolved = new List<object>();
+var unresolved = new List<Dictionary<string,string>>();
 
 foreach (var md in mdFiles)
 {
     var rel = Path.GetRelativePath(srcRoot, md).Replace('\\', '/');
-    var dstPath = Path.Combine(dstRoot, rel).Replace(".md", ".mdx");
+    Console.WriteLine($"Processing: {rel} ({md})");
+
+    // Special-case: root index.md -> site index page in starlight
+    bool isRootIndex = string.Equals(rel, "index.md", StringComparison.OrdinalIgnoreCase);
+    string dstPath;
+    if (isRootIndex)
+    {
+        dstPath = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "starlight", "src", "pages", "index.mdx"));
+    }
+    else
+    {
+        dstPath = Path.Combine(dstRoot, rel).Replace(".md", ".mdx");
+    }
     Directory.CreateDirectory(Path.GetDirectoryName(dstPath)!);
 
     var content = await File.ReadAllTextAsync(md);
@@ -54,12 +66,32 @@ foreach (var md in mdFiles)
     string? title = ExtractTitleFromFrontmatter(front) ?? ExtractFirstH1(body) ?? Path.GetFileNameWithoutExtension(md);
     string? description = ExtractDescriptionFromFrontmatter(front) ?? ExtractFirstParagraph(body) ?? string.Empty;
 
-    string EscapeYaml(string? s) => s?.Replace("\\", "\\\\").Replace("\"", "\\\"") ?? string.Empty;
+    string EscapeYaml(string? s) => s == null ? string.Empty : s.Replace("\r\n", " ").Replace("\n", " ").Replace("\\", "\\\\").Replace("\"", "\\\"").Trim();
 
     var sb = new StringBuilder();
     sb.AppendLine($"title: \"{EscapeYaml(title)}\"");
     if (!string.IsNullOrEmpty(description)) sb.AppendLine($"description: \"{EscapeYaml(description)}\"");
-    sb.AppendLine("template: doc");
+
+    if (isRootIndex)
+    {
+        // Lightweight index enhancements: hero blurb and featured top-level docs
+        var hero = ExtractFirstParagraph(body) ?? string.Empty;
+        sb.AppendLine($"hero: \"{EscapeYaml(hero)}\"");
+
+        var topFiles = Directory.GetFiles(srcRoot, "*.md", SearchOption.TopDirectoryOnly)
+            .Select(f => Path.GetFileNameWithoutExtension(f))
+            .Where(n => !n.Equals("index", StringComparison.OrdinalIgnoreCase))
+            .Select(n => n.ToLowerInvariant().Replace(' ', '-'))
+            .ToArray();
+        if (topFiles.Length > 0)
+            sb.AppendLine($"featured: [{string.Join(", ", topFiles.Select(s => $"\"{s}\""))}]");
+
+        // add explicit layout for site index pages
+        sb.AppendLine("layout: ../layouts/Index.astro");
+    }
+
+    // if this is the site index, mark template as 'index' so it can be treated differently by Starlight
+    sb.AppendLine(isRootIndex ? "template: index" : "template: doc");
     var frontYaml = sb.ToString();
 
     var updatedBody = Regex.Replace(body, @"\(([^)]+?)\.md(#.*?)?\)", m =>
@@ -69,19 +101,48 @@ foreach (var md in mdFiles)
         return $"({pathPart}.mdx{anchorPart})";
     }, RegexOptions.IgnoreCase);
 
-    foreach (Match m in Regex.Matches(updatedBody, @"xref:([^\s\]\)]+)", RegexOptions.IgnoreCase))
+    try
     {
-        unresolved.Add(new { source = rel, xref = m.Groups[1].Value });
-    }
+        foreach (Match m in Regex.Matches(updatedBody, @"xref:([^\s\]\)]+)", RegexOptions.IgnoreCase))
+        {
+            unresolved.Add(new Dictionary<string,string> { ["source"] = rel, ["xref"] = m.Groups[1].Value });
+        }
 
-    var newContent = "---\n" + frontYaml + "---\n\n" + updatedBody;
-    await File.WriteAllTextAsync(dstPath, newContent);
-    Console.WriteLine($"Converted: {rel} -> {Path.GetRelativePath(dstRoot, dstPath)}");
+        var newContent = "---\n" + frontYaml + "---\n\n" + updatedBody;
+        await File.WriteAllTextAsync(dstPath, newContent);
+        string shortDst;
+        try { shortDst = Path.GetRelativePath(dstRoot, dstPath); } catch { shortDst = dstPath; }
+        Console.WriteLine($"Converted: {rel} -> {shortDst}");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error converting {rel}: {ex.GetType().Name}: {ex.Message}");
+        // continue with next file
+    }
 }
 
 var unresolvedOut = Path.Combine(Directory.GetCurrentDirectory(), "unresolved-xrefs.json");
-await File.WriteAllTextAsync(unresolvedOut, System.Text.Json.JsonSerializer.Serialize(unresolved, new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
-Console.WriteLine($"Unresolved xrefs written to {unresolvedOut}");
+try
+{
+    await File.WriteAllTextAsync(unresolvedOut, System.Text.Json.JsonSerializer.Serialize(unresolved, new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
+    Console.WriteLine($"Unresolved xrefs written to {unresolvedOut}");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error serializing unresolved xrefs: {ex.GetType().Name}: {ex.Message}");
+    // fallback: write a simple raw text file listing the entries
+    try
+    {
+        var rawOut = Path.Combine(Directory.GetCurrentDirectory(), "unresolved-xrefs-raw.txt");
+        var lines = unresolved.Select(d => $"{d.GetValueOrDefault("source")} -> {d.GetValueOrDefault("xref")}\n");
+        await File.WriteAllTextAsync(rawOut, string.Join(string.Empty, lines));
+        Console.WriteLine($"Wrote fallback unresolved xrefs to {rawOut}");
+    }
+    catch (Exception ex2)
+    {
+        Console.WriteLine($"Failed to write fallback unresolved xrefs: {ex2.GetType().Name}: {ex2.Message}");
+    }
+}
 
 string? ExtractTitleFromFrontmatter(string front)
 {
