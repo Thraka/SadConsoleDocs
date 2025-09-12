@@ -45,28 +45,13 @@ All tools live in `tooling/` and are single-file C# scripts. From the repo root:
 
 - Converted `.mdx` files under `starlight/src/content/docs/`.
 
-## Notes on YAML parsing
+## Decisions made
 
-- Initially there was an idea to use `YamlDotNet` to parse YAML robustly. I removed the dependency to keep the scripts self-contained and avoid project file complications for single-file tools.
+- Convert conceptual content (articles, guides, tutorials) to MDX and integrate into Starlight (`starlight/src/content/docs`).
 
-- If you want robust YAML parsing for toc or API extraction, reintroduce YamlDotNet by adding a script package header:
+- Postpone full API YAML → MDX conversion for now. Instead, produce supporting artifacts (`tooling/uid-slug.json` and `tooling/unresolved-xrefs.json`) so a plugin or converter can be applied later without rework.
 
-  `#:package YamlDotNet@12.0.2`
-
-  Place that as the first line of the script file, then add the appropriate `using` directives and parsing logic.
-
-## Plan for the next chat (quick checklist)
-
-- Decide API strategy:
-
-  - Option A (recommended): full DocFX API YAML → MDX conversion (integrated, searchable).
-
-  - Option B: build DocFX HTML and serve under `/api` (fast, less integrated).
-
-- If Option A, choose whether I should:
-
-  1. Write the C# converter that converts each API YAML → MDX (using `tooling/uid-slug.json` to produce slugs and to rewrite `xref:` links), or
-  2. Add a plugin that the Starlight community provides (you may find one).
+- Use single-file .NET tools (in `tooling/`) to perform conversions and asset copying.
 
 ## Suggested next tasks
 
@@ -76,13 +61,7 @@ All tools live in `tooling/` and are single-file C# scripts. From the repo root:
 
 3. Copy static assets: `dotnet run tooling/copyassets.cs`.
 
-4. Pick an API approach and either point me at a plugin or ask me to implement YAML→MDX conversion. If you want me to implement conversion, I will:
-
-   - Use `tooling/uid-slug.json` as the source for mapping UIDs → slugs.
-
-   - Convert API YAML to MDX pages under `starlight/src/content/docs/reference/`.
-
-   - Re-run link normalization to replace `xref:UID` with the final slugs.
+4. API conversion is postponed for now. I will produce `tooling/uid-slug.json` and `tooling/unresolved-xrefs.json` to make later plugin-based conversion straightforward. When you are ready to convert the API reference, tell me and I will proceed with a converter or integrate the plugin you prefer.
 
 ## CI / Deployment notes
 
@@ -90,24 +69,9 @@ All tools live in `tooling/` and are single-file C# scripts. From the repo root:
 
 - For CI: run conversion tools first (if needed), then build the Starlight site and deploy output to your static host.
 
-## Rollback and branching
-
-- Use Git to manage changes:
-
-  - `git log` to find commit id
-  - `git checkout -- <file>` to restore individual files
-  - `git revert <commit>` or `git reset` to rollback changes if needed
-
 ## Questions to answer later
 
 - Do you want automatic MDX component enrichment (admonitions, callouts, API member tables), or keep first pass minimal content for manual enhancement?
 
 - Do you want me to add direct support for monikers/versioned builds in the tooling now, or wait until we finalize the API approach?
-
-## If you want me to proceed now
-
-Choose one:
-
-- Convert all conceptual content (md → mdx) and open a PR with the results.
-- Implement the full API YAML → MDX converter (I can scaffold and run on a subset first).
 
