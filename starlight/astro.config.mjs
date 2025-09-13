@@ -14,6 +14,7 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'How to use ImGui', slug: 'guides/how-to-use-imgui' },
 					],
 				},
 				{
@@ -23,4 +24,9 @@ export default defineConfig({
 			],
 		}),
 	],
+	markdown: {
+		shikiConfig: {
+			theme: 'nord',
+		},
+	},
 });
