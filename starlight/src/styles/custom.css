@@ -1,0 +1,23 @@
+:root {
+  --sl-font: 'Hack';
+  
+  --color-black: #000;
+  --color-black-bright: #555;
+  --color-blue: #0000b4;
+  --color-blue-bright: #55f;
+  --color-green: #0a0;
+  --color-green-bright: #0f0;
+  --color-cyan: #0AA;
+  --color-cyan-bright: #5ff;
+  --color-red: #700;
+  --color-red-bright: #f55;
+  --color-magenta: #a0a;
+  --color-magenta-bright: #f5f;
+  --color-yellow: #a50;
+  --color-yellow-bright: #ff5;
+  --color-white: #aaa;
+  --color-white-bright: #fff;
+  /*--color-hljs-background: #002451;*/
+
+  
+}

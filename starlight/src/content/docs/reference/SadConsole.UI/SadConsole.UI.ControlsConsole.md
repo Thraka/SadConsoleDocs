@@ -1,0 +1,151 @@
+---
+title: ControlsConsole Class
+slug: reference/sadconsole.ui.controlsconsole
+sidebar:
+  label: ControlsConsole
+---
+## Definition
+
+A basic console that can contain controls.
+
+```csharp title="C#"
+[DataContract]
+public class ControlsConsole : Console, IDisposable, IScreenSurfaceEditable, IScreenSurface, IScreenObject, IPositionable, IComponentHost, ISurface, ISurfaceSettable, ICellSurfaceResize
+```
+
+Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/) → [ScreenObject](../sadconsole.screenobject/) → [ScreenSurface](../sadconsole.screensurface/) → [Console](../sadconsole.console/)
+
+Implements [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable/), [IScreenSurfaceEditable](../sadconsole.iscreensurfaceeditable/), [IScreenSurface](../sadconsole.iscreensurface/), [IScreenObject](../sadconsole.iscreenobject/), SadRogue.Primitives.IPositionable, [IComponentHost](../sadconsole.components.icomponenthost/), [ISurface](../sadconsole.isurface/), [ISurfaceSettable](../sadconsole.isurfacesettable/), [ICellSurfaceResize](../sadconsole.icellsurfaceresize/)
+
+## Constructors
+
+### ControlsConsole(int, int)
+
+Creates a new console.
+
+```csharp title="C#"
+public ControlsConsole(int width, int height)
+```
+
+#### Parameters
+
+`width` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The width in cells of the surface.
+
+`height` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The height in cells of the surface.
+
+
+### ControlsConsole(int, int, ColoredGlyphBase[])
+
+Creates a new screen object that can render a surface. Uses the specified cells to generate the surface.
+
+```csharp title="C#"
+public ControlsConsole(int width, int height, ColoredGlyphBase[] initialCells)
+```
+
+#### Parameters
+
+`width` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The width in cells of the surface.
+
+`height` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The height in cells of the surface.
+
+`initialCells` [ColoredGlyphBase[]](../sadconsole.coloredglyphbase/)  
+The initial cells to seed the surface.
+
+
+### ControlsConsole(int, int, int, int)
+
+Creates a new console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+
+```csharp title="C#"
+public ControlsConsole(int width, int height, int bufferWidth, int bufferHeight)
+```
+
+#### Parameters
+
+`width` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The visible width of the console in cells.
+
+`height` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The visible height of the console in cells.
+
+`bufferWidth` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The total width of the console in cells.
+
+`bufferHeight` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The total height of the console in cells.
+
+
+### ControlsConsole(int, int, int, int, ColoredGlyphBase[]?)
+
+Creates a console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+
+```csharp title="C#"
+public ControlsConsole(int width, int height, int bufferWidth, int bufferHeight, ColoredGlyphBase[]? initialCells)
+```
+
+#### Parameters
+
+`width` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The width of the console in cells.
+
+`height` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The height of the console in cells.
+
+`bufferWidth` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The total width of the console in cells.
+
+`bufferHeight` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
+The total height of the console in cells.
+
+`initialCells` [ColoredGlyphBase[]](../sadconsole.coloredglyphbase/)  
+The cells to seed the console with. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, creates the cells for you.
+
+
+### ControlsConsole(ICellSurface, IFont?, Point?)
+
+Creates a new console using the existing surface.
+
+```csharp title="C#"
+public ControlsConsole(ICellSurface surface, IFont? font = null, Point? fontSize = null)
+```
+
+#### Parameters
+
+`surface` [ICellSurface](../sadconsole.icellsurface/)  
+The surface.
+
+`font` [IFont](../sadconsole.ifont/)  
+The font to use with the surface.
+
+`fontSize` System.NullableSadRogue.Primitives.Point  
+The font size.
+
+
+## Properties
+
+### Controls
+
+The controls host holding all the controls.
+
+```csharp title="C#"
+public ControlHost Controls { get; }
+```
+
+## Methods
+
+### ToString()
+
+Returns the value "Console (Controls)".
+
+```csharp title="C#"
+public override string ToString()
+```
+
+#### Returns
+
+[string](https://learn.microsoft.com/dotnet/api/system.string/)  
+The string "Console (Controls)".

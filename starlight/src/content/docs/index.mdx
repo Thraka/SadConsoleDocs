@@ -1,26 +1,28 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Welcome to SadConsole
+description: SadConsole is a terminal, ascii, console, game engine.
 template: splash
 hero:
   tagline: Congrats on setting up a new Starlight project!
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get started
+      link: /getting-started/cli
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+With SadConsole you can make ascii-styled games for modern platforms. At its heart, SadConsole is really a giant tile-based game engine. However, its object model is conceptually similar to a traditional **console** app.
+
+SadConsole is offered as a [NuGet package](https://www.nuget.org/packages/SadConsole/) and supports MonoGame, SFML, and FNA as rendering engines.
+
+To get started with SadConsole, see [Create a new SadConsole .NET project with the SadConsole templates](getting-started-cli.md).
+
 ## Next steps
 
-<CardGrid stagger>
+<CardGrid>
 	<Card title="Update content" icon="pencil">
 		Edit `src/content/docs/index.mdx` to see this page change.
 	</Card>
