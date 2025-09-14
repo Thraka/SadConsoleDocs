@@ -42,6 +42,7 @@ export default defineConfig({
 							// Each item here is one entry in the navigation menu.
 							{ label: 'How to use ImGui', slug: 'guides/how-to-use-imgui' },
 							{ label: 'How to use the debugger', slug: 'guides/how-to-use-debugger' },
+							{ label: 'Terminal demo', slug: 'guides/terminal-demo' },
 						],
 					},
 					{
