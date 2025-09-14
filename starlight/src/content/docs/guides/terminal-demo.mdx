@@ -1,0 +1,60 @@
+---
+title: Terminal Demo
+---
+
+# Terminal Demo
+
+This page demonstrates the MSDOS/CRT theme and provides toggles to enable/disable CRT effects and control intensity. It also shows example terminal output, code blocks, tables and callouts.
+
+{/* Demo controls: plain HTML so MDX parsing doesn't require React */}
+<div class="demo-controls" style="margin-bottom: 1rem; display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+  <label style="display:inline-flex; gap:0.5rem; align-items:center;">
+    <input id="crt-toggle" type="checkbox" />
+    <span>Enable CRT</span>
+  </label>
+
+  <label style="display:inline-flex; gap:0.5rem; align-items:center;">
+    <span>Intensity</span>
+    <input id="crt-range" type="range" min="0" max="1" step="0.01" value="0.9" />
+  </label>
+
+  <button id="crt-reset" style="margin-left:auto;">Reset</button>
+</div>
+
+<script src="/scripts/terminal-demo.js" defer></script>
+
+## Simulated Terminal Output
+
+<pre>
+<span class="line-number">1</span> C:\> dir
+<span class="line-number">2</span> Volume in drive C has no label.
+<span class="line-number">3</span> Volume Serial Number is 1A2B-3C4D
+<span class="line-number">4</span> 
+<span class="line-number">5</span> Directory of C:\\Projects
+<span class="line-number">6</span> 
+<span class="line-number">7</span> 01/02/2025  03:14 PM    <span class="result-ok">&lt;DIR&gt;</span>          src
+<span class="line-number">8</span> 01/02/2025  03:15 PM               2048 README.md
+<span class="line-number">9</span> 01/02/2025  03:17 PM             102400 program.exe
+</pre>
+
+## Code Block
+
+```csharp
+public static void Main(string[] args)
+{
+    Console.WriteLine("Hello, world!");
+}
+```
+
+## Table Example
+
+| Name | Type | Notes |
+|------|------|-------|
+| lib  | Static | default build |
+| app  | Executable | entry-point |
+
+## Callouts
+
+<div class="callout info">Info: This is a sample callout styled like terminal output.</div>
+<div class="callout warn">Warning: Watch your console output for errors.</div>
+<div class="callout err">Error: Simulation failure.</div>
