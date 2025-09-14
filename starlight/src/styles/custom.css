@@ -20,4 +20,337 @@
   /*--color-hljs-background: #002451;*/
 
   
+  /* Starlight theme overrides — MSDOS/CRT foundation */
+  --sl-color-bg: var(--color-black);
+  --sl-color-text: var(--color-white);
+  --sl-color-text-accent: var(--color-white-bright);
+
+  /* Primary accent: bright green (typical terminal) */
+  --sl-color-accent: var(--color-green-bright);
+  --sl-color-accent-high: var(--color-green);
+  --sl-color-accent-low: rgba(0, 128, 0, 0.06);
+
+  /* Navigation / sidebar backgrounds — keep pure black for authenticity */
+  --sl-color-bg-nav: var(--color-black);
+  --sl-color-bg-sidebar: var(--color-black);
+  --sl-color-bg-inline-code: #050505; /* slightly lighter than pure black for inline code */
+  --sl-color-bg-accent: rgba(0,255,0,0.02);
+
+  /* Hairlines and separators use a dim gray from the palette */
+  --sl-color-hairline: var(--color-black-bright);
+  --sl-color-hairline-light: #111;
+  --sl-color-hairline-shade: #000;
+
+  /* Override font stacks so Hack is used everywhere (fall back to system monospace) */
+  --sl-font: 'Hack', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --sl-font-mono: 'Hack', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* Make accent text stand out as a bright CRT color */
+  --sl-color-text-accent: var(--color-green-bright);
+
+  /* Typography & layout tweaks for MSDOS feel */
+  --sl-text-base: 0.9rem;
+  --sl-line-height: 1.35;
+
+  /* Shrink the sidebar and nav to feel denser */
+  --sl-sidebar-width: 14rem; /* narrower sidebar */
+  --sl-nav-height: 2.75rem;
+  --sl-menu-button-size: 1.75rem;
+
+  /* Make headings slightly smaller and more compact */
+  --sl-text-h1: 1.6rem;
+  --sl-text-h2: 1.25rem;
+  --sl-text-h3: 1.05rem;
+}
+
+/* CRT / Terminal visual effects */
+:root {
+  --crt-scanline-opacity: 0.04;
+  --crt-glow-color: rgba(0,255,0,0.09);
+  --crt-vignette: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,0.18) 100%);
+}
+
+/* global overlay for subtle vignette */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: var(--crt-vignette);
+  mix-blend-mode: multiply;
+  z-index: 9998;
+}
+
+/* scanlines using repeating-linear-gradient */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    rgba(255,255,255,var(--crt-scanline-opacity)) 0px,
+    rgba(255,255,255,var(--crt-scanline-opacity)) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  z-index: 9997;
+}
+
+/* subtle glow for headings and important text */
+h1, h2, .site-title, .badge, .callout {
+  text-shadow: 0 0 6px var(--crt-glow-color);
+}
+
+/* Blinking cursor helper for code blocks or simulated prompts */
+.cursor {
+  display: inline-block;
+  width: 0.6ch;
+  background: var(--sl-color-accent);
+  margin-left: 0.2ch;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 40% { opacity: 1 }
+  50%, 100% { opacity: 0 }
+}
+
+/* Basic page styling */
+html, body {
+  height: 100%;
+  background-color: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  font-family: var(--__sl-font);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings in monospace and slightly condensed to feel terminal-like */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--__sl-font-mono);
+  color: var(--sl-color-text-accent);
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
+}
+
+/* Links use the terminal accent, with a subtle underline */
+a {
+  color: var(--sl-color-accent);
+  text-decoration: underline dotted var(--sl-color-accent-high);
+}
+a:hover, a:focus {
+  color: var(--sl-color-accent-high);
+  text-decoration: underline solid var(--sl-color-accent-high);
+}
+
+/* Inline code and code blocks */
+code, pre, .sl-code, .language-text {
+  font-family: var(--__sl-font-mono) !important;
+  background: transparent;
+  color: var(--sl-color-text);
+}
+
+pre {
+  position: relative;
+  background: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.92));
+  border-left: 4px solid rgba(0,255,0,0.06);
+  box-shadow: inset 0 0 8px rgba(0,255,0,0.02);
+  padding: 0.75rem 1rem;
+  border-radius: 3px;
+  overflow: auto;
+  color: var(--sl-color-text);
+}
+
+/* Enhanced code block and callout styling */
+pre code, pre[class*="language-"], code[class*="language-"] {
+  font-family: var(--__sl-font-mono) !important;
+  font-size: 0.92rem;
+  color: var(--sl-color-text);
+}
+
+/* Syntax highlight-ish tokens mapped to EGA palette for fun */
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: rgba(255,255,255,0.28); }
+.token.punctuation { color: var(--color-white); }
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol { color: var(--color-cyan-bright); }
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted { color: var(--color-green-bright); }
+.token.attr-value, .token.function { color: var(--color-yellow-bright); }
+.token.keyword, .token.deleted { color: var(--color-red-bright); }
+.token.regex, .token.variable { color: var(--color-magenta-bright); }
+
+/* Callouts (notes, warns) present as terminal boxes */
+.callout {
+  background: rgba(255,255,255,0.02);
+  border-left: 4px solid var(--sl-color-accent);
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.callout.warn { border-left-color: var(--color-yellow-bright); }
+.callout.err { border-left-color: var(--color-red-bright); }
+.callout.info { border-left-color: var(--color-blue-bright); }
+
+/* Tables: allow a fixed-width console table look with faint separators */
+.table-terminal {
+  border: 1px solid rgba(255,255,255,0.03);
+  background: transparent;
+}
+
+.table-terminal th { background: rgba(255,255,255,0.02); color: var(--sl-color-text-accent); }
+
+/* Accessibility: custom scrollbar for modern browsers to fit terminal look */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
+*::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border: 2px solid transparent; border-radius: 6px; }
+*::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.12); }
+
+/* High contrast mode: ensure focus visibility */
+@media (forced-colors: active) {
+  :root { --sl-color-accent: WindowText; --sl-color-text: WindowText; --sl-color-bg: Window; }
+}
+
+/* Add an optional line-number column look */
+pre[data-ln] {
+  padding-left: 2.5rem;
+}
+
+pre .line-number {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.6rem;
+  color: rgba(255,255,255,0.18);
+  font-size: 0.85rem;
+  text-align: right;
+  font-family: var(--__sl-font-mono);
+}
+
+/* Make blockquote look like console output */
+blockquote {
+  border-left: 4px solid var(--sl-color-accent);
+  padding-left: 1rem;
+  color: var(--sl-color-white);
+  background: rgba(0,0,0,0.02);
+}
+
+/* Small UI accents */
+hr {
+  border: none;
+  border-top: 1px solid var(--sl-color-hairline);
+  margin: 1.25rem 0;
+}
+
+/* Accessibility: selection color should be inverse-like but subtle */
+::selection {
+  background: rgba(0,255,0,0.12);
+  color: var(--color-black);
+}
+
+/* Focus outlines use the bright green accent */
+:focus {
+  outline: 2px dashed var(--sl-color-accent);
+  outline-offset: 4px;
+}
+
+/* Navigation bar */
+header[role="banner"], nav[role="navigation"] {
+  background: var(--sl-color-bg-nav);
+  height: var(--sl-nav-height);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+/* Brand / site title in bright terminal green */
+header .site-title, .site-title {
+  font-family: var(--__sl-font-mono);
+  color: var(--sl-color-accent);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+/* Sidebar styles */
+aside, .sidebar, .sl-sidebar {
+  background: var(--sl-color-bg-sidebar);
+  border-right: 1px solid var(--sl-color-hairline);
+  width: var(--sl-sidebar-width);
+  min-width: 10rem;
+}
+
+/* Sidebar nav links as terminal list */
+.sidebar a, .sl-sidebar a, aside a {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  color: var(--sl-color-text);
+  font-family: var(--__sl-font-mono);
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+.sidebar a:hover, .sidebar a:focus, .sl-sidebar a:hover {
+  background: rgba(255,255,255,0.02);
+  color: var(--sl-color-accent);
+  border-left-color: var(--sl-color-accent);
+}
+
+/* Active link accent */
+.sidebar .active > a, .sl-sidebar .active > a {
+  background: rgba(0,255,0,0.03);
+  color: var(--sl-color-accent-high);
+  border-left-color: var(--sl-color-accent-high);
+}
+
+/* Main content container — narrower and denser */
+main, .content, .sl-content {
+  max-width: var(--sl-content-width);
+  padding: 1rem 1.25rem;
+  line-height: var(--sl-line-height);
+  color: var(--sl-color-text);
+}
+
+/* Make tables feel like fixed-width console tables */
+table, thead, tbody, tr, th, td {
+  font-family: var(--__sl-font-mono) !important;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  border: 1px solid var(--sl-color-hairline);
+  margin-bottom: 1rem;
+}
+
+th, td {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid rgba(255,255,255,0.03);
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Make small UI elements such as pills and badges fit the aesthetic */
+.badge, .chip, .tag {
+  background: rgba(0,0,0,0.14);
+  color: var(--sl-color-text-accent);
+  border: 1px solid rgba(255,255,255,0.03);
+  font-family: var(--__sl-font-mono);
+  padding: 0.12rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.78rem;
+}
+
+/* Utility: monospace everything that looks like code or console text */
+.kbd, .terminal, .cmd, .console-output, pre.code, pre[class*="language-"] {
+  font-family: var(--__sl-font-mono) !important;
+}
+
+/* Responsive adjustments for small screens — keep the theme readable */
+@media (max-width: 640px) {
+  :root { --sl-sidebar-width: 12rem; --sl-text-base: 0.88rem }
+  body::after { opacity: 0.35 }
+  header[role="banner"] { padding: 0 0.5rem }
 }
