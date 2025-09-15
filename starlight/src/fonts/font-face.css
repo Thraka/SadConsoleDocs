@@ -35,6 +35,15 @@
 }
 
 @font-face {
+  font-family: 'DOS2';
+  src: url('./Web437_IBM_EGA_8x14.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
   font-family: 'Nerd';
   src: url('./DejaVuSansMonoNerdFont.ttf') format('truetype');
   font-weight: normal;
