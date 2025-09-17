@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # The old doc site
 docfx/
+
+# Local Netlify folder
+.netlify

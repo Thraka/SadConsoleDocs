@@ -38,13 +38,22 @@ export default defineConfig({
               starlightSidebarTopics([
                   {
                       label: 'Getting Started',
-                      link: '/guides/',
+                      link: 'getting-started/cli',
+                      icon: 'open-book',
+                      items: [
+                          // Each item here is one entry in the navigation menu.
+                          { label: 'Getting Started', slug: 'getting-started/cli' },
+                          { label: 'Terminal demo', slug: 'guides/terminal-demo' },
+                      ],
+                  },
+                  {
+                      label: 'Advanced',
+                      link: '/guides/how-to-use-imgui',
                       icon: 'open-book',
                       items: [
                           // Each item here is one entry in the navigation menu.
                           { label: 'How to use ImGui', slug: 'guides/how-to-use-imgui' },
                           { label: 'How to use the debugger', slug: 'guides/how-to-use-debugger' },
-                          { label: 'Terminal demo', slug: 'guides/terminal-demo' },
                       ],
                   },
                   {
