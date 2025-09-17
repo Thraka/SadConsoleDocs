@@ -119,10 +119,9 @@ html, body{
 
   .sl-markdown-content ul {
     list-style-type: none;
-    padding-left: 16px;
   }
 
-  .sl-markdown-content ul li:before {
+  .sl-markdown-content ul li::marker {
       content: "\2666\a0\A0";
       color: #0a0;
   }
