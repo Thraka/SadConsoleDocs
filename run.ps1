@@ -1,1 +1,1 @@
-Start-Process -FilePath pwsh -ArgumentList '-NoProfile','-Command','npm run dev' -WorkingDirectory 'E:\Fun\SadConsoleDocs\starlight'
+Start-Process -FilePath pwsh -ArgumentList '-NoProfile','-Command','npm run dev'
