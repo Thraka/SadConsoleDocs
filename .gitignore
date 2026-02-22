@@ -26,3 +26,10 @@ docfx/
 
 # Local Netlify folder
 .netlify
+
+
+bin/
+.vs/
+obj/
+*.csproj.user
+*.suo
