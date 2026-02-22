@@ -86,7 +86,7 @@ export default defineConfig({
                           },
                       ],
                   },
-              ]),
+              ], { exclude: ['guides/terminal-demo'] }),
           ],
       }),
 	],
