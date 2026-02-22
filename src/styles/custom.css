@@ -28,11 +28,11 @@
   /* --sl-text-base is intentionally left as-is (user override present) */
   --sl-text-lg: 1.125rem;   /* ~18px */
   --sl-text-xl: 1.25rem;    /* ~20px */
-  --sl-text-2xl: 1.5rem;    /* ~24px */
-  --sl-text-3xl: 1.8125rem; /* ~29px */
-  --sl-text-4xl: 2.1875rem; /* ~35px */
-  --sl-text-5xl: 2.625rem;  /* ~42px */
-  --sl-text-6xl: 4rem;      /* ~64px */
+  --sl-text-2xl: 1.25rem;   /* ~20px (was 1.5rem) */
+  --sl-text-3xl: 1.5rem;    /* ~24px (was 1.8125rem) */
+  --sl-text-4xl: 1.8125rem; /* ~29px (was 2.1875rem) */
+  --sl-text-5xl: 2.1875rem; /* ~35px (was 2.625rem) */
+  --sl-text-6xl: 2.625rem;  /* ~42px (was 4rem) */
   --sl-line-height: 1.4;
 
   --sl-text-body: 0.9375rem; /* ~15px */
