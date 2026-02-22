@@ -4,6 +4,7 @@ description: Learn how to use ImGui. ImGui support for SadConsole is included in
 ---
 
 import { Code } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
 Dear ImGui is a bloat-free `graphical` user interface library for C++ that is designed to be fast, portable, and easy to integrate. It is particularly popular in the game development industry and real-time applications due to its immediate mode GUI paradigm, which simplifies the creation of dynamic user interfaces.
 
@@ -31,13 +32,16 @@ To render your ImGui widgets, you create instances of either `SadConsole.ImGuiSy
 
 To add ImGui to your project:
 
+import snippet from 'snippets/how-to-use-imgui/csharp/Program.cs?raw';
+
+<Steps>
 01. Add the [SadConsole.Debug.MonoGame NuGet package](https://www.nuget.org/packages/SadConsole.Debug.MonoGame/) to your project.
 01. Add `EnableImGui` to the configuration builder.
 01. Use a method callback to add the ImGui objects to the ImGui MonoGame Component.
 
-import snippet from 'snippets/how-to-use-imgui/csharp/Program.cs?raw';
+    <Code code={snippet} lang="csharp" mark={{ range: "10-12" }} />
 
-<Code code={snippet} lang="csharp" mark={{ range: "10-12" }} />
+</Steps>
 
 The previous code uses the method callback to add an instance of `ImGuiWindow1` to the ImGui MonoGame Component. The implementation of `ImGuiWindow1` is described in the following section.
 
