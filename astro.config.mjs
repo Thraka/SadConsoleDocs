@@ -39,7 +39,7 @@ export default defineConfig({
                   {
                       label: 'Getting Started',
                       link: 'getting-started/cli',
-                      icon: 'open-book',
+                      icon: 'rocket',
                       items: [
                           // Each item here is one entry in the navigation menu.
                           { label: 'Getting Started with templates', slug: 'getting-started/cli' },
@@ -47,9 +47,23 @@ export default defineConfig({
                       ],
                   },
                   {
+                      label: 'Tutorials',
+                      link: '/tutorials/first-game/part-1-drawing',
+                      icon: 'open-book',
+                      items: [
+                        {
+                            label: 'Your first SadConsole Game', items: [
+                                // Each item here is one entry in the navigation menu.
+                                { label: 'Part 1: Drawing', slug: 'tutorials/first-game/part-1-drawing' },
+                                { label: 'Part 2: Cursors and parents', slug: 'tutorials/first-game/part-2-cursor-parents' },
+                            ]
+                        }
+                      ],
+                  },
+                  {
                       label: 'Advanced',
                       link: '/guides/how-to-use-imgui',
-                      icon: 'open-book',
+                      icon: 'puzzle',
                       items: [
                         {
                             label: 'ImGui and the Debugger', items: [
