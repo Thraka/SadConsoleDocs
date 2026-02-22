@@ -79,6 +79,5 @@ export default defineConfig({
       },
 	},
 
-  site: 'https://sadconsole.com',
-  adapter: netlify()
+  site: 'https://sadconsole.com'
 });
