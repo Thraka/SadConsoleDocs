@@ -47,6 +47,15 @@ html, body{
   font-family: 'Hack';
 }
 
+/* Various list settings */
+.sl-markdown-content ul {
+  margin-bottom: 1rem;
+}
+
+.sl-markdown-content ul > li + li {
+    margin-top: 1rem;
+}
+
 /* Header anchor links */
 .sl-markdown-content .sl-anchor-link {
   margin-inline-start: var(--sl-anchor-icon-size);
@@ -158,7 +167,7 @@ html, body{
   }
 
   .sl-markdown-content strong {
-    color: var(--ansi-green-bright);
+    color: var(--ansi-green);
   }
 
   .sl-markdown-content em {
