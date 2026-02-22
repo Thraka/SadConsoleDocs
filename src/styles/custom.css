@@ -47,6 +47,11 @@ html, body{
   font-family: 'Hack';
 }
 
+/* Header anchor links */
+.sl-markdown-content .sl-anchor-link {
+  margin-inline-start: var(--sl-anchor-icon-size);
+}
+
 /* MSDOS-like rules scoped to dark theme only (attribute-driven by Starlight) */
 
 /* Also support explicit data-theme="dark" toggles */
@@ -165,6 +170,14 @@ html, body{
     background: var(--ansi-green-bright);
     color: var(--ansi-black);
   }
+
+  /* LinkButton styles */
+  .sl-link-button.primary {
+    background: var(--ansi-red);
+    border-color: var(--ansi-red-bright);
+    color: var(--ansi-red-bright);
+  }
+
 }
 
 [data-theme="light"] {
