@@ -3,10 +3,12 @@ title: Panel Class
 slug: reference/sadconsole.ui.controls.panel
 sidebar:
   label: Panel
+editUrl: false
+description: A control container that processes the mouse on each child. `SadConsole.UI.Controls.ControlBase.TabStop` defaults to false.
 ---
 ## Definition
 
-A control container that processes the mouse on each child. [TabStop](../sadconsole.ui.controls.controlbase/#tabstop/) defaults to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+A control container that processes the mouse on each child. [TabStop](../sadconsole.ui.controls.controlbase/#tabstop) defaults to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 [DataContract]
@@ -54,7 +56,7 @@ public ControlBase this[string name] { get; }
 
 ### UseNormalStateOnly
 
-When true, only uses [Normal](../sadconsole.ui.themestates/#normal/) for drawing.
+When true, only uses [Normal](../sadconsole.ui.themestates/#normal) for drawing.
 
 ```csharp title="C#"
 [DataMember]
@@ -220,7 +222,7 @@ public void CopyTo(ControlBase[] array, int arrayIndex)
 
 ### OnMouseExit(ControlMouseState)
 
-Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseExit(ControlBase.ControlMouseState state)
@@ -251,7 +253,7 @@ The state of the keyboard.
 
 ### OnIsDirtyChanged()
 
-When [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty/) is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, changes the child controls to also be dirty.
+When [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty) is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, changes the child controls to also be dirty.
 
 ```csharp title="C#"
 protected override void OnIsDirtyChanged()

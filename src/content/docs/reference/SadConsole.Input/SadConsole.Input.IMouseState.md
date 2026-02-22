@@ -3,6 +3,8 @@ title: IMouseState Interface
 slug: reference/sadconsole.input.imousestate
 sidebar:
   label: IMouseState
+editUrl: false
+description: Reports the state of the mouse.
 ---
 ## Definition
 

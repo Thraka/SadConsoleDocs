@@ -3,6 +3,8 @@ title: IComponentHost Interface
 slug: reference/sadconsole.components.icomponenthost
 sidebar:
   label: IComponentHost
+editUrl: false
+description: Provides a collection of `SadConsole.Components.IComponent` objects.
 ---
 ## Definition
 
@@ -25,7 +27,7 @@ ObservableCollection<IComponent> SadComponents { get; }
 
 ## Methods
 
-### GetSadComponent<TComponent>()
+### GetSadComponent\<TComponent>()
 
 Gets the first component of the specified type.
 
@@ -38,7 +40,7 @@ TComponent? GetSadComponent<TComponent>() where TComponent : class, IComponent
 TComponent  
 The component if found, otherwise null.
 
-### GetSadComponents<TComponent>()
+### GetSadComponents\<TComponent>()
 
 Gets components of the specified types.
 
@@ -51,9 +53,9 @@ IEnumerable<TComponent> GetSadComponents<TComponent>() where TComponent : class,
 [IEnumerable\<TComponent\>](https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1/)  
 The components found.
 
-### HasSadComponent<TComponent>(out TComponent?)
+### HasSadComponent\<TComponent>(out TComponent?)
 
-Indicates whether or not the component exists in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) collection.
+Indicates whether or not the component exists in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) collection.
 
 ```csharp title="C#"
 bool HasSadComponent<TComponent>(out TComponent? component) where TComponent : class, IComponent
@@ -70,7 +72,7 @@ bool HasSadComponent<TComponent>(out TComponent? component) where TComponent : c
 
 ### CompareComponent(IComponent, IComponent)
 
-Uses the [SortOrder](../sadconsole.components.icomponent/#sortorder/) to compare the `left` component with the `right` component.
+Uses the [SortOrder](../sadconsole.components.icomponent/#sortorder) to compare the `left` component with the `right` component.
 
 ```csharp title="C#"
 public static int CompareComponent(IComponent left, IComponent right)

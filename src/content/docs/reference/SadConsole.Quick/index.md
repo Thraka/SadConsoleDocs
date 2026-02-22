@@ -3,6 +3,7 @@ title: SadConsole.Quick
 slug: reference/sadconsole.quick
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

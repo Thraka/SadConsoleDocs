@@ -3,6 +3,7 @@ title: ScreenObjectState Class
 slug: reference/sadconsole.debug.screenobjectstate
 sidebar:
   label: ScreenObjectState
+editUrl: false
 ---
 ## Definition
 

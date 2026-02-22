@@ -3,6 +3,7 @@ title: ColoredGlyphJsonConverter Class
 slug: reference/sadconsole.serializedtypes.coloredglyphjsonconverter
 sidebar:
   label: ColoredGlyphJsonConverter
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: StyleExtensions Class
 slug: reference/hexa.net.imgui.styleextensions
 sidebar:
   label: StyleExtensions
+editUrl: false
+description: Extensions that help with getting ImGui style values.
 ---
 ## Definition
 

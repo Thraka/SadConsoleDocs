@@ -3,6 +3,8 @@ title: Recolor Class
 slug: reference/sadconsole.effects.recolor
 sidebar:
   label: Recolor
+editUrl: false
+description: Recors the foreground or the background of a cell.
 ---
 ## Definition
 
@@ -50,7 +52,7 @@ public Color Background { get; set; }
 
 ### DoForeground
 
-When true, the [Foreground](../sadconsole.effects.recolor/#foreground/) color will be applied to the cell.
+When true, the [Foreground](../sadconsole.effects.recolor/#foreground) color will be applied to the cell.
 
 ```csharp title="C#"
 [DataMember]
@@ -59,7 +61,7 @@ public bool DoForeground { get; set; }
 
 ### DoBackground
 
-/// When true, the [Background](../sadconsole.effects.recolor/#background/) color will be applied to the cell.
+/// When true, the [Background](../sadconsole.effects.recolor/#background) color will be applied to the cell.
 
 ```csharp title="C#"
 [DataMember]

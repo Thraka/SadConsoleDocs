@@ -3,6 +3,8 @@ title: DrawString Class
 slug: reference/sadconsole.instructions.drawstring
 sidebar:
   label: DrawString
+editUrl: false
+description: Draws a string to a console as if someone was typing.
 ---
 ## Definition
 
@@ -50,7 +52,7 @@ public DrawString(ColoredString text)
 
 ### DrawString()
 
-Creates a new instance of the object. [Text](../sadconsole.instructions.drawstring/#text/) must be set manually.
+Creates a new instance of the object. [Text](../sadconsole.instructions.drawstring/#text) must be set manually.
 
 ```csharp title="C#"
 public DrawString()
@@ -120,7 +122,7 @@ public override void Reset()
 
 #### Remarks
 
-On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished/) to false. Override this method to reset the derived class' counters and status flags for the instruction.
+On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished) to false. Override this method to reset the derived class' counters and status flags for the instruction.
 
 ### OnAdded(IScreenObject)
 

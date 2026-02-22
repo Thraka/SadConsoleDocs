@@ -3,6 +3,8 @@ title: FocusedScreenObjectStack Class
 slug: reference/sadconsole.focusedscreenobjectstack
 sidebar:
   label: FocusedScreenObjectStack
+editUrl: false
+description: A stack of screen objects. The top-most of the stack is considered active and represented by the `SadConsole.IScreenObject` property.
 ---
 ## Definition
 

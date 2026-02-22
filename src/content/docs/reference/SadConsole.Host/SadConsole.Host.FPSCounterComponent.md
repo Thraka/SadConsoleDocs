@@ -3,6 +3,8 @@ title: FPSCounterComponent Class
 slug: reference/sadconsole.host.fpscountercomponent
 sidebar:
   label: FPSCounterComponent
+editUrl: false
+description: A component to draw how many frames per second the engine is performing at.
 ---
 ## Definition
 

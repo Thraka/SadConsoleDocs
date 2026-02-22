@@ -3,6 +3,7 @@ title: PromptWindow Class
 slug: reference/hexa.net.imgui.sc.windows.promptwindow
 sidebar:
   label: PromptWindow
+editUrl: false
 ---
 ## Definition
 

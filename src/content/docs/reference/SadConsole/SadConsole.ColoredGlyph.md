@@ -3,6 +3,8 @@ title: ColoredGlyph Class
 slug: reference/sadconsole.coloredglyph
 sidebar:
   label: ColoredGlyph
+editUrl: false
+description: Represents an individual piece of a `SadConsole.ICellSurface` containing a glyph, foreground color, background color, and a mirror effect.
 ---
 ## Definition
 
@@ -127,7 +129,7 @@ The mirror effect.
 The visibility of the glyph.
 
 
-### ColoredGlyph(Color, Color, int, Mirror, bool, List<CellDecorator>)
+### ColoredGlyph(Color, Color, int, Mirror, bool, List\<CellDecorator>)
 
 Creates a cell with the specified foreground, background, glyph, mirror effect, visibility and decorators.
 

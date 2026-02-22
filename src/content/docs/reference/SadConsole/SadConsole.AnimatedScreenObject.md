@@ -3,6 +3,8 @@ title: AnimatedScreenObject Class
 slug: reference/sadconsole.animatedscreenobject
 sidebar:
   label: AnimatedScreenObject
+editUrl: false
+description: A `SadConsole.ScreenObject` that displays an animated set of `SadConsole.ICellSurface` surfaces.
 ---
 ## Definition
 
@@ -40,7 +42,7 @@ The width of each frame this animation will have.
 The height of each frame this animation will have.
 
 
-### AnimatedScreenObject(string, IEnumerable<ICellSurface>)
+### AnimatedScreenObject(string, IEnumerable\<ICellSurface>)
 
 Creates a new animation with the specified name and frames.
 
@@ -83,7 +85,7 @@ The font used with this animation.
 The size of the font.
 
 
-### AnimatedScreenObject(string, IFont, Point, IEnumerable<ICellSurface>)
+### AnimatedScreenObject(string, IFont, Point, IEnumerable\<ICellSurface>)
 
 ```csharp title="C#"
 [JsonConstructor]
@@ -137,7 +139,7 @@ protected bool IsMouseOver
 
 ### NewFrameWidth
 
-The width to assign a frame when [CreateFrame()](../sadconsole.animatedscreenobject/#createframe/) is called.
+The width to assign a frame when [CreateFrame()](../sadconsole.animatedscreenobject/#createframe) is called.
 
 ```csharp title="C#"
 [DataMember]
@@ -146,7 +148,7 @@ protected int NewFrameWidth
 
 ### NewFrameHeight
 
-The height to assign a frame when [CreateFrame()](../sadconsole.animatedscreenobject/#createframe/) is called.
+The height to assign a frame when [CreateFrame()](../sadconsole.animatedscreenobject/#createframe) is called.
 
 ```csharp title="C#"
 [DataMember]
@@ -175,7 +177,7 @@ public bool Repeat { get; set; }
 
 ### IsPlaying
 
-When true, Indicates the animation is currently animating. The [Update(TimeSpan)](../sadconsole.animatedscreenobject/#/) method will advance the frames.
+When true, Indicates the animation is currently animating. The [Update(TimeSpan)](../sadconsole.animatedscreenobject/#updatetimespan) method will advance the frames.
 
 ```csharp title="C#"
 [DataMember]
@@ -244,7 +246,7 @@ public bool MoveToFrontOnMouseClick { get; set; }
 
 ### FocusOnMouseClick
 
-When true, this object will set [IsFocused](../sadconsole.iscreenobject/#isfocused/) to true when the mouse is clicked.
+When true, this object will set [IsFocused](../sadconsole.iscreenobject/#isfocused) to true when the mouse is clicked.
 
 ```csharp title="C#"
 [DataMember]
@@ -253,7 +255,7 @@ public bool FocusOnMouseClick { get; set; }
 
 ### ForceRendererRefresh
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the [Renderer](../sadconsole.iscreensurface/#renderer/) to refresh the backing texture with the latest state of the object.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the [Renderer](../sadconsole.iscreensurface/#renderer) to refresh the backing texture with the latest state of the object.
 
 ```csharp title="C#"
 public bool ForceRendererRefresh { get; set; }
@@ -295,7 +297,7 @@ public IFont Font { get; set; }
 
 ### FontSize
 
-The size of the [Font](../sadconsole.iscreensurface/#font/) cells applied to the object when rendering.
+The size of the [Font](../sadconsole.iscreensurface/#font) cells applied to the object when rendering.
 
 ```csharp title="C#"
 public Point FontSize { get; set; }
@@ -319,7 +321,7 @@ public Rectangle AbsoluteArea { get; }
 
 ### UsePixelPositioning
 
-Treats the `SadRogue.Primitives.IPositionable.Position` of the object as if it is pixels and not cells.
+Treats the ``SadRogue.Primitives.IPositionable.Position`` of the object as if it is pixels and not cells.
 
 ```csharp title="C#"
 public bool UsePixelPositioning { get; set; }
@@ -433,7 +435,7 @@ public void Restart()
 
 ### MoveNext(bool)
 
-Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe/) to the next frame.
+Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe) to the next frame.
 
 ```csharp title="C#"
 public void MoveNext(bool circular = false)
@@ -447,7 +449,7 @@ If true and the current frame is the last, sets the current frame to the first f
 
 ### MovePrevious(bool)
 
-Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe/) to the previous frame.
+Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe) to the previous frame.
 
 ```csharp title="C#"
 public void MovePrevious(bool circular = false)
@@ -461,7 +463,7 @@ If true and the current frame is the first, sets the current frame to the last f
 
 ### MoveEnd()
 
-Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe/) to the last frame.
+Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe) to the last frame.
 
 ```csharp title="C#"
 public void MoveEnd()
@@ -470,7 +472,7 @@ public void MoveEnd()
 
 ### MoveStart()
 
-Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe/) to the first frame.
+Changes the [CurrentFrame](../sadconsole.animatedscreenobject/#currentframe) to the first frame.
 
 ```csharp title="C#"
 public void MoveStart()
@@ -497,7 +499,7 @@ The height of the surface.
 How many frames the animation should have.
 
 `blankChance` [double](https://learn.microsoft.com/dotnet/api/system.double/)  
-Chance a character will be blank. Characters are between index 48-158. Chance is evaluated versus <xref href="System.Random.NextDouble" data-throw-if-not-resolved="false"></xref>.
+Chance a character will be blank. Characters are between index 48-158. Chance is evaluated versus [NextDouble()](https://learn.microsoft.com/dotnet/api/system.random.nextdouble/).
 
 `background` System.NullableSadRogue.Primitives.Color  
 The background color of the animation. Defaults to transparent.
@@ -510,7 +512,7 @@ The foreground color of the animation. Defaults to white.
 [AnimatedScreenObject](../sadconsole.animatedscreenobject/)  
 An animation.
 
-### FromImage(string, string, Point, TimeSpan, Point?, Point?, IFont?, Action<ColoredGlyphBase>?, TextureConvertMode, TextureConvertForegroundStyle, TextureConvertBackgroundStyle, Color?)
+### FromImage(string, string, Point, TimeSpan, Point?, Point?, IFont?, Action\<ColoredGlyphBase>?, TextureConvertMode, TextureConvertForegroundStyle, TextureConvertBackgroundStyle, Color?)
 
 Converts an image file containing frames to an instance of [AnimatedScreenObject](../sadconsole.animatedscreenobject/).
 
@@ -539,19 +541,19 @@ Pixel padding separating frames: X between the columns, Y between the rows.
 Limits the number of frames copied to the animation. X first frame index, Y last frame index.
 
 `font` [IFont](../sadconsole.ifont/)  
-<xref href="SadConsole.IFont" data-throw-if-not-resolved="false"></xref> to be used when creating the <xref href="SadConsole.AnimatedScreenObject" data-throw-if-not-resolved="false"></xref>.
+[IFont](../sadconsole.ifont/) to be used when creating the [AnimatedScreenObject](../sadconsole.animatedscreenobject/).
 
 `action` [Action\<ColoredGlyphBase\>](https://learn.microsoft.com/dotnet/api/system.action-1/)  
-Callback that will be applied to each <xref href="SadConsole.ColoredGlyphBase" data-throw-if-not-resolved="false"></xref> when creating a frame.
+Callback that will be applied to each [ColoredGlyphBase](../sadconsole.coloredglyphbase/) when creating a frame.
 
 `convertMode` [TextureConvertMode](../sadconsole.textureconvertmode/)  
 The mode used when converting the texture to a surface.
 
 `convertForegroundStyle` [TextureConvertForegroundStyle](../sadconsole.textureconvertforegroundstyle/)  
-The style to use when <code class="paramref">convertMode</code> is <xref href="SadConsole.TextureConvertMode.Foreground" data-throw-if-not-resolved="false"></xref>.
+The style to use when `convertMode` is [Foreground](../sadconsole.textureconvertmode/#foreground).
 
 `convertBackgroundStyle` [TextureConvertBackgroundStyle](../sadconsole.textureconvertbackgroundstyle/)  
-The style to use when <code class="paramref">convertMode</code> is <xref href="SadConsole.TextureConvertMode.Background" data-throw-if-not-resolved="false"></xref>.
+The style to use when `convertMode` is [Background](../sadconsole.textureconvertmode/#background).
 
 `frameDefaultBackground` System.NullableSadRogue.Primitives.Color  
 The default background to use in the animation frames. Defaults to transparent.
@@ -598,7 +600,7 @@ The animated surface.
 
 ### OnMouseEnter(MouseScreenObjectState)
 
-Raises the [MouseEnter](../sadconsole.animatedscreenobject/#mouseenter/) event.
+Raises the [MouseEnter](../sadconsole.animatedscreenobject/#mouseenter) event.
 
 ```csharp title="C#"
 protected virtual void OnMouseEnter(MouseScreenObjectState state)
@@ -612,7 +614,7 @@ Current mouse state in relation to this console.
 
 ### OnMouseExit(MouseScreenObjectState)
 
-Raises the [MouseExit](../sadconsole.animatedscreenobject/#mouseexit/) event.
+Raises the [MouseExit](../sadconsole.animatedscreenobject/#mouseexit) event.
 
 ```csharp title="C#"
 protected virtual void OnMouseExit(MouseScreenObjectState state)
@@ -626,7 +628,7 @@ Current mouse state in relation to this console.
 
 ### OnMouseMove(MouseScreenObjectState)
 
-Raises the [MouseMove](../sadconsole.animatedscreenobject/#mousemove/) event.
+Raises the [MouseMove](../sadconsole.animatedscreenobject/#mousemove) event.
 
 ```csharp title="C#"
 protected virtual void OnMouseMove(MouseScreenObjectState state)
@@ -640,7 +642,7 @@ Current mouse state in relation to this console.
 
 ### OnMouseLeftClicked(MouseScreenObjectState)
 
-Raises the [MouseButtonClicked](../sadconsole.animatedscreenobject/#mousebuttonclicked/) event. Possibly moves the console to the top of it's parent's children collection.
+Raises the [MouseButtonClicked](../sadconsole.animatedscreenobject/#mousebuttonclicked) event. Possibly moves the console to the top of it's parent's children collection.
 
 ```csharp title="C#"
 protected virtual void OnMouseLeftClicked(MouseScreenObjectState state)
@@ -654,7 +656,7 @@ Current mouse state in relation to this console.
 
 ### OnRightMouseClicked(MouseScreenObjectState)
 
-Raises the [MouseButtonClicked](../sadconsole.animatedscreenobject/#mousebuttonclicked/) event.
+Raises the [MouseButtonClicked](../sadconsole.animatedscreenobject/#mousebuttonclicked) event.
 
 ```csharp title="C#"
 protected virtual void OnRightMouseClicked(MouseScreenObjectState state)
@@ -700,7 +702,7 @@ True when this object should halt further mouse processing..
 
 ### UpdateAbsolutePosition()
 
-Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition/) based on the `SadRogue.Primitives.IPositionable.Position` of this instance and the [Parent](../sadconsole.iscreenobject/#parent/) instance.
+Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition) based on the ``SadRogue.Primitives.IPositionable.Position`` of this instance and the [Parent](../sadconsole.iscreenobject/#parent) instance.
 
 ```csharp title="C#"
 public override void UpdateAbsolutePosition()
@@ -709,7 +711,7 @@ public override void UpdateAbsolutePosition()
 
 ### Render(TimeSpan)
 
-Draws the animation's current frame and all [SadComponents](../sadconsole.screenobject/#sadcomponents/) and [Children](../sadconsole.screenobject/#children/).
+Draws the animation's current frame and all [SadComponents](../sadconsole.screenobject/#sadcomponents) and [Children](../sadconsole.screenobject/#children).
 
 ```csharp title="C#"
 public override void Render(TimeSpan delta)
@@ -723,7 +725,7 @@ The time that has elapsed since the last call.
 
 ### Update(TimeSpan)
 
-Updates the [AnimatedScreenObject](../sadconsole.animatedscreenobject/) effects and all [SadComponents](../sadconsole.screenobject/#sadcomponents/) and [Children](../sadconsole.screenobject/#children/).
+Updates the [AnimatedScreenObject](../sadconsole.animatedscreenobject/) effects and all [SadComponents](../sadconsole.screenobject/#sadcomponents) and [Children](../sadconsole.screenobject/#children).
 
 ```csharp title="C#"
 public override void Update(TimeSpan delta)
@@ -761,7 +763,7 @@ protected virtual void Dispose(bool disposing)
 
 ### ~AnimatedScreenObject()
 
-Disposes [Renderer](../sadconsole.animatedscreenobject/#renderer/).
+Disposes [Renderer](../sadconsole.animatedscreenobject/#renderer).
 
 ```csharp title="C#"
 protected ~AnimatedScreenObject()
@@ -779,7 +781,7 @@ public void Dispose()
 
 ### AnimationStateChanged
 
-Raised when the [AnimatedScreenObject.AnimationState](../sadconsole.animatedscreenobject/) changes.
+Raised when the [AnimatedScreenObject.AnimationState](../sadconsole.animatedscreenobject.animationstate/) changes.
 
 ```csharp title="C#"
 public event EventHandler<AnimatedScreenObject.AnimationStateChangedEventArgs>? AnimationStateChanged

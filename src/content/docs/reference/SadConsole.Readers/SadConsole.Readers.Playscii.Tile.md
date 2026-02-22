@@ -3,6 +3,8 @@ title: Playscii.Tile Struct
 slug: reference/sadconsole.readers.playscii.tile
 sidebar:
   label: Playscii.Tile
+editUrl: false
+description: Json tile in the `SadConsole.Readers.Playscii` file.
 ---
 ## Definition
 
@@ -61,10 +63,10 @@ public ColoredGlyphBase ToColoredGlyph(IFont font, Palette colors)
 #### Parameters
 
 `font` [IFont](../sadconsole.ifont/)  
-<xref href="SadConsole.IFont" data-throw-if-not-resolved="false"></xref> to be used when creating the <xref href="SadConsole.ScreenSurface" data-throw-if-not-resolved="false"></xref>.
+[IFont](../sadconsole.ifont/) to be used when creating the [ScreenSurface](../sadconsole.screensurface/).
 
 `colors` SadRogue.Primitives.Palette  
-<xref href="SadRogue.Primitives.Palette" data-throw-if-not-resolved="false"></xref> of colors converted from the <xref href="SadConsole.Readers.Playscii" data-throw-if-not-resolved="false"></xref> format.
+``SadRogue.Primitives.Palette`` of colors converted from the [Playscii](../sadconsole.readers.playscii/) format.
 
 #### Returns
 

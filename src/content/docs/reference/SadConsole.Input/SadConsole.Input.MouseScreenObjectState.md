@@ -3,6 +3,8 @@ title: MouseScreenObjectState Struct
 slug: reference/sadconsole.input.mousescreenobjectstate
 sidebar:
   label: MouseScreenObjectState
+editUrl: false
+description: The state of the mouse.
 ---
 ## Definition
 
@@ -60,7 +62,7 @@ public ColoredGlyphBase? Cell { readonly get; init; }
 
 ### CellPosition
 
-The position of the [Cell](../sadconsole.input.mousescreenobjectstate/#cell/).
+The position of the [Cell](../sadconsole.input.mousescreenobjectstate/#cell).
 
 ```csharp title="C#"
 public Point CellPosition { readonly get; init; }
@@ -68,7 +70,7 @@ public Point CellPosition { readonly get; init; }
 
 ### SurfaceCellPosition
 
-The position of the mouse on the [IScreenObject](../sadconsole.iscreenobject/), based on the [WorldCellPosition](../sadconsole.input.mousescreenobjectstate/#worldcellposition/) and the position of the [ScreenObject](../sadconsole.input.mousescreenobjectstate/#screenobject/).
+The position of the mouse on the [IScreenObject](../sadconsole.iscreenobject/), based on the [WorldCellPosition](../sadconsole.input.mousescreenobjectstate/#worldcellposition) and the position of the [ScreenObject](../sadconsole.input.mousescreenobjectstate/#screenobject).
 
 ```csharp title="C#"
 public Point SurfaceCellPosition { readonly get; init; }
@@ -92,7 +94,7 @@ public Point SurfacePixelPosition { readonly get; init; }
 
 ### IsOnScreenObject
 
-Indicates that the mouse is within the bounds of [ScreenObject](../sadconsole.input.mousescreenobjectstate/#screenobject/).
+Indicates that the mouse is within the bounds of [ScreenObject](../sadconsole.input.mousescreenobjectstate/#screenobject).
 
 ```csharp title="C#"
 public bool IsOnScreenObject { readonly get; init; }

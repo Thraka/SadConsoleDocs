@@ -3,6 +3,7 @@ title: StartingScreenConfig Class
 slug: reference/sadconsole.configuration.startingscreenconfig
 sidebar:
   label: StartingScreenConfig
+editUrl: false
 ---
 ## Definition
 

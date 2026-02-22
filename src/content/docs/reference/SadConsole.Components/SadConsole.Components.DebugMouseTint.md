@@ -3,6 +3,8 @@ title: DebugMouseTint Class
 slug: reference/sadconsole.components.debugmousetint
 sidebar:
   label: DebugMouseTint
+editUrl: false
+description: Tints a surface when that surface would use the mouse. Helps debug which object is receiving mouse input as you move the mouse around.
 ---
 ## Definition
 

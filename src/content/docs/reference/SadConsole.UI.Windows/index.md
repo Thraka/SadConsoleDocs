@@ -3,6 +3,7 @@ title: SadConsole.UI.Windows
 slug: reference/sadconsole.ui.windows
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

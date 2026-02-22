@@ -3,6 +3,8 @@ title: DrawCallCustom Class
 slug: reference/sadconsole.drawcalls.drawcallcustom
 sidebar:
   label: DrawCallCustom
+editUrl: false
+description: A draw call that invokes an `System.Action` delegate.
 ---
 ## Definition
 
@@ -46,7 +48,7 @@ public Action DrawCallback { get; set; }
 
 ### Draw()
 
-Invokes [DrawCallback](../sadconsole.drawcalls.drawcallcustom/#drawcallback/).
+Invokes [DrawCallback](../sadconsole.drawcalls.drawcallcustom/#drawcallback).
 
 ```csharp title="C#"
 public void Draw()

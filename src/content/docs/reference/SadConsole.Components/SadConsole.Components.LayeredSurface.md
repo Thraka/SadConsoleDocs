@@ -3,6 +3,8 @@ title: LayeredSurface Class
 slug: reference/sadconsole.components.layeredsurface
 sidebar:
   label: LayeredSurface
+editUrl: false
+description: Manages a set of surface layers.
 ---
 ## Definition
 
@@ -38,7 +40,7 @@ protected IScreenSurface? _screen
 
 ### _screenCachedView
 
-A cached copy of the [View](../sadconsole.icellsurface/#view/) of the hosting screen surface.
+A cached copy of the [View](../sadconsole.icellsurface/#view) of the hosting screen surface.
 
 ```csharp title="C#"
 protected Rectangle _screenCachedView
@@ -127,7 +129,7 @@ public void Add(ICellSurface layer)
 The layer to add.
 
 
-### AddRange(IEnumerable<ICellSurface>)
+### AddRange(IEnumerable\<ICellSurface>)
 
 Adds a collection if layers to this component.
 
@@ -328,7 +330,7 @@ The maximum width of the surface.
 The maximum height of the surface.
 
 `clear` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the <xref href="SadConsole.ICellSurface.DefaultForeground" data-throw-if-not-resolved="false"></xref>, <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref> and glyph 0.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the [DefaultForeground](../sadconsole.icellsurface/#defaultforeground), [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) and glyph 0.
 
 
 ### Resize(int, int, bool)
@@ -348,7 +350,7 @@ The width of the surface and view.
 The height of the surface and view.
 
 `clear` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the <xref href="SadConsole.ICellSurface.DefaultForeground" data-throw-if-not-resolved="false"></xref>, <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref> and glyph 0.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the [DefaultForeground](../sadconsole.icellsurface/#defaultforeground), [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) and glyph 0.
 
 
 ### OnAdded(IScreenObject)

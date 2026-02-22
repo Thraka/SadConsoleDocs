@@ -3,6 +3,8 @@ title: AdjustableColor Class
 slug: reference/sadconsole.ui.adjustablecolor
 sidebar:
   label: AdjustableColor
+editUrl: false
+description: A color that can be adjusted by brightness and mapped to a `SadConsole.UI.Colors` color.
 ---
 ## Definition
 
@@ -71,7 +73,7 @@ The predefined color.
 A friendly name of the color.
 
 `colors` [Colors](../sadconsole.ui.colors/)  
-The colors used setting the <xref href="SadConsole.UI.AdjustableColor.BaseColor" data-throw-if-not-resolved="false"></xref> value.
+The colors used setting the [BaseColor](../sadconsole.ui.adjustablecolor/#basecolor) value.
 
 
 ## Properties
@@ -113,7 +115,7 @@ public bool IsCustomColor { get; set; }
 
 ### UIColor
 
-The [Colors](../sadconsole.ui.colors/) mapped color when [IsCustomColor](../sadconsole.ui.adjustablecolor/#iscustomcolor/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+The [Colors](../sadconsole.ui.colors/) mapped color when [IsCustomColor](../sadconsole.ui.adjustablecolor/#iscustomcolor) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 [DataMember]
@@ -145,7 +147,7 @@ public void SetUIColor(Colors.ColorNames color, Colors colors, Colors.Brightness
 The predefined color.
 
 `colors` [Colors](../sadconsole.ui.colors/)  
-The colors used setting the <xref href="SadConsole.UI.AdjustableColor.BaseColor" data-throw-if-not-resolved="false"></xref> value.
+The colors used setting the [BaseColor](../sadconsole.ui.adjustablecolor/#basecolor) value.
 
 `brightness` [Colors.Brightness](../sadconsole.ui.colors/)  
 The brightness to apply to the color.
@@ -187,7 +189,7 @@ The color.
 
 ### RefreshUIColor(Colors)
 
-Refreshes [BaseColor](../sadconsole.ui.adjustablecolor/#basecolor/) using [UIColor](../sadconsole.ui.adjustablecolor/#uicolor/) and the provided [Colors](../sadconsole.ui.colors/) object.
+Refreshes [BaseColor](../sadconsole.ui.adjustablecolor/#basecolor) using [UIColor](../sadconsole.ui.adjustablecolor/#uicolor) and the provided [Colors](../sadconsole.ui.colors/) object.
 
 ```csharp title="C#"
 public void RefreshUIColor(Colors colors)

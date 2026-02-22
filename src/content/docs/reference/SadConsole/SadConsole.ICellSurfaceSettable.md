@@ -3,6 +3,8 @@ title: ICellSurfaceSettable Interface
 slug: reference/sadconsole.icellsurfacesettable
 sidebar:
   label: ICellSurfaceSettable
+editUrl: false
+description: Adds a method to change the backing cells of a surface.
 ---
 ## Definition
 

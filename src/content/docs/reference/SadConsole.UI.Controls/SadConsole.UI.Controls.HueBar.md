@@ -3,6 +3,8 @@ title: HueBar Class
 slug: reference/sadconsole.ui.controls.huebar
 sidebar:
   label: HueBar
+editUrl: false
+description: Displays the color hues on a bar.
 ---
 ## Definition
 
@@ -62,7 +64,7 @@ public int SelectedPosition { get; }
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState info)
@@ -108,7 +110,7 @@ The duration of thecurrent frame.
 
 ### ColorChanged
 
-Raised when the [SelectedColor](../sadconsole.ui.controls.huebar/#selectedcolor/) value changes.
+Raised when the [SelectedColor](../sadconsole.ui.controls.huebar/#selectedcolor) value changes.
 
 ```csharp title="C#"
 public event EventHandler? ColorChanged

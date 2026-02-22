@@ -3,6 +3,7 @@ title: SadConsole.Renderers.Constants
 slug: reference/sadconsole.renderers.constants
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

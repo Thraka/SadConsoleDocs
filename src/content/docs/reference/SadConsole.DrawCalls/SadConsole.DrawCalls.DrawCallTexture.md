@@ -3,10 +3,12 @@ title: DrawCallTexture Class
 slug: reference/sadconsole.drawcalls.drawcalltexture
 sidebar:
   label: DrawCallTexture
+editUrl: false
+description: Draws an image ot the active `SadConsole.Host.Global.SharedSpriteBatch`.
 ---
 ## Definition
 
-Draws an image ot the active [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch/).
+Draws an image ot the active [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch).
 
 ```csharp title="C#"
 public class DrawCallTexture : IDrawCall
@@ -32,7 +34,7 @@ public DrawCallTexture(Texture2D texture, Vector2 position, Color? tint = null, 
 The image to draw.
 
 `position` Microsoft.Xna.Framework.Vector2  
-The position on the <xref href="SadConsole.Host.Global.SharedSpriteBatch" data-throw-if-not-resolved="false"></xref> to draw the image.
+The position on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch) to draw the image.
 
 `tint` System.NullableMicrosoft.Xna.Framework.Color  
 A color tint to apply to the drawn image.
@@ -66,7 +68,7 @@ public Effect ShaderEffect
 
 ### Position
 
-Where on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch/) to draw the texture.
+Where on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch) to draw the texture.
 
 ```csharp title="C#"
 public Vector2 Position

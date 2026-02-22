@@ -3,6 +3,8 @@ title: DrawImage Class
 slug: reference/sadconsole.components.drawimage
 sidebar:
   label: DrawImage
+editUrl: false
+description: Draws an image on top of a console.
 ---
 ## Definition
 
@@ -50,7 +52,7 @@ The texture to use
 
 ### PositionMode
 
-Sets or gets how the [PositionOffset](../sadconsole.components.drawimage/#positionoffset/) property is interpreted.
+Sets or gets how the [PositionOffset](../sadconsole.components.drawimage/#positionoffset) property is interpreted.
 
 ```csharp title="C#"
 public DrawImage.PositionModes PositionMode { get; set; }
@@ -63,7 +65,7 @@ The positioning offset.
 ```csharp title="C#"
 public Point PositionOffset { get; set; }
 ```
-## Remarks
+#### Remarks
 
 The position the image is displayed is based on the hosting console's position. This property adjusts the position of the image by the specified amount.
 
@@ -71,7 +73,7 @@ The position the image is displayed is based on the hosting console's position. 
 
 ### ~DrawImage()
 
-Calls [Dispose()](../sadconsole.components.drawimage/#dispose/).
+Calls [Dispose()](../sadconsole.components.drawimage/#dispose).
 
 ```csharp title="C#"
 protected ~DrawImage()

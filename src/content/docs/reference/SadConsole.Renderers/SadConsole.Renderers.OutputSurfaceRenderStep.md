@@ -3,10 +3,12 @@ title: OutputSurfaceRenderStep Class
 slug: reference/sadconsole.renderers.outputsurfacerenderstep
 sidebar:
   label: OutputSurfaceRenderStep
+editUrl: false
+description: A render step that draws the `SadConsole.Renderers.ScreenSurfaceRenderer._backingTexture` texture.
 ---
 ## Definition
 
-A render step that draws the [_backingTexture](../sadconsole.renderers.screensurfacerenderer/#backingtexture/) texture.
+A render step that draws the [_backingTexture](../sadconsole.renderers.screensurfacerenderer/#backingtexture) texture.
 
 ```csharp title="C#"
 public class OutputSurfaceRenderStep : IRenderStep, IDisposable
@@ -92,7 +94,7 @@ The renderer the render step is using.
 The surface associated with the renderer. This may be null.
 
 `backingTextureChanged` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to indicate the <xref href="SadConsole.Renderers.IRenderer.Output" data-throw-if-not-resolved="false"></xref> changed; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to indicate the [Output](../sadconsole.renderers.irenderer/#output) changed; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 `isForced` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when refresh is being forced; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
@@ -100,11 +102,11 @@ The surface associated with the renderer. This may be null.
 #### Returns
 
 [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the step is going to draw something new and is requesting a `SadConsole.Renderers.IRenderStep.Composing(SadConsole.Renderers.IRenderer%2cSadConsole.IScreenSurface)` step; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the step is going to draw something new and is requesting a [Composing(IRenderer, IScreenSurface)](../sadconsole.renderers.irenderstep/#composingirenderer-iscreensurface) step; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ### Composing(IRenderer, IScreenSurface)
 
-Called when the renderer needs to redraw the [Output](../sadconsole.renderers.irenderer/#output/) texture.
+Called when the renderer needs to redraw the [Output](../sadconsole.renderers.irenderer/#output) texture.
 
 ```csharp title="C#"
 public void Composing(IRenderer renderer, IScreenSurface screenObject)

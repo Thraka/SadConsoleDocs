@@ -3,6 +3,8 @@ title: StringValidation Class
 slug: reference/sadconsole.stringvalidation
 sidebar:
   label: StringValidation
+editUrl: false
+description: Validates a string
 ---
 ## Definition
 
@@ -36,7 +38,7 @@ A positive validation result.
 
 ### Integer(string)
 
-Returns a [StringValidation.Validator](../sadconsole.stringvalidation/) delegate that validates whether or not a string can be parsed by the `System.Int64.TryParse(System.String%2cSystem.Int64%40)`.
+Returns a [StringValidation.Validator](../sadconsole.stringvalidation.validator/) delegate that validates whether or not a string can be parsed by the [TryParse(string, out long)](https://learn.microsoft.com/dotnet/api/system.int64.tryparse#system-int64-tryparse(system-string-system-int64@)/).
 
 ```csharp title="C#"
 public static StringValidation.Validator Integer(string errorMessage)
@@ -54,7 +56,7 @@ The validation result.
 
 ### Decimal(string)
 
-Returns a [StringValidation.Validator](../sadconsole.stringvalidation/) delegate that validates whether or not a string can be parsed by the `System.Double.TryParse(System.String%2cSystem.Double%40)`.
+Returns a [StringValidation.Validator](../sadconsole.stringvalidation.validator/) delegate that validates whether or not a string can be parsed by the [TryParse(string, out double)](https://learn.microsoft.com/dotnet/api/system.double.tryparse#system-double-tryparse(system-string-system-double@)/).
 
 ```csharp title="C#"
 public static StringValidation.Validator Decimal(string errorMessage)
@@ -72,7 +74,7 @@ The validation result.
 
 ### LengthRange(int, int, string)
 
-Returns a [StringValidation.Validator](../sadconsole.stringvalidation/) delegate that validates whether or not a length of a string falls within the specified range.
+Returns a [StringValidation.Validator](../sadconsole.stringvalidation.validator/) delegate that validates whether or not a length of a string falls within the specified range.
 
 ```csharp title="C#"
 public static StringValidation.Validator LengthRange(int min, int max, string errorMessage)
@@ -94,7 +96,7 @@ The validation result.
 
 ### All(params Validator[])
 
-Uses multiple [StringValidation.Validator](../sadconsole.stringvalidation/) delegates to validate a string. All validators must pass.
+Uses multiple [StringValidation.Validator](../sadconsole.stringvalidation.validator/) delegates to validate a string. All validators must pass.
 
 ```csharp title="C#"
 public static StringValidation.Validator All(params StringValidation.Validator[] validators)
@@ -103,7 +105,7 @@ public static StringValidation.Validator All(params StringValidation.Validator[]
 #### Parameters
 
 `validators` [Validator[]](../sadconsole.stringvalidation.validator/)  
-Each <xref href="SadConsole.StringValidation.Validator" data-throw-if-not-resolved="false"></xref> to use.
+Each [StringValidation.Validator](../sadconsole.stringvalidation.validator/) to use.
 
 #### Returns
 
@@ -112,7 +114,7 @@ When all validators pass, a successful result; otherwise, the failed result.
 
 ### Letters(string)
 
-Returns a [StringValidation.Validator](../sadconsole.stringvalidation/) delegate that validates whether a string contains only letters.
+Returns a [StringValidation.Validator](../sadconsole.stringvalidation.validator/) delegate that validates whether a string contains only letters.
 
 ```csharp title="C#"
 public static StringValidation.Validator Letters(string errorMessage)

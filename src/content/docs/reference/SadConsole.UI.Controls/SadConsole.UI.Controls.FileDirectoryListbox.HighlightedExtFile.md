@@ -3,6 +3,8 @@ title: FileDirectoryListbox.HighlightedExtFile Class
 slug: reference/sadconsole.ui.controls.filedirectorylistbox.highlightedextfile
 sidebar:
   label: FileDirectoryListbox.HighlightedExtFile
+editUrl: false
+description: A listbox item container that represents a highlighted file.
 ---
 ## Definition
 

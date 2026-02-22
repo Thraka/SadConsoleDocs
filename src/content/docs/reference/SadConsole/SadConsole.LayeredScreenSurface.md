@@ -3,6 +3,8 @@ title: LayeredScreenSurface Class
 slug: reference/sadconsole.layeredscreensurface
 sidebar:
   label: LayeredScreenSurface
+editUrl: false
+description: A basic console that can contain controls.
 ---
 ## Definition
 
@@ -58,7 +60,7 @@ The initial cells to seed the surface.
 
 ### LayeredScreenSurface(int, int, int, int)
 
-Creates a new console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new console with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public LayeredScreenSurface(int width, int height, int bufferWidth, int bufferHeight)
@@ -81,7 +83,7 @@ The total height of the console in cells.
 
 ### LayeredScreenSurface(int, int, int, int, ColoredGlyphBase[]?)
 
-Creates a console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a console with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public LayeredScreenSurface(int width, int height, int bufferWidth, int bufferHeight, ColoredGlyphBase[]? initialCells)
@@ -160,7 +162,7 @@ The maximum width of the surface.
 The maximum height of the surface.
 
 `clear` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the <xref href="SadConsole.ICellSurface.DefaultForeground" data-throw-if-not-resolved="false"></xref>, <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref> and glyph 0.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the [DefaultForeground](../sadconsole.icellsurface/#defaultforeground), [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) and glyph 0.
 
 
 ### Resize(int, int, bool)
@@ -180,7 +182,7 @@ The width of the surface and view.
 The height of the surface and view.
 
 `clear` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the <xref href="SadConsole.ICellSurface.DefaultForeground" data-throw-if-not-resolved="false"></xref>, <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref> and glyph 0.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the [DefaultForeground](../sadconsole.icellsurface/#defaultforeground), [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) and glyph 0.
 
 
 ### ToString()

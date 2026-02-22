@@ -3,10 +3,12 @@ title: Table.Cell.Options Class
 slug: reference/sadconsole.ui.controls.table.cell.options
 sidebar:
   label: Table.Cell.Options
+editUrl: false
+description: A collection of settings that are used by `SadConsole.UI.Controls.Table.Cell`
 ---
 ## Definition
 
-A collection of settings that are used by [Table.Cell](../sadconsole.ui.controls.table/)
+A collection of settings that are used by [Table.Cell](../sadconsole.ui.controls.table.cell/)
 
 ```csharp title="C#"
 public class Table.Cell.Options : IEquatable<Table.Cell.Options>

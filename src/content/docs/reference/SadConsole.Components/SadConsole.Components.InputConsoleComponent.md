@@ -3,10 +3,12 @@ title: InputConsoleComponent Class
 slug: reference/sadconsole.components.inputconsolecomponent
 sidebar:
   label: InputConsoleComponent
+editUrl: false
+description: A base class that implements `SadConsole.Components.IComponent.ProcessMouse(SadConsole.IScreenObject%2cSadConsole.Input.MouseScreenObjectState%2cSystem.Boolean%40)` and `SadConsole.Components.IComponent.ProcessKeyboard(SadConsole.IScreenObject%2cSadConsole.Input.Keyboard%2cSystem.Boolean%40)` of `SadConsole.Components.IComponent`.
 ---
 ## Definition
 
-A base class that implements `SadConsole.Components.IComponent.ProcessMouse(SadConsole.IScreenObject%2cSadConsole.Input.MouseScreenObjectState%2cSystem.Boolean%40)` and `SadConsole.Components.IComponent.ProcessKeyboard(SadConsole.IScreenObject%2cSadConsole.Input.Keyboard%2cSystem.Boolean%40)` of [IComponent](../sadconsole.components.icomponent/).
+A base class that implements [ProcessMouse(IScreenObject, MouseScreenObjectState, out bool)](../sadconsole.components.icomponent/#processmouseiscreenobject-mousescreenobjectstate-out-bool) and [ProcessKeyboard(IScreenObject, Keyboard, out bool)](../sadconsole.components.icomponent/#processkeyboardiscreenobject-keyboard-out-bool) of [IComponent](../sadconsole.components.icomponent/).
 
 ```csharp title="C#"
 public abstract class InputConsoleComponent : IComponent

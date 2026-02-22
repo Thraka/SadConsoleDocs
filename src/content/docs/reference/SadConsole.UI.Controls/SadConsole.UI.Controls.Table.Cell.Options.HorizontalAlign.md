@@ -3,6 +3,8 @@ title: Table.Cell.Options.HorizontalAlign Enum
 slug: reference/sadconsole.ui.controls.table.cell.options.horizontalalign
 sidebar:
   label: Table.Cell.Options.HorizontalAlign
+editUrl: false
+description: Alignment enum for the horizontal axis
 ---
 ## Definition
 

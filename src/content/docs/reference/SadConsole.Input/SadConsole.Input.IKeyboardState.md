@@ -3,6 +3,8 @@ title: IKeyboardState Interface
 slug: reference/sadconsole.input.ikeyboardstate
 sidebar:
   label: IKeyboardState
+editUrl: false
+description: Holds the state of keystrokes by a keyboard.
 ---
 ## Definition
 

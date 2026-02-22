@@ -3,6 +3,8 @@ title: Document Class
 slug: reference/sadconsole.ansi.document
 sidebar:
   label: Document
+editUrl: false
+description: Represents an ANSI.SYS formatted document.
 ---
 ## Definition
 
@@ -44,7 +46,7 @@ public byte[] AnsiBytes { get; set; }
 
 ### AnsiString
 
-A string representing the [AnsiBytes](../sadconsole.ansi.document/#ansibytes/).
+A string representing the [AnsiBytes](../sadconsole.ansi.document/#ansibytes).
 
 ```csharp title="C#"
 public string AnsiString { get; }
@@ -52,7 +54,7 @@ public string AnsiString { get; }
 
 ### Stream
 
-A stream that points to the [AnsiBytes](../sadconsole.ansi.document/#ansibytes/).
+A stream that points to the [AnsiBytes](../sadconsole.ansi.document/#ansibytes).
 
 ```csharp title="C#"
 public MemoryStream? Stream { get; }

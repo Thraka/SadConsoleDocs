@@ -3,6 +3,8 @@ title: TheDrawFont.Character Struct
 slug: reference/sadconsole.readers.thedrawfont.character
 sidebar:
   label: TheDrawFont.Character
+editUrl: false
+description: A character defined by the font.
 ---
 ## Definition
 

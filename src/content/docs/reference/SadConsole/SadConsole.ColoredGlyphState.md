@@ -3,6 +3,8 @@ title: ColoredGlyphState Struct
 slug: reference/sadconsole.coloredglyphstate
 sidebar:
   label: ColoredGlyphState
+editUrl: false
+description: A `SadConsole.ColoredGlyphBase` with state information.
 ---
 ## Definition
 
@@ -63,7 +65,7 @@ The visibility of the glyph.
 
 ### Decorators
 
-A copy of the [Decorators](../sadconsole.coloredglyphbase/#decorators/) property.
+A copy of the [Decorators](../sadconsole.coloredglyphbase/#decorators) property.
 
 ```csharp title="C#"
 public CellDecorator[] Decorators { get; }
@@ -71,7 +73,7 @@ public CellDecorator[] Decorators { get; }
 
 ### Foreground
 
-A copy of the [Foreground](../sadconsole.coloredglyphbase/#foreground/) property.
+A copy of the [Foreground](../sadconsole.coloredglyphbase/#foreground) property.
 
 ```csharp title="C#"
 public Color Foreground { get; }
@@ -79,7 +81,7 @@ public Color Foreground { get; }
 
 ### Background
 
-A copy of the [Background](../sadconsole.coloredglyphbase/#background/) property.
+A copy of the [Background](../sadconsole.coloredglyphbase/#background) property.
 
 ```csharp title="C#"
 public Color Background { get; }
@@ -87,7 +89,7 @@ public Color Background { get; }
 
 ### Glyph
 
-A copy of the [Glyph](../sadconsole.coloredglyphbase/#glyph/) property.
+A copy of the [Glyph](../sadconsole.coloredglyphbase/#glyph) property.
 
 ```csharp title="C#"
 public int Glyph { get; }
@@ -95,7 +97,7 @@ public int Glyph { get; }
 
 ### Mirror
 
-A copy of the [Mirror](../sadconsole.coloredglyphbase/#mirror/) property.
+A copy of the [Mirror](../sadconsole.coloredglyphbase/#mirror) property.
 
 ```csharp title="C#"
 public Mirror Mirror { get; }
@@ -103,7 +105,7 @@ public Mirror Mirror { get; }
 
 ### IsVisible
 
-A copy of the [IsVisible](../sadconsole.coloredglyphbase/#isvisible/) property.
+A copy of the [IsVisible](../sadconsole.coloredglyphbase/#isvisible) property.
 
 ```csharp title="C#"
 public bool IsVisible { get; }

@@ -3,6 +3,8 @@ title: Entity Class
 slug: reference/sadconsole.entities.entity
 sidebar:
   label: Entity
+editUrl: false
+description: A positioned and animated game object.
 ---
 ## Definition
 
@@ -140,7 +142,7 @@ public bool IsDirty { get; set; }
 
 ### UsePixelPositioning
 
-Treats the `SadRogue.Primitives.IPositionable.Position` of the entity as if it is pixels and not cells.
+Treats the ``SadRogue.Primitives.IPositionable.Position`` of the entity as if it is pixels and not cells.
 
 ```csharp title="C#"
 public bool UsePixelPositioning { get; set; }
@@ -148,7 +150,7 @@ public bool UsePixelPositioning { get; set; }
 
 ### AppearanceSingle
 
-The appearance of the entity when [IsSingleCell](../sadconsole.entities.entity/#issinglecell/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+The appearance of the entity when [IsSingleCell](../sadconsole.entities.entity/#issinglecell) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public Entity.SingleCell? AppearanceSingle { get; set; }
@@ -156,7 +158,7 @@ public Entity.SingleCell? AppearanceSingle { get; set; }
 
 ### AppearanceSurface
 
-The appearance of the entity when [IsSingleCell](../sadconsole.entities.entity/#issinglecell/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+The appearance of the entity when [IsSingleCell](../sadconsole.entities.entity/#issinglecell) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public Entity.Animated? AppearanceSurface { get; set; }
@@ -174,7 +176,7 @@ public bool IsSingleCell { get; set; }
 
 ### OnPositionChanged(Point, Point)
 
-Raises the [PositionChanged](../sadconsole.screenobject/#positionchanged/) event.
+Raises the [PositionChanged](../sadconsole.screenobject/#positionchanged) event.
 
 ```csharp title="C#"
 protected override void OnPositionChanged(Point oldPosition, Point newPosition)
@@ -191,7 +193,7 @@ The new position.
 
 ### OnIsDirtyChanged()
 
-Raises the [IsDirtyChanged](../sadconsole.entities.entity/#isdirtychanged/) event.
+Raises the [IsDirtyChanged](../sadconsole.entities.entity/#isdirtychanged) event.
 
 ```csharp title="C#"
 protected virtual void OnIsDirtyChanged()
@@ -200,7 +202,7 @@ protected virtual void OnIsDirtyChanged()
 
 ### UpdateAbsolutePosition()
 
-Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition/) based on the `SadRogue.Primitives.IPositionable.Position` of this instance and the [Parent](../sadconsole.iscreenobject/#parent/) instance.
+Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition) based on the ``SadRogue.Primitives.IPositionable.Position`` of this instance and the [Parent](../sadconsole.iscreenobject/#parent) instance.
 
 ```csharp title="C#"
 public override void UpdateAbsolutePosition()
@@ -269,7 +271,7 @@ The entity.
 
 ### IsDirtyChanged
 
-Raised when the [IsDirty](../sadconsole.entities.entity/#isdirty/) property changes value.
+Raised when the [IsDirty](../sadconsole.entities.entity/#isdirty) property changes value.
 
 ```csharp title="C#"
 public event EventHandler? IsDirtyChanged

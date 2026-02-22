@@ -3,10 +3,12 @@ title: KeyboardConsoleComponent Class
 slug: reference/sadconsole.components.keyboardconsolecomponent
 sidebar:
   label: KeyboardConsoleComponent
+editUrl: false
+description: A base class that implements `SadConsole.Components.IComponent.ProcessKeyboard(SadConsole.IScreenObject%2cSadConsole.Input.Keyboard%2cSystem.Boolean%40)` of `SadConsole.Components.IComponent`.
 ---
 ## Definition
 
-A base class that implements `SadConsole.Components.IComponent.ProcessKeyboard(SadConsole.IScreenObject%2cSadConsole.Input.Keyboard%2cSystem.Boolean%40)` of [IComponent](../sadconsole.components.icomponent/).
+A base class that implements [ProcessKeyboard(IScreenObject, Keyboard, out bool)](../sadconsole.components.icomponent/#processkeyboardiscreenobject-keyboard-out-bool) of [IComponent](../sadconsole.components.icomponent/).
 
 ```csharp title="C#"
 public abstract class KeyboardConsoleComponent : IComponent

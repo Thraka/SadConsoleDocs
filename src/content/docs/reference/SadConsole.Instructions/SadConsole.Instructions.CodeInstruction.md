@@ -3,6 +3,8 @@ title: CodeInstruction Class
 slug: reference/sadconsole.instructions.codeinstruction
 sidebar:
   label: CodeInstruction
+editUrl: false
+description: An instruction with a code callback.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Implements [IComponent](../sadconsole.components.icomponent/)
 
 ## Constructors
 
-### CodeInstruction(Func<IScreenObject, TimeSpan, bool>)
+### CodeInstruction(Func\<IScreenObject, TimeSpan, bool>)
 
 Creates a new instruction with the specified callback.
 
@@ -29,7 +31,7 @@ public CodeInstruction(Func<IScreenObject, TimeSpan, bool> callback)
 #### Parameters
 
 `callback` [Func\<IScreenObject, TimeSpan, bool\>](https://learn.microsoft.com/dotnet/api/system.func-3/)  
-The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set <xref href="SadConsole.Instructions.InstructionBase.IsFinished" data-throw-if-not-resolved="false"></xref>.
+The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set [IsFinished](../sadconsole.instructions.instructionbase/#isfinished).
 
 
 ## Properties
@@ -61,7 +63,7 @@ The object that hosts this instruction.
 The time that has elapsed since this method was last called.
 
 
-### SetCallback(Func<IScreenObject, TimeSpan, bool>)
+### SetCallback(Func\<IScreenObject, TimeSpan, bool>)
 
 Sets the callback used by the instruction.
 
@@ -72,4 +74,4 @@ public void SetCallback(Func<IScreenObject, TimeSpan, bool> callback)
 #### Parameters
 
 `callback` [Func\<IScreenObject, TimeSpan, bool\>](https://learn.microsoft.com/dotnet/api/system.func-3/)  
-The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set <xref href="SadConsole.Instructions.InstructionBase.IsFinished" data-throw-if-not-resolved="false"></xref>.
+The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set [IsFinished](../sadconsole.instructions.instructionbase/#isfinished).

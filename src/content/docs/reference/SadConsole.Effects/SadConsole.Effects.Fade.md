@@ -3,6 +3,8 @@ title: Fade Class
 slug: reference/sadconsole.effects.fade
 sidebar:
   label: Fade
+editUrl: false
+description: Fades both the background and foreground to separate colors.
 ---
 ## Definition
 
@@ -86,7 +88,7 @@ public bool Repeat { get; set; }
 
 ### UseCellForeground
 
-Gets or sets a value to indicate that the color gradient used with the [DestinationForeground](../sadconsole.effects.fade/#destinationforeground/) should replace its first color stop with the cell's foreground color.
+Gets or sets a value to indicate that the color gradient used with the [DestinationForeground](../sadconsole.effects.fade/#destinationforeground) should replace its first color stop with the cell's foreground color.
 
 ```csharp title="C#"
 [DataMember]
@@ -95,7 +97,7 @@ public bool UseCellForeground { get; set; }
 
 ### UseCellBackground
 
-Gets or sets a value to indicate that the color gradient used with the [DestinationBackground](../sadconsole.effects.fade/#destinationbackground/) should replace its first color stop with the cell's background color.
+Gets or sets a value to indicate that the color gradient used with the [DestinationBackground](../sadconsole.effects.fade/#destinationbackground) should replace its first color stop with the cell's background color.
 
 ```csharp title="C#"
 [DataMember]
@@ -122,7 +124,7 @@ public bool FadeBackground { get; set; }
 
 ### AutoReverse
 
-Gets or sets a value to indicate that the fade effect should automatically reverse itself when it finishes going up the color spectrum. By setting this to true, and setting the [Repeat](../sadconsole.effects.fade/#repeat/) property to true, you can create a pulse effect.
+Gets or sets a value to indicate that the fade effect should automatically reverse itself when it finishes going up the color spectrum. By setting this to true, and setting the [Repeat](../sadconsole.effects.fade/#repeat) property to true, you can create a pulse effect.
 
 ```csharp title="C#"
 [DataMember]
@@ -131,7 +133,7 @@ public bool AutoReverse { get; set; }
 
 ### UseCellDestinationReverse
 
-When [UseCellForeground](../sadconsole.effects.fade/#usecellforeground/) or [UseCellBackground](../sadconsole.effects.fade/#usecellbackground/) is set, and this is true, the last color in the fade will be set to the cell instead of the first.
+When [UseCellForeground](../sadconsole.effects.fade/#usecellforeground) or [UseCellBackground](../sadconsole.effects.fade/#usecellbackground) is set, and this is true, the last color in the fade will be set to the cell instead of the first.
 
 ```csharp title="C#"
 [DataMember]

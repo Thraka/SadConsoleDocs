@@ -3,6 +3,8 @@ title: AnimatedValue Class
 slug: reference/sadconsole.instructions.animatedvalue
 sidebar:
   label: AnimatedValue
+editUrl: false
+description: An function that applies an `SadConsole.EasingFunctions.EasingBase` function between two values.
 ---
 ## Definition
 
@@ -38,7 +40,7 @@ The starting value of the animation.
 The ending value of the animation.
 
 `easingFunction` [EasingBase](../sadconsole.easingfunctions.easingbase/)  
-The easing function used during animation. Defaults to <xref href="SadConsole.EasingFunctions.Linear" data-throw-if-not-resolved="false"></xref>.
+The easing function used during animation. Defaults to [Linear](../sadconsole.easingfunctions.linear/).
 
 
 ## Fields
@@ -99,7 +101,7 @@ The starting value of the animation.
 The ending value of the animation.
 
 `easingFunction` [EasingBase](../sadconsole.easingfunctions.easingbase/)  
-The easing function used during animation. Defaults to <xref href="SadConsole.EasingFunctions.Linear" data-throw-if-not-resolved="false"></xref>.
+The easing function used during animation. Defaults to [Linear](../sadconsole.easingfunctions.linear/).
 
 
 ### Reset()
@@ -112,7 +114,7 @@ public override void Reset()
 
 #### Remarks
 
-On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished/) to false. Override this method to reset the derived class' counters and status flags for the instruction.
+On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished) to false. Override this method to reset the derived class' counters and status flags for the instruction.
 
 ### Update(IScreenObject, TimeSpan)
 
@@ -135,7 +137,7 @@ The time since the last frame update.
 
 ### ValueChanged
 
-Raised when the instruction is running and the value changes during `SadConsole.Instructions.AnimatedValue.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)`.
+Raised when the instruction is running and the value changes during [Update(IScreenObject, TimeSpan)](../sadconsole.instructions.animatedvalue/#updateiscreenobject-timespan).
 
 ```csharp title="C#"
 public event EventHandler<double>? ValueChanged

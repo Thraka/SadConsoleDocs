@@ -3,10 +3,12 @@ title: UpdateComponent Class
 slug: reference/sadconsole.components.updatecomponent
 sidebar:
   label: UpdateComponent
+editUrl: false
+description: A base class that implements `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)` of `SadConsole.Components.IComponent`.
 ---
 ## Definition
 
-A base class that implements `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)` of [IComponent](../sadconsole.components.icomponent/).
+A base class that implements [Update(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#updateiscreenobject-timespan) of [IComponent](../sadconsole.components.icomponent/).
 
 ```csharp title="C#"
 public abstract class UpdateComponent : IComponent

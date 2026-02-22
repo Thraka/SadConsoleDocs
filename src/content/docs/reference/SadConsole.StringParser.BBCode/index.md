@@ -3,6 +3,7 @@ title: SadConsole.StringParser.BBCode
 slug: reference/sadconsole.stringparser.bbcode
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

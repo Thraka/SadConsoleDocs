@@ -3,6 +3,8 @@ title: Colors.ColorNames Enum
 slug: reference/sadconsole.ui.colors.colornames
 sidebar:
   label: Colors.ColorNames
+editUrl: false
+description: An enumeration of each color name defined by the library colors object.
 ---
 ## Definition
 

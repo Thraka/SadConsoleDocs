@@ -3,6 +3,8 @@ title: HorizontalAlignment Enum
 slug: reference/sadconsole.horizontalalignment
 sidebar:
   label: HorizontalAlignment
+editUrl: false
+description: Horizontal alignment modes.
 ---
 ## Definition
 

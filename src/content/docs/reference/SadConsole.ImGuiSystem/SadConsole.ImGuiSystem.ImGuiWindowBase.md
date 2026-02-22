@@ -3,6 +3,7 @@ title: ImGuiWindowBase Class
 slug: reference/sadconsole.imguisystem.imguiwindowbase
 sidebar:
   label: ImGuiWindowBase
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: Mouse Class
 slug: reference/sadconsole.input.mouse
 sidebar:
   label: Mouse
+editUrl: false
+description: The state of the mouse.
 ---
 ## Definition
 
@@ -157,7 +159,7 @@ public bool IsOnScreen { get; }
 
 ### Update(TimeSpan)
 
-Reads the mouse state from [GetMouseState()](../sadconsole.gamehost/#getmousestate/).
+Reads the mouse state from [GetMouseState()](../sadconsole.gamehost/#getmousestate).
 
 ```csharp title="C#"
 public void Update(TimeSpan elapsedSeconds)
@@ -180,7 +182,7 @@ public void Clear()
 
 ### Process()
 
-Builds information about the mouse state based on the [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects/) or [Screen](../sadconsole.gamehost/#screen/). Should be called each frame.
+Builds information about the mouse state based on the [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects) or [Screen](../sadconsole.gamehost/#screen). Should be called each frame.
 
 ```csharp title="C#"
 public virtual void Process()

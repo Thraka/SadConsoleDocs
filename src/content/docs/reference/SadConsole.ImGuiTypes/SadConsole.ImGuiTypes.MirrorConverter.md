@@ -3,6 +3,7 @@ title: MirrorConverter Class
 slug: reference/sadconsole.imguitypes.mirrorconverter
 sidebar:
   label: MirrorConverter
+editUrl: false
 ---
 ## Definition
 

@@ -3,10 +3,12 @@ title: DebugFocusedObjectTint Class
 slug: reference/sadconsole.components.debugfocusedobjecttint
 sidebar:
   label: DebugFocusedObjectTint
+editUrl: false
+description: Tints a surface when that surface is focused. Helps debug which object is focused in `SadConsole.GameHost.FocusedScreenObjects`.
 ---
 ## Definition
 
-Tints a surface when that surface is focused. Helps debug which object is focused in [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects/).
+Tints a surface when that surface is focused. Helps debug which object is focused in [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects).
 
 ```csharp title="C#"
 public class DebugFocusedObjectTint : RootComponent, IConfigurator

@@ -3,6 +3,8 @@ title: CompositeControl Class
 slug: reference/sadconsole.ui.controls.compositecontrol
 sidebar:
   label: CompositeControl
+editUrl: false
+description: Base class for controls that host and render other controls.
 ---
 ## Definition
 
@@ -45,7 +47,7 @@ protected bool MouseLastHandledByChild
 
 ### Controls
 
-The controls this composite control is hosting. Use [AddControl(ControlBase)](../sadconsole.ui.controls.compositecontrol/#/) and [RemoveControl(ControlBase)](../sadconsole.ui.controls.compositecontrol/#/) to manage the collection.
+The controls this composite control is hosting. Use [AddControl(ControlBase)](../sadconsole.ui.controls.compositecontrol/#addcontrolcontrolbase) and [RemoveControl(ControlBase)](../sadconsole.ui.controls.compositecontrol/#removecontrolcontrolbase) to manage the collection.
 
 ```csharp title="C#"
 protected List<ControlBase> Controls
@@ -53,7 +55,7 @@ protected List<ControlBase> Controls
 
 ### NamedControls
 
-The controls added which contain a [Name](../sadconsole.ui.controls.controlbase/#name/) value.
+The controls added which contain a [Name](../sadconsole.ui.controls.controlbase/#name) value.
 
 ```csharp title="C#"
 protected Dictionary<string, ControlBase> NamedControls
@@ -77,7 +79,7 @@ protected ControlBase this[int index] { get; }
 
 ### CreateChildControls()
 
-Create each control and add it to [Controls](../sadconsole.ui.controls.compositecontrol/#controls/).
+Create each control and add it to [Controls](../sadconsole.ui.controls.compositecontrol/#controls).
 
 ```csharp title="C#"
 protected virtual void CreateChildControls()
@@ -104,7 +106,7 @@ The mouse state based on the parent screen object.
 
 ### OnMouseExit(ControlMouseState)
 
-Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseExit(ControlBase.ControlMouseState state)

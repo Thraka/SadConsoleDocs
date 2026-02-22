@@ -3,6 +3,8 @@ title: IRendererMonoGame Interface
 slug: reference/sadconsole.renderers.irenderermonogame
 sidebar:
   label: IRendererMonoGame
+editUrl: false
+description: MonoGame-specific renderer settings.
 ---
 ## Definition
 

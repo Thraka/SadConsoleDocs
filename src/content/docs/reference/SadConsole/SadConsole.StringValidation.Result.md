@@ -3,6 +3,8 @@ title: StringValidation.Result Struct
 slug: reference/sadconsole.stringvalidation.result
 sidebar:
   label: StringValidation.Result
+editUrl: false
+description: The object produced when validating a string.
 ---
 ## Definition
 
@@ -29,7 +31,7 @@ public Result(bool isValid, string? errorMsg = null)
 A value to indicate that the result is valid or not.
 
 `errorMsg` [string](https://learn.microsoft.com/dotnet/api/system.string/)  
-A message associated with the result when <code class="paramref">isValid</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+A message associated with the result when `isValid` is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 
 ## Fields
@@ -44,7 +46,7 @@ public readonly bool IsValid
 
 ### ErrorMessage
 
-The error message when [IsValid](../sadconsole.stringvalidation.result/#isvalid/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. May be an empty string when there isn't a message.
+The error message when [IsValid](../sadconsole.stringvalidation.result/#isvalid) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>. May be an empty string when there isn't a message.
 
 ```csharp title="C#"
 public readonly string ErrorMessage

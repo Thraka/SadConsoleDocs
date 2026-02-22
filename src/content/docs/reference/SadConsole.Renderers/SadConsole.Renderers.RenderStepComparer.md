@@ -3,10 +3,12 @@ title: RenderStepComparer Class
 slug: reference/sadconsole.renderers.renderstepcomparer
 sidebar:
   label: RenderStepComparer
+editUrl: false
+description: Compares `SadConsole.Renderers.IRenderStep` with the `SadConsole.Renderers.IRenderStep.SortOrder` property.
 ---
 ## Definition
 
-Compares [IRenderStep](../sadconsole.renderers.irenderstep/) with the [SortOrder](../sadconsole.renderers.irenderstep/#sortorder/) property.
+Compares [IRenderStep](../sadconsole.renderers.irenderstep/) with the [SortOrder](../sadconsole.renderers.irenderstep/#sortorder) property.
 
 ```csharp title="C#"
 public class RenderStepComparer : IComparer<IRenderStep>

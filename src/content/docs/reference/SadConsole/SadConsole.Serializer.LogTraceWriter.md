@@ -3,6 +3,8 @@ title: Serializer.LogTraceWriter Class
 slug: reference/sadconsole.serializer.logtracewriter
 sidebar:
   label: Serializer.LogTraceWriter
+editUrl: false
+description: A simple log writer that helps debug the JSON serialization.
 ---
 ## Definition
 

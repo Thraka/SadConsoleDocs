@@ -3,6 +3,8 @@ title: HandledEventArgs Class
 slug: reference/sadconsole.handledeventargs
 sidebar:
   label: HandledEventArgs
+editUrl: false
+description: Event args that allow a handled flag to be set.
 ---
 ## Definition
 

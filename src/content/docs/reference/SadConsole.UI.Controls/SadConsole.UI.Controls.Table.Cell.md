@@ -3,6 +3,8 @@ title: Table.Cell Class
 slug: reference/sadconsole.ui.controls.table.cell
 sidebar:
   label: Table.Cell
+editUrl: false
+description: A basic cell used in the Table control
 ---
 ## Definition
 

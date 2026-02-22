@@ -3,6 +3,8 @@ title: ConfigurationImGui Class
 slug: reference/sadconsole.configuration.configurationimgui
 sidebar:
   label: ConfigurationImGui
+editUrl: false
+description: Extensions to enable ImGui with SadConsole.
 ---
 ## Definition
 
@@ -16,7 +18,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### EnableImGui(Builder, string, float, bool, Action<ImGuiMonoGameComponent>)
+### EnableImGui(Builder, string, float, bool, Action\<ImGuiMonoGameComponent>)
 
 Adds the ImGui MonoGame component to MonoGame.
 

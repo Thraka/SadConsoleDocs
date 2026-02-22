@@ -3,6 +3,8 @@ title: GlyphDefinition Struct
 slug: reference/sadconsole.glyphdefinition
 sidebar:
   label: GlyphDefinition
+editUrl: false
+description: Represents a decorator (glyph and mirror) defined by a font.
 ---
 ## Definition
 

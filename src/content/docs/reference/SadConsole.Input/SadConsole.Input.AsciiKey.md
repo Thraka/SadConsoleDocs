@@ -3,6 +3,8 @@ title: AsciiKey Struct
 slug: reference/sadconsole.input.asciikey
 sidebar:
   label: AsciiKey
+editUrl: false
+description: Represents the state of a single key.
 ---
 ## Definition
 
@@ -73,7 +75,7 @@ public TimeSpan TimeHeld
 
 ### PostInitialDelay
 
-Tracks if the key was previously held when calculating the [InitialRepeatDelay](../sadconsole.input.keyboard/#initialrepeatdelay/).
+Tracks if the key was previously held when calculating the [InitialRepeatDelay](../sadconsole.input.keyboard/#initialrepeatdelay).
 
 ```csharp title="C#"
 public bool PostInitialDelay
@@ -95,7 +97,7 @@ public void Fill(Keys key, bool shiftPressed, IKeyboardState state)
 The key.
 
 `shiftPressed` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Helps identify which <xref href="SadConsole.Input.AsciiKey.Character" data-throw-if-not-resolved="false"></xref> to use while the key is pressed.
+Helps identify which [Character](../sadconsole.input.asciikey/#character) to use while the key is pressed.
 
 `state` [IKeyboardState](../sadconsole.input.ikeyboardstate/)  
 Keyboard state to read from.

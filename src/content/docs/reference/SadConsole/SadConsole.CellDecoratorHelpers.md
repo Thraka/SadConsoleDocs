@@ -3,10 +3,12 @@ title: CellDecoratorHelpers Class
 slug: reference/sadconsole.celldecoratorhelpers
 sidebar:
   label: CellDecoratorHelpers
+editUrl: false
+description: Helpers for `SadConsole.CellDecorator` and `SadConsole.ColoredGlyphBase.Decorators` which manages null on the property.
 ---
 ## Definition
 
-Helpers for [CellDecorator](../sadconsole.celldecorator/) and [Decorators](../sadconsole.coloredglyphbase/#decorators/) which manages null on the property.
+Helpers for [CellDecorator](../sadconsole.celldecorator/) and [Decorators](../sadconsole.coloredglyphbase/#decorators) which manages null on the property.
 
 ```csharp title="C#"
 public static class CellDecoratorHelpers
@@ -26,7 +28,7 @@ public static IListPool<CellDecorator> Pool { get; set; }
 
 ## Methods
 
-### SetDecorators(IEnumerable<CellDecorator>?, ColoredGlyphBase)
+### SetDecorators(IEnumerable\<CellDecorator>?, ColoredGlyphBase)
 
 Replaces the decorators of a glyph.
 
@@ -60,7 +62,7 @@ The decorator to set.
 The glyph to alter.
 
 
-### AddDecorators(IEnumerable<CellDecorator>?, ColoredGlyphBase)
+### AddDecorators(IEnumerable\<CellDecorator>?, ColoredGlyphBase)
 
 Adds the decorators to a glyph.
 
@@ -94,9 +96,9 @@ The decorator to add.
 The glyph to alter.
 
 
-### RemoveDecorators(IEnumerable<CellDecorator>, ColoredGlyphBase)
+### RemoveDecorators(IEnumerable\<CellDecorator>, ColoredGlyphBase)
 
-Removes the specified decorators from a glyph. If no decorators remain on the glyph, the [Decorators](../sadconsole.coloredglyphbase/#decorators/) collection is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+Removes the specified decorators from a glyph. If no decorators remain on the glyph, the [Decorators](../sadconsole.coloredglyphbase/#decorators) collection is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
 
 ```csharp title="C#"
 public static void RemoveDecorators(IEnumerable<CellDecorator> decorators, ColoredGlyphBase glyph)
@@ -113,7 +115,7 @@ The glyph to alter.
 
 ### RemoveAllDecorators(ColoredGlyphBase)
 
-Removes all decorators from a glyph, returns the list to the pool, and sets the [Decorators](../sadconsole.coloredglyphbase/#decorators/) collection to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+Removes all decorators from a glyph, returns the list to the pool, and sets the [Decorators](../sadconsole.coloredglyphbase/#decorators) collection to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
 
 ```csharp title="C#"
 public static void RemoveAllDecorators(ColoredGlyphBase glyph)
@@ -127,7 +129,7 @@ The glyph to alter.
 
 ### RemoveDecorator(CellDecorator, ColoredGlyphBase)
 
-Removes the specified decorator from a glyph. If no decorators remain on the glyph, the [Decorators](../sadconsole.coloredglyphbase/#decorators/) collection is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+Removes the specified decorator from a glyph. If no decorators remain on the glyph, the [Decorators](../sadconsole.coloredglyphbase/#decorators) collection is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
 
 ```csharp title="C#"
 public static void RemoveDecorator(CellDecorator decorator, ColoredGlyphBase glyph)
@@ -144,7 +146,7 @@ The glyph to alter.
 
 ### CloneDecorators(ColoredGlyphBase)
 
-Returns a new list of decorators from the [Decorators](../sadconsole.coloredglyphbase/#decorators/) property of `glyph`.
+Returns a new list of decorators from the [Decorators](../sadconsole.coloredglyphbase/#decorators) property of `glyph`.
 
 ```csharp title="C#"
 public static List<CellDecorator>? CloneDecorators(ColoredGlyphBase glyph)
@@ -160,7 +162,7 @@ The glyph to copy the decorators from.
 [List\<CellDecorator\>](https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1/)  
 A list with all of the decorators from `glyph`. If the glyph's decorators are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> is returned.
 
-### ItemsMatch(List<CellDecorator>?, List<CellDecorator>?)
+### ItemsMatch(List\<CellDecorator>?, List\<CellDecorator>?)
 
 Determines whether the contents of two [CellDecorator](../sadconsole.celldecorator/) arrays are equal.
 

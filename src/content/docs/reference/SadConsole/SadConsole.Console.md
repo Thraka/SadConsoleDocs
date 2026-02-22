@@ -3,6 +3,8 @@ title: Console Class
 slug: reference/sadconsole.console
 sidebar:
   label: Console
+editUrl: false
+description: A surface that has a cursor.
 ---
 ## Definition
 
@@ -59,7 +61,7 @@ The initial cells to seed the surface.
 
 ### Console(int, int, int, int)
 
-Creates a new console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new console with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public Console(int width, int height, int bufferWidth, int bufferHeight)
@@ -82,7 +84,7 @@ The total height of the console in cells.
 
 ### Console(int, int, int, int, ColoredGlyphBase[]?)
 
-Creates a console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a console with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public Console(int width, int height, int bufferWidth, int bufferHeight, ColoredGlyphBase[]? initialCells)
@@ -158,7 +160,7 @@ protected override void OnVisibleChanged()
 
 ### OnFocusLost()
 
-Called when this console's focus has been lost. Hides the [Cursor](../sadconsole.console/#cursor/) if [AutoCursorOnFocus](../sadconsole.console/#autocursoronfocus/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Called when this console's focus has been lost. Hides the [Cursor](../sadconsole.console/#cursor) if [AutoCursorOnFocus](../sadconsole.console/#autocursoronfocus) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public override void OnFocusLost()
@@ -167,7 +169,7 @@ public override void OnFocusLost()
 
 ### OnFocused()
 
-Called when this console is focused. Shows the [Cursor](../sadconsole.console/#cursor/) if [AutoCursorOnFocus](../sadconsole.console/#autocursoronfocus/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Called when this console is focused. Shows the [Cursor](../sadconsole.console/#cursor) if [AutoCursorOnFocus](../sadconsole.console/#autocursoronfocus) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public override void OnFocused()

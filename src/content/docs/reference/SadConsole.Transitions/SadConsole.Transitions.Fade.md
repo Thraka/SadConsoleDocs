@@ -3,6 +3,8 @@ title: Fade Class
 slug: reference/sadconsole.transitions.fade
 sidebar:
   label: Fade
+editUrl: false
+description: Fades out one `SadConsole.IScreenSurface` while fading in another.
 ---
 ## Definition
 
@@ -39,7 +41,7 @@ public Fade(IScreenSurface from, IScreenSurface to, TimeSpan duration, EasingBas
 
 ### DeparentFromObject
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, removes the "From" object from the parent when the transition finishes. Supersedes [HideFromObject](../sadconsole.transitions.fade/#hidefromobject/).
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, removes the "From" object from the parent when the transition finishes. Supersedes [HideFromObject](../sadconsole.transitions.fade/#hidefromobject).
 
 ```csharp title="C#"
 public bool DeparentFromObject { get; set; }
@@ -47,7 +49,7 @@ public bool DeparentFromObject { get; set; }
 
 ### HideFromObject
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, sets [IsVisible](../sadconsole.iscreenobject/#isvisible/) to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> on the "From" object when the transition finishes.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, sets [IsVisible](../sadconsole.iscreenobject/#isvisible) to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> on the "From" object when the transition finishes.
 
 ```csharp title="C#"
 public bool HideFromObject { get; set; }

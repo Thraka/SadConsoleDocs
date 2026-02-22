@@ -3,6 +3,8 @@ title: Simple Class
 slug: reference/sadconsole.splashscreens.simple
 sidebar:
   label: Simple
+editUrl: false
+description: A simple splashscreen that fades in a screen specifying "Powered by SadConsole".
 ---
 ## Definition
 

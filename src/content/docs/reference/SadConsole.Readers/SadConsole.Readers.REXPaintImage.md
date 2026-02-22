@@ -3,6 +3,8 @@ title: REXPaintImage Class
 slug: reference/sadconsole.readers.rexpaintimage
 sidebar:
   label: REXPaintImage
+editUrl: false
+description: A RexPaint image.
 ---
 ## Definition
 

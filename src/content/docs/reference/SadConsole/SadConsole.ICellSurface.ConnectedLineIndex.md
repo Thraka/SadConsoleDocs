@@ -3,6 +3,8 @@ title: ICellSurface.ConnectedLineIndex Enum
 slug: reference/sadconsole.icellsurface.connectedlineindex
 sidebar:
   label: ICellSurface.ConnectedLineIndex
+editUrl: false
+description: Array index enum for line glyphs.
 ---
 ## Definition
 

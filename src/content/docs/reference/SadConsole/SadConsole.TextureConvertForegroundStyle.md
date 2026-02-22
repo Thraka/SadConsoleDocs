@@ -3,10 +3,12 @@ title: TextureConvertForegroundStyle Enum
 slug: reference/sadconsole.textureconvertforegroundstyle
 sidebar:
   label: TextureConvertForegroundStyle
+editUrl: false
+description: The style applied when `SadConsole.TextureConvertMode.Foreground` is set.
 ---
 ## Definition
 
-The style applied when [Foreground](../sadconsole.textureconvertmode/#foreground/) is set.
+The style applied when [Foreground](../sadconsole.textureconvertmode/#foreground) is set.
 
 ```csharp title="C#"
 public enum TextureConvertForegroundStyle

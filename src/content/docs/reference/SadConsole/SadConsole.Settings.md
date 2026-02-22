@@ -3,6 +3,8 @@ title: Settings Class
 slug: reference/sadconsole.settings
 sidebar:
   label: Settings
+editUrl: false
+description: Various settings for SadConsole.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### DefaultConsoleUseKeyboard
 
-Gets and sets the default value for [UseKeyboard](../sadconsole.iscreenobject/#usekeyboard/) when the console is created.
+Gets and sets the default value for [UseKeyboard](../sadconsole.iscreenobject/#usekeyboard) when the console is created.
 
 ```csharp title="C#"
 public static bool DefaultConsoleUseKeyboard
@@ -26,7 +28,7 @@ public static bool DefaultConsoleUseKeyboard
 
 ### DefaultScreenObjectUseKeyboard
 
-Gets and sets the default value for [UseKeyboard](../sadconsole.screenobject/#usekeyboard/).
+Gets and sets the default value for [UseKeyboard](../sadconsole.screenobject/#usekeyboard).
 
 ```csharp title="C#"
 public static bool DefaultScreenObjectUseKeyboard
@@ -34,7 +36,7 @@ public static bool DefaultScreenObjectUseKeyboard
 
 ### DefaultScreenObjectUseMouse
 
-Gets and sets the default value for [UseMouse](../sadconsole.screenobject/#usemouse/).
+Gets and sets the default value for [UseMouse](../sadconsole.screenobject/#usemouse).
 
 ```csharp title="C#"
 public static bool DefaultScreenObjectUseMouse
@@ -66,7 +68,7 @@ public static bool AllowWindowResize
 
 ### DoDraw
 
-When true, indicates that the game loop should call [Render(TimeSpan)](../sadconsole.iscreenobject/#/) on each object in [Screen](../sadconsole.gamehost/#screen/).
+When true, indicates that the game loop should call [Render(TimeSpan)](../sadconsole.iscreenobject/#rendertimespan) on each object in [Screen](../sadconsole.gamehost/#screen).
 
 ```csharp title="C#"
 public static bool DoDraw
@@ -82,7 +84,7 @@ public static bool DoFinalDraw
 
 ### DoUpdate
 
-When true, indicates that the game loop should call [Update(TimeSpan)](../sadconsole.iscreenobject/#/) on each object in [Screen](../sadconsole.gamehost/#screen/).
+When true, indicates that the game loop should call [Update(TimeSpan)](../sadconsole.iscreenobject/#updatetimespan) on each object in [Screen](../sadconsole.gamehost/#screen).
 
 ```csharp title="C#"
 public static bool DoUpdate
@@ -100,7 +102,7 @@ public static Point WindowMinimumSize { get; set; }
 
 ### SerializationIsCompressed
 
-When set to true, all loading and saving performed by SadConsole uses GZIP. [LoadFont(string)](../sadconsole.gamehost/#/) does not use this setting and always runs uncompressed.
+When set to true, all loading and saving performed by SadConsole uses GZIP. [LoadFont(string)](../sadconsole.gamehost/#loadfontstring) does not use this setting and always runs uncompressed.
 
 ```csharp title="C#"
 public static bool SerializationIsCompressed { get; set; }
@@ -132,7 +134,7 @@ public static string DebuggerPipeId { get; }
 
 ### AutomaticAddColorsToMappings
 
-Automatically adds all of the static color declarations of `SadRogue.Primitives.Color` to [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings/).
+Automatically adds all of the static color declarations of ``SadRogue.Primitives.Color`` to [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings).
 
 ```csharp title="C#"
 public static bool AutomaticAddColorsToMappings { get; set; }

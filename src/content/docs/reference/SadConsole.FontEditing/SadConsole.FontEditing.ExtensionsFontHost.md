@@ -3,6 +3,8 @@ title: ExtensionsFontHost Class
 slug: reference/sadconsole.fontediting.extensionsfonthost
 sidebar:
   label: ExtensionsFontHost
+editUrl: false
+description: Extension methods to handle editing `SadConsole.SadFont` objects.
 ---
 ## Definition
 
@@ -181,7 +183,7 @@ The font being edited.
 The glyph index to erase.
 
 `doSetPixels` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, pushes the updated pixel buffer, <code class="paramref">cachedFontTexturePixels</code>, to the font texture.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, pushes the updated pixel buffer, `cachedFontTexturePixels`, to the font texture.
 
 `cachedFontTexturePixels` SadRogue.Primitives.Color[]  
 A cached array of all the font's texture pixels.
@@ -207,7 +209,7 @@ The index of the glyph to update.
 The pixels to set on the glyph.
 
 `doSetPixels` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, pushes the updated pixel buffer, <code class="paramref">cachedFontTexturePixels</code>, to the font texture.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, pushes the updated pixel buffer, `cachedFontTexturePixels`, to the font texture.
 
 `cachedFontTexturePixels` SadRogue.Primitives.Color[]  
 A cached array of all the font's texture pixels.
@@ -220,7 +222,7 @@ The `pixels` count doesn't match the size of a font glyph.
 
 ### Edit_GetGlyph_CPU(IFont, int, ref Color[])
 
-Returns a glyph's pixels packaged into a `SadRogue.Primitives.Color` array.
+Returns a glyph's pixels packaged into a ``SadRogue.Primitives.Color`` array.
 
 ```csharp title="C#"
 public static Color[] Edit_GetGlyph_CPU(this IFont font, int glyphIndex, ref Color[] cachedFontTexturePixels)

@@ -3,6 +3,8 @@ title: Blinker Class
 slug: reference/sadconsole.effects.blinker
 sidebar:
   label: Blinker
+editUrl: false
+description: Blinks the foreground and background colors of a cell with the specified colors.
 ---
 ## Definition
 
@@ -59,7 +61,7 @@ public Color BlinkOutBackgroundColor { get; set; }
 
 ### SwapColorsFromCell
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, ignores the [BlinkOutBackgroundColor](../sadconsole.effects.blinker/#blinkoutbackgroundcolor/) and [BlinkOutForegroundColor](../sadconsole.effects.blinker/#blinkoutforegroundcolor/) colors and instead swaps the glyph's foreground and background colors.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, ignores the [BlinkOutBackgroundColor](../sadconsole.effects.blinker/#blinkoutbackgroundcolor) and [BlinkOutForegroundColor](../sadconsole.effects.blinker/#blinkoutforegroundcolor) colors and instead swaps the glyph's foreground and background colors.
 
 ```csharp title="C#"
 [DataMember]

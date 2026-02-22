@@ -3,6 +3,7 @@ title: FontJsonConverter Class
 slug: reference/sadconsole.serializedtypes.fontjsonconverter
 sidebar:
   label: FontJsonConverter
+editUrl: false
 ---
 ## Definition
 

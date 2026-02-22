@@ -3,10 +3,12 @@ title: SurfaceComponentFollowTarget Class
 slug: reference/sadconsole.components.surfacecomponentfollowtarget
 sidebar:
   label: SurfaceComponentFollowTarget
+editUrl: false
+description: Add to a `SadConsole.IScreenSurface` to have the `SadConsole.ICellSurface.ViewPosition` center on a specific object.
 ---
 ## Definition
 
-Add to a [IScreenSurface](../sadconsole.iscreensurface/) to have the [ViewPosition](../sadconsole.icellsurface/#viewposition/) center on a specific object.
+Add to a [IScreenSurface](../sadconsole.iscreensurface/) to have the [ViewPosition](../sadconsole.icellsurface/#viewposition) center on a specific object.
 
 ```csharp title="C#"
 public class SurfaceComponentFollowTarget : UpdateComponent, IComponent

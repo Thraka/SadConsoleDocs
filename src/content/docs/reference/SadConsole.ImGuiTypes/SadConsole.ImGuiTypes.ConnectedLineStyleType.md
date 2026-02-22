@@ -3,6 +3,7 @@ title: ConnectedLineStyleType Class
 slug: reference/sadconsole.imguitypes.connectedlinestyletype
 sidebar:
   label: ConnectedLineStyleType
+editUrl: false
 ---
 ## Definition
 

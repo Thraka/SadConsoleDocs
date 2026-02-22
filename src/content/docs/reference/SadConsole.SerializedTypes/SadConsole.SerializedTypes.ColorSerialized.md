@@ -3,6 +3,7 @@ title: ColorSerialized Struct
 slug: reference/sadconsole.serializedtypes.colorserialized
 sidebar:
   label: ColorSerialized
+editUrl: false
 ---
 ## Definition
 

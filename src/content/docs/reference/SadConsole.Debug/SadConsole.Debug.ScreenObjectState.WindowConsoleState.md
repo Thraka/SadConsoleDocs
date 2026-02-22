@@ -3,6 +3,7 @@ title: ScreenObjectState.WindowConsoleState Class
 slug: reference/sadconsole.debug.screenobjectstate.windowconsolestate
 sidebar:
   label: ScreenObjectState.WindowConsoleState
+editUrl: false
 ---
 ## Definition
 

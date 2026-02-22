@@ -3,6 +3,7 @@ title: StartingConsoleConfig Class
 slug: reference/sadconsole.configuration.startingconsoleconfig
 sidebar:
   label: StartingConsoleConfig
+editUrl: false
 ---
 ## Definition
 

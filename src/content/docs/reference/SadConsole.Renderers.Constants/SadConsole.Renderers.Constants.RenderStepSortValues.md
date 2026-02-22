@@ -3,6 +3,8 @@ title: RenderStepSortValues Class
 slug: reference/sadconsole.renderers.constants.renderstepsortvalues
 sidebar:
   label: RenderStepSortValues
+editUrl: false
+description: Renderer names used by hosts and types.
 ---
 ## Definition
 

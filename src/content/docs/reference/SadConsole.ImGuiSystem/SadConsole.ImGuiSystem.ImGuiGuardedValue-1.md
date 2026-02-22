@@ -3,6 +3,8 @@ title: ImGuiGuardedValue<T> Struct
 slug: reference/sadconsole.imguisystem.imguiguardedvalue-1
 sidebar:
   label: ImGuiGuardedValue<T>
+editUrl: false
+description: Makes a copy of a value and allows it to be changed. The change can be committed or reverted.
 ---
 ## Definition
 

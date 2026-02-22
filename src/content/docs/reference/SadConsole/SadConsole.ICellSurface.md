@@ -3,6 +3,8 @@ title: ICellSurface Interface
 slug: reference/sadconsole.icellsurface
 sidebar:
   label: ICellSurface
+editUrl: false
+description: An array of `SadConsole.ColoredGlyphBase` objects used to represent a 2D surface.
 ---
 ## Definition
 
@@ -49,7 +51,7 @@ int TimesShiftedUp { get; set; }
 
 ### UsePrintProcessor
 
-When true, the [Parser](../sadconsole.coloredstring/#parser/) is used to generate a [ColoredString](../sadconsole.coloredstring/) before printing.
+When true, the [Parser](../sadconsole.coloredstring/#parser) is used to generate a [ColoredString](../sadconsole.coloredstring/) before printing.
 
 ```csharp title="C#"
 bool UsePrintProcessor { get; set; }
@@ -57,7 +59,7 @@ bool UsePrintProcessor { get; set; }
 
 ### Effects
 
-Processes the effects added to cells with `CellSurfaceEditor.SetEffect*`.
+Processes the effects added to cells with ``CellSurfaceEditor.SetEffect*``.
 
 ```csharp title="C#"
 EffectsManager Effects { get; }
@@ -105,7 +107,7 @@ bool IsDirty { get; set; }
 
 ### IsScrollable
 
-Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the [View](../sadconsole.icellsurface/#view/) width or height is different from [Area](../sadconsole.icellsurface/#area/); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the [View](../sadconsole.icellsurface/#view) width or height is different from [Area](../sadconsole.icellsurface/#area); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 bool IsScrollable { get; }
@@ -203,7 +205,7 @@ The glyph to use for the connected line array.
 [int[]](https://learn.microsoft.com/dotnet/api/system.int32/)  
 An array of glyphs.
 
-### ValidateLineStyle<T>(in T[])
+### ValidateLineStyle\<T>(in T[])
 
 Returns a value that indicates a line style array is not null and contains the required number of elements.
 
@@ -214,7 +216,7 @@ public static bool ValidateLineStyle<T>(in T[] connectedLineStyle)
 #### Parameters
 
 `connectedLineStyle` T[]  
-The array to check based on the <xref href="SadConsole.ICellSurface.ConnectedLineIndex" data-throw-if-not-resolved="false"></xref> enum.
+The array to check based on the [ICellSurface.ConnectedLineIndex](../sadconsole.icellsurface.connectedlineindex/) enum.
 
 #### Returns
 
@@ -225,7 +227,7 @@ True when the line style is correct.
 
 ### IsDirtyChanged
 
-An event that is raised when [IsDirty](../sadconsole.icellsurface/#isdirty/) changes.
+An event that is raised when [IsDirty](../sadconsole.icellsurface/#isdirty) changes.
 
 ```csharp title="C#"
 event EventHandler IsDirtyChanged

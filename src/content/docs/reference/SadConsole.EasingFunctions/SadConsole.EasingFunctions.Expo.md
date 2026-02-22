@@ -3,6 +3,7 @@ title: Expo Class
 slug: reference/sadconsole.easingfunctions.expo
 sidebar:
   label: Expo
+editUrl: false
 ---
 ## Definition
 

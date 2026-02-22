@@ -3,6 +3,8 @@ title: GameHost Class
 slug: reference/sadconsole.gamehost
 sidebar:
   label: GameHost
+editUrl: false
+description: Represents the SadConsole game engine.
 ---
 ## Definition
 
@@ -146,7 +148,7 @@ public IFont DefaultFont { get; set; }
 
 ### DefaultFontSize
 
-The default font size to use with the [DefaultFont](../sadconsole.gamehost/#defaultfont/).
+The default font size to use with the [DefaultFont](../sadconsole.gamehost/#defaultfont).
 
 ```csharp title="C#"
 public IFont.Sizes DefaultFontSize { get; set; }
@@ -194,7 +196,7 @@ public TimeSpan GameRunningTotalTime { get; }
 
 ### StartingConsole
 
-The console created by the game and automatically assigned to [Screen](../sadconsole.gamehost/#screen/).
+The console created by the game and automatically assigned to [Screen](../sadconsole.gamehost/#screen).
 
 ```csharp title="C#"
 public Console? StartingConsole { get; protected set; }
@@ -210,7 +212,7 @@ public IScreenObject? Screen { get; set; }
 
 ### RootComponents
 
-Update components that run before the [Screen](../sadconsole.gamehost/#screen/) is processed.
+Update components that run before the [Screen](../sadconsole.gamehost/#screen) is processed.
 
 ```csharp title="C#"
 public List<RootComponent> RootComponents { get; set; }
@@ -236,7 +238,7 @@ public Random Random { get; set; }
 
 ### OnGameStarted()
 
-Raises the [Started](../sadconsole.gamehost/#started/) event.
+Raises the [Started](../sadconsole.gamehost/#started) event.
 
 ```csharp title="C#"
 protected virtual void OnGameStarted()
@@ -245,7 +247,7 @@ protected virtual void OnGameStarted()
 
 ### OnGameEnding()
 
-Raises the [Ending](../sadconsole.gamehost/#ending/) event.
+Raises the [Ending](../sadconsole.gamehost/#ending) event.
 
 ```csharp title="C#"
 protected virtual void OnGameEnding()
@@ -254,7 +256,7 @@ protected virtual void OnGameEnding()
 
 ### OnFrameRender()
 
-Raises the [FrameRender](../sadconsole.gamehost/#framerender/) event.
+Raises the [FrameRender](../sadconsole.gamehost/#framerender) event.
 
 ```csharp title="C#"
 protected virtual void OnFrameRender()
@@ -263,7 +265,7 @@ protected virtual void OnFrameRender()
 
 ### OnFrameUpdate()
 
-Raises the [FrameUpdate](../sadconsole.gamehost/#frameupdate/) event.
+Raises the [FrameUpdate](../sadconsole.gamehost/#frameupdate) event.
 
 ```csharp title="C#"
 protected virtual void OnFrameUpdate()
@@ -465,7 +467,7 @@ The splash screens to show.
 
 ### LoadFont(string)
 
-Loads a font from a file and adds it to the [Fonts](../sadconsole.gamehost/#fonts/) collection.
+Loads a font from a file and adds it to the [Fonts](../sadconsole.gamehost/#fonts) collection.
 
 ```csharp title="C#"
 public IFont LoadFont(string font)
@@ -483,7 +485,7 @@ A master font that you can generate a usable font from.
 
 ### DestroyDefaultStartingConsole()
 
-Destroys the [StartingConsole](../sadconsole.gamehost/#startingconsole/) instance.
+Destroys the [StartingConsole](../sadconsole.gamehost/#startingconsole) instance.
 
 ```csharp title="C#"
 public void DestroyDefaultStartingConsole()
@@ -491,7 +493,7 @@ public void DestroyDefaultStartingConsole()
 
 #### Remarks
 
-Prior to calling this method, you must set [Screen](../sadconsole.gamehost/#screen/) to an object other than [StartingConsole](../sadconsole.gamehost/#startingconsole/).
+Prior to calling this method, you must set [Screen](../sadconsole.gamehost/#screen) to an object other than [StartingConsole](../sadconsole.gamehost/#startingconsole).
 
 ### OpenStream(string, FileMode, FileAccess)
 
@@ -507,10 +509,10 @@ public virtual Stream OpenStream(string file, FileMode mode = FileMode.Open, Fil
 The file to open.
 
 `mode` [FileMode](https://learn.microsoft.com/dotnet/api/system.io.filemode/)  
-The mode for opening. Defaults to <xref href="System.IO.FileMode.Open" data-throw-if-not-resolved="false"></xref>.
+The mode for opening. Defaults to [Open](https://learn.microsoft.com/dotnet/api/system.io.filemode#system-io-filemode-open/).
 
 `access` [FileAccess](https://learn.microsoft.com/dotnet/api/system.io.fileaccess/)  
-The type of access for the stream. Defaults to <xref href="System.IO.FileAccess.Read" data-throw-if-not-resolved="false"></xref>.
+The type of access for the stream. Defaults to [Read](https://learn.microsoft.com/dotnet/api/system.io.fileaccess#system-io-fileaccess-read/).
 
 #### Returns
 
@@ -555,7 +557,7 @@ The file to delete.
 
 ### LoadDefaultFonts(string?)
 
-Loads the embedded `IBM.font` files. Sets the [DefaultFont](../sadconsole.gamehost/#defaultfont/) property.
+Loads the embedded `IBM.font` files. Sets the [DefaultFont](../sadconsole.gamehost/#defaultfont) property.
 
 ```csharp title="C#"
 protected void LoadDefaultFonts(string? defaultFont)
@@ -568,11 +570,11 @@ An optional font to load and set as the default.
 
 #### Remarks
 
-If `defaultFont` is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the [EmbeddedFont](../sadconsole.gamehost/#embeddedfont/) or [EmbeddedFontExtended](../sadconsole.gamehost/#embeddedfontextended/) font is set based on the value of [UseDefaultExtendedFont](../sadconsole.settings/#usedefaultextendedfont/).
+If `defaultFont` is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the [EmbeddedFont](../sadconsole.gamehost/#embeddedfont) or [EmbeddedFontExtended](../sadconsole.gamehost/#embeddedfontextended) font is set based on the value of [UseDefaultExtendedFont](../sadconsole.settings/#usedefaultextendedfont).
 
 ### LoadMappedColors()
 
-Uses reflection to examine the `SadRogue.Primitives.Color` type and add any predefined colors into [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings/).
+Uses reflection to examine the ``SadRogue.Primitives.Color`` type and add any predefined colors into [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings).
 
 ```csharp title="C#"
 protected static void LoadMappedColors()
@@ -624,7 +626,7 @@ When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/built
 
 ### SaveGlobalState()
 
-Saves the global state, mainly the [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects/) and [Screen](../sadconsole.gamehost/#screen/) objects.
+Saves the global state, mainly the [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects) and [Screen](../sadconsole.gamehost/#screen) objects.
 
 ```csharp title="C#"
 public void SaveGlobalState()
@@ -633,7 +635,7 @@ public void SaveGlobalState()
 
 ### RestoreGlobalState()
 
-Restores the global state that was saved with [SaveGlobalState()](../sadconsole.gamehost/#saveglobalstate/).
+Restores the global state that was saved with [SaveGlobalState()](../sadconsole.gamehost/#saveglobalstate).
 
 ```csharp title="C#"
 public void RestoreGlobalState()
@@ -695,7 +697,7 @@ public event EventHandler<GameHost>? FrameUpdate
 [EventHandler\<GameHost\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### Started
 
-A callback to run before the [Run()](../sadconsole.gamehost/#run/) method is called;
+A callback to run before the [Run()](../sadconsole.gamehost/#run) method is called;
 
 ```csharp title="C#"
 public event EventHandler<GameHost>? Started
@@ -706,7 +708,7 @@ public event EventHandler<GameHost>? Started
 [EventHandler\<GameHost\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### Ending
 
-A callback to run after the [Run()](../sadconsole.gamehost/#run/) method is called;
+A callback to run after the [Run()](../sadconsole.gamehost/#run) method is called;
 
 ```csharp title="C#"
 public event EventHandler<GameHost>? Ending

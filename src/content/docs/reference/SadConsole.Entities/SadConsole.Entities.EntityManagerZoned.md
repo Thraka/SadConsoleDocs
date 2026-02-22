@@ -3,6 +3,8 @@ title: EntityManagerZoned Class
 slug: reference/sadconsole.entities.entitymanagerzoned
 sidebar:
   label: EntityManagerZoned
+editUrl: false
+description: Manages a set of entities. Adds a render step and only renders the entities that are in the parent `SadConsole.IScreenSurface` visible area.
 ---
 ## Definition
 
@@ -186,7 +188,7 @@ The zone to filter entities by.
 [IReadOnlyList\<Entity\>](https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1/)  
 A list of entities.
 
-### OnEntityChangedPosition(Entity, ValueChangedEventArgs<Point>)
+### OnEntityChangedPosition(Entity, ValueChangedEventArgs\<Point>)
 
 Called when an entity changes position.
 
@@ -233,7 +235,7 @@ The entity that was removed.
 
 ### OnEntityEnterZone(IScreenSurface, Zone, Entity, Point)
 
-Called when an entity enters a zone and raises the [EnterZone](../sadconsole.entities.entitymanagerzoned/#enterzone/) event.
+Called when an entity enters a zone and raises the [EnterZone](../sadconsole.entities.entitymanagerzoned/#enterzone) event.
 
 ```csharp title="C#"
 protected virtual void OnEntityEnterZone(IScreenSurface host, Zone zone, Entity entity, Point triggeredPosition)
@@ -256,7 +258,7 @@ The position the entity entered.
 
 ### OnEntityExitZone(IScreenSurface, Zone, Entity, Point)
 
-Called when an entity enters a zone and raises the [ExitZone](../sadconsole.entities.entitymanagerzoned/#exitzone/) event.
+Called when an entity enters a zone and raises the [ExitZone](../sadconsole.entities.entitymanagerzoned/#exitzone) event.
 
 ```csharp title="C#"
 protected virtual void OnEntityExitZone(IScreenSurface host, Zone zone, Entity entity, Point triggeredPosition)
@@ -303,7 +305,7 @@ The position the entity moved to.
 The position the entity moved from.
 
 
-### GetZonesAtPosition(in Point, out HashSet<Zone>)
+### GetZonesAtPosition(in Point, out HashSet\<Zone>)
 
 Gets the zones that contain the specified position.
 
@@ -326,7 +328,7 @@ The zones that contain this position.
 
 ### DisableEntity(Entity)
 
-Prevents an entity from being processed with the [Zones](../sadconsole.entities.entitymanagerzoned/#zones/).
+Prevents an entity from being processed with the [Zones](../sadconsole.entities.entitymanagerzoned/#zones).
 
 ```csharp title="C#"
 public void DisableEntity(Entity entity)
@@ -340,7 +342,7 @@ The entity to disable.
 
 ### EnableEntity(Entity)
 
-Enables the entity to be processed with with the [Zones](../sadconsole.entities.entitymanagerzoned/#zones/).
+Enables the entity to be processed with with the [Zones](../sadconsole.entities.entitymanagerzoned/#zones).
 
 ```csharp title="C#"
 public void EnableEntity(Entity entity)
@@ -354,7 +356,7 @@ The entity to disable.
 
 ### IsEntityDisabled(Entity)
 
-Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the entity has been disabled by [DisableEntity(Entity)](../sadconsole.entities.entitymanagerzoned/#/); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the entity has been disabled by [DisableEntity(Entity)](../sadconsole.entities.entitymanagerzoned/#disableentityentity); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool IsEntityDisabled(Entity entity)

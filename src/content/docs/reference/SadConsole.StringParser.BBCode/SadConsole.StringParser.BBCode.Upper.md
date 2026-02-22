@@ -3,6 +3,7 @@ title: Upper Class
 slug: reference/sadconsole.stringparser.bbcode.upper
 sidebar:
   label: Upper
+editUrl: false
 ---
 ## Definition
 
@@ -23,7 +24,7 @@ public Upper()
 
 ## Methods
 
-### SetBBCode(string, string?, Dictionary<string, string>?)
+### SetBBCode(string, string?, Dictionary\<string, string>?)
 
 Provides the information about the tag that triggered this command.
 
@@ -43,7 +44,7 @@ Optional value provided by the BBCode.
 Optional parameters provided by the BBCode.
 
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

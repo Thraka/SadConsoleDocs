@@ -3,6 +3,8 @@ title: ConcurrentInstructions Class
 slug: reference/sadconsole.instructions.concurrentinstructions
 sidebar:
   label: ConcurrentInstructions
+editUrl: false
+description: Runs one or more instructions at the same time. This instruction completes when all added instructions have finished.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Implements [IComponent](../sadconsole.components.icomponent/)
 
 ## Constructors
 
-### ConcurrentInstructions(IEnumerable<InstructionBase>)
+### ConcurrentInstructions(IEnumerable\<InstructionBase>)
 
 Creates a new instruction that runs the provided instructions concurrently.
 
@@ -63,7 +65,7 @@ The time that has elapsed since this method was last called.
 
 ### Repeat()
 
-Repeats the current instruction. Decrements the [RepeatCount](../sadconsole.instructions.instructionbase/#repeatcount/) value (if applicable), and raises the [Repeating](../sadconsole.instructions.instructionbase/#repeating/) event. This method should be overridden in derived classes to customize how the object is reset for a repeat.
+Repeats the current instruction. Decrements the [RepeatCount](../sadconsole.instructions.instructionbase/#repeatcount) value (if applicable), and raises the [Repeating](../sadconsole.instructions.instructionbase/#repeating) event. This method should be overridden in derived classes to customize how the object is reset for a repeat.
 
 ```csharp title="C#"
 public override void Repeat()
@@ -80,4 +82,4 @@ public override void Reset()
 
 #### Remarks
 
-On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished/) to false. Override this method to reset the derived class' counters and status flags for the instruction.
+On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished) to false. Override this method to reset the derived class' counters and status flags for the instruction.

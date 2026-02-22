@@ -3,10 +3,12 @@ title: MonoRectangleExtensions Class
 slug: reference/microsoft.xna.framework.monorectangleextensions
 sidebar:
   label: MonoRectangleExtensions
+editUrl: false
+description: Extension methods for `Microsoft.Xna.Framework.Rectangle` that enable operations involving `SadRogue.Primitives.Rectangle`.
 ---
 ## Definition
 
-Extension methods for `Microsoft.Xna.Framework.Rectangle` that enable operations involving `SadRogue.Primitives.Rectangle`.
+Extension methods for ``Microsoft.Xna.Framework.Rectangle`` that enable operations involving ``SadRogue.Primitives.Rectangle``.
 
 ```csharp title="C#"
 public static class MonoRectangleExtensions
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### ToRectangle(Rectangle)
 
-Converts from `Microsoft.Xna.Framework.Rectangle` to `SadRogue.Primitives.Rectangle`.
+Converts from ``Microsoft.Xna.Framework.Rectangle`` to ``SadRogue.Primitives.Rectangle``.
 
 ```csharp title="C#"
 public static Rectangle ToRectangle(this Rectangle self)
@@ -34,7 +36,7 @@ SadRogue.Primitives.Rectangle
 
 ### Matches(Rectangle, Rectangle)
 
-Compares a `Microsoft.Xna.Framework.Rectangle` to a `SadRogue.Primitives.Rectangle`.
+Compares a ``Microsoft.Xna.Framework.Rectangle`` to a ``SadRogue.Primitives.Rectangle``.
 
 ```csharp title="C#"
 public static bool Matches(this Rectangle self, Rectangle other)

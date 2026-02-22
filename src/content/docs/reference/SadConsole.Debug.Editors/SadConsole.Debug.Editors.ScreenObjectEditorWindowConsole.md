@@ -3,6 +3,7 @@ title: ScreenObjectEditorWindowConsole Class
 slug: reference/sadconsole.debug.editors.screenobjecteditorwindowconsole
 sidebar:
   label: ScreenObjectEditorWindowConsole
+editUrl: false
 ---
 ## Definition
 

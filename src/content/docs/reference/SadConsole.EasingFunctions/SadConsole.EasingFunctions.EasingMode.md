@@ -3,6 +3,8 @@ title: EasingMode Enum
 slug: reference/sadconsole.easingfunctions.easingmode
 sidebar:
   label: EasingMode
+editUrl: false
+description: The types of easing modes.
 ---
 ## Definition
 

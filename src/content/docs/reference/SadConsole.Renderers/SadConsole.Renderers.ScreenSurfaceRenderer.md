@@ -3,6 +3,8 @@ title: ScreenSurfaceRenderer Class
 slug: reference/sadconsole.renderers.screensurfacerenderer
 sidebar:
   label: ScreenSurfaceRenderer
+editUrl: false
+description: Draws a `SadConsole.IScreenSurface`.
 ---
 ## Definition
 
@@ -92,7 +94,7 @@ public BlendState MonoGameBlendState { get; set; }
 
 ### BackingTextureUsageMode
 
-Used when creating the [_backingTexture](../sadconsole.renderers.screensurfacerenderer/#backingtexture/) variable.
+Used when creating the [_backingTexture](../sadconsole.renderers.screensurfacerenderer/#backingtexture) variable.
 
 ```csharp title="C#"
 public RenderTargetUsage BackingTextureUsageMode { get; set; }
@@ -204,7 +206,7 @@ public void Dispose()
 
 ### BackingTextureRecreated
 
-Raised when the [_backingTexture](../sadconsole.renderers.screensurfacerenderer/#backingtexture/) is recreated.
+Raised when the [_backingTexture](../sadconsole.renderers.screensurfacerenderer/#backingtexture) is recreated.
 
 ```csharp title="C#"
 public event EventHandler BackingTextureRecreated

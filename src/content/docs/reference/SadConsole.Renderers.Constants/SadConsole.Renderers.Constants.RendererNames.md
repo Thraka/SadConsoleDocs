@@ -3,6 +3,8 @@ title: RendererNames Class
 slug: reference/sadconsole.renderers.constants.renderernames
 sidebar:
   label: RendererNames
+editUrl: false
+description: Renderer names used by hosts and types.
 ---
 ## Definition
 
@@ -26,7 +28,7 @@ public const string Default = "default"
 
 ### ScreenSurface
 
-The renderer for a [ScreenSurface](../sadconsole.renderers.constants.renderernames/#screensurface/).
+The renderer for a [ScreenSurface](../sadconsole.renderers.constants.renderernames/#screensurface).
 
 ```csharp title="C#"
 public const string ScreenSurface = "screensurface"
@@ -34,7 +36,7 @@ public const string ScreenSurface = "screensurface"
 
 ### OptimizedScreenSurface
 
-The renderer for a [ScreenSurface](../sadconsole.renderers.constants.renderernames/#screensurface/) that doesn't use any steps, it directly renders the surface to a cached texture.
+The renderer for a [ScreenSurface](../sadconsole.renderers.constants.renderernames/#screensurface) that doesn't use any steps, it directly renders the surface to a cached texture.
 
 ```csharp title="C#"
 public const string OptimizedScreenSurface = "optimizedscreensurface"
@@ -42,7 +44,7 @@ public const string OptimizedScreenSurface = "optimizedscreensurface"
 
 ### LayeredScreenSurface
 
-The renderer for a [LayeredScreenSurface](../sadconsole.renderers.constants.renderernames/#layeredscreensurface/).
+The renderer for a [LayeredScreenSurface](../sadconsole.renderers.constants.renderernames/#layeredscreensurface).
 
 ```csharp title="C#"
 public const string LayeredScreenSurface = "layeredscreensurface"

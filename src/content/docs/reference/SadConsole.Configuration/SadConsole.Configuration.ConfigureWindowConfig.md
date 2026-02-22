@@ -3,6 +3,8 @@ title: ConfigureWindowConfig Class
 slug: reference/sadconsole.configuration.configurewindowconfig
 sidebar:
   label: ConfigureWindowConfig
+editUrl: false
+description: Holds the config state for the window.
 ---
 ## Definition
 
@@ -159,4 +161,4 @@ public bool IsWindowSizeValid()
 #### Returns
 
 [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-True when the [WindowWidthInPixels](../sadconsole.configuration.configurewindowconfig/#windowwidthinpixels/) and [WindowHeightInPixels](../sadconsole.configuration.configurewindowconfig/#windowheightinpixels/) are less than or equal to the screen size; otherwise, false.
+True when the [WindowWidthInPixels](../sadconsole.configuration.configurewindowconfig/#windowwidthinpixels) and [WindowHeightInPixels](../sadconsole.configuration.configurewindowconfig/#windowheightinpixels) are less than or equal to the screen size; otherwise, false.

@@ -3,6 +3,8 @@ title: REXPaintImage.Layer Class
 slug: reference/sadconsole.readers.rexpaintimage.layer
 sidebar:
   label: REXPaintImage.Layer
+editUrl: false
+description: A layer of a RexPaint image.
 ---
 ## Definition
 

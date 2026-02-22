@@ -3,6 +3,8 @@ title: ScrollBar.ThemeStyle Class
 slug: reference/sadconsole.ui.controls.scrollbar.themestyle
 sidebar:
   label: ScrollBar.ThemeStyle
+editUrl: false
+description: The drawing code for the scrollbar
 ---
 ## Definition
 

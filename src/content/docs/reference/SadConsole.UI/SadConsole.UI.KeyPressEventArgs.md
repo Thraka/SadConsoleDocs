@@ -3,6 +3,8 @@ title: KeyPressEventArgs Class
 slug: reference/sadconsole.ui.keypresseventargs
 sidebar:
   label: KeyPressEventArgs
+editUrl: false
+description: Event arguments to indicate that a key is being pressed on a control that allows keyboard key cancelling.
 ---
 ## Definition
 

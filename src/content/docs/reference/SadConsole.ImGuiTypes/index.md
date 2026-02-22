@@ -3,6 +3,7 @@ title: SadConsole.ImGuiTypes
 slug: reference/sadconsole.imguitypes
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

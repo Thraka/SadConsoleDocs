@@ -3,6 +3,7 @@ title: SadConsole.Debug
 slug: reference/sadconsole.debug
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

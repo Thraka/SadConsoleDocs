@@ -3,6 +3,8 @@ title: CheckBox Class
 slug: reference/sadconsole.ui.controls.checkbox
 sidebar:
   label: CheckBox
+editUrl: false
+description: Represents a button that can be toggled on/off within a group of other buttons.
 ---
 ## Definition
 
@@ -87,7 +89,7 @@ public int UncheckedIconGlyph { get; set; }
 
 ### CheckedIconColor
 
-An optional color of the [CheckedIconGlyph](../sadconsole.ui.controls.checkbox/#checkediconglyph/).
+An optional color of the [CheckedIconGlyph](../sadconsole.ui.controls.checkbox/#checkediconglyph).
 
 ```csharp title="C#"
 [DataMember]
@@ -96,7 +98,7 @@ public Color? CheckedIconColor { get; set; }
 
 ### UncheckedIconColor
 
-An optional color of the [UncheckedIconGlyph](../sadconsole.ui.controls.checkbox/#uncheckediconglyph/).
+An optional color of the [UncheckedIconGlyph](../sadconsole.ui.controls.checkbox/#uncheckediconglyph).
 
 ```csharp title="C#"
 [DataMember]
@@ -123,7 +125,7 @@ public ThemeStates IconThemeState { get; protected set; }
 
 ### OnClick()
 
-Perfroms a click on the base button and also toggles the [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected/) property.
+Perfroms a click on the base button and also toggles the [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected) property.
 
 ```csharp title="C#"
 protected override void OnClick()
@@ -132,7 +134,7 @@ protected override void OnClick()
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)
@@ -160,7 +162,7 @@ The duration of thecurrent frame.
 
 ### CreateControlSurface()
 
-Resizes the control surface based on [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize/) or the [Width](../sadconsole.ui.controls.controlbase/#width/) and [Height](../sadconsole.ui.controls.controlbase/#height/) properties.
+Resizes the control surface based on [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize) or the [Width](../sadconsole.ui.controls.controlbase/#width) and [Height](../sadconsole.ui.controls.controlbase/#height) properties.
 
 ```csharp title="C#"
 protected override ICellSurface CreateControlSurface()

@@ -3,6 +3,7 @@ title: SadConsole.Input
 slug: reference/sadconsole.input
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

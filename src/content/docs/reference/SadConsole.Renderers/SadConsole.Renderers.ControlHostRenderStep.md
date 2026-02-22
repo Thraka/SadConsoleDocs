@@ -3,6 +3,8 @@ title: ControlHostRenderStep Class
 slug: reference/sadconsole.renderers.controlhostrenderstep
 sidebar:
   label: ControlHostRenderStep
+editUrl: false
+description: Draws a `SadConsole.UI.ControlHost`.
 ---
 ## Definition
 
@@ -72,7 +74,7 @@ public void SetData(object data)
 #### Parameters
 
 `data` [object](https://learn.microsoft.com/dotnet/api/system.object/)  
-A <xref href="SadConsole.UI.ControlHost" data-throw-if-not-resolved="false"></xref> object.
+A [ControlHost](../sadconsole.ui.controlhost/) object.
 
 
 ### Reset()
@@ -101,7 +103,7 @@ The renderer the render step is using.
 The surface associated with the renderer. This may be null.
 
 `backingTextureChanged` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to indicate the <xref href="SadConsole.Renderers.IRenderer.Output" data-throw-if-not-resolved="false"></xref> changed; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to indicate the [Output](../sadconsole.renderers.irenderer/#output) changed; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 `isForced` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
 <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when refresh is being forced; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
@@ -109,11 +111,11 @@ The surface associated with the renderer. This may be null.
 #### Returns
 
 [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the step is going to draw something new and is requesting a `SadConsole.Renderers.IRenderStep.Composing(SadConsole.Renderers.IRenderer%2cSadConsole.IScreenSurface)` step; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the step is going to draw something new and is requesting a [Composing(IRenderer, IScreenSurface)](../sadconsole.renderers.irenderstep/#composingirenderer-iscreensurface) step; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ### Composing(IRenderer, IScreenSurface)
 
-Called when the renderer needs to redraw the [Output](../sadconsole.renderers.irenderer/#output/) texture.
+Called when the renderer needs to redraw the [Output](../sadconsole.renderers.irenderer/#output) texture.
 
 ```csharp title="C#"
 public void Composing(IRenderer renderer, IScreenSurface screenObject)
@@ -182,7 +184,7 @@ protected void Dispose(bool disposing)
 #### Parameters
 
 `disposing` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to indicate this method was called from <xref href="SadConsole.Renderers.ControlHostRenderStep.Dispose" data-throw-if-not-resolved="false"></xref>.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to indicate this method was called from [Dispose()](../sadconsole.renderers.controlhostrenderstep/#dispose).
 
 
 ### Dispose()

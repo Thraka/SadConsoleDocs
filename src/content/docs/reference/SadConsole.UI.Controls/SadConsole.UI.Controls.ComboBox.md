@@ -3,6 +3,8 @@ title: ComboBox Class
 slug: reference/sadconsole.ui.controls.combobox
 sidebar:
   label: ComboBox
+editUrl: false
+description: Represents a button that can be toggled on/off within a group of other buttons.
 ---
 ## Definition
 
@@ -78,7 +80,7 @@ public object? SelectedItem { get; set; }
 
 ### PopupInnerAligned
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, uses the [PopupHorizontal](../sadconsole.ui.controls.combobox/#popuphorizontal/) value from the interior of the control. When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, it's used from the outside of the control.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, uses the [PopupHorizontal](../sadconsole.ui.controls.combobox/#popuphorizontal) value from the interior of the control. When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, it's used from the outside of the control.
 
 ```csharp title="C#"
 [DataMember]
@@ -177,7 +179,7 @@ protected void RepositionOffScreenContainer()
 
 ### OnIsSelected()
 
-When [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, displays the popup container. When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, hides the popup container.
+When [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, displays the popup container. When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, hides the popup container.
 
 ```csharp title="C#"
 protected override void OnIsSelected()
@@ -186,7 +188,7 @@ protected override void OnIsSelected()
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)
@@ -216,7 +218,7 @@ The duration of thecurrent frame.
 
 ### SelectedItemChanged
 
-An event that triggers when the [SelectedItem](../sadconsole.ui.controls.combobox/#selecteditem/) property changes.
+An event that triggers when the [SelectedItem](../sadconsole.ui.controls.combobox/#selecteditem) property changes.
 
 ```csharp title="C#"
 public event EventHandler<ListBox.SelectedItemEventArgs>? SelectedItemChanged

@@ -3,6 +3,7 @@ title: Linear Class
 slug: reference/sadconsole.easingfunctions.linear
 sidebar:
   label: Linear
+editUrl: false
 ---
 ## Definition
 

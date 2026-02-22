@@ -3,6 +3,8 @@ title: NamedColorCollection Class
 slug: reference/sadconsole.ui.namedcolorcollection
 sidebar:
   label: NamedColorCollection
+editUrl: false
+description: A collection of named colors
 ---
 ## Definition
 
@@ -27,7 +29,7 @@ public NamedColorCollection()
 ```
 
 
-### NamedColorCollection(IEnumerable<NamedColor>)
+### NamedColorCollection(IEnumerable\<NamedColor>)
 
 ```csharp title="C#"
 public NamedColorCollection(IEnumerable<NamedColor> initialCollection)
@@ -74,7 +76,7 @@ public void LoadDefaults()
 
 ### Load(string)
 
-Loads a [Colors](../sadconsole.ui.namedcolorcollection/#colors/) dictionary from a file, and returns a new instance of the [NamedColorCollection](../sadconsole.ui.namedcolorcollection/) class with those colors.
+Loads a [Colors](../sadconsole.ui.namedcolorcollection/#colors) dictionary from a file, and returns a new instance of the [NamedColorCollection](../sadconsole.ui.namedcolorcollection/) class with those colors.
 
 ```csharp title="C#"
 public static NamedColorCollection Load(string file)
@@ -96,7 +98,7 @@ Thrown when the file isn't found.
 
 ### Save(string)
 
-Saves the [Colors](../sadconsole.ui.namedcolorcollection/#colors/) dictionary to a file.
+Saves the [Colors](../sadconsole.ui.namedcolorcollection/#colors) dictionary to a file.
 
 ```csharp title="C#"
 public void Save(string file)

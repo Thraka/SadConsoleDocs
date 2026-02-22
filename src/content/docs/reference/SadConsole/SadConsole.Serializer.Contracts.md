@@ -3,6 +3,8 @@ title: Serializer.Contracts Class
 slug: reference/sadconsole.serializer.contracts
 sidebar:
   label: Serializer.Contracts
+editUrl: false
+description: Registers the default converters for SadConsole objects, when needed.
 ---
 ## Definition
 

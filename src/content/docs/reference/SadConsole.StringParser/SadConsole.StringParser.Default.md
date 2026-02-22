@@ -3,6 +3,8 @@ title: Default Class
 slug: reference/sadconsole.stringparser.default
 sidebar:
   label: Default
+editUrl: false
+description: The default string parser.
 ---
 ## Definition
 
@@ -34,7 +36,7 @@ Custom processor called before the build in command resolver.
 ```csharp title="C#"
 public Func<string, string, ColoredGlyphAndEffect[], ICellSurface?, ParseCommandStacks?, ParseCommandBase?>? CustomProcessor
 ```
-## Remarks
+#### Remarks
 
 Signature is ("command", "parameters", existing glyphs, text surface, associated editor, command stacks).
 
@@ -50,7 +52,7 @@ public Dictionary<string, Func<string>> Variables { get; }
 
 ## Methods
 
-### Parse(ReadOnlySpan<char>, int, ICellSurface?, ParseCommandStacks?)
+### Parse(ReadOnlySpan\<char>, int, ICellSurface?, ParseCommandStacks?)
 
 Creates a colored string by parsing commands embedded in the string.
 

@@ -3,6 +3,8 @@ title: SadConsoleGameComponent Class
 slug: reference/sadconsole.host.sadconsolegamecomponent
 sidebar:
   label: SadConsoleGameComponent
+editUrl: false
+description: A game component that handles updating, input, and rendering of SadConsole.
 ---
 ## Definition
 
@@ -40,7 +42,7 @@ public override void Initialize()
 
 ### Draw(GameTime)
 
-Draws the SadConsole frame through draw calls when `SadConsole.Settings.DoDraw` is true.
+Draws the SadConsole frame through draw calls when ``SadConsole.Settings.DoDraw`` is true.
 
 ```csharp title="C#"
 public override void Draw(GameTime gameTime)
@@ -54,7 +56,7 @@ Time between drawing frames.
 
 ### Update(GameTime)
 
-Updates the SadConsole game objects and handles input. Only runs when `SadConsole.Settings.DoUpdate` is true.
+Updates the SadConsole game objects and handles input. Only runs when ``SadConsole.Settings.DoUpdate`` is true.
 
 ```csharp title="C#"
 public override void Update(GameTime gameTime)

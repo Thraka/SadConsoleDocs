@@ -3,10 +3,12 @@ title: ScreenObjectComparer Class
 slug: reference/sadconsole.screenobjectcomparer
 sidebar:
   label: ScreenObjectComparer
+editUrl: false
+description: Compares `SadConsole.IScreenObject` with the `SadConsole.IScreenObject.SortOrder` property.
 ---
 ## Definition
 
-Compares [IScreenObject](../sadconsole.iscreenobject/) with the [SortOrder](../sadconsole.iscreenobject/#sortorder/) property.
+Compares [IScreenObject](../sadconsole.iscreenobject/) with the [SortOrder](../sadconsole.iscreenobject/#sortorder) property.
 
 ```csharp title="C#"
 public class ScreenObjectComparer : IComparer<IScreenObject>

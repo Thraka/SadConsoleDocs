@@ -3,6 +3,8 @@ title: ICellEffect Interface
 slug: reference/sadconsole.effects.icelleffect
 sidebar:
   label: ICellEffect
+editUrl: false
+description: The interface describing a cell effect
 ---
 ## Definition
 

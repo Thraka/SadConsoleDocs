@@ -3,6 +3,8 @@ title: Colors Class
 slug: reference/sadconsole.ui.colors
 sidebar:
   label: Colors
+editUrl: false
+description: Default colors used by control themes.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### Colors()
 
-Creates a color object based on the [CreateAnsi()](../sadconsole.ui.colors/#createansi/) scheme.
+Creates a color object based on the [CreateAnsi()](../sadconsole.ui.colors/#createansi) scheme.
 
 ```csharp title="C#"
 public Colors()
@@ -275,7 +277,7 @@ public Color BronzeDark { get; set; }
 
 ### ModalBackground
 
-The color used to darken the background when <see cref="o:UI.Window.Show"></see> is called and [IsModal](../sadconsole.ui.window/#ismodal/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>. Defaults to (20, 20, 20, 200).
+The color used to darken the background when <see cref="o:UI.Window.Show"></see> is called and [IsModal](../sadconsole.ui.window/#ismodal) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>. Defaults to (20, 20, 20, 200).
 
 ```csharp title="C#"
 public Color ModalBackground { get; set; }
@@ -470,7 +472,7 @@ public virtual void RebuildAppearances()
 
 ### GetOffColor(Color, Color)
 
-Compares two colors and if they match, returns a color that is lighter or darker based on if [IsLightTheme](../sadconsole.ui.colors/#islighttheme/).
+Compares two colors and if they match, returns a color that is lighter or darker based on if [IsLightTheme](../sadconsole.ui.colors/#islighttheme).
 
 ```csharp title="C#"
 public Color GetOffColor(Color inColor, Color compareColor)
@@ -570,7 +572,7 @@ public bool TryToColorName(Color color, out Colors.ColorNames colorName)
 The color to match.
 
 `colorName` [Colors.ColorNames](../sadconsole.ui.colors/)  
-Set to the color enumeration value when the <code class="paramref">color</code> parameter matches a defined color.
+Set to the color enumeration value when the `color` parameter matches a defined color.
 
 #### Returns
 
@@ -579,7 +581,7 @@ Set to the color enumeration value when the <code class="paramref">color</code> 
 
 ### AddToColorMappings()
 
-Adds each color here to the [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings/) dictionary. Uses the format of "theme.property-name".
+Adds each color here to the [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings) dictionary. Uses the format of "theme.property-name".
 
 ```csharp title="C#"
 public void AddToColorMappings()

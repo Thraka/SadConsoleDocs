@@ -3,6 +3,8 @@ title: ButtonBase Class
 slug: reference/sadconsole.ui.controls.buttonbase
 sidebar:
   label: ButtonBase
+editUrl: false
+description: Base class for creating a button type control.
 ---
 ## Definition
 
@@ -36,7 +38,7 @@ Height of the button.
 
 ### ButtonBase()
 
-Creates a new button control with [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize/) set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Creates a new button control with [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize) set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 protected ButtonBase()
@@ -47,7 +49,7 @@ protected ButtonBase()
 
 ### _textAlignment
 
-The alignment of the `SadConsole.UI.Controls.ButtonBase._text`.
+The alignment of the ``SadConsole.UI.Controls.ButtonBase._text``.
 
 ```csharp title="C#"
 protected HorizontalAlignment _textAlignment
@@ -66,7 +68,7 @@ public string Text { get; set; }
 
 ### AutoSize
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, automatically resizes the surface to fit the [Text](../sadconsole.ui.controls.buttonbase/#text/).
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, automatically resizes the surface to fit the [Text](../sadconsole.ui.controls.buttonbase/#text).
 
 ```csharp title="C#"
 [DataMember]
@@ -86,7 +88,7 @@ public HorizontalAlignment TextAlignment { get; set; }
 
 ### OnClick()
 
-Raises the [Click](../sadconsole.ui.controls.buttonbase/#click/) event.
+Raises the [Click](../sadconsole.ui.controls.buttonbase/#click) event.
 
 ```csharp title="C#"
 protected virtual void OnClick()
@@ -109,7 +111,7 @@ When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/built
 
 ### ProcessKeyboard(Keyboard)
 
-Detects if the SPACE or ENTER keys are pressed and calls the [Click](../sadconsole.ui.controls.buttonbase/#click/) method.
+Detects if the SPACE or ENTER keys are pressed and calls the [Click](../sadconsole.ui.controls.buttonbase/#click) method.
 
 ```csharp title="C#"
 public override bool ProcessKeyboard(Keyboard info)
@@ -125,7 +127,7 @@ public override bool ProcessKeyboard(Keyboard info)
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState state)
@@ -139,7 +141,7 @@ The current mouse data
 
 ### OnLeftMouseClicked(ControlMouseState)
 
-Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnLeftMouseClicked(ControlBase.ControlMouseState state)
@@ -153,7 +155,7 @@ The current mouse data
 
 ### OnMouseExit(ControlMouseState)
 
-Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseExit(ControlBase.ControlMouseState state)

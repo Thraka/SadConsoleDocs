@@ -3,6 +3,8 @@ title: Cursor Class
 slug: reference/sadconsole.components.cursor
 sidebar:
   label: Cursor
+editUrl: false
+description: A cursor that is attached to a `SadConsole.Console` used for printing.
 ---
 ## Definition
 
@@ -73,7 +75,7 @@ public ColoredGlyphBase CursorRenderCellActiveState { get; }
 
 ### PrintAppearance
 
-Appearance used when printing text. [PrintOnlyCharacterData](../sadconsole.components.cursor/#printonlycharacterdata/) must be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> for this to apply.
+Appearance used when printing text. [PrintOnlyCharacterData](../sadconsole.components.cursor/#printonlycharacterdata) must be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> for this to apply.
 
 ```csharp title="C#"
 [DataMember]
@@ -82,7 +84,7 @@ public ColoredGlyphBase PrintAppearance { get; set; }
 
 ### PrintAppearanceMatchesHost
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, printing will use the host's [DefaultForeground](../sadconsole.icellsurface/#defaultforeground/) and [DefaultBackground](../sadconsole.icellsurface/#defaultbackground/) color properties.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, printing will use the host's [DefaultForeground](../sadconsole.icellsurface/#defaultforeground) and [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) color properties.
 
 ```csharp title="C#"
 [DataMember]
@@ -109,7 +111,7 @@ public ICellEffect? CursorRenderEffect { get; set; }
 
 ### CursorGlyph
 
-Sets the glyph used in rendering. A shortcut to [CursorRenderCell](../sadconsole.components.cursor/#cursorrendercell/).
+Sets the glyph used in rendering. A shortcut to [CursorRenderCell](../sadconsole.components.cursor/#cursorrendercell).
 
 ```csharp title="C#"
 public int CursorGlyph { get; set; }
@@ -117,7 +119,7 @@ public int CursorGlyph { get; set; }
 
 ### PrintOnlyCharacterData
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that the cursor, when printing, should not use the [PrintAppearance](../sadconsole.components.cursor/#printappearance/) property in determining the color/effect of the cell, but keep the cell the same as it was.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that the cursor, when printing, should not use the [PrintAppearance](../sadconsole.components.cursor/#printappearance) property in determining the color/effect of the cell, but keep the cell the same as it was.
 
 ```csharp title="C#"
 [DataMember]
@@ -135,7 +137,7 @@ public bool MouseClickReposition { get; set; }
 
 ### MouseClickRepositionHandlesMouse
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, returns a handled status from the mouse processor when the [MouseClickReposition](../sadconsole.components.cursor/#mouseclickreposition/) is enabled. This prevents further left-mouse processing on the host.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, returns a handled status from the mouse processor when the [MouseClickReposition](../sadconsole.components.cursor/#mouseclickreposition) is enabled. This prevents further left-mouse processing on the host.
 
 ```csharp title="C#"
 [DataMember]
@@ -162,7 +164,7 @@ public bool IsEnabled { get; set; }
 
 ### ApplyCursorEffect
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, prevents the [CursorRenderEffect](../sadconsole.components.cursor/#cursorrendereffect/) from being applied.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, prevents the [CursorRenderEffect](../sadconsole.components.cursor/#cursorrendereffect) from being applied.
 
 ```csharp title="C#"
 public bool ApplyCursorEffect { get; set; }
@@ -170,7 +172,7 @@ public bool ApplyCursorEffect { get; set; }
 
 ### UsePrintEffect
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, applies the [PrintEffect](../sadconsole.components.cursor/#printeffect/) to the cursor when it prints.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, applies the [PrintEffect](../sadconsole.components.cursor/#printeffect) to the cursor when it prints.
 
 ```csharp title="C#"
 [DataMember]
@@ -214,7 +216,7 @@ public bool UseLinuxLineEndings { get; set; }
 
 ### UseStringParser
 
-Indicates this cursor should process te string through the `SadConsole.StringParser.IParser.Parse(System.ReadOnlySpan%7bSystem.Char%7d%2cSystem.Int32%2cSadConsole.ICellSurface%2cSadConsole.StringParser.ParseCommandStacks)` method from [Parser](../sadconsole.coloredstring/#parser/) to create a colored string when using [Print(string)](../sadconsole.components.cursor/#/) or `SadConsole.Components.Cursor.Print(System.String%2cSadConsole.ColoredGlyphBase%2cSadConsole.Effects.ICellEffect)`.
+Indicates this cursor should process te string through the [Parse(ReadOnlySpan\<char\>, int, ICellSurface, ParseCommandStacks)](../sadconsole.stringparser.iparser/#parsereadonlyspanchar-int-icellsurface-parsecommandstacks) method from [Parser](../sadconsole.coloredstring/#parser) to create a colored string when using [Print(string)](../sadconsole.components.cursor/#printstring) or [Print(string, ColoredGlyphBase, ICellEffect)](../sadconsole.components.cursor/#printstring-coloredglyphbase-icelleffect).
 
 ```csharp title="C#"
 [DataMember]
@@ -259,7 +261,7 @@ public uint SortOrder { get; set; }
 
 ### ApplyDefaultCursorEffect()
 
-Resets the [CursorRenderEffect](../sadconsole.components.cursor/#cursorrendereffect/) back to the default.
+Resets the [CursorRenderEffect](../sadconsole.components.cursor/#cursorrendereffect) back to the default.
 
 ```csharp title="C#"
 public Cursor ApplyDefaultCursorEffect()
@@ -271,7 +273,7 @@ public Cursor ApplyDefaultCursorEffect()
 
 ### RestartCursorEffect()
 
-Clones and reassigns [CursorRenderEffect](../sadconsole.components.cursor/#cursorrendereffect/) to restart it.
+Clones and reassigns [CursorRenderEffect](../sadconsole.components.cursor/#cursorrendereffect) to restart it.
 
 ```csharp title="C#"
 public Cursor RestartCursorEffect()
@@ -301,7 +303,7 @@ Thrown when the cursor is not attached to any surface.
 
 ### SetPrintAppearance(ColoredGlyphBase)
 
-Sets [PrintAppearance](../sadconsole.components.cursor/#printappearance/).
+Sets [PrintAppearance](../sadconsole.components.cursor/#printappearance).
 
 ```csharp title="C#"
 public Cursor SetPrintAppearance(ColoredGlyphBase appearance)
@@ -319,7 +321,7 @@ This cursor object.
 
 ### SetPrintAppearance(Color, Color)
 
-Sets [PrintAppearance](../sadconsole.components.cursor/#printappearance/).
+Sets [PrintAppearance](../sadconsole.components.cursor/#printappearance).
 
 ```csharp title="C#"
 public Cursor SetPrintAppearance(Color foreground, Color background)
@@ -340,7 +342,7 @@ This cursor object.
 
 ### SetPrintAppearance(Color)
 
-Sets [PrintAppearance](../sadconsole.components.cursor/#printappearance/), only changing the foreground color.
+Sets [PrintAppearance](../sadconsole.components.cursor/#printappearance), only changing the foreground color.
 
 ```csharp title="C#"
 public Cursor SetPrintAppearance(Color foreground)
@@ -462,7 +464,7 @@ The current cursor object.
 
 ### NewLine()
 
-Calls the [CarriageReturn()](../sadconsole.components.cursor/#carriagereturn/) and [LineFeed()](../sadconsole.components.cursor/#linefeed/) methods in a single call.
+Calls the [CarriageReturn()](../sadconsole.components.cursor/#carriagereturn) and [LineFeed()](../sadconsole.components.cursor/#linefeed) methods in a single call.
 
 ```csharp title="C#"
 public Cursor NewLine()

@@ -3,6 +3,7 @@ title: ShapeSettings Struct
 slug: reference/sadconsole.imguitypes.shapesettings
 sidebar:
   label: ShapeSettings
+editUrl: false
 ---
 ## Definition
 

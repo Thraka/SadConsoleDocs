@@ -3,6 +3,8 @@ title: DebugExtensionsMouseTint Class
 slug: reference/sadconsole.configuration.debugextensionsmousetint
 sidebar:
   label: DebugExtensionsMouseTint
+editUrl: false
+description: Extensions class for configuring mouse tint debugging.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### EnableMouseTintDebug(Builder)
 
-Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents/) component that tints the object under the mouse `SadRogue.Primitives.Color.Purple`.
+Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents) component that tints the object under the mouse ``SadRogue.Primitives.Color.Purple``.
 
 ```csharp title="C#"
 public static Builder EnableMouseTintDebug(this Builder builder)
@@ -36,7 +38,7 @@ The config builder.
 
 ### EnableMouseTintDebug(Builder, Color)
 
-Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents/) component that tints the object under the mouse.
+Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents) component that tints the object under the mouse.
 
 ```csharp title="C#"
 public static Builder EnableMouseTintDebug(this Builder builder, Color tintColor)

@@ -3,6 +3,7 @@ title: ImGuiSC Class
 slug: reference/hexa.net.imgui.sc.imguisc
 sidebar:
   label: ImGuiSC
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: Algorithms Class
 slug: reference/sadconsole.algorithms
 sidebar:
   label: Algorithms
+editUrl: false
+description: Provides a few minor helper methods related to filling.
 ---
 ## Definition
 
@@ -16,7 +18,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### FloodFill<TNode>(TNode, Func<TNode, bool>, Action<TNode>, Func<TNode, NodeConnections<TNode>>)
+### FloodFill\<TNode>(TNode, Func\<TNode, bool>, Action\<TNode>, Func\<TNode, NodeConnections\<TNode>>)
 
 A very slow 4-way fill algorithm to change items from one type to another.
 
@@ -39,7 +41,7 @@ After it is determined if the node should change, this changes the node.
 Gets any other nodes connected to this node.
 
 
-### GradientFill(Point, Point, int, int, Rectangle, Gradient, Action<int, int, Color>)
+### GradientFill(Point, Point, int, int, Rectangle, Gradient, Action\<int, int, Color>)
 
 Processes an area and applies a gradient calculation to each part of the area.
 

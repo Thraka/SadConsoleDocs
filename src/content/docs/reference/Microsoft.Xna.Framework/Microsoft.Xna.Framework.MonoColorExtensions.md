@@ -3,10 +3,12 @@ title: MonoColorExtensions Class
 slug: reference/microsoft.xna.framework.monocolorextensions
 sidebar:
   label: MonoColorExtensions
+editUrl: false
+description: Extension methods for `Microsoft.Xna.Framework.Color` that enable operations involving `SadRogue.Primitives.Color`.
 ---
 ## Definition
 
-Extension methods for `Microsoft.Xna.Framework.Color` that enable operations involving `SadRogue.Primitives.Color`.
+Extension methods for ``Microsoft.Xna.Framework.Color`` that enable operations involving ``SadRogue.Primitives.Color``.
 
 ```csharp title="C#"
 public static class MonoColorExtensions
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### ToSadRogueColor(Color)
 
-Converts from `Microsoft.Xna.Framework.Color` to `SadRogue.Primitives.Color`.
+Converts from ``Microsoft.Xna.Framework.Color`` to ``SadRogue.Primitives.Color``.
 
 ```csharp title="C#"
 public static Color ToSadRogueColor(this Color self)
@@ -34,7 +36,7 @@ SadRogue.Primitives.Color
 
 ### Matches(Color, Color)
 
-Compares a `Microsoft.Xna.Framework.Color` to a `SadRogue.Primitives.Color`.
+Compares a ``Microsoft.Xna.Framework.Color`` to a ``SadRogue.Primitives.Color``.
 
 ```csharp title="C#"
 public static bool Matches(this Color self, Color other)

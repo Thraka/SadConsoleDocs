@@ -3,6 +3,7 @@ title: Helpers Class
 slug: reference/sadconsole.imguisystem.helpers
 sidebar:
   label: Helpers
+editUrl: false
 ---
 ## Definition
 

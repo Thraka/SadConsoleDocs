@@ -3,6 +3,8 @@ title: FileDirectoryListbox.FauxDirectory Class
 slug: reference/sadconsole.ui.controls.filedirectorylistbox.fauxdirectory
 sidebar:
   label: FileDirectoryListbox.FauxDirectory
+editUrl: false
+description: A listbox item container that represents a fake directory, such as `..`.
 ---
 ## Definition
 

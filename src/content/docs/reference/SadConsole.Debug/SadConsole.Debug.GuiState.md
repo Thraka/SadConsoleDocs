@@ -3,6 +3,7 @@ title: GuiState Class
 slug: reference/sadconsole.debug.guistate
 sidebar:
   label: GuiState
+editUrl: false
 ---
 ## Definition
 

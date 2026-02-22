@@ -3,10 +3,12 @@ title: MonoGame_TextureExtensions Class
 slug: reference/microsoft.xna.framework.graphics.monogame_textureextensions
 sidebar:
   label: MonoGame_TextureExtensions
+editUrl: false
+description: Extensions for the `Microsoft.Xna.Framework.Graphics.Texture2D` type.
 ---
 ## Definition
 
-Extensions for the `Microsoft.Xna.Framework.Graphics.Texture2D` type.
+Extensions for the ``Microsoft.Xna.Framework.Graphics.Texture2D`` type.
 
 ```csharp title="C#"
 public static class MonoGame_TextureExtensions

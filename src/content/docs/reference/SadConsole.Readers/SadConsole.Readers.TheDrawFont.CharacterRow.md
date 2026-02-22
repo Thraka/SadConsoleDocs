@@ -3,6 +3,8 @@ title: TheDrawFont.CharacterRow Struct
 slug: reference/sadconsole.readers.thedrawfont.characterrow
 sidebar:
   label: TheDrawFont.CharacterRow
+editUrl: false
+description: A set of glyph characters.
 ---
 ## Definition
 

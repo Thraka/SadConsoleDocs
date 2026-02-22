@@ -3,6 +3,7 @@ title: Themes Class
 slug: reference/sadconsole.imguisystem.themes
 sidebar:
   label: Themes
+editUrl: false
 ---
 ## Definition
 

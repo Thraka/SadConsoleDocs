@@ -3,6 +3,8 @@ title: Keyboard Class
 slug: reference/sadconsole.quick.keyboard
 sidebar:
   label: Keyboard
+editUrl: false
+description: Adds keyboard-related extension methods for `SadConsole.IScreenObject`.
 ---
 ## Definition
 
@@ -16,7 +18,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### WithKeyboard(IScreenObject, Func<IScreenObject, Keyboard, bool>)
+### WithKeyboard(IScreenObject, Func\<IScreenObject, Keyboard, bool>)
 
 Adds a keyboard handler to a [IScreenObject](../sadconsole.iscreenobject/).
 
@@ -38,7 +40,7 @@ The handler callback.
 
 ### RemoveKeyboardHooks(IScreenObject)
 
-Removes all of the keyboard hooks added with `SadConsole.Quick.Keyboard.WithKeyboard(SadConsole.IScreenObject%2cSystem.Func%7bSadConsole.IScreenObject%2cSadConsole.Input.Keyboard%2cSystem.Boolean%7d)`.
+Removes all of the keyboard hooks added with [WithKeyboard(IScreenObject, Func\<IScreenObject, Keyboard, bool\>)](../sadconsole.quick.keyboard/#withkeyboardiscreenobject-funciscreenobject-keyboard-bool).
 
 ```csharp title="C#"
 public static IScreenObject RemoveKeyboardHooks(this IScreenObject screenObject)
@@ -53,9 +55,9 @@ The object to use.
 
 [IScreenObject](../sadconsole.iscreenobject/)
 
-### RemoveKeyboardHook(IScreenObject, Func<IScreenObject, Keyboard, bool>)
+### RemoveKeyboardHook(IScreenObject, Func\<IScreenObject, Keyboard, bool>)
 
-Removes the specified handler that was added with `SadConsole.Quick.Keyboard.WithKeyboard(SadConsole.IScreenObject%2cSystem.Func%7bSadConsole.IScreenObject%2cSadConsole.Input.Keyboard%2cSystem.Boolean%7d)`.
+Removes the specified handler that was added with [WithKeyboard(IScreenObject, Func\<IScreenObject, Keyboard, bool\>)](../sadconsole.quick.keyboard/#withkeyboardiscreenobject-funciscreenobject-keyboard-bool).
 
 ```csharp title="C#"
 public static IScreenObject RemoveKeyboardHook(this IScreenObject screenObject, Func<IScreenObject, Keyboard, bool> handler)

@@ -1,1 +1,1 @@
-docfx2astro -i E:\fun\thraka.github.io-source\root\api -o E:\fun\SadConsoleDocs\starlight\src\content\docs\reference\ --group-by namespace
+docfx2astro -i E:\fun\thraka.github.io-source\root\api -o E:\fun\SadConsoleDocs\src\content\docs\reference\ --group-by namespace

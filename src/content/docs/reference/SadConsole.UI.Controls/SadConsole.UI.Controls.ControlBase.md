@@ -3,6 +3,8 @@ title: ControlBase Class
 slug: reference/sadconsole.ui.controls.controlbase
 sidebar:
   label: ControlBase
+editUrl: false
+description: Base class for all controls.
 ---
 ## Definition
 
@@ -36,7 +38,7 @@ protected ControlBase(int width, int height)
 
 ### MouseState_IsMouseOver
 
-A cached value determined by [OnMouseEnter(ControlMouseState)](../sadconsole.ui.controls.controlbase/#/). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the mouse is over the bounds defined by [MouseArea](../sadconsole.ui.controls.controlbase/#mousearea/) .
+A cached value determined by [OnMouseEnter(ControlMouseState)](../sadconsole.ui.controls.controlbase/#onmouseentercontrolmousestate). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the mouse is over the bounds defined by [MouseArea](../sadconsole.ui.controls.controlbase/#mousearea) .
 
 ```csharp title="C#"
 protected bool MouseState_IsMouseOver
@@ -44,7 +46,7 @@ protected bool MouseState_IsMouseOver
 
 ### MouseState_EnteredWithButtonDown
 
-A cached value determined by [OnMouseEnter(ControlMouseState)](../sadconsole.ui.controls.controlbase/#/). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the mouse entered the control's bounds with the mouse button down.
+A cached value determined by [OnMouseEnter(ControlMouseState)](../sadconsole.ui.controls.controlbase/#onmouseentercontrolmousestate). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the mouse entered the control's bounds with the mouse button down.
 
 ```csharp title="C#"
 protected bool MouseState_EnteredWithButtonDown
@@ -52,7 +54,7 @@ protected bool MouseState_EnteredWithButtonDown
 
 ### MouseState_IsMouseLeftDown
 
-A cached value determined by [OnMouseIn(ControlMouseState)](../sadconsole.ui.controls.controlbase/#/). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the left mouse button is down.
+A cached value determined by [OnMouseIn(ControlMouseState)](../sadconsole.ui.controls.controlbase/#onmouseincontrolmousestate). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the left mouse button is down.
 
 ```csharp title="C#"
 protected bool MouseState_IsMouseLeftDown
@@ -60,7 +62,7 @@ protected bool MouseState_IsMouseLeftDown
 
 ### MouseState_IsMouseRightDown
 
-A cached value determined by [OnMouseIn(ControlMouseState)](../sadconsole.ui.controls.controlbase/#/). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the right mouse button is down.
+A cached value determined by [OnMouseIn(ControlMouseState)](../sadconsole.ui.controls.controlbase/#onmouseincontrolmousestate). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the right mouse button is down.
 
 ```csharp title="C#"
 protected bool MouseState_IsMouseRightDown
@@ -105,7 +107,7 @@ public bool CanFocus { get; set; }
 
 ### CanResize
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this control can be resized with the `SadConsole.UI.Controls.ControlBase.Resize(System.Int32%2cSystem.Int32)` method; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this control can be resized with the [Resize(int, int)](../sadconsole.ui.controls.controlbase/#resizeint-int) method; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 [DataMember]
@@ -145,7 +147,7 @@ When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/built
 ```csharp title="C#"
 public bool IsMouseButtonStateClean { get; }
 ```
-## Remarks
+#### Remarks
 
 This property is only set when the mouse enters the control with the buttons pressed. Once the buttons are let go, the mouse is considered clean for this control.
 
@@ -160,7 +162,7 @@ public Point Position { get; set; }
 
 ### AbsolutePosition
 
-Gets the position of this control based on the control's [Position](../sadconsole.ui.controls.controlbase/#position/) and the position of the [Parent](../sadconsole.ui.controls.controlbase/#parent/).
+Gets the position of this control based on the control's [Position](../sadconsole.ui.controls.controlbase/#position) and the position of the [Parent](../sadconsole.ui.controls.controlbase/#parent).
 
 ```csharp title="C#"
 public Point AbsolutePosition { get; }
@@ -306,7 +308,7 @@ protected virtual void OnFocused()
 
 ### OnIsDirtyChanged()
 
-Called when the [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty/) property changes value.
+Called when the [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty) property changes value.
 
 ```csharp title="C#"
 protected virtual void OnIsDirtyChanged()
@@ -417,7 +419,7 @@ Called by the control as the mouse state changes, like when the mouse is clicked
 
 ### OnStateChanged(ControlStates, ControlStates)
 
-Called when the [State](../sadconsole.ui.controls.controlbase/#state/) changes. Sets the [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty/) to true.
+Called when the [State](../sadconsole.ui.controls.controlbase/#state) changes. Sets the [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty) to true.
 
 ```csharp title="C#"
 protected virtual void OnStateChanged(ControlStates oldState, ControlStates newState)
@@ -434,7 +436,7 @@ The new state.
 
 ### OnSurfaceChanged(ICellSurface, ICellSurface)
 
-Called when the [Surface](../sadconsole.ui.controls.controlbase/#surface/) property is set.
+Called when the [Surface](../sadconsole.ui.controls.controlbase/#surface) property is set.
 
 ```csharp title="C#"
 protected virtual void OnSurfaceChanged(ICellSurface oldSurface, ICellSurface newSurface)
@@ -451,7 +453,7 @@ The new surface instance.
 
 ### FindThemeFont()
 
-Returns the [AlternateFont](../sadconsole.ui.controls.controlbase/#alternatefont/). If null, returns the host's console font or the default engine font.
+Returns the [AlternateFont](../sadconsole.ui.controls.controlbase/#alternatefont). If null, returns the host's console font or the default engine font.
 
 ```csharp title="C#"
 public IFont FindThemeFont()
@@ -502,7 +504,7 @@ public bool HasThemeColors()
 
 ### Resize(int, int)
 
-Resizes the control if the [CanResize](../sadconsole.ui.controls.controlbase/#canresize/) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Resizes the control if the [CanResize](../sadconsole.ui.controls.controlbase/#canresize) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public virtual void Resize(int width, int height)
@@ -519,7 +521,7 @@ The desired height of the control.
 
 ### OnResized()
 
-Called when `SadConsole.UI.Controls.ControlBase.Resize(System.Int32%2cSystem.Int32)` was called.
+Called when [Resize(int, int)](../sadconsole.ui.controls.controlbase/#resizeint-int) was called.
 
 ```csharp title="C#"
 protected virtual void OnResized()
@@ -528,7 +530,7 @@ protected virtual void OnResized()
 
 ### CreateControlSurface()
 
-Generates the surface to be used by this control. This method is called internally to assign the [Surface](../sadconsole.ui.controls.controlbase/#surface/) property a value.
+Generates the surface to be used by this control. This method is called internally to assign the [Surface](../sadconsole.ui.controls.controlbase/#surface) property a value.
 
 ```csharp title="C#"
 protected virtual ICellSurface CreateControlSurface()
@@ -537,11 +539,11 @@ protected virtual ICellSurface CreateControlSurface()
 #### Returns
 
 [ICellSurface](../sadconsole.icellsurface/)  
-A surface that should be assigned to the [Surface](../sadconsole.ui.controls.controlbase/#surface/) property.
+A surface that should be assigned to the [Surface](../sadconsole.ui.controls.controlbase/#surface) property.
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected virtual void RefreshThemeStateColors(Colors colors)
@@ -555,7 +557,7 @@ The colors to apply to the theme state.
 
 ### OnMouseEnter(ControlMouseState)
 
-Called when the mouse first enters the control. Raises the MouseEnter event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the mouse first enters the control. Raises the MouseEnter event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected virtual void OnMouseEnter(ControlBase.ControlMouseState state)
@@ -569,7 +571,7 @@ The current mouse data
 
 ### OnMouseExit(ControlMouseState)
 
-Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected virtual void OnMouseExit(ControlBase.ControlMouseState state)
@@ -583,7 +585,7 @@ The current mouse data
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected virtual void OnMouseIn(ControlBase.ControlMouseState state)
@@ -597,7 +599,7 @@ The current mouse data
 
 ### OnLeftMouseClicked(ControlMouseState)
 
-Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected virtual void OnLeftMouseClicked(ControlBase.ControlMouseState state)
@@ -611,7 +613,7 @@ The current mouse data
 
 ### OnRightMouseClicked(ControlMouseState)
 
-Called when the right mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the right mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected virtual void OnRightMouseClicked(ControlBase.ControlMouseState state)
@@ -641,7 +643,7 @@ The duration of thecurrent frame.
 
 ### IsDirtyChanged
 
-Raised when the [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty/) property changes.
+Raised when the [IsDirty](../sadconsole.ui.controls.controlbase/#isdirty) property changes.
 
 ```csharp title="C#"
 public event EventHandler<EventArgs>? IsDirtyChanged
@@ -652,7 +654,7 @@ public event EventHandler<EventArgs>? IsDirtyChanged
 [EventHandler\<EventArgs\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### Focused
 
-Raised when the [IsFocused](../sadconsole.ui.controls.controlbase/#isfocused/) is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Raised when the [IsFocused](../sadconsole.ui.controls.controlbase/#isfocused) is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public event EventHandler<EventArgs>? Focused
@@ -663,7 +665,7 @@ public event EventHandler<EventArgs>? Focused
 [EventHandler\<EventArgs\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### Unfocused
 
-Raised when the [IsFocused](../sadconsole.ui.controls.controlbase/#isfocused/) is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+Raised when the [IsFocused](../sadconsole.ui.controls.controlbase/#isfocused) is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public event EventHandler<EventArgs>? Unfocused
@@ -674,7 +676,7 @@ public event EventHandler<EventArgs>? Unfocused
 [EventHandler\<EventArgs\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### PositionChanged
 
-Raised when the [Position](../sadconsole.ui.controls.controlbase/#position/) property changes value.
+Raised when the [Position](../sadconsole.ui.controls.controlbase/#position) property changes value.
 
 ```csharp title="C#"
 public event EventHandler<EventArgs>? PositionChanged

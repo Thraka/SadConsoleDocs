@@ -3,6 +3,8 @@ title: CodeEffect Class
 slug: reference/sadconsole.effects.codeeffect
 sidebar:
   label: CodeEffect
+editUrl: false
+description: Effect that runs code for the apply and update actions of an effect.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Implements [ICellEffect](../sadconsole.effects.icelleffect/)
 
 ## Constructors
 
-### CodeEffect(string, Func<CodeEffect, ColoredGlyphBase, ColoredGlyphBase, bool>, Action<CodeEffect, TimeSpan>, Action<CodeEffect>)
+### CodeEffect(string, Func\<CodeEffect, ColoredGlyphBase, ColoredGlyphBase, bool>, Action\<CodeEffect, TimeSpan>, Action\<CodeEffect>)
 
 Creates a cell effect that runs custom code instead of hardcoded effect actions.
 
@@ -32,13 +34,13 @@ public CodeEffect(string id, Func<CodeEffect, ColoredGlyphBase, ColoredGlyphBase
 A user-definable identifier.
 
 `apply` [Func\<CodeEffect, ColoredGlyphBase, ColoredGlyphBase, bool\>](https://learn.microsoft.com/dotnet/api/system.func-4/)  
-The code to run for <xref href="SadConsole.Effects.ICellEffect.ApplyToCell(SadConsole.ColoredGlyphBase%2cSadConsole.ColoredGlyphBase)" data-throw-if-not-resolved="false"></xref>.
+The code to run for [ApplyToCell(ColoredGlyphBase, ColoredGlyphBase)](../sadconsole.effects.icelleffect/#applytocellcoloredglyphbase-coloredglyphbase).
 
 `update` [Action\<CodeEffect, TimeSpan\>](https://learn.microsoft.com/dotnet/api/system.action-2/)  
-The code to run for <xref href="SadConsole.Effects.ICellEffect.Update(System.TimeSpan)" data-throw-if-not-resolved="false"></xref>.
+The code to run for [Update(TimeSpan)](../sadconsole.effects.icelleffect/#updatetimespan).
 
 `restart` [Action\<CodeEffect\>](https://learn.microsoft.com/dotnet/api/system.action-1/)  
-The code to run for <xref href="SadConsole.Effects.ICellEffect.Restart" data-throw-if-not-resolved="false"></xref>.
+The code to run for [Restart()](../sadconsole.effects.icelleffect/#restart).
 
 
 ## Properties
@@ -61,7 +63,7 @@ public object? Tag { get; set; }
 
 ### UseDuration
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, uses the [Duration](../sadconsole.effects.codeeffect/#duration/) timer to stop this effect; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, uses the [Duration](../sadconsole.effects.codeeffect/#duration) timer to stop this effect; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool UseDuration { get; set; }

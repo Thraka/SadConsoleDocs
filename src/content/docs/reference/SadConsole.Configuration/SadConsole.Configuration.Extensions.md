@@ -3,6 +3,8 @@ title: Extensions Class
 slug: reference/sadconsole.configuration.extensions
 sidebar:
   label: Extensions
+editUrl: false
+description: Extensions to the `SadConsole.Configuration.Builder` type.
 ---
 ## Definition
 
@@ -16,9 +18,9 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### OnStart(Builder, EventHandler<GameHost>)
+### OnStart(Builder, EventHandler\<GameHost>)
 
-Sets an event handler for the [Started](../sadconsole.gamehost/#started/) event.
+Sets an event handler for the [Started](../sadconsole.gamehost/#started) event.
 
 ```csharp title="C#"
 public static Builder OnStart(this Builder configBuilder, EventHandler<GameHost> instance_Started)
@@ -37,9 +39,9 @@ The event handler
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### OnEnd(Builder, EventHandler<GameHost>)
+### OnEnd(Builder, EventHandler\<GameHost>)
 
-Sets an event handler for the [Ending](../sadconsole.gamehost/#ending/) event.
+Sets an event handler for the [Ending](../sadconsole.gamehost/#ending) event.
 
 ```csharp title="C#"
 public static Builder OnEnd(this Builder configBuilder, EventHandler<GameHost> instance_Ending)
@@ -58,9 +60,9 @@ The event handler
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### AddFrameUpdateEvent(Builder, EventHandler<GameHost>)
+### AddFrameUpdateEvent(Builder, EventHandler\<GameHost>)
 
-Sets an event handler for the [FrameUpdate](../sadconsole.gamehost/#frameupdate/) event.
+Sets an event handler for the [FrameUpdate](../sadconsole.gamehost/#frameupdate) event.
 
 ```csharp title="C#"
 public static Builder AddFrameUpdateEvent(this Builder configBuilder, EventHandler<GameHost> instance_FrameUpdate)
@@ -79,9 +81,9 @@ The event handler
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### AddFrameRenderEvent(Builder, EventHandler<GameHost>)
+### AddFrameRenderEvent(Builder, EventHandler\<GameHost>)
 
-Sets an event handler for the [FrameRender](../sadconsole.gamehost/#framerender/) event.
+Sets an event handler for the [FrameRender](../sadconsole.gamehost/#framerender) event.
 
 ```csharp title="C#"
 public static Builder AddFrameRenderEvent(this Builder configBuilder, EventHandler<GameHost> instance_FrameRender)
@@ -100,7 +102,7 @@ The event handler
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### ConfigureWindow(Builder, Action<ConfigureWindowConfig, BuilderBase, GameHost>)
+### ConfigureWindow(Builder, Action\<ConfigureWindowConfig, BuilderBase, GameHost>)
 
 Configures the game window.
 
@@ -203,7 +205,7 @@ The height of the window.
 
 ### UseDefaultConsole(Builder)
 
-Sets the [StartingConsole](../sadconsole.gamehost/#startingconsole/) and [Screen](../sadconsole.gamehost/#screen/) properties to new console when the game starts.
+Sets the [StartingConsole](../sadconsole.gamehost/#startingconsole) and [Screen](../sadconsole.gamehost/#screen) properties to new console when the game starts.
 
 ```csharp title="C#"
 public static Builder UseDefaultConsole(this Builder configBuilder)
@@ -219,7 +221,7 @@ The builder object that composes the game startup.
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### ConfigureFonts(Builder, Action<FontConfig, GameHost>)
+### ConfigureFonts(Builder, Action\<FontConfig, GameHost>)
 
 Configures which default font to use during game startup, as well as which other fonts to load for the game.
 
@@ -233,7 +235,7 @@ public static Builder ConfigureFonts(this Builder configBuilder, Action<FontConf
 The builder object that composes the game startup.
 
 `fontLoader` [Action\<FontConfig, GameHost\>](https://learn.microsoft.com/dotnet/api/system.action-2/)  
-A method that provides access to the <xref href="SadConsole.Configuration.FontConfig" data-throw-if-not-resolved="false"></xref> object that loads fonts.
+A method that provides access to the [FontConfig](../sadconsole.configuration.fontconfig/) object that loads fonts.
 
 #### Returns
 
@@ -278,7 +280,7 @@ public static Builder ConfigureFonts(this Builder configBuilder, bool useExtende
 The builder object that composes the game startup.
 
 `useExtendedDefault` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, SadConsole sets the default font to <xref href="SadConsole.GameHost.EmbeddedFontExtended" data-throw-if-not-resolved="false"></xref>; otherwise <xref href="SadConsole.GameHost.EmbeddedFont" data-throw-if-not-resolved="false"></xref> is used.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, SadConsole sets the default font to [EmbeddedFontExtended](../sadconsole.gamehost/#embeddedfontextended); otherwise [EmbeddedFont](../sadconsole.gamehost/#embeddedfont) is used.
 
 #### Returns
 
@@ -305,7 +307,7 @@ The configuration builder.
 
 ### SetDefaultFontSize(Builder, Sizes)
 
-Sets the default font size for the game. The default is [One](../sadconsole.ifont.sizes/#one/).
+Sets the default font size for the game. The default is [One](../sadconsole.ifont.sizes/#one).
 
 ```csharp title="C#"
 public static Builder SetDefaultFontSize(this Builder configBuilder, IFont.Sizes size)
@@ -324,7 +326,7 @@ The size of the default font.
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### SetSplashScreen<TSplashScreen>(Builder)
+### SetSplashScreen\<TSplashScreen>(Builder)
 
 Sets the startup splash screen to the specified object.
 
@@ -342,7 +344,7 @@ The builder object that composes the game startup.
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### SetSplashScreen(Builder, Func<GameHost, ScreenSurface[]>)
+### SetSplashScreen(Builder, Func\<GameHost, ScreenSurface[]>)
 
 Sets the startup splash screens to the array returned by the `creator` delegate.
 
@@ -363,9 +365,9 @@ A delegate that returns an array of surface objects.
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### SetStartingScreen<TRootObject>(Builder)
+### SetStartingScreen\<TRootObject>(Builder)
 
-Sets the [Screen](../sadconsole.gamehost/#screen/) property to the specified type.
+Sets the [Screen](../sadconsole.gamehost/#screen) property to the specified type.
 
 ```csharp title="C#"
 public static Builder SetStartingScreen<TRootObject>(this Builder configBuilder) where TRootObject : IScreenObject, new()
@@ -381,9 +383,9 @@ The builder object that composes the game startup.
 [Builder](../sadconsole.configuration.builder/)  
 The configuration builder.
 
-### SetStartingScreen(Builder, Func<GameHost, IScreenObject>)
+### SetStartingScreen(Builder, Func\<GameHost, IScreenObject>)
 
-Sets the [Screen](../sadconsole.gamehost/#screen/) property to the return value of the `creator` parameter.
+Sets the [Screen](../sadconsole.gamehost/#screen) property to the return value of the `creator` parameter.
 
 ```csharp title="C#"
 public static Builder SetStartingScreen(this Builder configBuilder, Func<GameHost, IScreenObject> creator)
@@ -416,7 +418,7 @@ public static Builder IsStartingScreenFocused(this Builder configBuilder, bool v
 The builder object that composes the game startup.
 
 `value` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Indicates whether or not <xref href="SadConsole.GameHost.Screen" data-throw-if-not-resolved="false"></xref> is focused.
+Indicates whether or not [Screen](../sadconsole.gamehost/#screen) is focused.
 
 #### Returns
 

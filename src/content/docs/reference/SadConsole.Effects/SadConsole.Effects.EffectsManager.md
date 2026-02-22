@@ -3,6 +3,8 @@ title: EffectsManager Class
 slug: reference/sadconsole.effects.effectsmanager
 sidebar:
   label: EffectsManager
+editUrl: false
+description: Effects manager for a text surface.
 ---
 ## Definition
 
@@ -85,7 +87,7 @@ Cell to set the effect for.
 The effect to associate with the cell.
 
 
-### SetEffect(IEnumerable<ColoredGlyphBase>, ICellEffect?)
+### SetEffect(IEnumerable\<ColoredGlyphBase>, ICellEffect?)
 
 Changes the effect of the `cells` provided.
 

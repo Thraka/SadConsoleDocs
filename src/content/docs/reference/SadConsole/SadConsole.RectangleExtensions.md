@@ -3,10 +3,12 @@ title: RectangleExtensions Class
 slug: reference/sadconsole.rectangleextensions
 sidebar:
   label: RectangleExtensions
+editUrl: false
+description: Extensions for the `SadRogue.Primitives.Rectangle` type.
 ---
 ## Definition
 
-Extensions for the `SadRogue.Primitives.Rectangle` type.
+Extensions for the ``SadRogue.Primitives.Rectangle`` type.
 
 ```csharp title="C#"
 public static class RectangleExtensions

@@ -3,6 +3,7 @@ title: PalettePopup Class
 slug: reference/hexa.net.imgui.sc.windows.palettepopup
 sidebar:
   label: PalettePopup
+editUrl: false
 ---
 ## Definition
 

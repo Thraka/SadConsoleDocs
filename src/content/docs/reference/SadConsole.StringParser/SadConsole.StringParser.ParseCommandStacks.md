@@ -3,6 +3,8 @@ title: ParseCommandStacks Class
 slug: reference/sadconsole.stringparser.parsecommandstacks
 sidebar:
   label: ParseCommandStacks
+editUrl: false
+description: A list of behaviors applied as a string is processed.
 ---
 ## Definition
 
@@ -85,7 +87,7 @@ public Stack<ParseCommandBase> All { get; set; }
 
 ### CalculatedDecorators
 
-Returns the active array that is calculated from the [Decorator](../sadconsole.stringparser.parsecommandstacks/#decorator/) stack.
+Returns the active array that is calculated from the [Decorator](../sadconsole.stringparser.parsecommandstacks/#decorator) stack.
 
 ```csharp title="C#"
 public CellDecorator[] CalculatedDecorators { get; set; }
@@ -95,8 +97,8 @@ public CellDecorator[] CalculatedDecorators { get; set; }
 
 ### AddSafe(ParseCommandBase)
 
-Adds a behavior to the [All](../sadconsole.stringparser.parsecommandstacks/#all/) collection and the collection 
-based on the [CommandType](../sadconsole.stringparser.parsecommandbase/#commandtype/) type.
+Adds a behavior to the [All](../sadconsole.stringparser.parsecommandstacks/#all) collection and the collection 
+based on the [CommandType](../sadconsole.stringparser.parsecommandbase/#commandtype) type.
 
 ```csharp title="C#"
 public void AddSafe(ParseCommandBase command)
@@ -109,7 +111,7 @@ public void AddSafe(ParseCommandBase command)
 
 ### RemoveSafe(ParseCommandBase)
 
-Removes a command from the appropriate command stack and from the [All](../sadconsole.stringparser.parsecommandstacks/#all/) stack.
+Removes a command from the appropriate command stack and from the [All](../sadconsole.stringparser.parsecommandstacks/#all) stack.
 
 ```csharp title="C#"
 public void RemoveSafe(ParseCommandBase command)

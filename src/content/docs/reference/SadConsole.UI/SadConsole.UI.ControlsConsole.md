@@ -3,6 +3,8 @@ title: ControlsConsole Class
 slug: reference/sadconsole.ui.controlsconsole
 sidebar:
   label: ControlsConsole
+editUrl: false
+description: A basic console that can contain controls.
 ---
 ## Definition
 
@@ -58,7 +60,7 @@ The initial cells to seed the surface.
 
 ### ControlsConsole(int, int, int, int)
 
-Creates a new console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new console with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public ControlsConsole(int width, int height, int bufferWidth, int bufferHeight)
@@ -81,7 +83,7 @@ The total height of the console in cells.
 
 ### ControlsConsole(int, int, int, int, ColoredGlyphBase[]?)
 
-Creates a console with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a console with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public ControlsConsole(int width, int height, int bufferWidth, int bufferHeight, ColoredGlyphBase[]? initialCells)

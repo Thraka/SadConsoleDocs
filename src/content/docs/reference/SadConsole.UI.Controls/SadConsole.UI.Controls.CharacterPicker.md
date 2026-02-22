@@ -3,6 +3,8 @@ title: CharacterPicker Class
 slug: reference/sadconsole.ui.controls.characterpicker
 sidebar:
   label: CharacterPicker
+editUrl: false
+description: Displays the glyphs associated with a font and allows the user to select one.
 ---
 ## Definition
 
@@ -115,7 +117,7 @@ public Mirror MirrorSetting { get; set; }
 
 ### HighlightSelectedCharacter
 
-When true, highlights the selected character with [SelectedGlyphForeground](../sadconsole.ui.controls.characterpicker/#selectedglyphforeground/) when [HighlightSelectedCharacterWithEffect](../sadconsole.ui.controls.characterpicker/#highlightselectedcharacterwitheffect/) is false;
+When true, highlights the selected character with [SelectedGlyphForeground](../sadconsole.ui.controls.characterpicker/#selectedglyphforeground) when [HighlightSelectedCharacterWithEffect](../sadconsole.ui.controls.characterpicker/#highlightselectedcharacterwitheffect) is false;
 
 ```csharp title="C#"
 public bool HighlightSelectedCharacter { get; set; }
@@ -123,7 +125,7 @@ public bool HighlightSelectedCharacter { get; set; }
 
 ### HighlightSelectedCharacterWithEffect
 
-When true, uses [SelectedGlyphEffect](../sadconsole.ui.controls.characterpicker/#selectedglypheffect/) to highlight the character.
+When true, uses [SelectedGlyphEffect](../sadconsole.ui.controls.characterpicker/#selectedglypheffect) to highlight the character.
 
 ```csharp title="C#"
 public bool HighlightSelectedCharacterWithEffect { get; set; }
@@ -173,7 +175,7 @@ public int SelectedCharacter { get; set; }
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState info)
@@ -186,7 +188,7 @@ protected override void OnMouseIn(ControlBase.ControlMouseState info)
 
 ### OnLeftMouseClicked(ControlMouseState)
 
-Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnLeftMouseClicked(ControlBase.ControlMouseState info)
@@ -217,7 +219,7 @@ The mouse state based on the parent screen object.
 
 ### CreateControlSurface()
 
-Generates the surface to be used by this control. This method is called internally to assign the [Surface](../sadconsole.ui.controls.controlbase/#surface/) property a value.
+Generates the surface to be used by this control. This method is called internally to assign the [Surface](../sadconsole.ui.controls.controlbase/#surface) property a value.
 
 ```csharp title="C#"
 protected override ICellSurface CreateControlSurface()
@@ -226,7 +228,7 @@ protected override ICellSurface CreateControlSurface()
 #### Returns
 
 [ICellSurface](../sadconsole.icellsurface/)  
-A surface that should be assigned to the [Surface](../sadconsole.ui.controls.controlbase/#surface/) property.
+A surface that should be assigned to the [Surface](../sadconsole.ui.controls.controlbase/#surface) property.
 
 ### UpdateAndRedraw(TimeSpan)
 
@@ -246,7 +248,7 @@ The game frame time delta.
 
 ### SelectedCharacterChanged
 
-Raised when the [SelectedCharacter](../sadconsole.ui.controls.characterpicker/#selectedcharacter/) property changes.
+Raised when the [SelectedCharacter](../sadconsole.ui.controls.characterpicker/#selectedcharacter) property changes.
 
 ```csharp title="C#"
 public event EventHandler<ValueChangedEventArgs<int>>? SelectedCharacterChanged

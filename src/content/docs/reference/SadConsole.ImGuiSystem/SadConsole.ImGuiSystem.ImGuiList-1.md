@@ -3,6 +3,8 @@ title: ImGuiList<T> Class
 slug: reference/sadconsole.imguisystem.imguilist-1
 sidebar:
   label: ImGuiList<T>
+editUrl: false
+description: Wraps a collection of objects for ImGui controls, like list boxes.
 ---
 ## Definition
 
@@ -35,7 +37,7 @@ public ImGuiList(params T[] items)
 The items to wrap.
 
 
-### ImGuiList(IEnumerable<T>)
+### ImGuiList(IEnumerable\<T>)
 
 Creates a new list, wrapping the provided items.
 
@@ -66,7 +68,7 @@ The 0-based index of the item to select.
 The items to wrap.
 
 
-### ImGuiList(int, IEnumerable<T>)
+### ImGuiList(int, IEnumerable\<T>)
 
 Creates a new list, wrapping the provided items, and sets which item is selected.
 
@@ -102,7 +104,7 @@ Each item's title.
 ```csharp title="C#"
 public string[] Names { get; }
 ```
-## Remarks
+#### Remarks
 
 Refreshed when this property is accessed.
 
@@ -143,4 +145,4 @@ public bool IsItemSelected()
 #### Returns
 
 [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Checks if [SelectedItemIndex](../sadconsole.imguisystem.imguilist-1/#selecteditemindex/) doesn't equal -1.
+Checks if [SelectedItemIndex](../sadconsole.imguisystem.imguilist-1/#selecteditemindex) doesn't equal -1.

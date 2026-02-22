@@ -3,6 +3,8 @@ title: Button3d Class
 slug: reference/sadconsole.ui.controls.button3d
 sidebar:
   label: Button3d
+editUrl: false
+description: A button control that is drawn with a shadow.
 ---
 ## Definition
 
@@ -38,7 +40,7 @@ Height of the control (default is 1).
 
 ### CreateControlSurface()
 
-Generates the surface to be used by this control. This method is called internally to assign the [Surface](../sadconsole.ui.controls.controlbase/#surface/) property a value.
+Generates the surface to be used by this control. This method is called internally to assign the [Surface](../sadconsole.ui.controls.controlbase/#surface) property a value.
 
 ```csharp title="C#"
 protected override ICellSurface CreateControlSurface()
@@ -47,11 +49,11 @@ protected override ICellSurface CreateControlSurface()
 #### Returns
 
 [ICellSurface](../sadconsole.icellsurface/)  
-A surface that should be assigned to the [Surface](../sadconsole.ui.controls.controlbase/#surface/) property.
+A surface that should be assigned to the [Surface](../sadconsole.ui.controls.controlbase/#surface) property.
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)

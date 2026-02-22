@@ -3,10 +3,12 @@ title: EntityManagerZoned.ZoneEventArgs Class
 slug: reference/sadconsole.entities.entitymanagerzoned.zoneeventargs
 sidebar:
   label: EntityManagerZoned.ZoneEventArgs
+editUrl: false
+description: Contains event data for a `SadConsole.Entities.EntityManagerZoned.ZoneEventArgs.Zone` and `SadConsole.Entities.EntityManagerZoned.ZoneEventArgs.Entity` interaction.
 ---
 ## Definition
 
-Contains event data for a [Zone](../sadconsole.entities.entitymanagerzoned.zoneeventargs/#zone/) and [Entity](../sadconsole.entities.entitymanagerzoned.zoneeventargs/#entity/) interaction.
+Contains event data for a [Zone](../sadconsole.entities.entitymanagerzoned.zoneeventargs/#zone) and [Entity](../sadconsole.entities.entitymanagerzoned.zoneeventargs/#entity) interaction.
 
 ```csharp title="C#"
 public class EntityManagerZoned.ZoneEventArgs

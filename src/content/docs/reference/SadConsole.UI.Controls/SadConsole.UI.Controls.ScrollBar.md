@@ -3,6 +3,8 @@ title: ScrollBar Class
 slug: reference/sadconsole.ui.controls.scrollbar
 sidebar:
   label: ScrollBar
+editUrl: false
+description: Represents a scrollbar control.
 ---
 ## Definition
 
@@ -31,7 +33,7 @@ public ScrollBar(Orientation orientation, int size)
 Sets the control to either horizontal or vertical.
 
 `size` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The height or width of the control, based on the <code class="paramref">orientation</code>, with a thickness of 1.
+The height or width of the control, based on the `orientation`, with a thickness of 1.
 
 #### Exceptions
 
@@ -94,7 +96,7 @@ public int MaximumValue { get; set; }
 
 ### ArrowStep
 
-Gets or sets the amount of values to add or subtract to the [Value](../sadconsole.ui.controls.scrollbar/#value/) when the up or down arrows are used.
+Gets or sets the amount of values to add or subtract to the [Value](../sadconsole.ui.controls.scrollbar/#value) when the up or down arrows are used.
 
 ```csharp title="C#"
 [DataMember]
@@ -103,7 +105,7 @@ public int ArrowStep { get; set; }
 
 ### MouseWheelStep
 
-Gets or sets the amount of values to add or subtract to the [Value](../sadconsole.ui.controls.scrollbar/#value/) when the up or down arrows are used.
+Gets or sets the amount of values to add or subtract to the [Value](../sadconsole.ui.controls.scrollbar/#value) when the up or down arrows are used.
 
 ```csharp title="C#"
 [DataMember]
@@ -121,7 +123,7 @@ public int Value { get; set; }
 
 ### ArrowsMoveGrip
 
-When true, the arrow buttons simply move the grip instead of using the [ArrowStep](../sadconsole.ui.controls.scrollbar/#arrowstep/) value to adjust the value.
+When true, the arrow buttons simply move the grip instead of using the [ArrowStep](../sadconsole.ui.controls.scrollbar/#arrowstep) value to adjust the value.
 
 ```csharp title="C#"
 [DataMember]
@@ -130,7 +132,7 @@ public bool ArrowsMoveGrip { get; set; }
 
 ### MouseWheelMovesGrip
 
-When true, the mouse wheelsimply moves the grip instead of using the [MouseWheelStep](../sadconsole.ui.controls.scrollbar/#mousewheelstep/) value to adjust the value.
+When true, the mouse wheelsimply moves the grip instead of using the [MouseWheelStep](../sadconsole.ui.controls.scrollbar/#mousewheelstep) value to adjust the value.
 
 ```csharp title="C#"
 [DataMember]
@@ -150,7 +152,7 @@ public ScrollBar.ThemeStyle Style { get; set; }
 
 ### OnValueChanged()
 
-Invokes the [ValueChanged](../sadconsole.ui.controls.scrollbar/#valuechanged/) event.
+Invokes the [ValueChanged](../sadconsole.ui.controls.scrollbar/#valuechanged) event.
 
 ```csharp title="C#"
 protected void OnValueChanged()
@@ -168,7 +170,7 @@ protected void CalculateGripSize()
 
 ### SetGripToValue()
 
-Moves the grip position based on the [Value](../sadconsole.ui.controls.scrollbar/#value/) property.
+Moves the grip position based on the [Value](../sadconsole.ui.controls.scrollbar/#value) property.
 
 ```csharp title="C#"
 protected void SetGripToValue()
@@ -186,7 +188,7 @@ protected override void OnResized()
 
 ### SetValue(int, bool)
 
-Sets the value of the control without using the [Value](../sadconsole.ui.controls.scrollbar/#value/) property. Optionally calls [SetGripToValue()](../sadconsole.ui.controls.scrollbar/#setgriptovalue/).
+Sets the value of the control without using the [Value](../sadconsole.ui.controls.scrollbar/#value) property. Optionally calls [SetGripToValue()](../sadconsole.ui.controls.scrollbar/#setgriptovalue).
 
 ```csharp title="C#"
 protected void SetValue(int value, bool setGrip = true)
@@ -212,7 +214,7 @@ public void IncreaseValue(int value)
 #### Parameters
 
 `value` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The value to add to <xref href="SadConsole.UI.Controls.ScrollBar.Value" data-throw-if-not-resolved="false"></xref>.
+The value to add to [Value](../sadconsole.ui.controls.scrollbar/#value).
 
 
 ### DecreaseValue(int)
@@ -226,7 +228,7 @@ public void DecreaseValue(int value)
 #### Parameters
 
 `value` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The value to subract from <xref href="SadConsole.UI.Controls.ScrollBar.Value" data-throw-if-not-resolved="false"></xref>.
+The value to subract from [Value](../sadconsole.ui.controls.scrollbar/#value).
 
 
 ### IncreaseGripByOne()
@@ -301,7 +303,7 @@ The duration of thecurrent frame.
 
 ### ValueChanged
 
-Raised when the [Value](../sadconsole.ui.controls.scrollbar/#value/) property changes.
+Raised when the [Value](../sadconsole.ui.controls.scrollbar/#value) property changes.
 
 ```csharp title="C#"
 public event EventHandler? ValueChanged

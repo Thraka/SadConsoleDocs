@@ -3,6 +3,7 @@ title: Bounce Class
 slug: reference/sadconsole.easingfunctions.bounce
 sidebar:
   label: Bounce
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: Entity.SingleCell Class
 slug: reference/sadconsole.entities.entity.singlecell
 sidebar:
   label: Entity.SingleCell
+editUrl: false
+description: An entity that is a single cell.
 ---
 ## Definition
 
@@ -71,7 +73,7 @@ public ColoredGlyphBase Appearance { get; protected set; }
 
 ### Effect
 
-An effect that can be applied to the [Appearance](../sadconsole.entities.entity.singlecell/#appearance/).
+An effect that can be applied to the [Appearance](../sadconsole.entities.entity.singlecell/#appearance).
 
 ```csharp title="C#"
 public ICellEffect? Effect { get; set; }

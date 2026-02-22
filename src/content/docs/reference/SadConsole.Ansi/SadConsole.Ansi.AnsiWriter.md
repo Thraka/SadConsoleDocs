@@ -3,6 +3,8 @@ title: AnsiWriter Class
 slug: reference/sadconsole.ansi.ansiwriter
 sidebar:
   label: AnsiWriter
+editUrl: false
+description: Writes a `SadConsole.Ansi.Document` to a `SadConsole.ICellSurface`.
 ---
 ## Definition
 
@@ -71,7 +73,7 @@ public int CharactersPerSecond { get; set; }
 
 ### Process(double)
 
-Processes the document by the amount of time that has elapsed. If [CharactersPerSecond](../sadconsole.ansi.ansiwriter/#characterspersecond/) is 0, time elapsed has no affect.
+Processes the document by the amount of time that has elapsed. If [CharactersPerSecond](../sadconsole.ansi.ansiwriter/#characterspersecond) is 0, time elapsed has no affect.
 
 ```csharp title="C#"
 public void Process(double timeElapsed)
@@ -111,7 +113,7 @@ public bool AnsiReadLine(string line, bool moreLines = false)
 The line to read.
 
 `moreLines` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, calls <xref href="SadConsole.Components.Cursor.LineFeed" data-throw-if-not-resolved="false"></xref>; otherwise does nothing.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, calls [LineFeed()](../sadconsole.components.cursor/#linefeed); otherwise does nothing.
 
 #### Returns
 

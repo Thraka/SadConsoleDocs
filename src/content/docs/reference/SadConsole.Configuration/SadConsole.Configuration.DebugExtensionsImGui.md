@@ -3,6 +3,8 @@ title: DebugExtensionsImGui Class
 slug: reference/sadconsole.configuration.debugextensionsimgui
 sidebar:
   label: DebugExtensionsImGui
+editUrl: false
+description: Extensions to enable the ImGui debug UI.
 ---
 ## Definition
 
@@ -16,9 +18,9 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### EnableImGuiDebugger(Builder, Keys, Action<bool>, Action)
+### EnableImGuiDebugger(Builder, Keys, Action\<bool>, Action)
 
-Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents/) component that uses the specified hotkey to invoke [Start()](../sadconsole.debug.debugger/#start/).
+Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents) component that uses the specified hotkey to invoke [Start()](../sadconsole.debug.debugger/#start).
 
 ```csharp title="C#"
 public static Builder EnableImGuiDebugger(this Builder builder, Keys hotkey, Action<bool> openedEventHandler = null, Action closedEventHandler = null)

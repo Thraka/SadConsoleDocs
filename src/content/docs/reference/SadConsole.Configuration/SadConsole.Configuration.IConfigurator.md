@@ -3,6 +3,8 @@ title: IConfigurator Interface
 slug: reference/sadconsole.configuration.iconfigurator
 sidebar:
   label: IConfigurator
+editUrl: false
+description: Configuration interface that's added to the `SadConsole.Configuration.Builder` object.
 ---
 ## Definition
 

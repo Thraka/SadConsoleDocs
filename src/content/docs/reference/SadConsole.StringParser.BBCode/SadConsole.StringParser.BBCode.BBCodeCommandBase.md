@@ -3,6 +3,8 @@ title: BBCodeCommandBase Class
 slug: reference/sadconsole.stringparser.bbcode.bbcodecommandbase
 sidebar:
   label: BBCodeCommandBase
+editUrl: false
+description: The base class for a BBCode command.
 ---
 ## Definition
 
@@ -35,7 +37,7 @@ public string Tag { get; protected set; }
 
 ## Methods
 
-### SetBBCode(string, string?, Dictionary<string, string>?)
+### SetBBCode(string, string?, Dictionary\<string, string>?)
 
 Provides the information about the tag that triggered this command.
 

@@ -3,6 +3,8 @@ title: DebugExtensionsFocusedTint Class
 slug: reference/sadconsole.configuration.debugextensionsfocusedtint
 sidebar:
   label: DebugExtensionsFocusedTint
+editUrl: false
+description: Extensions class for configuring focused object tint debugging.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### EnableFocusedObjectTintDebug(Builder)
 
-Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents/) component that tints the currently focused object.
+Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents) component that tints the currently focused object.
 
 ```csharp title="C#"
 public static Builder EnableFocusedObjectTintDebug(this Builder builder)
@@ -36,7 +38,7 @@ The config builder.
 
 ### EnableFocusedObjectTintDebug(Builder, Color)
 
-Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents/) component that tints the object under the mouse.
+Adds a [RootComponents](../sadconsole.gamehost/#rootcomponents) component that tints the object under the mouse.
 
 ```csharp title="C#"
 public static Builder EnableFocusedObjectTintDebug(this Builder builder, Color tintColor)

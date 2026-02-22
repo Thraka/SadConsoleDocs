@@ -3,6 +3,8 @@ title: IParser Interface
 slug: reference/sadconsole.stringparser.iparser
 sidebar:
   label: IParser
+editUrl: false
+description: Describes a parser
 ---
 ## Definition
 
@@ -15,7 +17,7 @@ public interface IParser
 
 ## Methods
 
-### Parse(ReadOnlySpan<char>, int, ICellSurface?, ParseCommandStacks?)
+### Parse(ReadOnlySpan\<char>, int, ICellSurface?, ParseCommandStacks?)
 
 Generates a colored string from a string of characters.
 

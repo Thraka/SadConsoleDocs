@@ -3,6 +3,7 @@ title: FpsConfig Class
 slug: reference/sadconsole.configuration.fpsconfig
 sidebar:
   label: FpsConfig
+editUrl: false
 ---
 ## Definition
 

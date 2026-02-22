@@ -3,6 +3,8 @@ title: IScreenSurface Interface
 slug: reference/sadconsole.iscreensurface
 sidebar:
   label: IScreenSurface
+editUrl: false
+description: A screen object that has mouse input, surface, and render information.
 ---
 ## Definition
 
@@ -25,7 +27,7 @@ string DefaultRendererName { get; }
 
 ### FocusOnMouseClick
 
-When true, this object will set [IsFocused](../sadconsole.iscreenobject/#isfocused/) to true when the mouse is clicked.
+When true, this object will set [IsFocused](../sadconsole.iscreenobject/#isfocused) to true when the mouse is clicked.
 
 ```csharp title="C#"
 bool FocusOnMouseClick { get; set; }
@@ -65,7 +67,7 @@ ICellSurface Surface { get; }
 
 ### UsePixelPositioning
 
-Treats the `SadRogue.Primitives.IPositionable.Position` of the object as if it is pixels and not cells.
+Treats the ``SadRogue.Primitives.IPositionable.Position`` of the object as if it is pixels and not cells.
 
 ```csharp title="C#"
 bool UsePixelPositioning { get; set; }
@@ -97,7 +99,7 @@ IFont Font { get; set; }
 
 ### FontSize
 
-The size of the [Font](../sadconsole.iscreensurface/#font/) cells applied to the object when rendering.
+The size of the [Font](../sadconsole.iscreensurface/#font) cells applied to the object when rendering.
 
 ```csharp title="C#"
 Point FontSize { get; set; }
@@ -105,7 +107,7 @@ Point FontSize { get; set; }
 
 ### ForceRendererRefresh
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the [Renderer](../sadconsole.iscreensurface/#renderer/) to refresh the backing texture with the latest state of the object.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the [Renderer](../sadconsole.iscreensurface/#renderer) to refresh the backing texture with the latest state of the object.
 
 ```csharp title="C#"
 bool ForceRendererRefresh { get; set; }

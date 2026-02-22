@@ -3,10 +3,12 @@ title: LayeredRenderer Class
 slug: reference/sadconsole.renderers.layeredrenderer
 sidebar:
   label: LayeredRenderer
+editUrl: false
+description: Draws a `SadConsole.Components.LayeredSurface` object by adding a `SadConsole.Renderers.LayeredSurfaceRenderStep` to the `SadConsole.Renderers.ScreenSurfaceRenderer.Steps` collection. Skips drawing the normal surface.
 ---
 ## Definition
 
-Draws a [LayeredSurface](../sadconsole.components.layeredsurface/) object by adding a [LayeredSurfaceRenderStep](../sadconsole.renderers.layeredsurfacerenderstep/) to the [Steps](../sadconsole.renderers.screensurfacerenderer/#steps/) collection. Skips drawing the normal surface.
+Draws a [LayeredSurface](../sadconsole.components.layeredsurface/) object by adding a [LayeredSurfaceRenderStep](../sadconsole.renderers.layeredsurfacerenderstep/) to the [Steps](../sadconsole.renderers.screensurfacerenderer/#steps) collection. Skips drawing the normal surface.
 
 ```csharp title="C#"
 public sealed class LayeredRenderer : ScreenSurfaceRenderer, IRenderer, IDisposable, IRendererMonoGame

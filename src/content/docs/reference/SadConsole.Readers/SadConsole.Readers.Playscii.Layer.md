@@ -3,6 +3,8 @@ title: Playscii.Layer Struct
 slug: reference/sadconsole.readers.playscii.layer
 sidebar:
   label: Playscii.Layer
+editUrl: false
+description: Json layer in the `SadConsole.Readers.Playscii` file.
 ---
 ## Definition
 
@@ -52,10 +54,10 @@ public ScreenSurface ToSurface(ScreenSurface parent, Palette colors)
 #### Parameters
 
 `parent` [ScreenSurface](../sadconsole.screensurface/)  
-<xref href="SadConsole.ScreenSurface" data-throw-if-not-resolved="false"></xref> that represents Playscii frame holding this layer.
+[ScreenSurface](../sadconsole.screensurface/) that represents Playscii frame holding this layer.
 
 `colors` SadRogue.Primitives.Palette  
-<xref href="SadRogue.Primitives.Palette" data-throw-if-not-resolved="false"></xref> of colors converted from the <xref href="SadConsole.Readers.Playscii" data-throw-if-not-resolved="false"></xref> format.
+``SadRogue.Primitives.Palette`` of colors converted from the [Playscii](../sadconsole.readers.playscii/) format.
 
 #### Returns
 

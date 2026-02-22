@@ -3,6 +3,7 @@ title: MessageWindow Class
 slug: reference/hexa.net.imgui.sc.windows.messagewindow
 sidebar:
   label: MessageWindow
+editUrl: false
 ---
 ## Definition
 

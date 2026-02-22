@@ -3,6 +3,8 @@ title: Border Class
 slug: reference/sadconsole.ui.border
 sidebar:
   label: Border
+editUrl: false
+description: Creates a 3D border around a surface.
 ---
 ## Definition
 
@@ -32,10 +34,10 @@ public Border(IScreenSurface contents, Border.BorderParameters parameters, IFont
 The object the border will be around.
 
 `parameters` [Border.BorderParameters](../sadconsole.ui.border/)  
-<xref href="SadConsole.UI.Border.BorderParameters" data-throw-if-not-resolved="false"></xref> to be used in creating the <xref href="SadConsole.UI.Border" data-throw-if-not-resolved="false"></xref>.
+[Border.BorderParameters](../sadconsole.ui.border.borderparameters/) to be used in creating the [Border](../sadconsole.ui.border/).
 
 `font` [IFont](../sadconsole.ifont/)  
-Optional <xref href="SadConsole.IFont" data-throw-if-not-resolved="false"></xref> for the border <xref href="SadConsole.CellSurface" data-throw-if-not-resolved="false"></xref>.
+Optional [IFont](../sadconsole.ifont/) for the border [CellSurface](../sadconsole.cellsurface/).
 
 
 ### Border(IScreenSurface, string)
@@ -96,7 +98,7 @@ The window the border will be around.
 
 ### Create3DForSurface(IScreenSurface, string, Color?, Color?, Color?, Color?, Color?)
 
-Creates a chunky 3d border using `SadConsole.ICellSurface.Connected3dBox` glyphs.
+Creates a chunky 3d border using ``SadConsole.ICellSurface.Connected3dBox`` glyphs.
 
 ```csharp title="C#"
 public static Border Create3DForSurface(IScreenSurface contents, string title, Color? titleForeground = null, Color? titleBackground = null, Color? borderBrightColor = null, Color? borderDarkColor = null, Color? borderBetweenColor = null)
@@ -111,19 +113,19 @@ The object the border will be around.
 Optional title to display on the border.
 
 `titleForeground` System.NullableSadRogue.Primitives.Color  
-Foreground color of the title. Defaults to a brighter version of the content's <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref>.
+Foreground color of the title. Defaults to a brighter version of the content's [DefaultBackground](../sadconsole.icellsurface/#defaultbackground).
 
 `titleBackground` System.NullableSadRogue.Primitives.Color  
-Background color of the title. Defaults to the content's <xref href="SadConsole.ICellSurface.DefaultForeground" data-throw-if-not-resolved="false"></xref>.
+Background color of the title. Defaults to the content's [DefaultForeground](../sadconsole.icellsurface/#defaultforeground).
 
 `borderBrightColor` System.NullableSadRogue.Primitives.Color  
-The bright color of the 3D border. Defaults to <xref href="SadRogue.Primitives.Color.AnsiWhiteBright" data-throw-if-not-resolved="false"></xref>.
+The bright color of the 3D border. Defaults to ``SadRogue.Primitives.Color.AnsiWhiteBright``.
 
 `borderDarkColor` System.NullableSadRogue.Primitives.Color  
-The dark color of the 3D border. Defaults to <xref href="SadRogue.Primitives.Color.AnsiBlackBright" data-throw-if-not-resolved="false"></xref>.
+The dark color of the 3D border. Defaults to ``SadRogue.Primitives.Color.AnsiBlackBright``.
 
 `borderBetweenColor` System.NullableSadRogue.Primitives.Color  
-The corner color of the 3D border. Defaults to the content's <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref>.
+The corner color of the 3D border. Defaults to the content's [DefaultBackground](../sadconsole.icellsurface/#defaultbackground).
 
 #### Returns
 
@@ -131,7 +133,7 @@ The corner color of the 3D border. Defaults to the content's <xref href="SadCons
 The created border, attached to the content.
 #### Remarks
 
-For a nice looking border, set the content's [DefaultForeground](../sadconsole.icellsurface/#defaultforeground/) to `SadRogue.Primitives.Color.AnsiWhite` and the [DefaultBackground](../sadconsole.icellsurface/#defaultbackground/) to `SadRogue.Primitives.Color.AnsiBlue`, before calling this method.
+For a nice looking border, set the content's [DefaultForeground](../sadconsole.icellsurface/#defaultforeground) to ``SadRogue.Primitives.Color.AnsiWhite`` and the [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) to ``SadRogue.Primitives.Color.AnsiBlue``, before calling this method.
 
 ### CreateForSurface(IScreenSurface, string)
 

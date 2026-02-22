@@ -3,6 +3,8 @@ title: TabControl Class
 slug: reference/sadconsole.ui.controls.tabcontrol
 sidebar:
   label: TabControl
+editUrl: false
+description: A control with tabs along the edge of the control. Each tab sets the content of the control.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Implements [IContainer](../sadconsole.ui.controls.icontainer/), [IList\<ControlB
 
 ## Constructors
 
-### TabControl(IEnumerable<TabItem>, int, int)
+### TabControl(IEnumerable\<TabItem>, int, int)
 
 Creates a new tab control with the specified tab items.
 
@@ -38,7 +40,7 @@ Width of the content area
 Heigh of the content area
 
 
-### TabControl(IEnumerable<TabItem>, int, int, int)
+### TabControl(IEnumerable\<TabItem>, int, int, int)
 
 Creates a new tab control with the specified tab items.
 
@@ -116,7 +118,7 @@ public ListEnumerator<TabItem> Tabs { get; }
 
 ### ActiveTabIndex
 
-The index of the active tab. If [InvalidActiveTabIndex](../sadconsole.ui.controls.tabcontrol/#invalidactivetabindex/) is returned, there is no active tab.
+The index of the active tab. If [InvalidActiveTabIndex](../sadconsole.ui.controls.tabcontrol/#invalidactivetabindex) is returned, there is no active tab.
 
 ```csharp title="C#"
 [DataMember]
@@ -142,7 +144,7 @@ public TabControl.Orientation TabOrientation { get; set; }
 
 ### ConnectedLineStyle
 
-An array of glyphs indexed by [ICellSurface.ConnectedLineIndex](../sadconsole.icellsurface/). Defaults to [ConnectedLineThin](../sadconsole.icellsurface/#connectedlinethin/).
+An array of glyphs indexed by [ICellSurface.ConnectedLineIndex](../sadconsole.icellsurface.connectedlineindex/). Defaults to [ConnectedLineThin](../sadconsole.icellsurface/#connectedlinethin).
 
 ```csharp title="C#"
 [DataMember]
@@ -238,7 +240,7 @@ Index of the tab.
 
 ### OnActiveTabItem(int, int)
 
-Raises the [ActiveTabItemChanged](../sadconsole.ui.controls.tabcontrol/#activetabitemchanged/) event.
+Raises the [ActiveTabItemChanged](../sadconsole.ui.controls.tabcontrol/#activetabitemchanged) event.
 
 ```csharp title="C#"
 protected void OnActiveTabItem(int previousActiveIndex, int activeIndex)
@@ -317,7 +319,7 @@ Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/bu
 
 ### OnLeftMouseClicked(ControlMouseState)
 
-Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnLeftMouseClicked(ControlBase.ControlMouseState state)
@@ -331,7 +333,7 @@ The current mouse data
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState state)
@@ -354,7 +356,7 @@ protected override void OnResized()
 
 ### ThemeDetermineContentRegion()
 
-Sets the [ContentRegion](../sadconsole.ui.controls.tabcontrol/#contentregion/) rectangle to how much space the tab control should give to tab item content.
+Sets the [ContentRegion](../sadconsole.ui.controls.tabcontrol/#contentregion) rectangle to how much space the tab control should give to tab item content.
 
 ```csharp title="C#"
 protected void ThemeDetermineContentRegion()

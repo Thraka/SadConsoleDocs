@@ -3,6 +3,7 @@ title: Circle Class
 slug: reference/sadconsole.easingfunctions.circle
 sidebar:
   label: Circle
+editUrl: false
 ---
 ## Definition
 

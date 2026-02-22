@@ -3,6 +3,8 @@ title: AnimatedBoxGrow Class
 slug: reference/sadconsole.instructions.animatedboxgrow
 sidebar:
   label: AnimatedBoxGrow
+editUrl: false
+description: Animates drawing a box. It can either
 ---
 ## Definition
 

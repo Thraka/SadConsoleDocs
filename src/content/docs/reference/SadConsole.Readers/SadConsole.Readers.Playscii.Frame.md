@@ -3,6 +3,8 @@ title: Playscii.Frame Struct
 slug: reference/sadconsole.readers.playscii.frame
 sidebar:
   label: Playscii.Frame
+editUrl: false
+description: Json frame object in the `SadConsole.Readers.Playscii` file.
 ---
 ## Definition
 
@@ -44,16 +46,16 @@ public ScreenSurface ToScreenSurface(int width, int height, IFont font, Palette 
 #### Parameters
 
 `width` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Width of the <xref href="SadConsole.ScreenSurface" data-throw-if-not-resolved="false"></xref>.
+Width of the [ScreenSurface](../sadconsole.screensurface/).
 
 `height` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Height of the <xref href="SadConsole.ScreenSurface" data-throw-if-not-resolved="false"></xref>.
+Height of the [ScreenSurface](../sadconsole.screensurface/).
 
 `font` [IFont](../sadconsole.ifont/)  
-<xref href="SadConsole.IFont" data-throw-if-not-resolved="false"></xref> to be used when creating the <xref href="SadConsole.ScreenSurface" data-throw-if-not-resolved="false"></xref>.
+[IFont](../sadconsole.ifont/) to be used when creating the [ScreenSurface](../sadconsole.screensurface/).
 
 `colors` SadRogue.Primitives.Palette  
-<xref href="SadRogue.Primitives.Palette" data-throw-if-not-resolved="false"></xref> of colors converted from the <xref href="SadConsole.Readers.Playscii" data-throw-if-not-resolved="false"></xref> format.
+``SadRogue.Primitives.Palette`` of colors converted from the [Playscii](../sadconsole.readers.playscii/) format.
 
 #### Returns
 

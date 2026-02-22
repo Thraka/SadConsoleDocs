@@ -3,6 +3,8 @@ title: Wait Class
 slug: reference/sadconsole.instructions.wait
 sidebar:
   label: Wait
+editUrl: false
+description: Represents an instruction to pause for a specified duration.
 ---
 ## Definition
 
@@ -29,7 +31,7 @@ public Wait(TimeSpan duration)
 #### Parameters
 
 `duration` [TimeSpan](https://learn.microsoft.com/dotnet/api/system.timespan/)  
-How long this instruction waits until it signals <xref href="SadConsole.Instructions.InstructionBase.IsFinished" data-throw-if-not-resolved="false"></xref>.
+How long this instruction waits until it signals [IsFinished](../sadconsole.instructions.instructionbase/#isfinished).
 
 
 ### Wait()
@@ -90,4 +92,4 @@ public override void Reset()
 
 #### Remarks
 
-On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished/) to false. Override this method to reset the derived class' counters and status flags for the instruction.
+On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished) to false. Override this method to reset the derived class' counters and status flags for the instruction.

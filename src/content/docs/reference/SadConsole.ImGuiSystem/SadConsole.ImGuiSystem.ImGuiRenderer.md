@@ -3,6 +3,7 @@ title: ImGuiRenderer Class
 slug: reference/sadconsole.imguisystem.imguirenderer
 sidebar:
   label: ImGuiRenderer
+editUrl: false
 ---
 ## Definition
 
@@ -42,7 +43,7 @@ public bool HideRequested { get; set; }
 
 ### RebuildFontAtlas()
 
-Creates a texture and loads the font data from ImGui. Should be called when the `Microsoft.Xna.Framework.Graphics.GraphicsDevice` is initialized but before any rendering is done
+Creates a texture and loads the font data from ImGui. Should be called when the ``Microsoft.Xna.Framework.Graphics.GraphicsDevice`` is initialized but before any rendering is done
 
 ```csharp title="C#"
 public virtual void RebuildFontAtlas()
@@ -51,7 +52,7 @@ public virtual void RebuildFontAtlas()
 
 ### BindTexture(Texture2D)
 
-Creates a pointer to a texture, which can be passed through ImGui calls such as `Hexa.NET.ImGui.ImGui.Image(Hexa.NET.ImGui.ImTextureID%2cSystem.Numerics.Vector2%2cSystem.Numerics.Vector2%2cSystem.Numerics.Vector2%2cSystem.Numerics.Vector4%2cSystem.Numerics.Vector4)`. That pointer is then used by ImGui to let us know what texture to draw
+Creates a pointer to a texture, which can be passed through ImGui calls such as [Image(ImTextureID, Vector2, Vector2, Vector2, Vector4, Vector4)](https://learn.microsoft.com/dotnet/api/system.numerics.vector2/). That pointer is then used by ImGui to let us know what texture to draw
 
 ```csharp title="C#"
 public virtual ImTextureID BindTexture(Texture2D texture)
@@ -93,7 +94,7 @@ public virtual void UnbindTexture(Texture2D texture)
 
 ### BeforeLayoutInput(GameTime)
 
-Runs the ImGui input. Call before [BeforeLayout(GameTime)](../sadconsole.imguisystem.imguirenderer/#/).
+Runs the ImGui input. Call before [BeforeLayout(GameTime)](../sadconsole.imguisystem.imguirenderer/#beforelayoutgametime).
 
 ```csharp title="C#"
 public void BeforeLayoutInput(GameTime gameTime)
@@ -138,7 +139,7 @@ protected virtual void SetupInput()
 
 ### UpdateEffect(Texture2D)
 
-Updates the `Microsoft.Xna.Framework.Graphics.Effect` to the current matrices and texture
+Updates the ``Microsoft.Xna.Framework.Graphics.Effect`` to the current matrices and texture
 
 ```csharp title="C#"
 protected virtual Effect UpdateEffect(Texture2D texture)

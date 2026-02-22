@@ -3,6 +3,8 @@ title: ISurfaceSettable Interface
 slug: reference/sadconsole.isurfacesettable
 sidebar:
   label: ISurfaceSettable
+editUrl: false
+description: An interface that provides a Surface property which can be set.
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: Helpers Class
 slug: reference/sadconsole.ansi.helpers
 sidebar:
   label: Helpers
+editUrl: false
+description: Helpers related to ANSI processing.
 ---
 ## Definition
 

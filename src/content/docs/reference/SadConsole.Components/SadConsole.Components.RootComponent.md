@@ -3,10 +3,12 @@ title: RootComponent Class
 slug: reference/sadconsole.components.rootcomponent
 sidebar:
   label: RootComponent
+editUrl: false
+description: A component used only with `SadConsole.GameHost.RootComponents`. Runs logic before the `SadConsole.GameHost.Screen` is processed.
 ---
 ## Definition
 
-A component used only with [RootComponents](../sadconsole.gamehost/#rootcomponents/). Runs logic before the [Screen](../sadconsole.gamehost/#screen/) is processed.
+A component used only with [RootComponents](../sadconsole.gamehost/#rootcomponents). Runs logic before the [Screen](../sadconsole.gamehost/#screen) is processed.
 
 ```csharp title="C#"
 public abstract class RootComponent

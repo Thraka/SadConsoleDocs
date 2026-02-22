@@ -3,6 +3,7 @@ title: ImGuiDemos Class
 slug: reference/sadconsole.imguisystem.imguidemos
 sidebar:
   label: ImGuiDemos
+editUrl: false
 ---
 ## Definition
 

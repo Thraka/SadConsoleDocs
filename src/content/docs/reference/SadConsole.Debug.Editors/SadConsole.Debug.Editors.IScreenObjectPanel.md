@@ -3,6 +3,7 @@ title: IScreenObjectPanel Interface
 slug: reference/sadconsole.debug.editors.iscreenobjectpanel
 sidebar:
   label: IScreenObjectPanel
+editUrl: false
 ---
 ## Definition
 

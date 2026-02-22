@@ -3,6 +3,8 @@ title: ListBoxItemTheme Class
 slug: reference/sadconsole.ui.controls.listboxitemtheme
 sidebar:
   label: ListBoxItemTheme
+editUrl: false
+description: A generic theme for a `SadConsole.UI.Controls.ListBox` item.
 ---
 ## Definition
 

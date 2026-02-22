@@ -3,10 +3,12 @@ title: Global.ResizeGraphicsDeviceManagerDelegate Delegate
 slug: reference/sadconsole.host.global.resizegraphicsdevicemanagerdelegate
 sidebar:
   label: Global.ResizeGraphicsDeviceManagerDelegate
+editUrl: false
+description: Resizes the `SadConsole.Host.Global.GraphicsDeviceManager` by the specified font size.
 ---
 ## Definition
 
-Resizes the [GraphicsDeviceManager](../sadconsole.host.global/#graphicsdevicemanager/) by the specified font size.
+Resizes the [GraphicsDeviceManager](../sadconsole.host.global/#graphicsdevicemanager) by the specified font size.
 
 ```csharp title="C#"
 public delegate void Global.ResizeGraphicsDeviceManagerDelegate(Point fontSize, int width, int height, int additionalWidth, int additionalHeight)

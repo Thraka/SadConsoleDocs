@@ -3,6 +3,8 @@ title: Blink Class
 slug: reference/sadconsole.effects.blink
 sidebar:
   label: Blink
+editUrl: false
+description: Switches between the normal foreground of a cell and a specified color for an amount of time, and then repeats.
 ---
 ## Definition
 
@@ -41,7 +43,7 @@ public TimeSpan BlinkSpeed { get; set; }
 
 ### UseCellBackgroundColor
 
-When true, uses the current cells background color for fading instead of the value of [BlinkOutColor](../sadconsole.effects.blink/#blinkoutcolor/).
+When true, uses the current cells background color for fading instead of the value of [BlinkOutColor](../sadconsole.effects.blink/#blinkoutcolor).
 
 ```csharp title="C#"
 [DataMember]

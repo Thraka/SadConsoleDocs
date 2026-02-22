@@ -3,6 +3,8 @@ title: ProgressBar Class
 slug: reference/sadconsole.ui.controls.progressbar
 sidebar:
   label: ProgressBar
+editUrl: false
+description: A control that fills an area (vertical or horizontal) according to a value.
 ---
 ## Definition
 
@@ -39,7 +41,7 @@ Sets the control to be horizontal, starting from the specified side. Center/Stre
 #### Exceptions
 
 [InvalidOperationException](https://learn.microsoft.com/dotnet/api/system.invalidoperationexception/)  
-Thrown when `horizontalAlignment` is set to either [Center](../sadconsole.horizontalalignment/#center/) or [Stretch](../sadconsole.horizontalalignment/#stretch/).
+Thrown when `horizontalAlignment` is set to either [Center](../sadconsole.horizontalalignment/#center) or [Stretch](../sadconsole.horizontalalignment/#stretch).
 
 
 ### ProgressBar(int, int, VerticalAlignment)
@@ -64,7 +66,7 @@ Sets the control to be vertical, starting from the specified side. Center/Stretc
 #### Exceptions
 
 [InvalidOperationException](https://learn.microsoft.com/dotnet/api/system.invalidoperationexception/)  
-Thrown when `verticalAlignment` is set to either [Center](../sadconsole.verticalalignment/#center/) or [Stretch](../sadconsole.verticalalignment/#stretch/).
+Thrown when `verticalAlignment` is set to either [Center](../sadconsole.verticalalignment/#center) or [Stretch](../sadconsole.verticalalignment/#stretch).
 
 
 ## Fields
@@ -89,7 +91,7 @@ protected int controlSize
 
 ### fillSize
 
-For theme use only. The size of the bar currently filled based on the [Progress](../sadconsole.ui.controls.progressbar/#progress/) property.
+For theme use only. The size of the bar currently filled based on the [Progress](../sadconsole.ui.controls.progressbar/#progress) property.
 
 ```csharp title="C#"
 [DataMember]
@@ -136,7 +138,7 @@ public string DisplayText { get; set; }
 
 ### DisplayTextAlignment
 
-Alignment to print the [DisplayText](../sadconsole.ui.controls.progressbar/#displaytext/). [Stretch](../sadconsole.horizontalalignment/#stretch/) is invalid for the property.
+Alignment to print the [DisplayText](../sadconsole.ui.controls.progressbar/#displaytext). [Stretch](../sadconsole.horizontalalignment/#stretch) is invalid for the property.
 
 ```csharp title="C#"
 [DataMember]
@@ -145,7 +147,7 @@ public HorizontalAlignment DisplayTextAlignment { get; set; }
 
 ### HorizontalAlignment
 
-The horizontal orientation used when [IsHorizontal](../sadconsole.ui.controls.progressbar/#ishorizontal/) is set to true.
+The horizontal orientation used when [IsHorizontal](../sadconsole.ui.controls.progressbar/#ishorizontal) is set to true.
 
 ```csharp title="C#"
 public HorizontalAlignment HorizontalAlignment { get; set; }
@@ -153,7 +155,7 @@ public HorizontalAlignment HorizontalAlignment { get; set; }
 
 ### VerticalAlignment
 
-The vertical orientation used when [IsHorizontal](../sadconsole.ui.controls.progressbar/#ishorizontal/) is set to false.
+The vertical orientation used when [IsHorizontal](../sadconsole.ui.controls.progressbar/#ishorizontal) is set to false.
 
 ```csharp title="C#"
 public VerticalAlignment VerticalAlignment { get; set; }
@@ -161,7 +163,7 @@ public VerticalAlignment VerticalAlignment { get; set; }
 
 ### IsHorizontal
 
-When true, the progress bar uses the [HorizontalAlignment](../sadconsole.ui.controls.progressbar/#horizontalalignment/) property to determine the starting fill direction. When false, uses the [VerticalAlignment](../sadconsole.ui.controls.progressbar/#verticalalignment/) property.
+When true, the progress bar uses the [HorizontalAlignment](../sadconsole.ui.controls.progressbar/#horizontalalignment) property to determine the starting fill direction. When false, uses the [VerticalAlignment](../sadconsole.ui.controls.progressbar/#verticalalignment) property.
 
 ```csharp title="C#"
 public bool IsHorizontal { get; set; }
@@ -213,7 +215,7 @@ public int BarGlyph { get; set; }
 
 ### DisplayTextColor
 
-The color to print the [DisplayText](../sadconsole.ui.controls.progressbar/#displaytext/) string.
+The color to print the [DisplayText](../sadconsole.ui.controls.progressbar/#displaytext) string.
 
 ```csharp title="C#"
 [DataMember]
@@ -231,7 +233,7 @@ public Color? BarColor { get; set; }
 
 ### PrintDisplayAsDecorator
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, prints the [DisplayText](../sadconsole.ui.controls.label/#displaytext/) on the control in decorators instead of replacing the portation of the bar that overlaps the text.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, prints the [DisplayText](../sadconsole.ui.controls.label/#displaytext) on the control in decorators instead of replacing the portation of the bar that overlaps the text.
 
 ```csharp title="C#"
 [DataMember]
@@ -260,7 +262,7 @@ True if the keyboard was handled by this control.
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)
@@ -290,7 +292,7 @@ The duration of thecurrent frame.
 
 ### ProgressChanged
 
-Called when the [Progress](../sadconsole.ui.controls.progressbar/#progress/) property value changes.
+Called when the [Progress](../sadconsole.ui.controls.progressbar/#progress) property value changes.
 
 ```csharp title="C#"
 public event EventHandler? ProgressChanged

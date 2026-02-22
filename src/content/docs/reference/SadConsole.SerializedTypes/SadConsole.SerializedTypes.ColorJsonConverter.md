@@ -3,6 +3,7 @@ title: ColorJsonConverter Class
 slug: reference/sadconsole.serializedtypes.colorjsonconverter
 sidebar:
   label: ColorJsonConverter
+editUrl: false
 ---
 ## Definition
 

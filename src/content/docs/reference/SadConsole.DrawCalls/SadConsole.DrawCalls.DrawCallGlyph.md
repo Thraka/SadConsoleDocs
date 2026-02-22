@@ -3,10 +3,12 @@ title: DrawCallGlyph Class
 slug: reference/sadconsole.drawcalls.drawcallglyph
 sidebar:
   label: DrawCallGlyph
+editUrl: false
+description: Draws a glyph to the active `SadConsole.Host.Global.SharedSpriteBatch`.
 ---
 ## Definition
 
-Draws a glyph to the active [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch/).
+Draws a glyph to the active [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch).
 
 ```csharp title="C#"
 public class DrawCallGlyph : IDrawCall
@@ -32,13 +34,13 @@ public DrawCallGlyph(ColoredGlyphBase cell, Rectangle targetRect, IFont font, bo
 The glyph to be drawn.
 
 `targetRect` Microsoft.Xna.Framework.Rectangle  
-Where on the <xref href="SadConsole.Host.Global.SharedSpriteBatch" data-throw-if-not-resolved="false"></xref> the glyph should be drawn.
+Where on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch) the glyph should be drawn.
 
 `font` [IFont](../sadconsole.ifont/)  
 The font to use when drawing the glyph.
 
 `drawBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, draws the <xref href="SadConsole.ColoredGlyphBase.Background" data-throw-if-not-resolved="false"></xref> color for the glyph; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, draws the [Background](../sadconsole.coloredglyphbase/#background) color for the glyph; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 
 ## Fields
@@ -61,7 +63,7 @@ public ColoredGlyphBase Cell
 
 ### TargetRect
 
-Where on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch/) the glyph should be drawn.
+Where on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch) the glyph should be drawn.
 
 ```csharp title="C#"
 public Rectangle TargetRect
@@ -69,7 +71,7 @@ public Rectangle TargetRect
 
 ### DrawBackground
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, draws the [Background](../sadconsole.coloredglyphbase/#background/) color for the glyph; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, draws the [Background](../sadconsole.coloredglyphbase/#background) color for the glyph; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool DrawBackground

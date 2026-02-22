@@ -3,6 +3,8 @@ title: REXPaintImage.Cell Struct
 slug: reference/sadconsole.readers.rexpaintimage.cell
 sidebar:
   label: REXPaintImage.Cell
+editUrl: false
+description: A RexPaint layer cell.
 ---
 ## Definition
 

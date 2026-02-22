@@ -3,6 +3,8 @@ title: FontExtensions Class
 slug: reference/sadconsole.fontextensions
 sidebar:
   label: FontExtensions
+editUrl: false
+description: Extensions for `SadConsole.IFont`.
 ---
 ## Definition
 

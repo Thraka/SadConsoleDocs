@@ -3,6 +3,8 @@ title: AnimatedScreenObject.AnimationStateChangedEventArgs Class
 slug: reference/sadconsole.animatedscreenobject.animationstatechangedeventargs
 sidebar:
   label: AnimatedScreenObject.AnimationStateChangedEventArgs
+editUrl: false
+description: Event args for when the animation state changes
 ---
 ## Definition
 

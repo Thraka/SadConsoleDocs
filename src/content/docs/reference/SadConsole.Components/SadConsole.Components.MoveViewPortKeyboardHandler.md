@@ -3,6 +3,8 @@ title: MoveViewPortKeyboardHandler Class
 slug: reference/sadconsole.components.moveviewportkeyboardhandler
 sidebar:
   label: MoveViewPortKeyboardHandler
+editUrl: false
+description: Moves the view of an `SadConsole.IScreenSurface` with a set of specified keyboard keys.
 ---
 ## Definition
 

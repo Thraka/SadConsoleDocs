@@ -3,6 +3,8 @@ title: ParseCommandBlink Class
 slug: reference/sadconsole.stringparser.parsecommandblink
 sidebar:
   label: ParseCommandBlink
+editUrl: false
+description: Blinks characters.
 ---
 ## Definition
 
@@ -51,7 +53,7 @@ public TimeSpan Speed
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

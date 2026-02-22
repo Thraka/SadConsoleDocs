@@ -3,6 +3,8 @@ title: Overlay Class
 slug: reference/sadconsole.components.overlay
 sidebar:
   label: Overlay
+editUrl: false
+description: A surface that's rendered on top of a host surface.
 ---
 ## Definition
 
@@ -34,9 +36,9 @@ Internal use.
 ```csharp title="C#"
 public IRenderStep? RenderStep
 ```
-## Remarks
+#### Remarks
 
-The render step used to draw the overlay. This render step is added to the host object and should draw the [Surface](../sadconsole.components.overlay/#surface/) of the Overlay component.
+The render step used to draw the overlay. This render step is added to the host object and should draw the [Surface](../sadconsole.components.overlay/#surface) of the Overlay component.
 
 ## Properties
 
@@ -50,7 +52,7 @@ public ScreenSurface? Surface { get; }
 
 ### ClearOnAdd
 
-When true, clears the [Surface](../sadconsole.components.overlay/#surface/) property when this object is added to a [IScreenSurface](../sadconsole.iscreensurface/).
+When true, clears the [Surface](../sadconsole.components.overlay/#surface) property when this object is added to a [IScreenSurface](../sadconsole.iscreensurface/).
 
 ```csharp title="C#"
 public bool ClearOnAdd { get; set; }

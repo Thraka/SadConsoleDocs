@@ -3,6 +3,8 @@ title: IFont Interface
 slug: reference/sadconsole.ifont
 sidebar:
   label: IFont
+editUrl: false
+description: Represents a font used by the rendering engine.
 ---
 ## Definition
 
@@ -17,7 +19,7 @@ public interface IFont : IDisposable
 
 ### Name
 
-The name of the font used when it is registered with the [Fonts](../sadconsole.gamehost/#fonts/) collection.
+The name of the font used when it is registered with the [Fonts](../sadconsole.gamehost/#fonts) collection.
 
 ```csharp title="C#"
 string Name { get; }
@@ -141,7 +143,7 @@ The rectangle for the glyph.
 
 ### GenerateGlyphSourceRectangle(int)
 
-Generates a rectangle for the specified glyph. For the actual font rectangle, use [GetGlyphSourceRectangle(int)](../sadconsole.ifont/#/).
+Generates a rectangle for the specified glyph. For the actual font rectangle, use [GetGlyphSourceRectangle(int)](../sadconsole.ifont/#getglyphsourcerectangleint).
 
 ```csharp title="C#"
 Rectangle GenerateGlyphSourceRectangle(int glyph)
@@ -159,7 +161,7 @@ A rectangle based on where the font thinks the rectangle should be.
 
 ### GetFontSize(Sizes)
 
-Gets the pixel size of a font based on a [IFont.Sizes](../sadconsole.ifont/).
+Gets the pixel size of a font based on a [IFont.Sizes](../sadconsole.ifont.sizes/).
 
 ```csharp title="C#"
 Point GetFontSize(IFont.Sizes size)
@@ -197,7 +199,7 @@ The color to apply to the decorator.
 The decorator instance.
 #### Remarks
 
-If the decorator does not exist, [Empty](../sadconsole.celldecorator/#empty/) is returned.
+If the decorator does not exist, [Empty](../sadconsole.celldecorator/#empty) is returned.
 
 ### HasGlyphDefinition(string)
 
@@ -236,4 +238,4 @@ The name of the glyph definition.
 The glyph definition.
 #### Remarks
 
-If the glyph definition doesn't exist, return s[Empty](../sadconsole.glyphdefinition/#empty/).
+If the glyph definition doesn't exist, return s[Empty](../sadconsole.glyphdefinition/#empty).

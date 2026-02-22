@@ -3,6 +3,8 @@ title: ImGuiCore Class
 slug: reference/sadconsole.imguisystem.imguicore
 sidebar:
   label: ImGuiCore
+editUrl: false
+description: Shared objects that drive the ImGui integration for SadConsole.
 ---
 ## Definition
 

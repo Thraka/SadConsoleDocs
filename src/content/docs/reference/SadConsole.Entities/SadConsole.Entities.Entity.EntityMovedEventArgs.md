@@ -3,6 +3,8 @@ title: Entity.EntityMovedEventArgs Class
 slug: reference/sadconsole.entities.entity.entitymovedeventargs
 sidebar:
   label: Entity.EntityMovedEventArgs
+editUrl: false
+description: Arguments for the entity moved event.
 ---
 ## Definition
 
@@ -45,7 +47,7 @@ public readonly Entity Entity
 
 ### FromPosition
 
-The position the [Entity](../sadconsole.entities.entity.entitymovedeventargs/#entity/) moved from.
+The position the [Entity](../sadconsole.entities.entity.entitymovedeventargs/#entity) moved from.
 
 ```csharp title="C#"
 public readonly Point FromPosition

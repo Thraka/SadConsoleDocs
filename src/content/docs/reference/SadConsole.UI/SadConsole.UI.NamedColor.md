@@ -3,6 +3,8 @@ title: NamedColor Class
 slug: reference/sadconsole.ui.namedcolor
 sidebar:
   label: NamedColor
+editUrl: false
+description: A color associated with a name.
 ---
 ## Definition
 

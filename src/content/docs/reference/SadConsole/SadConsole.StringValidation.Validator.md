@@ -3,6 +3,8 @@ title: StringValidation.Validator Delegate
 slug: reference/sadconsole.stringvalidation.validator
 sidebar:
   label: StringValidation.Validator
+editUrl: false
+description: Validates a string value.
 ---
 ## Definition
 

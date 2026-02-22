@@ -3,10 +3,12 @@ title: WindowRenderer Class
 slug: reference/sadconsole.renderers.windowrenderer
 sidebar:
   label: WindowRenderer
+editUrl: false
+description: Draws a `SadConsole.UI.Window` object by adding a `SadConsole.Renderers.WindowRenderStep` to the `SadConsole.Renderers.ScreenSurfaceRenderer.Steps` collection.
 ---
 ## Definition
 
-Draws a [Window](../sadconsole.ui.window/) object by adding a [WindowRenderStep](../sadconsole.renderers.windowrenderstep/) to the [Steps](../sadconsole.renderers.screensurfacerenderer/#steps/) collection.
+Draws a [Window](../sadconsole.ui.window/) object by adding a [WindowRenderStep](../sadconsole.renderers.windowrenderstep/) to the [Steps](../sadconsole.renderers.screensurfacerenderer/#steps) collection.
 
 ```csharp title="C#"
 public sealed class WindowRenderer : ScreenSurfaceRenderer, IRenderer, IDisposable, IRendererMonoGame

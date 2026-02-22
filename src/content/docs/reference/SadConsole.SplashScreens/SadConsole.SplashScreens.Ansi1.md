@@ -3,6 +3,8 @@ title: Ansi1 Class
 slug: reference/sadconsole.splashscreens.ansi1
 sidebar:
   label: Ansi1
+editUrl: false
+description: A simple splashscreen that fades in a screen specifying "Powered by SadConsole".
 ---
 ## Definition
 
@@ -37,7 +39,7 @@ The font size to use.
 
 ### Ansi1(Sizes)
 
-Creates the ansi splash screen using the [EmbeddedFont](../sadconsole.gamehost/#embeddedfont/) and the specified font size.
+Creates the ansi splash screen using the [EmbeddedFont](../sadconsole.gamehost/#embeddedfont) and the specified font size.
 
 ```csharp title="C#"
 public Ansi1(IFont.Sizes fontSize)
@@ -51,7 +53,7 @@ The size of font to use.
 
 ### Ansi1()
 
-Creates the ansi splash screen using the [EmbeddedFont](../sadconsole.gamehost/#embeddedfont/) and a font size of [One](../sadconsole.ifont.sizes/#one/).
+Creates the ansi splash screen using the [EmbeddedFont](../sadconsole.gamehost/#embeddedfont) and a font size of [One](../sadconsole.ifont.sizes/#one).
 
 ```csharp title="C#"
 public Ansi1()

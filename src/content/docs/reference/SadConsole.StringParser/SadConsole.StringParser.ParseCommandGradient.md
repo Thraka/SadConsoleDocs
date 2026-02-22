@@ -3,6 +3,8 @@ title: ParseCommandGradient Class
 slug: reference/sadconsole.stringparser.parsecommandgradient
 sidebar:
   label: ParseCommandGradient
+editUrl: false
+description: Recolors a glyph.
 ---
 ## Definition
 
@@ -50,7 +52,7 @@ public int Length
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

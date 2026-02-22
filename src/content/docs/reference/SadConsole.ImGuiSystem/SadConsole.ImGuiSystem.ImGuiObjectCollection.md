@@ -3,6 +3,8 @@ title: ImGuiObjectCollection Class
 slug: reference/sadconsole.imguisystem.imguiobjectcollection
 sidebar:
   label: ImGuiObjectCollection
+editUrl: false
+description: A collection of `SadConsole.ImGuiSystem.ImGuiObjectBase` objects that can be added to a ImGui renderer.
 ---
 ## Definition
 
@@ -51,7 +53,7 @@ public bool IsReadOnly { get; }
 
 ### BuildUI(ImGuiRenderer)
 
-Draws the objects contained in this collection if [IsVisible](../sadconsole.imguisystem.imguiobjectbase/#isvisible/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Draws the objects contained in this collection if [IsVisible](../sadconsole.imguisystem.imguiobjectbase/#isvisible) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public override void BuildUI(ImGuiRenderer renderer)

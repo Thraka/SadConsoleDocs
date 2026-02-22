@@ -3,10 +3,12 @@ title: Game Class
 slug: reference/sadconsole.host.game
 sidebar:
   label: Game
+editUrl: false
+description: A MonoGame `Microsoft.Xna.Framework.Game` instance that runs SadConsole.
 ---
 ## Definition
 
-A MonoGame `Microsoft.Xna.Framework.Game` instance that runs SadConsole.
+A MonoGame ``Microsoft.Xna.Framework.Game`` instance that runs SadConsole.
 
 ```csharp title="C#"
 public class Game : Game, IDisposable

@@ -3,6 +3,7 @@ title: SadConsole.Ansi
 slug: reference/sadconsole.ansi
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

@@ -3,10 +3,12 @@ title: ColorExtensions2 Class
 slug: reference/sadrogue.primitives.colorextensions2
 sidebar:
   label: ColorExtensions2
+editUrl: false
+description: Various extension methods to `SadRogue.Primitives.Color` class.
 ---
 ## Definition
 
-Various extension methods to `SadRogue.Primitives.Color` class.
+Various extension methods to ``SadRogue.Primitives.Color`` class.
 
 ```csharp title="C#"
 public static class ColorExtensions2
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### ColorMappings
 
-Custom color mappings for the [FromName(string)](../sadrogue.primitives.colorextensions2/#/) and `SadRogue.Primitives.ColorExtensions2.FromParser(SadRogue.Primitives.Color%2cSystem.String%2cSystem.Boolean%40%2cSystem.Boolean%40%2cSystem.Boolean%40%2cSystem.Boolean%40%2cSystem.Boolean%40)` methods. Key names should be lowercase.
+Custom color mappings for the [FromName(string)](../sadrogue.primitives.colorextensions2/#fromnamestring) and [FromParser(Color, string, out bool, out bool, out bool, out bool, out bool)](../sadrogue.primitives.colorextensions2/#fromparsercolor-string-out-bool-out-bool-out-bool-out-bool-out-bool) methods. Key names should be lowercase.
 
 ```csharp title="C#"
 public static Dictionary<string, Color> ColorMappings
@@ -43,7 +45,7 @@ The starting color which will be at index 0 in the array.
 The ending color which will be at index `steps - 1` in the array.
 
 `steps` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The gradient steps in the array which uses <xref href="SadRogue.Primitives.Color.Lerp(SadRogue.Primitives.Color%2cSadRogue.Primitives.Color%2cSystem.Single)" data-throw-if-not-resolved="false"></xref>.
+The gradient steps in the array which uses [Lerp(Color, Color, float)](https://learn.microsoft.com/dotnet/api/system.single/).
 
 #### Returns
 
@@ -605,7 +607,7 @@ The color to convert.
 #### Returns
 
 [string](https://learn.microsoft.com/dotnet/api/system.string/)  
-A string in this format R,G,B,A so for `SadRogue.Primitives.Color.Green` you would get <pre>`0,128,0,255`</pre>.
+A string in this format R,G,B,A so for ``SadRogue.Primitives.Color.Green`` you would get <pre>`0,128,0,255`</pre>.
 
 ### FromParser(Color, string, out bool, out bool, out bool, out bool, out bool)
 
@@ -644,7 +646,7 @@ SadRogue.Primitives.Color
 
 ### FromName(string)
 
-Searches [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings/) for a defined color.
+Searches [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings) for a defined color.
 
 ```csharp title="C#"
 public static Color FromName(string name)
@@ -662,7 +664,7 @@ A color.
 
 ### FromName(string, Color)
 
-Searches [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings/) for a defined color. If color is not defined, the color specified by `defaultColor` is returned.
+Searches [ColorMappings](../sadrogue.primitives.colorextensions2/#colormappings) for a defined color. If color is not defined, the color specified by `defaultColor` is returned.
 
 ```csharp title="C#"
 public static Color FromName(string name, Color defaultColor)

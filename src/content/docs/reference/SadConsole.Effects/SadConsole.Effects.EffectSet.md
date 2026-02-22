@@ -3,6 +3,8 @@ title: EffectSet Class
 slug: reference/sadconsole.effects.effectset
 sidebar:
   label: EffectSet
+editUrl: false
+description: Chains one effect after another.
 ---
 ## Definition
 
@@ -139,7 +141,7 @@ The enumerator.
 
 ### Add(ICellEffect)
 
-Adds an effect to the end of the [Effects](../sadconsole.effects.effectset/#effects/) collection.
+Adds an effect to the end of the [Effects](../sadconsole.effects.effectset/#effects) collection.
 
 ```csharp title="C#"
 public void Add(ICellEffect effect)

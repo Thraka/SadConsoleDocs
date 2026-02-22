@@ -3,6 +3,8 @@ title: Zone Class
 slug: reference/sadconsole.entities.zone
 sidebar:
   label: Zone
+editUrl: false
+description: Defines an area for a scene.
 ---
 ## Definition
 
@@ -47,7 +49,7 @@ public Zone(Rectangle area)
 The area of the zone.
 
 
-### Zone(IEnumerable<Point>)
+### Zone(IEnumerable\<Point>)
 
 Creates a new zone object using the specified positions.
 
@@ -113,7 +115,7 @@ public IReadOnlyList<Entity> Entities { get; }
 
 ### ToString()
 
-Returns the string "Zone - " followed by the [Name](../sadconsole.entities.zone/#name/) of the zone. If the name is empty, appends the [Area](../sadconsole.entities.zone/#area/) bounds.
+Returns the string "Zone - " followed by the [Name](../sadconsole.entities.zone/#name) of the zone. If the name is empty, appends the [Area](../sadconsole.entities.zone/#area) bounds.
 
 ```csharp title="C#"
 public override string ToString()

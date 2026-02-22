@@ -3,6 +3,8 @@ title: State Class
 slug: reference/sadconsole.ansi.state
 sidebar:
   label: State
+editUrl: false
+description: Represents the state of an ANSI.SYS processor.
 ---
 ## Definition
 
@@ -71,7 +73,7 @@ public Color Background { get; set; }
 
 ### AnsiCorrectPrintColor()
 
-Forces the Background of the print appearance to be the darkened color and the foreground to be bright or not based on the [Bold](../sadconsole.ansi.state/#bold/) property.
+Forces the Background of the print appearance to be the darkened color and the foreground to be bright or not based on the [Bold](../sadconsole.ansi.state/#bold) property.
 
 ```csharp title="C#"
 public void AnsiCorrectPrintColor()

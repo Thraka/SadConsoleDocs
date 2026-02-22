@@ -3,6 +3,8 @@ title: Label Class
 slug: reference/sadconsole.ui.controls.label
 sidebar:
   label: Label
+editUrl: false
+description: A simple surface for drawing text that can be moved and sized like a control.
 ---
 ## Definition
 
@@ -73,7 +75,7 @@ public Color? TextColor { get; set; }
 
 ### Alignment
 
-Sets the horizontal alignment of the label. Defaults to [Left](../sadconsole.horizontalalignment/#left/).
+Sets the horizontal alignment of the label. Defaults to [Left](../sadconsole.horizontalalignment/#left).
 
 ```csharp title="C#"
 public HorizontalAlignment Alignment { get; set; }
@@ -89,7 +91,7 @@ public string DisplayText { get; set; }
 
 ### UseNormalStateOnly
 
-When true, only uses [Normal](../sadconsole.ui.themestates/#normal/) for drawing.
+When true, only uses [Normal](../sadconsole.ui.themestates/#normal) for drawing.
 
 ```csharp title="C#"
 [DataMember]
@@ -98,7 +100,7 @@ public bool UseNormalStateOnly { get; set; }
 
 ### DecoratorUnderline
 
-The decorator to use when the [ShowUnderline](../sadconsole.ui.controls.label/#showunderline/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+The decorator to use when the [ShowUnderline](../sadconsole.ui.controls.label/#showunderline) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 [DataMember]
@@ -107,7 +109,7 @@ public CellDecorator DecoratorUnderline { get; set; }
 
 ### DecoratorStrikethrough
 
-The decorator to use when the [ShowStrikethrough](../sadconsole.ui.controls.label/#showstrikethrough/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+The decorator to use when the [ShowStrikethrough](../sadconsole.ui.controls.label/#showstrikethrough) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 [DataMember]

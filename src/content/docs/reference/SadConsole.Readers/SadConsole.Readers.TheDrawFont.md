@@ -3,6 +3,8 @@ title: TheDrawFont Class
 slug: reference/sadconsole.readers.thedrawfont
 sidebar:
   label: TheDrawFont
+editUrl: false
+description: Represents a TheDraw ascii font. http://www.roysac.com/thedrawfonts-tdf.html
 ---
 ## Definition
 

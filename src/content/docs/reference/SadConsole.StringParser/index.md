@@ -3,6 +3,7 @@ title: SadConsole.StringParser
 slug: reference/sadconsole.stringparser
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

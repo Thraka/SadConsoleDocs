@@ -3,10 +3,12 @@ title: FadeTextSurfaceTint Class
 slug: reference/sadconsole.instructions.fadetextsurfacetint
 sidebar:
   label: FadeTextSurfaceTint
+editUrl: false
+description: Animates a color change to `SadConsole.ScreenSurface.Tint`.
 ---
 ## Definition
 
-Animates a color change to [Tint](../sadconsole.screensurface/#tint/).
+Animates a color change to [Tint](../sadconsole.screensurface/#tint).
 
 ```csharp title="C#"
 public class FadeTextSurfaceTint : AnimatedValue, IComponent
@@ -29,7 +31,7 @@ public FadeTextSurfaceTint(IScreenSurface objectSurface, Gradient colors, TimeSp
 #### Parameters
 
 `objectSurface` [IScreenSurface](../sadconsole.iscreensurface/)  
-The <xref href="SadConsole.IScreenSurface.Tint" data-throw-if-not-resolved="false"></xref> to fade.
+The [Tint](../sadconsole.iscreensurface/#tint) to fade.
 
 `colors` SadRogue.Primitives.Gradient  
 The gradient pattern to fade through.
@@ -40,7 +42,7 @@ How long the fade takes.
 
 ### FadeTextSurfaceTint(Gradient, TimeSpan)
 
-Creates a new tint fade instruction that uses the console passed to `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)`.
+Creates a new tint fade instruction that uses the console passed to [Update(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#updateiscreenobject-timespan).
 
 ```csharp title="C#"
 public FadeTextSurfaceTint(Gradient colors, TimeSpan duration)
@@ -57,7 +59,7 @@ How long the fade takes.
 
 ### FadeTextSurfaceTint()
 
-Creates a new tint fade instruction with default settings that uses the console passed to `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)`.
+Creates a new tint fade instruction with default settings that uses the console passed to [Update(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#updateiscreenobject-timespan).
 
 ```csharp title="C#"
 public FadeTextSurfaceTint()
@@ -65,7 +67,7 @@ public FadeTextSurfaceTint()
 
 #### Remarks
 
-The default settings are: - [Colors](../sadconsole.instructions.fadetextsurfacetint/#colors/): `SadRogue.Primitives.Color.White` to `SadRogue.Primitives.Color.Black` - Duration: 1 second
+The default settings are: - [Colors](../sadconsole.instructions.fadetextsurfacetint/#colors): ``SadRogue.Primitives.Color.White`` to ``SadRogue.Primitives.Color.Black`` - Duration: 1 second
 
 ## Properties
 

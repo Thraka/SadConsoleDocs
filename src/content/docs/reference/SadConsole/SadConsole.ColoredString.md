@@ -3,6 +3,8 @@ title: ColoredString Class
 slug: reference/sadconsole.coloredstring
 sidebar:
   label: ColoredString
+editUrl: false
+description: Represents a string that has foreground and background colors for each character in the string.
 ---
 ## Definition
 
@@ -143,7 +145,7 @@ public ColoredGlyphAndEffect this[int index] { get; set; }
 
 ### String
 
-Gets or sets the characters representing this string. When set, first processes the string through `SadConsole.StringParser.IParser.Parse(System.ReadOnlySpan%7bSystem.Char%7d%2cSystem.Int32%2cSadConsole.ICellSurface%2cSadConsole.StringParser.ParseCommandStacks)` method from [Parser](../sadconsole.coloredstring/#parser/).
+Gets or sets the characters representing this string. When set, first processes the string through [Parse(ReadOnlySpan\<char\>, int, ICellSurface, ParseCommandStacks)](../sadconsole.stringparser.iparser/#parsereadonlyspanchar-int-icellsurface-parsecommandstacks) method from [Parser](../sadconsole.coloredstring/#parser).
 
 ```csharp title="C#"
 public string String { get; set; }
@@ -266,7 +268,7 @@ public ColoredString SubString(int index, int count)
 The index to copy the contents from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The count of <xref href="SadConsole.ColoredGlyphAndEffect" data-throw-if-not-resolved="false"></xref> objects to copy.
+The count of [ColoredGlyphAndEffect](../sadconsole.coloredglyphandeffect/) objects to copy.
 
 #### Returns
 
@@ -343,7 +345,7 @@ public void SetMirror(Mirror mirror)
 The mirror mode.
 
 
-### SetDecorators(IEnumerable<CellDecorator>)
+### SetDecorators(IEnumerable\<CellDecorator>)
 
 Applies the decorators to each character in the colored string.
 

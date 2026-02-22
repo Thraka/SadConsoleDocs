@@ -3,6 +3,7 @@ title: ISadComponentPanel Interface
 slug: reference/sadconsole.debug.editors.isadcomponentpanel
 sidebar:
   label: ISadComponentPanel
+editUrl: false
 ---
 ## Definition
 

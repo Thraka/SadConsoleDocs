@@ -3,6 +3,8 @@ title: NumberBox Class
 slug: reference/sadconsole.ui.controls.numberbox
 sidebar:
   label: NumberBox
+editUrl: false
+description: InputBox control that allows text input.
 ---
 ## Definition
 
@@ -60,9 +62,9 @@ The maximum number that can be set for this text box.
 [DataMember]
 public long NumberMaximum { get; set; }
 ```
-## Remarks
+#### Remarks
 
-Set both [NumberMaximum](../sadconsole.ui.controls.numberbox/#numbermaximum/) and [NumberMinimum](../sadconsole.ui.controls.numberbox/#numberminimum/) to 0 to disable number bounds checking.
+Set both [NumberMaximum](../sadconsole.ui.controls.numberbox/#numbermaximum) and [NumberMinimum](../sadconsole.ui.controls.numberbox/#numberminimum) to 0 to disable number bounds checking.
 
 ### NumberMinimum
 
@@ -72,13 +74,13 @@ The minimum number that can be set for this text box.
 [DataMember]
 public long NumberMinimum { get; set; }
 ```
-## Remarks
+#### Remarks
 
-Set both [NumberMaximum](../sadconsole.ui.controls.numberbox/#numbermaximum/) and [NumberMinimum](../sadconsole.ui.controls.numberbox/#numberminimum/) to 0 to disable number bounds checking.
+Set both [NumberMaximum](../sadconsole.ui.controls.numberbox/#numbermaximum) and [NumberMinimum](../sadconsole.ui.controls.numberbox/#numberminimum) to 0 to disable number bounds checking.
 
 ### DefaultValue
 
-The default value to use when the current value is invalid and [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+The default value to use when the current value is invalid and [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 [DataMember]
@@ -87,7 +89,7 @@ public long DefaultValue { get; set; }
 
 ### DefaultDecimalValue
 
-The default value to use when the current value is invalid and [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+The default value to use when the current value is invalid and [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 [DataMember]
@@ -123,7 +125,7 @@ public long DownButtonStep { get; set; }
 
 ### UpButtonStepDecimal
 
-Sets the up button's value step when [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal/) is on.
+Sets the up button's value step when [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal) is on.
 
 ```csharp title="C#"
 [DataMember]
@@ -132,7 +134,7 @@ public double UpButtonStepDecimal { get; set; }
 
 ### DownButtonStepDecimal
 
-Sets the down button's value step when [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal/) is on.
+Sets the down button's value step when [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal) is on.
 
 ```csharp title="C#"
 [DataMember]
@@ -141,12 +143,12 @@ public double DownButtonStepDecimal { get; set; }
 
 ### IsEditingNumberInvalid
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that the number is either out of bounds of the [NumberMinimum](../sadconsole.ui.controls.numberbox/#numberminimum/) and [NumberMaximum](../sadconsole.ui.controls.numberbox/#numbermaximum/) range, or it can't be property parsed. Otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that the number is either out of bounds of the [NumberMinimum](../sadconsole.ui.controls.numberbox/#numberminimum) and [NumberMaximum](../sadconsole.ui.controls.numberbox/#numbermaximum) range, or it can't be property parsed. Otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
 
 ```csharp title="C#"
 public bool IsEditingNumberInvalid { get; }
 ```
-## Remarks
+#### Remarks
 
 Used by the theme system.
 
@@ -168,7 +170,7 @@ public bool State_IsMouseOverDownButton { get; set; }
 
 ### NumberBoxInvalidNumberForeground
 
-The color to use with a [NumberBox](../sadconsole.ui.controls.numberbox/) control when [IsEditingNumberInvalid](../sadconsole.ui.controls.numberbox/#iseditingnumberinvalid/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+The color to use with a [NumberBox](../sadconsole.ui.controls.numberbox/) control when [IsEditingNumberInvalid](../sadconsole.ui.controls.numberbox/#iseditingnumberinvalid) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 [DataMember]
@@ -197,7 +199,7 @@ public int DownButtonGlyph { get; set; }
 
 ### IncreaseNumber(long)
 
-Increases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text/) property by the specified amount.
+Increases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text) property by the specified amount.
 
 ```csharp title="C#"
 public void IncreaseNumber(long amount)
@@ -211,7 +213,7 @@ The amount.
 
 ### IncreaseNumber(double)
 
-Increases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text/) property by the specified amount.
+Increases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text) property by the specified amount.
 
 ```csharp title="C#"
 public void IncreaseNumber(double amount)
@@ -225,12 +227,12 @@ The amount.
 #### Exceptions
 
 [Exception](https://learn.microsoft.com/dotnet/api/system.exception/)  
-Thrown when this method is used and the [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal/) property is set to false.
+Thrown when this method is used and the [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal) property is set to false.
 
 
 ### DecreaseNumber(long)
 
-Decreases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text/) property by the specified amount.
+Decreases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text) property by the specified amount.
 
 ```csharp title="C#"
 public void DecreaseNumber(long amount)
@@ -244,7 +246,7 @@ The amount.
 
 ### DecreaseNumber(double)
 
-Decreases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text/) property by the specified amount.
+Decreases the number stored in the [Text](../sadconsole.ui.controls.textbox/#text) property by the specified amount.
 
 ```csharp title="C#"
 public void DecreaseNumber(double amount)
@@ -258,7 +260,7 @@ The amount.
 #### Exceptions
 
 [Exception](https://learn.microsoft.com/dotnet/api/system.exception/)  
-Thrown when this method is used and the [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal/) property is set to false.
+Thrown when this method is used and the [AllowDecimal](../sadconsole.ui.controls.numberbox/#allowdecimal) property is set to false.
 
 
 ### OnFocused()
@@ -281,7 +283,7 @@ protected override void OnUnfocused()
 
 ### TextAsLong()
 
-Returns the [Text](../sadconsole.ui.controls.textbox/#text/) property as parsed by `System.Int64.TryParse(System.String%2cSystem.Globalization.NumberStyles%2cSystem.IFormatProvider%2cSystem.Int64%40)` with the current culture.
+Returns the [Text](../sadconsole.ui.controls.textbox/#text) property as parsed by [TryParse(string, NumberStyles, IFormatProvider, out long)](https://learn.microsoft.com/dotnet/api/system.int64.tryparse#system-int64-tryparse(system-string-system-globalization-numberstyles-system-iformatprovider-system-int64@)/) with the current culture.
 
 ```csharp title="C#"
 public long TextAsLong()
@@ -294,7 +296,7 @@ The parsed text value.
 
 ### TextAsDouble()
 
-Returns the [Text](../sadconsole.ui.controls.textbox/#text/) property as parsed by `System.Double.TryParse(System.String%2cSystem.Globalization.NumberStyles%2cSystem.IFormatProvider%2cSystem.Double%40)` with the current culture.
+Returns the [Text](../sadconsole.ui.controls.textbox/#text) property as parsed by [TryParse(string, NumberStyles, IFormatProvider, out double)](https://learn.microsoft.com/dotnet/api/system.double.tryparse#system-double-tryparse(system-string-system-globalization-numberstyles-system-iformatprovider-system-double@)/) with the current culture.
 
 ```csharp title="C#"
 public double TextAsDouble()
@@ -343,7 +345,7 @@ True when the control is enabled, set to use the mouse and the mouse is over it,
 
 ### OnResized()
 
-Called when `SadConsole.UI.Controls.ControlBase.Resize(System.Int32%2cSystem.Int32)` was called.
+Called when [Resize(int, int)](../sadconsole.ui.controls.controlbase/#resizeint-int) was called.
 
 ```csharp title="C#"
 protected override void OnResized()

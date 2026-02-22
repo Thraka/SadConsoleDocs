@@ -3,6 +3,8 @@ title: ToggleSwitch Class
 slug: reference/sadconsole.ui.controls.toggleswitch
 sidebar:
   label: ToggleSwitch
+editUrl: false
+description: Represents a button that can be toggled on/off within a group of other buttons.
 ---
 ## Definition
 
@@ -56,7 +58,7 @@ public int BackgroundGlyph { get; set; }
 
 ### OnGlyphColor
 
-The color of the [OnGlyph](../sadconsole.ui.controls.toggleswitch/#onglyph/) when the control is [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected/) is true.
+The color of the [OnGlyph](../sadconsole.ui.controls.toggleswitch/#onglyph) when the control is [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected) is true.
 
 ```csharp title="C#"
 [DataMember]
@@ -65,7 +67,7 @@ public Color OnGlyphColor { get; set; }
 
 ### OffGlyphColor
 
-The color of the [OnGlyph](../sadconsole.ui.controls.toggleswitch/#onglyph/) when the control is [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected/) is false.
+The color of the [OnGlyph](../sadconsole.ui.controls.toggleswitch/#onglyph) when the control is [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected) is false.
 
 ```csharp title="C#"
 [DataMember]
@@ -87,15 +89,15 @@ The orientation of the toggle switch relative to the text.
 ```csharp title="C#"
 public HorizontalAlignment SwitchOrientation { get; set; }
 ```
-## Remarks
+#### Remarks
 
-Valid values are [Left](../sadconsole.horizontalalignment/#left/) and [Right](../sadconsole.horizontalalignment/#right/).
+Valid values are [Left](../sadconsole.horizontalalignment/#left) and [Right](../sadconsole.horizontalalignment/#right).
 
 ## Methods
 
 ### OnClick()
 
-Perfroms a click on the base button and also toggles the [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected/) property.
+Perfroms a click on the base button and also toggles the [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected) property.
 
 ```csharp title="C#"
 protected override void OnClick()
@@ -104,7 +106,7 @@ protected override void OnClick()
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)

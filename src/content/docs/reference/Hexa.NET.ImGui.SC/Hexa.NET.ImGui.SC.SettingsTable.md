@@ -3,6 +3,7 @@ title: SettingsTable Class
 slug: reference/hexa.net.imgui.sc.settingstable
 sidebar:
   label: SettingsTable
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,7 @@ title: GuiDockspace Class
 slug: reference/sadconsole.debug.guidockspace
 sidebar:
   label: GuiDockspace
+editUrl: false
 ---
 ## Definition
 

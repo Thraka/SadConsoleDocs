@@ -3,6 +3,8 @@ title: IComponent Interface
 slug: reference/sadconsole.components.icomponent
 sidebar:
   label: IComponent
+editUrl: false
+description: A component that can be added to a `SadConsole.IScreenObject`.
 ---
 ## Definition
 
@@ -25,7 +27,7 @@ uint SortOrder { get; }
 
 ### IsUpdate
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)` method.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the [Update(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#updateiscreenobject-timespan) method.
 
 ```csharp title="C#"
 bool IsUpdate { get; }
@@ -33,7 +35,7 @@ bool IsUpdate { get; }
 
 ### IsRender
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the `SadConsole.Components.IComponent.Render(SadConsole.IScreenObject%2cSystem.TimeSpan)` method.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the [Render(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#renderiscreenobject-timespan) method.
 
 ```csharp title="C#"
 bool IsRender { get; }
@@ -41,7 +43,7 @@ bool IsRender { get; }
 
 ### IsMouse
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the `SadConsole.Components.IComponent.ProcessMouse(SadConsole.IScreenObject%2cSadConsole.Input.MouseScreenObjectState%2cSystem.Boolean%40)` method.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the [ProcessMouse(IScreenObject, MouseScreenObjectState, out bool)](../sadconsole.components.icomponent/#processmouseiscreenobject-mousescreenobjectstate-out-bool) method.
 
 ```csharp title="C#"
 bool IsMouse { get; }
@@ -49,7 +51,7 @@ bool IsMouse { get; }
 
 ### IsKeyboard
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the `SadConsole.Components.IComponent.ProcessKeyboard(SadConsole.IScreenObject%2cSadConsole.Input.Keyboard%2cSystem.Boolean%40)` method.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that this component calls the [ProcessKeyboard(IScreenObject, Keyboard, out bool)](../sadconsole.components.icomponent/#processkeyboardiscreenobject-keyboard-out-bool) method.
 
 ```csharp title="C#"
 bool IsKeyboard { get; }

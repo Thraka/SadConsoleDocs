@@ -3,6 +3,7 @@ title: ExtensionsHost Class
 slug: reference/sadconsole.configuration.extensionshost
 sidebar:
   label: ExtensionsHost
+editUrl: false
 ---
 ## Definition
 
@@ -66,7 +67,7 @@ The configuration builder.
 
 ### UseTitleContainer(Builder)
 
-Tells the game host to use the `Microsoft.Xna.Framework.TitleContainer` to open streams for reading.
+Tells the game host to use the ``Microsoft.Xna.Framework.TitleContainer`` to open streams for reading.
 
 ```csharp title="C#"
 public static Builder UseTitleContainer(this Builder configBuilder)
@@ -82,7 +83,7 @@ The builder object that composes the game startup.
 [Builder](../sadconsole.configuration.builder/)  
 The configuration object.
 
-### WithMonoGameCtor(Builder, Action<Game>)
+### WithMonoGameCtor(Builder, Action\<Game>)
 
 The `monogameCtorCallback` method is called by the MonoGame constructor. Some MonoGame specific settings may only be settable via the constructor.
 
@@ -103,7 +104,7 @@ A method.
 [Builder](../sadconsole.configuration.builder/)  
 The configuration object.
 
-### WithMonoGameInit(Builder, Action<Game>)
+### WithMonoGameInit(Builder, Action\<Game>)
 
 Internal only. Called by the MonoGame game to finish configuring SadConsole.
 
@@ -126,7 +127,7 @@ The configuration object.
 
 ### SkipMonoGameGameCreation(Builder)
 
-When called, tells the game host not to create the monogame game instance at [MonoGameInstance](../sadconsole.game/#monogameinstance/).
+When called, tells the game host not to create the monogame game instance at [MonoGameInstance](../sadconsole.game/#monogameinstance).
 
 ```csharp title="C#"
 public static Builder SkipMonoGameGameCreation(this Builder configBuilder)

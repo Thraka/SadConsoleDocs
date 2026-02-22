@@ -3,10 +3,12 @@ title: RenderComponent Class
 slug: reference/sadconsole.components.rendercomponent
 sidebar:
   label: RenderComponent
+editUrl: false
+description: A base class that implements `SadConsole.Components.IComponent.Render(SadConsole.IScreenObject%2cSystem.TimeSpan)` of `SadConsole.Components.IComponent`.
 ---
 ## Definition
 
-A base class that implements `SadConsole.Components.IComponent.Render(SadConsole.IScreenObject%2cSystem.TimeSpan)` of [IComponent](../sadconsole.components.icomponent/).
+A base class that implements [Render(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#renderiscreenobject-timespan) of [IComponent](../sadconsole.components.icomponent/).
 
 ```csharp title="C#"
 public abstract class RenderComponent : IComponent

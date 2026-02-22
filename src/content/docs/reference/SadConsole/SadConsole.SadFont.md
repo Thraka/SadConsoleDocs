@@ -3,6 +3,8 @@ title: SadFont Class
 slug: reference/sadconsole.sadfont
 sidebar:
   label: SadFont
+editUrl: false
+description: Represents a graphical font used by SadConsole.
 ---
 ## Definition
 
@@ -19,7 +21,7 @@ Implements [IFont](../sadconsole.ifont/), [IDisposable](https://learn.microsoft.
 
 ## Constructors
 
-### SadFont(int, int, int, int, int, int, ITexture, string, Dictionary<int, Rectangle>?)
+### SadFont(int, int, int, int, int, int, ITexture, string, Dictionary\<int, Rectangle>?)
 
 Creates a new font with the specified settings.
 
@@ -39,16 +41,16 @@ The pixel height of each glyph.
 The pixel padding between each glyph.
 
 `rows` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Number of glyph rows in the <code class="paramref">image</code>.
+Number of glyph rows in the `image`.
 
 `columns` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Number of glyph columns in the <code class="paramref">image</code>.
+Number of glyph columns in the `image`.
 
 `solidGlyphIndex` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The index of the glyph that is a solid white box.
 
 `image` [ITexture](../sadconsole.itexture/)  
-The <xref href="SadConsole.ITexture" data-throw-if-not-resolved="false"></xref> of the font.
+The [ITexture](../sadconsole.itexture/) of the font.
 
 `name` [string](https://learn.microsoft.com/dotnet/api/system.string/)  
 A font identifier used for serialization of resources using this font.
@@ -70,7 +72,7 @@ public int SolidGlyphIndex { get; set; }
 
 ### SolidGlyphRectangle
 
-The rectangle associated with the [SolidGlyphIndex](../sadconsole.sadfont/#solidglyphindex/).
+The rectangle associated with the [SolidGlyphIndex](../sadconsole.sadfont/#solidglyphindex).
 
 ```csharp title="C#"
 public Rectangle SolidGlyphRectangle { get; }
@@ -92,7 +94,7 @@ public int Rows { get; set; }
 
 ### TotalGlyphs
 
-Gets the total glyphs in this font, which represents the last index. Calculated from [Columns](../sadconsole.sadfont/#columns/) times [Rows](../sadconsole.sadfont/#rows/).
+Gets the total glyphs in this font, which represents the last index. Calculated from [Columns](../sadconsole.sadfont/#columns) times [Rows](../sadconsole.sadfont/#rows).
 
 ```csharp title="C#"
 public int TotalGlyphs { get; }
@@ -100,7 +102,7 @@ public int TotalGlyphs { get; }
 
 ### Name
 
-The name of the font used when it is registered with the [Fonts](../sadconsole.gamehost/#fonts/) collection.
+The name of the font used when it is registered with the [Fonts](../sadconsole.gamehost/#fonts) collection.
 
 ```csharp title="C#"
 [DataMember]
@@ -154,7 +156,7 @@ public int UnsupportedGlyphIndex { get; set; }
 
 ### UnsupportedGlyphRectangle
 
-The rectangle associated with the [UnsupportedGlyphIndex](../sadconsole.sadfont/#unsupportedglyphindex/).
+The rectangle associated with the [UnsupportedGlyphIndex](../sadconsole.sadfont/#unsupportedglyphindex).
 
 ```csharp title="C#"
 public Rectangle UnsupportedGlyphRectangle { get; }
@@ -212,11 +214,11 @@ The index of the glyph to get.
 #### Returns
 
 SadRogue.Primitives.Rectangle  
-The rectangle for the glyph if it exists, otherwise returns [UnsupportedGlyphRectangle](../sadconsole.sadfont/#unsupportedglyphrectangle/).
+The rectangle for the glyph if it exists, otherwise returns [UnsupportedGlyphRectangle](../sadconsole.sadfont/#unsupportedglyphrectangle).
 
 ### GenerateGlyphSourceRectangle(int)
 
-Generates a rectangle for the specified glyph based on the glyph index, [Rows](../sadconsole.sadfont/#rows/), [Columns](../sadconsole.sadfont/#columns/), and [GlyphPadding](../sadconsole.sadfont/#glyphpadding/) values. For the actual font rectangle, use [GetGlyphSourceRectangle(int)](../sadconsole.sadfont/#/).
+Generates a rectangle for the specified glyph based on the glyph index, [Rows](../sadconsole.sadfont/#rows), [Columns](../sadconsole.sadfont/#columns), and [GlyphPadding](../sadconsole.sadfont/#glyphpadding) values. For the actual font rectangle, use [GetGlyphSourceRectangle(int)](../sadconsole.sadfont/#getglyphsourcerectangleint).
 
 ```csharp title="C#"
 public Rectangle GenerateGlyphSourceRectangle(int glyph)
@@ -254,7 +256,7 @@ The color to apply to the decorator.
 The decorator instance.
 #### Remarks
 
-If the decorator does not exist, [Empty](../sadconsole.celldecorator/#empty/) is returned.
+If the decorator does not exist, [Empty](../sadconsole.celldecorator/#empty) is returned.
 
 ### GetGlyphDefinition(string)
 
@@ -275,7 +277,7 @@ The name of the glyph definition.
 The glyph definition.
 #### Remarks
 
-If the glyph definition doesn't exist, return s[Empty](../sadconsole.glyphdefinition/#empty/).
+If the glyph definition doesn't exist, return s[Empty](../sadconsole.glyphdefinition/#empty).
 
 ### HasGlyphDefinition(string)
 
@@ -297,7 +299,7 @@ The name of the glyph
 
 ### GetFontSize(Sizes)
 
-Gets the pixel size of a font based on a [IFont.Sizes](../sadconsole.ifont/).
+Gets the pixel size of a font based on a [IFont.Sizes](../sadconsole.ifont.sizes/).
 
 ```csharp title="C#"
 public Point GetFontSize(IFont.Sizes size)
@@ -315,7 +317,7 @@ The width and height of a font cell.
 
 ### ConfigureRects()
 
-Builds the [GlyphRectangles](../sadconsole.sadfont/#glyphrectangles/) array based on the current font settings, if the [GlyphRectangles](../sadconsole.sadfont/#glyphrectangles/) dictionary is empty.
+Builds the [GlyphRectangles](../sadconsole.sadfont/#glyphrectangles) array based on the current font settings, if the [GlyphRectangles](../sadconsole.sadfont/#glyphrectangles) dictionary is empty.
 
 ```csharp title="C#"
 public void ConfigureRects()
@@ -324,7 +326,7 @@ public void ConfigureRects()
 
 ### ForceConfigureRects()
 
-Builds the [GlyphRectangles](../sadconsole.sadfont/#glyphrectangles/) array based on the current font settings.
+Builds the [GlyphRectangles](../sadconsole.sadfont/#glyphrectangles) array based on the current font settings.
 
 ```csharp title="C#"
 public void ForceConfigureRects()
@@ -351,7 +353,7 @@ Returns the cloned font.
 
 ### Dispose()
 
-Disposes the [Image](../sadconsole.sadfont/#image/) property.
+Disposes the [Image](../sadconsole.sadfont/#image) property.
 
 ```csharp title="C#"
 public void Dispose()

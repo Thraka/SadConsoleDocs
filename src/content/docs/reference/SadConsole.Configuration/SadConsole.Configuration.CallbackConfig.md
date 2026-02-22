@@ -3,6 +3,7 @@ title: CallbackConfig Class
 slug: reference/sadconsole.configuration.callbackconfig
 sidebar:
   label: CallbackConfig
+editUrl: false
 ---
 ## Definition
 

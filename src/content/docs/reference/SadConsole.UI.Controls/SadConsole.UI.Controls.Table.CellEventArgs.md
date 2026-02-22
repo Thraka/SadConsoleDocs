@@ -3,6 +3,8 @@ title: Table.CellEventArgs Class
 slug: reference/sadconsole.ui.controls.table.celleventargs
 sidebar:
   label: Table.CellEventArgs
+editUrl: false
+description: Cell args for a table event
 ---
 ## Definition
 

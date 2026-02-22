@@ -3,6 +3,8 @@ title: ImGuiImplementation Class
 slug: reference/sadconsole.imguisystem.imguiimplementation
 sidebar:
   label: ImGuiImplementation
+editUrl: false
+description: A basic ImGui interface that adds the `SadConsole.ImGuiSystem.ImGuiMonoGameComponent` to MonoGame, rendering ImGui over SadConsole.
 ---
 ## Definition
 
@@ -53,13 +55,13 @@ public static void Start(bool disableFinalDraw = true, bool disableUpdate = fals
 #### Parameters
 
 `disableFinalDraw` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Turns off <xref href="SadConsole.Settings.DoFinalDraw" data-throw-if-not-resolved="false"></xref>, which causes SadConsole to only render ImGui to the screen.
+Turns off ``SadConsole.Settings.DoFinalDraw``, which causes SadConsole to only render ImGui to the screen.
 
 `disableUpdate` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Turns off <xref href="SadConsole.Settings.DoUpdate" data-throw-if-not-resolved="false"></xref>, which pauses SadConsole's update loop.
+Turns off ``SadConsole.Settings.DoUpdate``, which pauses SadConsole's update loop.
 
 `disableInput` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Turns off <xref href="SadConsole.Settings.Input.DoKeyboard" data-throw-if-not-resolved="false"></xref> and <xref href="SadConsole.Settings.Input.DoMouse" data-throw-if-not-resolved="false"></xref>, allowing only ImGui to handle input.
+Turns off ``SadConsole.Settings.Input.DoKeyboard`` and ``SadConsole.Settings.Input.DoMouse``, allowing only ImGui to handle input.
 
 `fontSize` [float](https://learn.microsoft.com/dotnet/api/system.single/)  
 The font size to use with ImGui.

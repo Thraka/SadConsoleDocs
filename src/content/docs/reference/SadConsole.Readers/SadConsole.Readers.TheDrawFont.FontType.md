@@ -3,6 +3,8 @@ title: TheDrawFont.FontType Enum
 slug: reference/sadconsole.readers.thedrawfont.fonttype
 sidebar:
   label: TheDrawFont.FontType
+editUrl: false
+description: The type of font.
 ---
 ## Definition
 

@@ -3,6 +3,7 @@ title: FontSerialized Class
 slug: reference/sadconsole.serializedtypes.fontserialized
 sidebar:
   label: FontSerialized
+editUrl: false
 ---
 ## Definition
 

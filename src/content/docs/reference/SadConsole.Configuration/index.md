@@ -3,6 +3,7 @@ title: SadConsole.Configuration
 slug: reference/sadconsole.configuration
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 
@@ -22,7 +23,7 @@ sidebar:
 | [FpsConfig](../sadconsole.configuration.fpsconfig/) |  |
 | [MonoGameCallbackConfig](../sadconsole.configuration.monogamecallbackconfig/) |  |
 | [MonoGameSettings](../sadconsole.configuration.monogamesettings/) |  |
-| [SplashScreenConfig](../sadconsole.configuration.splashscreenconfig/) | A config object that adds splash screen objects with the `SadConsole.GameHost.SetSplashScreens(SadConsole.IScreenSurface%5b%5d)` method. |
+| [SplashScreenConfig](../sadconsole.configuration.splashscreenconfig/) | A config object that adds splash screen objects with the [SetSplashScreens(params IScreenSurface[])](../sadconsole.gamehost/#setsplashscreensparams-iscreensurface) method. |
 | [StartingConsoleConfig](../sadconsole.configuration.startingconsoleconfig/) |  |
 | [StartingScreenConfig](../sadconsole.configuration.startingscreenconfig/) |  |
 ## Interfaces

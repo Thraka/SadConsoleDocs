@@ -3,6 +3,8 @@ title: IContainer Interface
 slug: reference/sadconsole.ui.controls.icontainer
 sidebar:
   label: IContainer
+editUrl: false
+description: A simple container for controls.
 ---
 ## Definition
 
@@ -33,7 +35,7 @@ ControlHost? Host { get; }
 
 ### this[string]
 
-Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name/) property.
+Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name) property.
 
 ```csharp title="C#"
 ControlBase this[string name] { get; }
@@ -82,7 +84,7 @@ The control instance found.
 
 ### GetNamedControl(string)
 
-Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name/) property.
+Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name) property.
 
 ```csharp title="C#"
 ControlBase GetNamedControl(string name)

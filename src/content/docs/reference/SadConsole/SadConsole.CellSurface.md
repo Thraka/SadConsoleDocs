@@ -3,6 +3,8 @@ title: CellSurface Class
 slug: reference/sadconsole.cellsurface
 sidebar:
   label: CellSurface
+editUrl: false
+description: An array of `SadConsole.ColoredGlyphBase` objects used to represent a 2D surface.
 ---
 ## Definition
 
@@ -22,7 +24,7 @@ Implements [ICellSurface](../sadconsole.icellsurface/), [IGridView\<ColoredGlyph
 
 ### CellSurface(int, int)
 
-Creates a new surface with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new surface with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public CellSurface(int width, int height)
@@ -39,7 +41,7 @@ The height of the surface in cells.
 
 ### CellSurface(int, int, ColoredGlyphBase[])
 
-Creates a new surface with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new surface with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public CellSurface(int width, int height, ColoredGlyphBase[] initialCells)
@@ -59,7 +61,7 @@ The cells to seed the surface with. If <a href="https://learn.microsoft.com/dotn
 
 ### CellSurface(int, int, int, int)
 
-Creates a new surface with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new surface with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public CellSurface(int viewWidth, int viewHeight, int totalWidth, int totalHeight)
@@ -82,7 +84,7 @@ The total height of the surface in cells.
 
 ### CellSurface(int, int, int, int, ColoredGlyphBase[]?)
 
-Creates a new surface with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new surface with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public CellSurface(int viewWidth, int viewHeight, int totalWidth, int totalHeight, ColoredGlyphBase[]? initialCells)
@@ -106,9 +108,9 @@ The total height of the surface in cells.
 The cells to seed the surface with. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, creates the cell array for you.
 
 
-### CellSurface(IGridView<ColoredGlyphBase>, int, int)
+### CellSurface(IGridView\<ColoredGlyphBase>, int, int)
 
-Creates a new surface from a grid view with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new surface from a grid view with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public CellSurface(IGridView<ColoredGlyphBase> surface, int visibleWidth = 0, int visibleHeight = 0)
@@ -120,10 +122,10 @@ public CellSurface(IGridView<ColoredGlyphBase> surface, int visibleWidth = 0, in
 The surface to use as the source of cells.
 
 `visibleWidth` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Optional view width. If <code>0</code>, the view width matches the width of the surface.
+Optional view width. If `0`, the view width matches the width of the surface.
 
 `visibleHeight` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Optional view height. If <code>0</code>, the view width matches the height of the surface.
+Optional view height. If `0`, the view width matches the height of the surface.
 
 
 ## Fields
@@ -177,7 +179,7 @@ public int TimesShiftedUp { get; set; }
 
 ### UsePrintProcessor
 
-When true, the [Parser](../sadconsole.coloredstring/#parser/) is used to generate a [ColoredString](../sadconsole.coloredstring/) before printing.
+When true, the [Parser](../sadconsole.coloredstring/#parser) is used to generate a [ColoredString](../sadconsole.coloredstring/) before printing.
 
 ```csharp title="C#"
 [DataMember]
@@ -195,7 +197,7 @@ public ICellSurface Surface { get; }
 
 ### Effects
 
-Processes the effects added to cells with `CellSurfaceEditor.SetEffect*`.
+Processes the effects added to cells with ``CellSurfaceEditor.SetEffect*``.
 
 ```csharp title="C#"
 [IgnoreDataMember]
@@ -287,7 +289,7 @@ public int Height { get; }
 
 ### IsScrollable
 
-Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the [View](../sadconsole.icellsurface/#view/) width or height is different from [Area](../sadconsole.icellsurface/#area/); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the [View](../sadconsole.icellsurface/#view) width or height is different from [Area](../sadconsole.icellsurface/#area); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool IsScrollable { get; }
@@ -433,7 +435,7 @@ The maximum height of the surface.
 
 ### SetIsDirtySafe()
 
-Sets [IsDirty](../sadconsole.cellsurface/#isdirty/) to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> without triggering [OnIsDirtyChanged()](../sadconsole.cellsurface/#onisdirtychanged/).
+Sets [IsDirty](../sadconsole.cellsurface/#isdirty) to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> without triggering [OnIsDirtyChanged()](../sadconsole.cellsurface/#onisdirtychanged).
 
 ```csharp title="C#"
 protected void SetIsDirtySafe()
@@ -442,7 +444,7 @@ protected void SetIsDirtySafe()
 
 ### OnIsDirtyChanged()
 
-Called when the [IsDirty](../sadconsole.cellsurface/#isdirty/) property changes.
+Called when the [IsDirty](../sadconsole.cellsurface/#isdirty) property changes.
 
 ```csharp title="C#"
 protected virtual void OnIsDirtyChanged()
@@ -451,7 +453,7 @@ protected virtual void OnIsDirtyChanged()
 
 ### OnCellsReset()
 
-Called when the [Cells](../sadconsole.cellsurface/#cells/) property is reset.
+Called when the [Cells](../sadconsole.cellsurface/#cells) property is reset.
 
 ```csharp title="C#"
 protected virtual void OnCellsReset()
@@ -460,7 +462,7 @@ protected virtual void OnCellsReset()
 
 ### GetEnumerator()
 
-Gets an enumerator for [Cells](../sadconsole.cellsurface/#cells/).
+Gets an enumerator for [Cells](../sadconsole.cellsurface/#cells).
 
 ```csharp title="C#"
 public IEnumerator<ColoredGlyphBase> GetEnumerator()
@@ -469,13 +471,13 @@ public IEnumerator<ColoredGlyphBase> GetEnumerator()
 #### Returns
 
 [IEnumerator\<ColoredGlyphBase\>](https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1/)  
-An enumerator for [Cells](../sadconsole.cellsurface/#cells/).
+An enumerator for [Cells](../sadconsole.cellsurface/#cells).
 
 ## Events
 
 ### IsDirtyChanged
 
-An event that is raised when [IsDirty](../sadconsole.icellsurface/#isdirty/) changes.
+An event that is raised when [IsDirty](../sadconsole.icellsurface/#isdirty) changes.
 
 ```csharp title="C#"
 public event EventHandler? IsDirtyChanged

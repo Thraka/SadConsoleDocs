@@ -3,6 +3,7 @@ title: ScreenObjectDetailsPanel Class
 slug: reference/sadconsole.debug.screenobjectdetailspanel
 sidebar:
   label: ScreenObjectDetailsPanel
+editUrl: false
 ---
 ## Definition
 

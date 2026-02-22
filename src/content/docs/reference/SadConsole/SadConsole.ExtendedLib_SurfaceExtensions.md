@@ -3,6 +3,8 @@ title: ExtendedLib_SurfaceExtensions Class
 slug: reference/sadconsole.extendedlib_surfaceextensions
 sidebar:
   label: ExtendedLib_SurfaceExtensions
+editUrl: false
+description: Extensions for the `SadConsole.IScreenSurface` type
 ---
 ## Definition
 

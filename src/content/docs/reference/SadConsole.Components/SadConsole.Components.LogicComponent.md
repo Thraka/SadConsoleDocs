@@ -3,10 +3,12 @@ title: LogicComponent Class
 slug: reference/sadconsole.components.logiccomponent
 sidebar:
   label: LogicComponent
+editUrl: false
+description: A base class that implements `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)` and `SadConsole.Components.IComponent.Render(SadConsole.IScreenObject%2cSystem.TimeSpan)` of `SadConsole.Components.IComponent`.
 ---
 ## Definition
 
-A base class that implements `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)` and `SadConsole.Components.IComponent.Render(SadConsole.IScreenObject%2cSystem.TimeSpan)` of [IComponent](../sadconsole.components.icomponent/).
+A base class that implements [Update(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#updateiscreenobject-timespan) and [Render(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#renderiscreenobject-timespan) of [IComponent](../sadconsole.components.icomponent/).
 
 ```csharp title="C#"
 public abstract class LogicComponent : IComponent

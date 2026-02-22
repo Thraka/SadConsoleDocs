@@ -3,6 +3,8 @@ title: TabItem Class
 slug: reference/sadconsole.ui.controls.tabitem
 sidebar:
   label: TabItem
+editUrl: false
+description: Contains the header and content of a tab for the `SadConsole.UI.Controls.TabControl`.
 ---
 ## Definition
 
@@ -82,7 +84,7 @@ public Panel Content { get; set; }
 
 ### TabSize
 
-The size in cells to allocate for displaying the header. <pre>`-1`</pre> indicates that the tab should be automatically sized to fit the size of the [Header](../sadconsole.ui.controls.tabitem/#header/).
+The size in cells to allocate for displaying the header. <pre>`-1`</pre> indicates that the tab should be automatically sized to fit the size of the [Header](../sadconsole.ui.controls.tabitem/#header).
 
 ```csharp title="C#"
 public int TabSize { get; set; }
@@ -90,7 +92,7 @@ public int TabSize { get; set; }
 
 ### AutomaticPadding
 
-Padding to add around the [Header](../sadconsole.ui.controls.tabitem/#header/) text when [TabSize](../sadconsole.ui.controls.tabitem/#tabsize/) is unset (-1).
+Padding to add around the [Header](../sadconsole.ui.controls.tabitem/#header) text when [TabSize](../sadconsole.ui.controls.tabitem/#tabsize) is unset (-1).
 
 ```csharp title="C#"
 public int AutomaticPadding { get; set; }
@@ -98,7 +100,7 @@ public int AutomaticPadding { get; set; }
 
 ### TextAlignment
 
-If [TabSize](../sadconsole.ui.controls.tabitem/#tabsize/) is any value other than <pre>`-1`</pre>, the [Header](../sadconsole.ui.controls.tabitem/#header/) is aligned according to this property.
+If [TabSize](../sadconsole.ui.controls.tabitem/#tabsize) is any value other than <pre>`-1`</pre>, the [Header](../sadconsole.ui.controls.tabitem/#header) is aligned according to this property.
 
 ```csharp title="C#"
 public HorizontalAlignment TextAlignment { get; set; }

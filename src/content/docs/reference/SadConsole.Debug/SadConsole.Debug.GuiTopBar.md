@@ -3,6 +3,7 @@ title: GuiTopBar Class
 slug: reference/sadconsole.debug.guitopbar
 sidebar:
   label: GuiTopBar
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: StringExtensions Class
 slug: reference/sadconsole.stringextensions
 sidebar:
   label: StringExtensions
+editUrl: false
+description: Helpers for strings.
 ---
 ## Definition
 
@@ -81,16 +83,16 @@ public static ColoredString CreateColored(this string value, Color? foreground =
 The current string.
 
 `foreground` System.NullableSadRogue.Primitives.Color  
-The foreground color. If null, <xref href="SadConsole.ColoredString.IgnoreForeground" data-throw-if-not-resolved="false"></xref> will be set.
+The foreground color. If null, [IgnoreForeground](../sadconsole.coloredstring/#ignoreforeground) will be set.
 
 `background` System.NullableSadRogue.Primitives.Color  
-The background color. If null, <xref href="SadConsole.ColoredString.IgnoreBackground" data-throw-if-not-resolved="false"></xref> will be set.
+The background color. If null, [IgnoreBackground](../sadconsole.coloredstring/#ignorebackground) will be set.
 
 `mirror` [Mirror?](../sadconsole.mirror/)  
-The mirror setting. If null, <xref href="SadConsole.ColoredString.IgnoreMirror" data-throw-if-not-resolved="false"></xref> will be set.
+The mirror setting. If null, [IgnoreMirror](../sadconsole.coloredstring/#ignoremirror) will be set.
 
 `decorators` [CellDecorator[]](../sadconsole.celldecorator/)  
-The decorators setting. If null, <xref href="SadConsole.ColoredString.IgnoreDecorators" data-throw-if-not-resolved="false"></xref> will be set.
+The decorators setting. If null, [IgnoreDecorators](../sadconsole.coloredstring/#ignoredecorators) will be set.
 
 #### Returns
 

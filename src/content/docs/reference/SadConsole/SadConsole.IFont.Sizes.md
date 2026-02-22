@@ -3,6 +3,8 @@ title: IFont.Sizes Enum
 slug: reference/sadconsole.ifont.sizes
 sidebar:
   label: IFont.Sizes
+editUrl: false
+description: The size options of a font.
 ---
 ## Definition
 

@@ -3,6 +3,7 @@ title: ComponentsPanel Class
 slug: reference/sadconsole.debug.componentspanel
 sidebar:
   label: ComponentsPanel
+editUrl: false
 ---
 ## Definition
 

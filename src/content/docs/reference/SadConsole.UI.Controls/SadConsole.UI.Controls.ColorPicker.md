@@ -3,10 +3,12 @@ title: ColorPicker Class
 slug: reference/sadconsole.ui.controls.colorpicker
 sidebar:
   label: ColorPicker
+editUrl: false
+description: Displays a rectangle gradient area between `SadRogue.Primitives.Color.Black` and a target color, and `SadRogue.Primitives.Color.White` and a target color.
 ---
 ## Definition
 
-Displays a rectangle gradient area between `SadRogue.Primitives.Color.Black` and a target color, and `SadRogue.Primitives.Color.White` and a target color.
+Displays a rectangle gradient area between ``SadRogue.Primitives.Color.Black`` and a target color, and ``SadRogue.Primitives.Color.White`` and a target color.
 
 ```csharp title="C#"
 public class ColorPicker : ControlBase
@@ -37,7 +39,7 @@ public ColorPicker(int width, int height, Color color)
 
 ### SelectedColor
 
-The color selected by the user. A shade of [MasterColor](../sadconsole.ui.controls.colorpicker/#mastercolor/).
+The color selected by the user. A shade of [MasterColor](../sadconsole.ui.controls.colorpicker/#mastercolor).
 
 ```csharp title="C#"
 public Color SelectedColor { get; }
@@ -55,7 +57,7 @@ public Color MasterColor { get; set; }
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState info)
@@ -101,7 +103,7 @@ The duration of thecurrent frame.
 
 ### SelectedColorChanged
 
-Raised when [SelectedColor](../sadconsole.ui.controls.colorpicker/#selectedcolor/) changes value.
+Raised when [SelectedColor](../sadconsole.ui.controls.colorpicker/#selectedcolor) changes value.
 
 ```csharp title="C#"
 public event EventHandler? SelectedColorChanged

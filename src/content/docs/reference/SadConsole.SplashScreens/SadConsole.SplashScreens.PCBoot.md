@@ -3,6 +3,8 @@ title: PCBoot Class
 slug: reference/sadconsole.splashscreens.pcboot
 sidebar:
   label: PCBoot
+editUrl: false
+description: A spashscreen that simulates an old computer boot up process.
 ---
 ## Definition
 

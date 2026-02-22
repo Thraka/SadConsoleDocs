@@ -3,10 +3,12 @@ title: CoroutineHandlerComponent Class
 slug: reference/sadconsole.components.coroutinehandlercomponent
 sidebar:
   label: CoroutineHandlerComponent
+editUrl: false
+description: An implementation of `Coroutine.CoroutineHandlerInstance` that calls `Coroutine.CoroutineHandlerInstance.Tick(System.TimeSpan)` every time `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)` is called.
 ---
 ## Definition
 
-An implementation of `Coroutine.CoroutineHandlerInstance` that calls [Tick(TimeSpan)](https://learn.microsoft.com/dotnet/api/system.timespan/) every time `SadConsole.Components.IComponent.Update(SadConsole.IScreenObject%2cSystem.TimeSpan)` is called.
+An implementation of ``Coroutine.CoroutineHandlerInstance`` that calls [Tick(TimeSpan)](https://learn.microsoft.com/dotnet/api/system.timespan/) every time [Update(IScreenObject, TimeSpan)](../sadconsole.components.icomponent/#updateiscreenobject-timespan) is called.
 
 ```csharp title="C#"
 public class CoroutineHandlerComponent : CoroutineHandlerInstance, IComponent

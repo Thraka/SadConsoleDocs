@@ -3,6 +3,7 @@ title: GuiScreenObjects Class
 slug: reference/sadconsole.debug.guiscreenobjects
 sidebar:
   label: GuiScreenObjects
+editUrl: false
 ---
 ## Definition
 

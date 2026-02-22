@@ -3,10 +3,12 @@ title: Table.TableCells.Layout Class
 slug: reference/sadconsole.ui.controls.table.tablecells.layout
 sidebar:
   label: Table.TableCells.Layout
+editUrl: false
+description: Defines the layout for a row or a column defined in `SadConsole.UI.Controls.Table.Cells`
 ---
 ## Definition
 
-Defines the layout for a row or a column defined in [Cells](../sadconsole.ui.controls.table/#cells/)
+Defines the layout for a row or a column defined in [Cells](../sadconsole.ui.controls.table/#cells)
 
 ```csharp title="C#"
 public class Table.TableCells.Layout

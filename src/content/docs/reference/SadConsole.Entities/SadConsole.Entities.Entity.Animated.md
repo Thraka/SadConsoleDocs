@@ -3,6 +3,8 @@ title: Entity.Animated Class
 slug: reference/sadconsole.entities.entity.animated
 sidebar:
   label: Entity.Animated
+editUrl: false
+description: An entity that is a an animated surface.
 ---
 ## Definition
 
@@ -58,7 +60,7 @@ A relative collision rectangle that you can specify. Defaults to the size of the
 [DataMember]
 public Rectangle CustomCollisionRectangle { get; set; }
 ```
-## Remarks
+#### Remarks
 
 This rectangle should be declared without using the animation center. Only apply the center when you're testing for collision and reading this rectangle.
 
@@ -74,7 +76,7 @@ public bool IsDirty { get; set; }
 
 ### Update(TimeSpan)
 
-Updates the [Animation](../sadconsole.entities.entity.animated/#animation/).
+Updates the [Animation](../sadconsole.entities.entity.animated/#animation).
 
 ```csharp title="C#"
 public void Update(TimeSpan delta)

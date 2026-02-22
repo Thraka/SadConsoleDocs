@@ -3,6 +3,8 @@ title: ParseCommandUndo Class
 slug: reference/sadconsole.stringparser.parsecommandundo
 sidebar:
   label: ParseCommandUndo
+editUrl: false
+description: Pops a behavior off of a `SadConsole.StringParser.ParseCommandStacks`.
 ---
 ## Definition
 
@@ -35,7 +37,7 @@ The current commands for the string.
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

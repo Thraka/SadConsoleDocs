@@ -3,6 +3,8 @@ title: EntityManagerZoned.ZoneMoveEventArgs Class
 slug: reference/sadconsole.entities.entitymanagerzoned.zonemoveeventargs
 sidebar:
   label: EntityManagerZoned.ZoneMoveEventArgs
+editUrl: false
+description: Contains event data for a `SadConsole.Entities.Zone` and `SadConsole.Entities.Entity` interaction.
 ---
 ## Definition
 

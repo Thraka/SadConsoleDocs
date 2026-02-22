@@ -3,6 +3,7 @@ title: Hexa.NET.ImGui.SC
 slug: reference/hexa.net.imgui.sc
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

@@ -3,6 +3,7 @@ title: SadConsole.EasingFunctions
 slug: reference/sadconsole.easingfunctions
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

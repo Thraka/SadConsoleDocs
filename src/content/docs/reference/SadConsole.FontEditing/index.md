@@ -3,6 +3,7 @@ title: SadConsole.FontEditing
 slug: reference/sadconsole.fontediting
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

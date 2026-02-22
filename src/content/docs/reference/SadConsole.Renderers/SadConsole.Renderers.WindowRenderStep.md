@@ -3,6 +3,8 @@ title: WindowRenderStep Class
 slug: reference/sadconsole.renderers.windowrenderstep
 sidebar:
   label: WindowRenderStep
+editUrl: false
+description: Renders the dimmed background screen when a window is modal.
 ---
 ## Definition
 

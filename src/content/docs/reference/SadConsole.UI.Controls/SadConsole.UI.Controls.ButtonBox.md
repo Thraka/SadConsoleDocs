@@ -3,6 +3,8 @@ title: ButtonBox Class
 slug: reference/sadconsole.ui.controls.buttonbox
 sidebar:
   label: ButtonBox
+editUrl: false
+description: A button control that is drawn using lines around it.
 ---
 ## Definition
 
@@ -49,7 +51,7 @@ public bool UseExtended { get; set; }
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)

@@ -3,6 +3,8 @@ title: Settings.WindowResizeOptions Enum
 slug: reference/sadconsole.settings.windowresizeoptions
 sidebar:
   label: Settings.WindowResizeOptions
+editUrl: false
+description: Resize modes for the final SadConsole render pass.
 ---
 ## Definition
 

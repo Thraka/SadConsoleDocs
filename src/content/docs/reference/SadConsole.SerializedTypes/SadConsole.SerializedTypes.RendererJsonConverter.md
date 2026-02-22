@@ -3,10 +3,12 @@ title: RendererJsonConverter Class
 slug: reference/sadconsole.serializedtypes.rendererjsonconverter
 sidebar:
   label: RendererJsonConverter
+editUrl: false
+description: Converts a `SadConsole.Renderers.IRenderer` to its `SadConsole.Renderers.IRenderer.Name` value and back.
 ---
 ## Definition
 
-Converts a [IRenderer](../sadconsole.renderers.irenderer/) to its [Name](../sadconsole.renderers.irenderer/#name/) value and back.
+Converts a [IRenderer](../sadconsole.renderers.irenderer/) to its [Name](../sadconsole.renderers.irenderer/#name) value and back.
 
 ```csharp title="C#"
 public class RendererJsonConverter : JsonConverter<IRenderer>

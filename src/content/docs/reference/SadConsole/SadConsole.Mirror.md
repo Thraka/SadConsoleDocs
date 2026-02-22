@@ -3,6 +3,8 @@ title: Mirror Enum
 slug: reference/sadconsole.mirror
 sidebar:
   label: Mirror
+editUrl: false
+description: The mirroring mode
 ---
 ## Definition
 

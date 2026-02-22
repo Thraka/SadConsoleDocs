@@ -3,6 +3,7 @@ title: FileListBox Class
 slug: reference/hexa.net.imgui.sc.filelistbox
 sidebar:
   label: FileListBox
+editUrl: false
 ---
 ## Definition
 
@@ -183,7 +184,7 @@ public bool Draw(out bool itemSelected, out bool itemHighlighted)
 `itemSelected` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
 
 `itemHighlighted` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-True when an item is single-clicked and <xref href="Hexa.NET.ImGui.SC.FileListBox.DoubleClickToSelect" data-throw-if-not-resolved="false"></xref> is true.
+True when an item is single-clicked and [DoubleClickToSelect](../hexa.net.imgui.sc.filelistbox/#doubleclicktoselect) is true.
 
 #### Returns
 

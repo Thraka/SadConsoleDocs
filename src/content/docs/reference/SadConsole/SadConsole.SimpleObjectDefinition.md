@@ -3,6 +3,7 @@ title: SimpleObjectDefinition Class
 slug: reference/sadconsole.simpleobjectdefinition
 sidebar:
   label: SimpleObjectDefinition
+editUrl: false
 ---
 ## Definition
 

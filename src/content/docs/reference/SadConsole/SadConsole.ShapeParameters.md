@@ -3,6 +3,8 @@ title: ShapeParameters Class
 slug: reference/sadconsole.shapeparameters
 sidebar:
   label: ShapeParameters
+editUrl: false
+description: Defines the parameters for generating a shape with a border and fill glyphs.
 ---
 ## Definition
 
@@ -199,16 +201,16 @@ public static ShapeParameters CreateBorder(ColoredGlyphBase borderStyle, bool ig
 The appearance of the border.
 
 `ignoreForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">borderStyle</code> value.
+When true, ignores the foreground of the `borderStyle` value.
 
 `ignoreBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">borderStyle</code> value.
+When true, ignores the background of the `borderStyle` value.
 
 `ignoreGlyph` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the glyph of the <code class="paramref">borderStyle</code> value.
+When true, ignores the glyph of the `borderStyle` value.
 
 `ignoreMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">borderStyle</code> value.
+When true, ignores the mirror of the `borderStyle` value.
 
 #### Returns
 
@@ -232,28 +234,28 @@ When not null, creates a border with this appearance.
 The fill appearance.
 
 `ignoreBorderForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">borderStyle</code> value.
+When true, ignores the foreground of the `borderStyle` value.
 
 `ignoreBorderBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">borderStyle</code> value.
+When true, ignores the background of the `borderStyle` value.
 
 `ignoreBorderGlyph` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the glyph of the <code class="paramref">borderStyle</code> value.
+When true, ignores the glyph of the `borderStyle` value.
 
 `ignoreBorderMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">borderStyle</code> value.
+When true, ignores the mirror of the `borderStyle` value.
 
 `ignoreFillForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">fillStyle</code> value.
+When true, ignores the foreground of the `fillStyle` value.
 
 `ignoreFillBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">fillStyle</code> value.
+When true, ignores the background of the `fillStyle` value.
 
 `ignoreFillGlyph` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the glyph of the <code class="paramref">fillStyle</code> value.
+When true, ignores the glyph of the `fillStyle` value.
 
 `ignoreFillMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">fillStyle</code> value.
+When true, ignores the mirror of the `fillStyle` value.
 
 #### Returns
 
@@ -277,13 +279,13 @@ The connected line glyphs that make up the border.
 The appearance colors of the border.
 
 `ignoreBorderForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">borderColors</code> value.
+When true, ignores the foreground of the `borderColors` value.
 
 `ignoreBorderBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">borderColors</code> value.
+When true, ignores the background of the `borderColors` value.
 
 `ignoreBorderMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">borderColors</code> value.
+When true, ignores the mirror of the `borderColors` value.
 
 #### Returns
 
@@ -310,25 +312,25 @@ The appearance colors of the border.
 The appearance colors of the fill.
 
 `ignoreBorderForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">borderColors</code> value.
+When true, ignores the foreground of the `borderColors` value.
 
 `ignoreBorderBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">borderColors</code> value.
+When true, ignores the background of the `borderColors` value.
 
 `ignoreBorderMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">borderColors</code> value.
+When true, ignores the mirror of the `borderColors` value.
 
 `ignoreFillForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">fillStyle</code> value.
+When true, ignores the foreground of the `fillStyle` value.
 
 `ignoreFillBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">fillStyle</code> value.
+When true, ignores the background of the `fillStyle` value.
 
 `ignoreFillGlyph` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the glyph of the <code class="paramref">fillStyle</code> value.
+When true, ignores the glyph of the `fillStyle` value.
 
 `ignoreFillMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">fillStyle</code> value.
+When true, ignores the mirror of the `fillStyle` value.
 
 #### Returns
 
@@ -349,13 +351,13 @@ public static ShapeParameters CreateStyledBoxExplicit(ColoredGlyphBase[] borderG
 The appearances used for each part of a connected line, specifically the glyph.
 
 `ignoreBorderForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">borderGlyphs</code> value.
+When true, ignores the foreground of the `borderGlyphs` value.
 
 `ignoreBorderBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">borderGlyphs</code> value.
+When true, ignores the background of the `borderGlyphs` value.
 
 `ignoreBorderMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">borderGlyphs</code> value.
+When true, ignores the mirror of the `borderGlyphs` value.
 
 #### Returns
 
@@ -379,28 +381,28 @@ The appearances used for each part of a connected line, specifically the glyph.
 The appearance colors of the fill.
 
 `ignoreBorderForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">borderGlyphs</code> value.
+When true, ignores the foreground of the `borderGlyphs` value.
 
 `ignoreBorderBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">borderGlyphs</code> value.
+When true, ignores the background of the `borderGlyphs` value.
 
 `ignoreBorderGlyph` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the glyph of the <code class="paramref">borderGlyphs</code> value.
+When true, ignores the glyph of the `borderGlyphs` value.
 
 `ignoreBorderMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">borderGlyphs</code> value.
+When true, ignores the mirror of the `borderGlyphs` value.
 
 `ignoreFillForeground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the foreground of the <code class="paramref">fillStyle</code> value.
+When true, ignores the foreground of the `fillStyle` value.
 
 `ignoreFillBackground` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the background of the <code class="paramref">fillStyle</code> value.
+When true, ignores the background of the `fillStyle` value.
 
 `ignoreFillGlyph` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the glyph of the <code class="paramref">fillStyle</code> value.
+When true, ignores the glyph of the `fillStyle` value.
 
 `ignoreFillMirror` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, ignores the mirror of the <code class="paramref">fillStyle</code> value.
+When true, ignores the mirror of the `fillStyle` value.
 
 #### Returns
 
@@ -409,7 +411,7 @@ The shape parameters.
 
 ### CreateStyledBoxThin(Color)
 
-Creates a box using the [ConnectedLineThin](../sadconsole.icellsurface/#connectedlinethin/) connected line style.
+Creates a box using the [ConnectedLineThin](../sadconsole.icellsurface/#connectedlinethin) connected line style.
 
 ```csharp title="C#"
 public static ShapeParameters CreateStyledBoxThin(Color foreground)
@@ -427,7 +429,7 @@ The shape parameters.
 
 ### CreateStyledBoxThick(Color)
 
-Creates a box using the [ConnectedLineThick](../sadconsole.icellsurface/#connectedlinethick/) connected line style.
+Creates a box using the [ConnectedLineThick](../sadconsole.icellsurface/#connectedlinethick) connected line style.
 
 ```csharp title="C#"
 public static ShapeParameters CreateStyledBoxThick(Color foreground)

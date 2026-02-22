@@ -3,6 +3,8 @@ title: TabControl.Orientation Enum
 slug: reference/sadconsole.ui.controls.tabcontrol.orientation
 sidebar:
   label: TabControl.Orientation
+editUrl: false
+description: Horizontal alignment modes
 ---
 ## Definition
 

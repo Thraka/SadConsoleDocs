@@ -3,6 +3,7 @@ title: ColoredGlyphReference Struct
 slug: reference/sadconsole.imguitypes.coloredglyphreference
 sidebar:
   label: ColoredGlyphReference
+editUrl: false
 ---
 ## Definition
 

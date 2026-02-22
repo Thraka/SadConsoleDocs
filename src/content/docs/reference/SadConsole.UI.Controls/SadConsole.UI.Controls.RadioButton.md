@@ -3,6 +3,8 @@ title: RadioButton Class
 slug: reference/sadconsole.ui.controls.radiobutton
 sidebar:
   label: RadioButton
+editUrl: false
+description: Represents a button that can be toggled on/off within a group of other buttons.
 ---
 ## Definition
 
@@ -95,7 +97,7 @@ public int UncheckedIconGlyph { get; set; }
 
 ### CheckedIconColor
 
-An optional color of the [CheckedIconGlyph](../sadconsole.ui.controls.radiobutton/#checkediconglyph/).
+An optional color of the [CheckedIconGlyph](../sadconsole.ui.controls.radiobutton/#checkediconglyph).
 
 ```csharp title="C#"
 [DataMember]
@@ -104,7 +106,7 @@ public Color? CheckedIconColor { get; set; }
 
 ### UncheckedIconColor
 
-An optional color of the [UncheckedIconGlyph](../sadconsole.ui.controls.radiobutton/#uncheckediconglyph/).
+An optional color of the [UncheckedIconGlyph](../sadconsole.ui.controls.radiobutton/#uncheckediconglyph).
 
 ```csharp title="C#"
 [DataMember]
@@ -131,7 +133,7 @@ public ThemeStates IconThemeState { get; protected set; }
 
 ### OnClick()
 
-Performs a click on the base button and also toggles the [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected/) property.
+Performs a click on the base button and also toggles the [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected) property.
 
 ```csharp title="C#"
 protected override void OnClick()
@@ -140,7 +142,7 @@ protected override void OnClick()
 
 ### OnIsSelected()
 
-Raises the [IsSelectedChanged](../sadconsole.ui.controls.togglebuttonbase/#isselectedchanged/) event and when [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, deselects any other [RadioButton](../sadconsole.ui.controls.radiobutton/) with the same [GroupName](../sadconsole.ui.controls.radiobutton/#groupname/).
+Raises the [IsSelectedChanged](../sadconsole.ui.controls.togglebuttonbase/#isselectedchanged) event and when [IsSelected](../sadconsole.ui.controls.togglebuttonbase/#isselected) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, deselects any other [RadioButton](../sadconsole.ui.controls.radiobutton/) with the same [GroupName](../sadconsole.ui.controls.radiobutton/#groupname).
 
 ```csharp title="C#"
 protected override void OnIsSelected()
@@ -149,7 +151,7 @@ protected override void OnIsSelected()
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)
@@ -177,7 +179,7 @@ The duration of thecurrent frame.
 
 ### CreateControlSurface()
 
-Resizes the control surface based on [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize/) or the [Width](../sadconsole.ui.controls.controlbase/#width/) and [Height](../sadconsole.ui.controls.controlbase/#height/) properties.
+Resizes the control surface based on [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize) or the [Width](../sadconsole.ui.controls.controlbase/#width) and [Height](../sadconsole.ui.controls.controlbase/#height) properties.
 
 ```csharp title="C#"
 protected override ICellSurface CreateControlSurface()

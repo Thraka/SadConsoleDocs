@@ -3,6 +3,8 @@ title: ImGuiObjectBase Class
 slug: reference/sadconsole.imguisystem.imguiobjectbase
 sidebar:
   label: ImGuiObjectBase
+editUrl: false
+description: Represents an object drawn in ImGui.
 ---
 ## Definition
 

@@ -3,6 +3,7 @@ title: Sine Class
 slug: reference/sadconsole.easingfunctions.sine
 sidebar:
   label: Sine
+editUrl: false
 ---
 ## Definition
 

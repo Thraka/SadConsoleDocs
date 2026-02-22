@@ -3,6 +3,8 @@ title: ClassicConsoleKeyboardHandler Class
 slug: reference/sadconsole.components.classicconsolekeyboardhandler
 sidebar:
   label: ClassicConsoleKeyboardHandler
+editUrl: false
+description: A classic console/terminal prompt keyboard handler.
 ---
 ## Definition
 
@@ -70,7 +72,7 @@ public char EraseGlyph { get; set; }
 
 ### ReplaceEmptyGlyph
 
-The glyph used to replace the empty characters that may be in the string sent to [EnterPressedAction](../sadconsole.components.classicconsolekeyboardhandler/#enterpressedaction/).
+The glyph used to replace the empty characters that may be in the string sent to [EnterPressedAction](../sadconsole.components.classicconsolekeyboardhandler/#enterpressedaction).
 
 ```csharp title="C#"
 public char ReplaceEmptyGlyph { get; set; }
@@ -101,7 +103,7 @@ The host object for the component.
 
 #### Remarks
 
-Makes the cursor visible, disables word breaks and the string parser, and prints the prompt. If the host is a [Console](../sadconsole.console/), it uses the `SadConsole.Components.ClassicConsoleKeyboardHandler._attachedCursor` property, caching reference to it. You can't change the cursor reference unless you re-add this component. If the host is a [IScreenObject](../sadconsole.iscreenobject/), the first instance of a cursor in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) collection is used. If there is no cursor, an exception is thrown.
+Makes the cursor visible, disables word breaks and the string parser, and prints the prompt. If the host is a [Console](../sadconsole.console/), it uses the ``SadConsole.Components.ClassicConsoleKeyboardHandler._attachedCursor`` property, caching reference to it. You can't change the cursor reference unless you re-add this component. If the host is a [IScreenObject](../sadconsole.iscreenobject/), the first instance of a cursor in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) collection is used. If there is no cursor, an exception is thrown.
 
 ### PrintPrompt()
 

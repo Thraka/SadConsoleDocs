@@ -3,6 +3,8 @@ title: AsciiKey.CharacterKeyMapping Struct
 slug: reference/sadconsole.input.asciikey.characterkeymapping
 sidebar:
   label: AsciiKey.CharacterKeyMapping
+editUrl: false
+description: Associates a character glyph and a `SadConsole.Input.Keys` value.
 ---
 ## Definition
 
@@ -16,7 +18,7 @@ public readonly struct AsciiKey.CharacterKeyMapping : IEquatable<AsciiKey.Charac
 Implements [IEquatable\<AsciiKey.CharacterKeyMapping\>](https://learn.microsoft.com/dotnet/api/system.iequatable-1/)
 ## Remarks
 
-Used when the [NumLock](../sadconsole.input.keys/#numlock/) is active.
+Used when the [NumLock](../sadconsole.input.keys/#numlock) is active.
 
 ## Constructors
 
@@ -38,7 +40,7 @@ The key the character maps to.
 
 #### Remarks
 
-Used when the [NumLock](../sadconsole.input.keys/#numlock/) is active.
+Used when the [NumLock](../sadconsole.input.keys/#numlock) is active.
 
 ## Properties
 

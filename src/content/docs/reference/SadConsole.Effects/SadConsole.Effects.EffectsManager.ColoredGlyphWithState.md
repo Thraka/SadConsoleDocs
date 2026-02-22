@@ -3,6 +3,8 @@ title: EffectsManager.ColoredGlyphWithState Class
 slug: reference/sadconsole.effects.effectsmanager.coloredglyphwithstate
 sidebar:
   label: EffectsManager.ColoredGlyphWithState
+editUrl: false
+description: A glyph with its original state.
 ---
 ## Definition
 

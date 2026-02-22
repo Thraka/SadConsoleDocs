@@ -3,10 +3,12 @@ title: DrawCallColor Class
 slug: reference/sadconsole.drawcalls.drawcallcolor
 sidebar:
   label: DrawCallColor
+editUrl: false
+description: Draws a colored rectangle to the active `SadConsole.Host.Global.SharedSpriteBatch`.
 ---
 ## Definition
 
-Draws a colored rectangle to the active [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch/).
+Draws a colored rectangle to the active [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch).
 
 ```csharp title="C#"
 public class DrawCallColor : IDrawCall
@@ -32,20 +34,20 @@ public DrawCallColor(Color color, Texture2D texture, Rectangle targetRect, Recta
 The folor of the rectangle.
 
 `texture` Microsoft.Xna.Framework.Graphics.Texture2D  
-The texture containing a solid white rectangle referenced by <code class="paramref">fontSolidRect</code>.
+The texture containing a solid white rectangle referenced by `fontSolidRect`.
 
 `targetRect` Microsoft.Xna.Framework.Rectangle  
 The drawing location of the rectangle.
 
 `fontSolidRect` Microsoft.Xna.Framework.Rectangle  
-The rectangle of the solid white glyph in the <code class="paramref">texture</code>.
+The rectangle of the solid white glyph in the `texture`.
 
 
 ## Fields
 
 ### Texture
 
-The texture, most likely a SadConsole font texture, containing the solid white rectangle referenced by [FontSolidRect](../sadconsole.drawcalls.drawcallcolor/#fontsolidrect/).
+The texture, most likely a SadConsole font texture, containing the solid white rectangle referenced by [FontSolidRect](../sadconsole.drawcalls.drawcallcolor/#fontsolidrect).
 
 ```csharp title="C#"
 public Texture2D Texture
@@ -53,7 +55,7 @@ public Texture2D Texture
 
 ### FontSolidRect
 
-The solid white glyph rectangle from [Texture](../sadconsole.drawcalls.drawcallcolor/#texture/) used for shading.
+The solid white glyph rectangle from [Texture](../sadconsole.drawcalls.drawcallcolor/#texture) used for shading.
 
 ```csharp title="C#"
 public Rectangle FontSolidRect
@@ -69,7 +71,7 @@ public Color Color
 
 ### TargetRect
 
-Where on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch/) the glyph should be drawn.
+Where on the [SharedSpriteBatch](../sadconsole.host.global/#sharedspritebatch) the glyph should be drawn.
 
 ```csharp title="C#"
 public Rectangle TargetRect

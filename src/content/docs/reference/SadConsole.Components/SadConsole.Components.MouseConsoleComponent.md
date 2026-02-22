@@ -3,10 +3,12 @@ title: MouseConsoleComponent Class
 slug: reference/sadconsole.components.mouseconsolecomponent
 sidebar:
   label: MouseConsoleComponent
+editUrl: false
+description: A base class that implements `SadConsole.Components.IComponent.ProcessMouse(SadConsole.IScreenObject%2cSadConsole.Input.MouseScreenObjectState%2cSystem.Boolean%40)` of `SadConsole.Components.IComponent`.
 ---
 ## Definition
 
-A base class that implements `SadConsole.Components.IComponent.ProcessMouse(SadConsole.IScreenObject%2cSadConsole.Input.MouseScreenObjectState%2cSystem.Boolean%40)` of [IComponent](../sadconsole.components.icomponent/).
+A base class that implements [ProcessMouse(IScreenObject, MouseScreenObjectState, out bool)](../sadconsole.components.icomponent/#processmouseiscreenobject-mousescreenobjectstate-out-bool) of [IComponent](../sadconsole.components.icomponent/).
 
 ```csharp title="C#"
 public abstract class MouseConsoleComponent : IComponent

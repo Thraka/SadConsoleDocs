@@ -3,6 +3,8 @@ title: OptimizedScreenSurfaceRenderer Class
 slug: reference/sadconsole.renderers.optimizedscreensurfacerenderer
 sidebar:
   label: OptimizedScreenSurfaceRenderer
+editUrl: false
+description: Draws a `SadConsole.IScreenSurface` with tint. Doesn't allow render steps.
 ---
 ## Definition
 
@@ -76,7 +78,7 @@ public BlendState MonoGameBlendState { get; set; }
 
 ### BackingTextureUsageMode
 
-Used when creating the [_backingTexture](../sadconsole.renderers.optimizedscreensurfacerenderer/#backingtexture/) variable.
+Used when creating the [_backingTexture](../sadconsole.renderers.optimizedscreensurfacerenderer/#backingtexture) variable.
 
 ```csharp title="C#"
 public RenderTargetUsage BackingTextureUsageMode { get; set; }
@@ -157,7 +159,7 @@ public void Dispose()
 
 ### BackingTextureRecreated
 
-Raised when the [_backingTexture](../sadconsole.renderers.optimizedscreensurfacerenderer/#backingtexture/) is recreated.
+Raised when the [_backingTexture](../sadconsole.renderers.optimizedscreensurfacerenderer/#backingtexture) is recreated.
 
 ```csharp title="C#"
 public event EventHandler BackingTextureRecreated

@@ -3,6 +3,8 @@ title: InstructionSet Class
 slug: reference/sadconsole.instructions.instructionset
 sidebar:
   label: InstructionSet
+editUrl: false
+description: A set of instructions to be executed sequentially.
 ---
 ## Definition
 
@@ -63,11 +65,11 @@ public override void Reset()
 
 #### Remarks
 
-On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished/) to false. Override this method to reset the derived class' counters and status flags for the instruction.
+On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished) to false. Override this method to reset the derived class' counters and status flags for the instruction.
 
 ### Update(IScreenObject, TimeSpan)
 
-Runs the instruction set. Once all instructions are finished, this set will set the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished/) property will be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Runs the instruction set. Once all instructions are finished, this set will set the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished) property will be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public override void Update(IScreenObject componentHost, TimeSpan delta)
@@ -115,7 +117,7 @@ public InstructionSet Instruct(InstructionBase instruction)
 [InstructionSet](../sadconsole.instructions.instructionset/)  
 This instruction set.
 
-### Code(Func<IScreenObject, TimeSpan, bool>)
+### Code(Func\<IScreenObject, TimeSpan, bool>)
 
 Adds a new [CodeInstruction](../sadconsole.instructions.codeinstruction/) instruction with the specified callback to the end of this set.
 
@@ -151,7 +153,7 @@ The code callback.
 [InstructionSet](../sadconsole.instructions.instructionset/)  
 This instruction set.
 
-### WaitTrue(Func<bool>)
+### WaitTrue(Func\<bool>)
 
 Adds a new [PredicateInstruction](../sadconsole.instructions.predicateinstruction/) instruction with the specified callback to the end of this set.
 

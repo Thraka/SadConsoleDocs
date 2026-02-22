@@ -3,6 +3,8 @@ title: CellSurfaceEditor Class
 slug: reference/sadconsole.cellsurfaceeditor
 sidebar:
   label: CellSurfaceEditor
+editUrl: false
+description: Methods to interact with a `SadConsole.ICellSurface`.
 ---
 ## Definition
 
@@ -303,7 +305,7 @@ The desired background.
 Sets how the glyph will be mirrored.
 
 
-### SetGlyph(ISurface, int, int, int, Color, Color, Mirror, IEnumerable<CellDecorator>)
+### SetGlyph(ISurface, int, int, int, Color, Color, Mirror, IEnumerable\<CellDecorator>)
 
 Changes the glyph, foreground, background, and mirror of a cell.
 
@@ -499,7 +501,7 @@ Index of the cell.
 The desired effect.
 
 
-### SetEffect(ISurface, IEnumerable<Point>, ICellEffect?)
+### SetEffect(ISurface, IEnumerable\<Point>, ICellEffect?)
 
 Changes the effect of a list of cells to the specified effect.
 
@@ -519,7 +521,7 @@ The cells for the effect.
 The desired effect.
 
 
-### SetEffect(ISurface, IEnumerable<int>, ICellEffect?)
+### SetEffect(ISurface, IEnumerable\<int>, ICellEffect?)
 
 Changes the effect of a list of cells to the specified effect.
 
@@ -559,7 +561,7 @@ The cells for the effect.
 The desired effect.
 
 
-### SetEffect(ISurface, IEnumerable<ColoredGlyphBase>, ICellEffect?)
+### SetEffect(ISurface, IEnumerable\<ColoredGlyphBase>, ICellEffect?)
 
 Changes the effect of a cell to the specified effect.
 
@@ -824,7 +826,7 @@ The y coordinate of the cell.
 The count of cells to use from the x,y coordinate (inclusive).
 
 `decorators` [CellDecorator[]](../sadconsole.celldecorator/)  
-The decorators. Use <pre><code class="lang-csharp">null</code></pre> to clear.
+The decorators. Use <pre>`null`</pre> to clear.
 
 
 ### SetDecorator(ISurface, Point, params CellDecorator[]?)
@@ -844,7 +846,7 @@ The surface being edited.
 The coordinate of the cell.
 
 `decorators` [CellDecorator[]](../sadconsole.celldecorator/)  
-The decorators. Use <pre><code class="lang-csharp">null</code></pre> to clear.
+The decorators. Use <pre>`null`</pre> to clear.
 
 
 ### SetDecorator(ISurface, int, int, params CellDecorator[]?)
@@ -867,7 +869,7 @@ The index of the cell to start applying.
 The count of cells to use from the index (inclusive).
 
 `decorators` [CellDecorator[]](../sadconsole.celldecorator/)  
-The decorators. Use <pre><code class="lang-csharp">null</code></pre> to clear.
+The decorators. Use <pre>`null`</pre> to clear.
 
 
 ### SetDecorator(ISurface, int, params CellDecorator[]?)
@@ -887,7 +889,7 @@ The surface being edited.
 The index of the cell to start applying.
 
 `decorators` [CellDecorator[]](../sadconsole.celldecorator/)  
-The decorators. Use <pre><code class="lang-csharp">null</code></pre> to clear.
+The decorators. Use <pre>`null`</pre> to clear.
 
 
 ### AddDecorator(ISurface, int, int, int, params CellDecorator[])
@@ -1357,7 +1359,7 @@ Y location of the text.
 An array of glyphs to print at the specified position.
 
 
-### Print(ISurface, int, int, IEnumerable<ColoredGlyphBase>)
+### Print(ISurface, int, int, IEnumerable\<ColoredGlyphBase>)
 
 Draws the string on the console at the specified location, wrapping if needed.
 
@@ -1539,7 +1541,7 @@ The row to shift.
 The starting column to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingX</code>.
+The number of cells to shift starting from `startingX`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1573,7 +1575,7 @@ The row to shift.
 The starting column to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingX</code>.
+The number of cells to shift starting from `startingX`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1607,7 +1609,7 @@ The row to shift.
 The starting column to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingX</code>.
+The number of cells to shift starting from `startingX`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1641,7 +1643,7 @@ The row to shift.
 The starting column to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingX</code>.
+The number of cells to shift starting from `startingX`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1670,7 +1672,7 @@ The row to shift.
 The starting column to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingX</code>.
+The number of cells to shift starting from `startingX`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1722,7 +1724,7 @@ The column to shift.
 The starting row to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingY</code>.
+The number of cells to shift starting from `startingY`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1756,7 +1758,7 @@ The column to shift.
 The starting row to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingY</code>.
+The number of cells to shift starting from `startingY`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1790,7 +1792,7 @@ The column to shift.
 The starting row to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingY</code>.
+The number of cells to shift starting from `startingY`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1824,7 +1826,7 @@ The column to shift.
 The starting column to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingY</code>.
+The number of cells to shift starting from `startingY`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -1853,7 +1855,7 @@ The column to shift.
 The starting column to shift from.
 
 `count` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The number of cells to shift starting from <code class="paramref">startingY</code>.
+The number of cells to shift starting from `startingY`.
 
 `amount` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 The amount to shift by. A negative value shifts left and a positive value shifts right.
@@ -2026,7 +2028,7 @@ The count of glyphs to erase.
 The cells processed by this method.
 #### Remarks
 
-Cells altered by this method has the [Glyph](../sadconsole.coloredglyphbase/#glyph/) set to [DefaultGlyph](../sadconsole.icellsurface/#defaultglyph/), the [Decorators](../sadconsole.coloredglyphbase/#decorators/) array reset, and the [Mirror](../sadconsole.coloredglyphbase/#mirror/) set to [None](../sadconsole.mirror/#none/).
+Cells altered by this method has the [Glyph](../sadconsole.coloredglyphbase/#glyph) set to [DefaultGlyph](../sadconsole.icellsurface/#defaultglyph), the [Decorators](../sadconsole.coloredglyphbase/#decorators) array reset, and the [Mirror](../sadconsole.coloredglyphbase/#mirror) set to [None](../sadconsole.mirror/#none).
 
 ### Erase(ISurface, int, int)
 
@@ -2049,7 +2051,7 @@ The y position.
 
 #### Remarks
 
-The cell altered by this method has the [Glyph](../sadconsole.coloredglyphbase/#glyph/) set to [DefaultGlyph](../sadconsole.icellsurface/#defaultglyph/), the [Decorators](../sadconsole.coloredglyphbase/#decorators/) array reset, and the [Mirror](../sadconsole.coloredglyphbase/#mirror/) set to [None](../sadconsole.mirror/#none/).
+The cell altered by this method has the [Glyph](../sadconsole.coloredglyphbase/#glyph) set to [DefaultGlyph](../sadconsole.icellsurface/#defaultglyph), the [Decorators](../sadconsole.coloredglyphbase/#decorators) array reset, and the [Mirror](../sadconsole.coloredglyphbase/#mirror) set to [None](../sadconsole.mirror/#none).
 
 ### Erase(ISurface)
 
@@ -2066,7 +2068,7 @@ The surface being edited.
 
 #### Remarks
 
-All cells have [Glyph](../sadconsole.coloredglyphbase/#glyph/) set to [DefaultGlyph](../sadconsole.icellsurface/#defaultglyph/), the [Decorators](../sadconsole.coloredglyphbase/#decorators/) array reset, and the [Mirror](../sadconsole.coloredglyphbase/#mirror/) set to [None](../sadconsole.mirror/#none/).
+All cells have [Glyph](../sadconsole.coloredglyphbase/#glyph) set to [DefaultGlyph](../sadconsole.icellsurface/#defaultglyph), the [Decorators](../sadconsole.coloredglyphbase/#decorators) array reset, and the [Mirror](../sadconsole.coloredglyphbase/#mirror) set to [None](../sadconsole.mirror/#none).
 
 ### Clear(ISurface)
 
@@ -2145,7 +2147,7 @@ The surface being edited.
 The area to clear.
 
 
-### Clear(ISurface, IEnumerable<Point>)
+### Clear(ISurface, IEnumerable\<Point>)
 
 Clears an area of obj.Surface. Each cell is reset to its default state. Then, Glyph, foreground, and background, are reset to the surface's default values.
 
@@ -2366,7 +2368,7 @@ Provides the options for drawing a border and filling the circle.
 
 ### ConnectLines(ISurface)
 
-Connects all lines in a surface for both [ConnectedLineThin](../sadconsole.icellsurface/#connectedlinethin/) and [ConnectedLineThick](../sadconsole.icellsurface/#connectedlinethick/) styles.
+Connects all lines in a surface for both [ConnectedLineThin](../sadconsole.icellsurface/#connectedlinethin) and [ConnectedLineThick](../sadconsole.icellsurface/#connectedlinethick) styles.
 
 ```csharp title="C#"
 public static void ConnectLines(this ISurface obj)
@@ -2392,7 +2394,7 @@ public static void ConnectLines(this ISurface obj, int[] lineStyle)
 The surface being edited.
 
 `lineStyle` [int[]](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The array of line styles indexed by <xref href="SadConsole.ICellSurface.ConnectedLineIndex" data-throw-if-not-resolved="false"></xref>.
+The array of line styles indexed by [ICellSurface.ConnectedLineIndex](../sadconsole.icellsurface.connectedlineindex/).
 
 
 ### ConnectLines(ISurface, int[], Rectangle)
@@ -2409,7 +2411,7 @@ public static void ConnectLines(this ISurface obj, int[] lineStyle, Rectangle ar
 The surface being edited.
 
 `lineStyle` [int[]](https://learn.microsoft.com/dotnet/api/system.int32/)  
-The array of line styles indexed by <xref href="SadConsole.ICellSurface.ConnectedLineIndex" data-throw-if-not-resolved="false"></xref>.
+The array of line styles indexed by [ICellSurface.ConnectedLineIndex](../sadconsole.icellsurface.connectedlineindex/).
 
 `area` SadRogue.Primitives.Rectangle  
 The area to process.
@@ -2584,7 +2586,7 @@ public static void PrintTheDraw(this ICellSurface cellSurface, int y, string tex
 #### Parameters
 
 `cellSurface` [ICellSurface](../sadconsole.icellsurface/)  
-Class implementing <xref href="SadConsole.ICellSurface" data-throw-if-not-resolved="false"></xref>.
+Class implementing [ICellSurface](../sadconsole.icellsurface/).
 
 `y` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 Y coordinate of the obj.Surface.
@@ -2593,10 +2595,10 @@ Y coordinate of the obj.Surface.
 Text to print.
 
 `drawFont` [TheDrawFont](../sadconsole.readers.thedrawfont/)  
-Instance of the <xref href="SadConsole.Readers.TheDrawFont" data-throw-if-not-resolved="false"></xref> to use.
+Instance of the [TheDrawFont](../sadconsole.readers.thedrawfont/) to use.
 
 `alignment` [HorizontalAlignment](../sadconsole.horizontalalignment/)  
-<xref href="SadConsole.HorizontalAlignment" data-throw-if-not-resolved="false"></xref> to use.
+[HorizontalAlignment](../sadconsole.horizontalalignment/) to use.
 
 `padding` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 Amount of regular font characters used as horizontal padding on both sides of the output.
@@ -2613,7 +2615,7 @@ public static void PrintTheDraw(this ICellSurface cellSurface, int x, int y, str
 #### Parameters
 
 `cellSurface` [ICellSurface](../sadconsole.icellsurface/)  
-Class implementing <xref href="SadConsole.ICellSurface" data-throw-if-not-resolved="false"></xref>.
+Class implementing [ICellSurface](../sadconsole.icellsurface/).
 
 `x` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
 X coordinate of the obj.Surface.
@@ -2625,4 +2627,4 @@ Y coordinate of the obj.Surface.
 Text to print.
 
 `drawFont` [TheDrawFont](../sadconsole.readers.thedrawfont/)  
-Instance of the <xref href="SadConsole.Readers.TheDrawFont" data-throw-if-not-resolved="false"></xref> to use.
+Instance of the [TheDrawFont](../sadconsole.readers.thedrawfont/) to use.

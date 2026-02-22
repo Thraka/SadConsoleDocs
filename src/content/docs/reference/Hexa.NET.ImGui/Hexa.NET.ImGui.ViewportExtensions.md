@@ -3,6 +3,7 @@ title: ViewportExtensions Class
 slug: reference/hexa.net.imgui.viewportextensions
 sidebar:
   label: ViewportExtensions
+editUrl: false
 ---
 ## Definition
 

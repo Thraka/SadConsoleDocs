@@ -3,6 +3,8 @@ title: Timer Class
 slug: reference/sadconsole.components.timer
 sidebar:
   label: Timer
+editUrl: false
+description: A simple timer with callback.
 ---
 ## Definition
 
@@ -79,7 +81,7 @@ The time since the last frame update.
 
 ### Restart()
 
-Restarts the timer; raises the [TimerRestart](../sadconsole.components.timer/#timerrestart/) event.
+Restarts the timer; raises the [TimerRestart](../sadconsole.components.timer/#timerrestart) event.
 
 ```csharp title="C#"
 public void Restart()
@@ -88,7 +90,7 @@ public void Restart()
 
 ### Start()
 
-Starts the timer; raises the [TimerStart](../sadconsole.components.timer/#timerstart/) event.
+Starts the timer; raises the [TimerStart](../sadconsole.components.timer/#timerstart) event.
 
 ```csharp title="C#"
 public void Start()
@@ -97,7 +99,7 @@ public void Start()
 
 ### Stop()
 
-Starts the timer; raises the [TimerStop](../sadconsole.components.timer/#timerstop/) event.
+Starts the timer; raises the [TimerStop](../sadconsole.components.timer/#timerstop) event.
 
 ```csharp title="C#"
 public void Stop()

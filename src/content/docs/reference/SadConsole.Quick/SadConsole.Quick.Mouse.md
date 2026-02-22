@@ -3,6 +3,8 @@ title: Mouse Class
 slug: reference/sadconsole.quick.mouse
 sidebar:
   label: Mouse
+editUrl: false
+description: Adds mouse-related extension methods for `SadConsole.IScreenObject`.
 ---
 ## Definition
 
@@ -16,7 +18,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### WithMouse(IScreenObject, Func<IScreenObject, MouseScreenObjectState, bool>)
+### WithMouse(IScreenObject, Func\<IScreenObject, MouseScreenObjectState, bool>)
 
 Adds a mouse handler to a [IScreenObject](../sadconsole.iscreenobject/).
 
@@ -38,7 +40,7 @@ The handler callback.
 
 ### RemoveMouseHooks(IScreenObject)
 
-Removes all of the mouse hooks added with `SadConsole.Quick.Mouse.WithMouse(SadConsole.IScreenObject%2cSystem.Func%7bSadConsole.IScreenObject%2cSadConsole.Input.MouseScreenObjectState%2cSystem.Boolean%7d)`.
+Removes all of the mouse hooks added with [WithMouse(IScreenObject, Func\<IScreenObject, MouseScreenObjectState, bool\>)](../sadconsole.quick.mouse/#withmouseiscreenobject-funciscreenobject-mousescreenobjectstate-bool).
 
 ```csharp title="C#"
 public static IScreenObject RemoveMouseHooks(this IScreenObject screenObject)
@@ -53,9 +55,9 @@ The object to use.
 
 [IScreenObject](../sadconsole.iscreenobject/)
 
-### RemoveMouseHook(IScreenObject, Func<IScreenObject, MouseScreenObjectState, bool>)
+### RemoveMouseHook(IScreenObject, Func\<IScreenObject, MouseScreenObjectState, bool>)
 
-Removes the specified handler that was added with `SadConsole.Quick.Mouse.WithMouse(SadConsole.IScreenObject%2cSystem.Func%7bSadConsole.IScreenObject%2cSadConsole.Input.MouseScreenObjectState%2cSystem.Boolean%7d)`.
+Removes the specified handler that was added with [WithMouse(IScreenObject, Func\<IScreenObject, MouseScreenObjectState, bool\>)](../sadconsole.quick.mouse/#withmouseiscreenobject-funciscreenobject-mousescreenobjectstate-bool).
 
 ```csharp title="C#"
 public static IScreenObject RemoveMouseHook(this IScreenObject screenObject, Func<IScreenObject, MouseScreenObjectState, bool> handler)

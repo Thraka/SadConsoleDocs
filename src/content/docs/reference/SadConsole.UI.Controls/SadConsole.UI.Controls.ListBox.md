@@ -3,6 +3,8 @@ title: ListBox Class
 slug: reference/sadconsole.ui.controls.listbox
 sidebar:
   label: ListBox
+editUrl: false
+description: A scrollable list control.
 ---
 ## Definition
 
@@ -111,7 +113,7 @@ public int VisibleItemsMax { get; set; }
 
 ### CompareByReference
 
-When the [SelectedItem](../sadconsole.ui.controls.listbox/#selecteditem/) changes, and this property is true, objects will be compared by reference. If false, they will be compared by value.
+When the [SelectedItem](../sadconsole.ui.controls.listbox/#selecteditem) changes, and this property is true, objects will be compared by reference. If false, they will be compared by value.
 
 ```csharp title="C#"
 [DataMember]
@@ -120,7 +122,7 @@ public bool CompareByReference { get; set; }
 
 ### SingleClickItemExecute
 
-When set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the [SelectedItemExecuted](../sadconsole.ui.controls.listbox/#selecteditemexecuted/) event will fire when an item is single-clicked instead of double-clicked.
+When set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the [SelectedItemExecuted](../sadconsole.ui.controls.listbox/#selecteditemexecuted) event will fire when an item is single-clicked instead of double-clicked.
 
 ```csharp title="C#"
 [DataMember]
@@ -154,7 +156,7 @@ public object? SelectedItem { get; set; }
 
 ### BorderTheme
 
-The drawing theme for the border when [DrawBorder](../sadconsole.ui.controls.listbox/#drawborder/) is true.
+The drawing theme for the border when [DrawBorder](../sadconsole.ui.controls.listbox/#drawborder) is true.
 
 ```csharp title="C#"
 public ThemeStates BorderTheme { get; protected set; }
@@ -162,7 +164,7 @@ public ThemeStates BorderTheme { get; protected set; }
 
 ### BorderLineStyle
 
-The line style for the border when [DrawBorder](../sadconsole.ui.controls.listbox/#drawborder/) is true.
+The line style for the border when [DrawBorder](../sadconsole.ui.controls.listbox/#drawborder) is true.
 
 ```csharp title="C#"
 [DataMember]
@@ -199,7 +201,7 @@ public Rectangle ItemsArea { get; set; }
 
 ### OnSelectedItemChanged()
 
-Invokes the [SelectedItemChanged](../sadconsole.ui.controls.listbox/#selecteditemchanged/) event.
+Invokes the [SelectedItemChanged](../sadconsole.ui.controls.listbox/#selecteditemchanged) event.
 
 ```csharp title="C#"
 protected virtual void OnSelectedItemChanged()
@@ -208,7 +210,7 @@ protected virtual void OnSelectedItemChanged()
 
 ### OnItemAction()
 
-Invokes the [SelectedItemExecuted](../sadconsole.ui.controls.listbox/#selecteditemexecuted/) event.
+Invokes the [SelectedItemExecuted](../sadconsole.ui.controls.listbox/#selecteditemexecuted) event.
 
 ```csharp title="C#"
 protected virtual void OnItemAction()
@@ -217,7 +219,7 @@ protected virtual void OnItemAction()
 
 ### OnResized()
 
-Called when `SadConsole.UI.Controls.ControlBase.Resize(System.Int32%2cSystem.Int32)` was called.
+Called when [Resize(int, int)](../sadconsole.ui.controls.controlbase/#resizeint-int) was called.
 
 ```csharp title="C#"
 protected override void OnResized()
@@ -226,7 +228,7 @@ protected override void OnResized()
 
 ### SetupScrollBar(Orientation, int, Point)
 
-Configures the associated [ScrollBar](../sadconsole.ui.controls.listbox/#scrollbar/).
+Configures the associated [ScrollBar](../sadconsole.ui.controls.listbox/#scrollbar).
 
 ```csharp title="C#"
 public void SetupScrollBar(Orientation orientation, int sizeValue, Point position)
@@ -271,7 +273,7 @@ public override bool ProcessKeyboard(Keyboard info)
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState state)
@@ -285,7 +287,7 @@ The current mouse data
 
 ### OnLeftMouseClicked(ControlMouseState)
 
-Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnLeftMouseClicked(ControlBase.ControlMouseState state)
@@ -340,7 +342,7 @@ protected void ShowHideScrollBar()
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)
@@ -370,7 +372,7 @@ The game frame time delta.
 
 ### SelectedItemChanged
 
-An event that triggers when the [SelectedItem](../sadconsole.ui.controls.listbox/#selecteditem/) property changes.
+An event that triggers when the [SelectedItem](../sadconsole.ui.controls.listbox/#selecteditem) property changes.
 
 ```csharp title="C#"
 public event EventHandler<ListBox.SelectedItemEventArgs>? SelectedItemChanged
@@ -381,7 +383,7 @@ public event EventHandler<ListBox.SelectedItemEventArgs>? SelectedItemChanged
 [EventHandler\<ListBox.SelectedItemEventArgs\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### SelectedItemReselected
 
-An event that triggers when the [SelectedItem](../sadconsole.ui.controls.listbox/#selecteditem/) property is reselected by the mouse.
+An event that triggers when the [SelectedItem](../sadconsole.ui.controls.listbox/#selecteditem) property is reselected by the mouse.
 
 ```csharp title="C#"
 public event EventHandler<ListBox.SelectedItemEventArgs>? SelectedItemReselected

@@ -3,6 +3,7 @@ title: GuiPreviews Class
 slug: reference/sadconsole.debug.guipreviews
 sidebar:
   label: GuiPreviews
+editUrl: false
 ---
 ## Definition
 

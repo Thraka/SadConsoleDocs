@@ -3,6 +3,8 @@ title: ListBox.SelectedItemEventArgs Class
 slug: reference/sadconsole.ui.controls.listbox.selecteditemeventargs
 sidebar:
   label: ListBox.SelectedItemEventArgs
+editUrl: false
+description: The event args used when the selected item changes.
 ---
 ## Definition
 

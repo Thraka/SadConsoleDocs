@@ -3,6 +3,8 @@ title: REXPaintImage.Color Struct
 slug: reference/sadconsole.readers.rexpaintimage.color
 sidebar:
   label: REXPaintImage.Color
+editUrl: false
+description: A RexPaint color.
 ---
 ## Definition
 

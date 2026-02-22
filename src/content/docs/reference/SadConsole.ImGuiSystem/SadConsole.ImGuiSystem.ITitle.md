@@ -3,6 +3,8 @@ title: ITitle Interface
 slug: reference/sadconsole.imguisystem.ititle
 sidebar:
   label: ITitle
+editUrl: false
+description: Defines a title on an object.
 ---
 ## Definition
 

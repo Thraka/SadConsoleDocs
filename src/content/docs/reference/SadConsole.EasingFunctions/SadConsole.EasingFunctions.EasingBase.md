@@ -3,6 +3,8 @@ title: EasingBase Class
 slug: reference/sadconsole.easingfunctions.easingbase
 sidebar:
   label: EasingBase
+editUrl: false
+description: The base class for an easing function.
 ---
 ## Definition
 

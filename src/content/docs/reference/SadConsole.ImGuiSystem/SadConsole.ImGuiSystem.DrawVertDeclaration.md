@@ -3,6 +3,7 @@ title: DrawVertDeclaration Class
 slug: reference/sadconsole.imguisystem.drawvertdeclaration
 sidebar:
   label: DrawVertDeclaration
+editUrl: false
 ---
 ## Definition
 

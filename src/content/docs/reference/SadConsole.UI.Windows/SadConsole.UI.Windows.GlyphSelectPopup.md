@@ -3,6 +3,8 @@ title: GlyphSelectPopup Class
 slug: reference/sadconsole.ui.windows.glyphselectpopup
 sidebar:
   label: GlyphSelectPopup
+editUrl: false
+description: A popup window that displays the glyphs of a font.
 ---
 ## Definition
 

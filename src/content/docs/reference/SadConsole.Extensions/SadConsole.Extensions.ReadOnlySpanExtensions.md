@@ -3,6 +3,8 @@ title: ReadOnlySpanExtensions Class
 slug: reference/sadconsole.extensions.readonlyspanextensions
 sidebar:
   label: ReadOnlySpanExtensions
+editUrl: false
+description: Extensions for the `System.ReadOnlySpan`1` type.
 ---
 ## Definition
 
@@ -16,7 +18,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### Next(ReadOnlySpan<char>, char, out int)
+### Next(ReadOnlySpan\<char>, char, out int)
 
 Gets the next instnace of the specified character in a [char](https://learn.microsoft.com/dotnet/api/system.char/) span.
 

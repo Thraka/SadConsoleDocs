@@ -3,6 +3,8 @@ title: SurfaceViewer Class
 slug: reference/sadconsole.ui.controls.surfaceviewer
 sidebar:
   label: SurfaceViewer
+editUrl: false
+description: Draws a `SadConsole.ICellSurface` within an area. Optionally supports scroll bars.
 ---
 ## Definition
 
@@ -81,7 +83,7 @@ public void ResetSurface()
 
 ### OnSurfaceChanged(ICellSurface, ICellSurface)
 
-Handles and dehandles the [IsDirtyChanged](../sadconsole.icellsurface/#isdirtychanged/) event for the backing surface.
+Handles and dehandles the [IsDirtyChanged](../sadconsole.icellsurface/#isdirtychanged) event for the backing surface.
 
 ```csharp title="C#"
 protected override void OnSurfaceChanged(ICellSurface oldSurface, ICellSurface newSurface)

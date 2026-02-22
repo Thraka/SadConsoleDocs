@@ -3,6 +3,8 @@ title: FontConfig Class
 slug: reference/sadconsole.configuration.fontconfig
 sidebar:
   label: FontConfig
+editUrl: false
+description: The config settings for loading the default fonts when the game starts.
 ---
 ## Definition
 
@@ -53,7 +55,7 @@ public bool UseExtendedFont
 
 ### DefaultFontSize
 
-The size of font to use with the default font. The default is [One](../sadconsole.ifont.sizes/#one/).
+The size of font to use with the default font. The default is [One](../sadconsole.ifont.sizes/#one).
 
 ```csharp title="C#"
 public IFont.Sizes DefaultFontSize
@@ -118,7 +120,7 @@ An array of font files to load.
 
 ### SetDefaultFontSize(Sizes)
 
-Sets the default font size for the game. The default is [One](../sadconsole.ifont.sizes/#one/).
+Sets the default font size for the game. The default is [One](../sadconsole.ifont.sizes/#one).
 
 ```csharp title="C#"
 public void SetDefaultFontSize(IFont.Sizes size)
@@ -132,7 +134,7 @@ The default font size.
 
 ### Run(BuilderBase, GameHost)
 
-Invokes the [FontLoader](../sadconsole.configuration.fontconfig/#fontloader/) delegate.
+Invokes the [FontLoader](../sadconsole.configuration.fontconfig/#fontloader) delegate.
 
 ```csharp title="C#"
 public void Run(BuilderBase config, GameHost game)

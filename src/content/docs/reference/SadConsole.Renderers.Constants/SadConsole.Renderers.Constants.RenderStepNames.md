@@ -3,6 +3,8 @@ title: RenderStepNames Class
 slug: reference/sadconsole.renderers.constants.renderstepnames
 sidebar:
   label: RenderStepNames
+editUrl: false
+description: Renderer names used by hosts and types.
 ---
 ## Definition
 

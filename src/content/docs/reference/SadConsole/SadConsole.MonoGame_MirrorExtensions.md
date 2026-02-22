@@ -3,6 +3,8 @@ title: MonoGame_MirrorExtensions Class
 slug: reference/sadconsole.monogame_mirrorextensions
 sidebar:
   label: MonoGame_MirrorExtensions
+editUrl: false
+description: Extensions for `SadConsole.Mirror`.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### ToMonoGame(Mirror)
 
-Converts a [Mirror](../sadconsole.mirror/) type to a MonoGame `Microsoft.Xna.Framework.Graphics.SpriteEffects` type.
+Converts a [Mirror](../sadconsole.mirror/) type to a MonoGame ``Microsoft.Xna.Framework.Graphics.SpriteEffects`` type.
 
 ```csharp title="C#"
 public static SpriteEffects ToMonoGame(this Mirror mirror)

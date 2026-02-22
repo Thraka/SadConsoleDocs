@@ -3,10 +3,12 @@ title: ControlHost Class
 slug: reference/sadconsole.ui.controlhost
 sidebar:
   label: ControlHost
+editUrl: false
+description: Adds the ability for a host to contain and display controls from `SadConsole.UI.Controls`.
 ---
 ## Definition
 
-Adds the ability for a host to contain and display controls from [SadConsole.UI.Controls](../sadconsole/).
+Adds the ability for a host to contain and display controls from [SadConsole.UI.Controls](../sadconsole.ui.controls/).
 
 ```csharp title="C#"
 public class ControlHost : IComponent, IContainer, IList<ControlBase>, ICollection<ControlBase>, IEnumerable<ControlBase>, IEnumerable
@@ -38,7 +40,7 @@ protected List<ControlBase> ControlsList
 
 ### NamedControls
 
-The controls added which contain a [Name](../sadconsole.ui.controls.controlbase/#name/) value.
+The controls added which contain a [Name](../sadconsole.ui.controls.controlbase/#name) value.
 
 ```csharp title="C#"
 protected Dictionary<string, ControlBase> NamedControls
@@ -131,7 +133,7 @@ public bool CanTabToNextConsole { get; set; }
 
 ### NextTabConsole
 
-Sets reference to the console to tab to when the [CanTabToNextConsole](../sadconsole.ui.controlhost/#cantabtonextconsole/) property is true. Set this to null to allow the engine to determine the next console.
+Sets reference to the console to tab to when the [CanTabToNextConsole](../sadconsole.ui.controlhost/#cantabtonextconsole) property is true. Set this to null to allow the engine to determine the next console.
 
 ```csharp title="C#"
 public IScreenSurface? NextTabConsole { get; set; }
@@ -139,7 +141,7 @@ public IScreenSurface? NextTabConsole { get; set; }
 
 ### PreviousTabConsole
 
-Sets reference to the console to tab to when the [CanTabToNextConsole](../sadconsole.ui.controlhost/#cantabtonextconsole/) property is true. Set this to null to allow the engine to determine the next console.
+Sets reference to the console to tab to when the [CanTabToNextConsole](../sadconsole.ui.controlhost/#cantabtonextconsole) property is true. Set this to null to allow the engine to determine the next console.
 
 ```csharp title="C#"
 public IScreenSurface? PreviousTabConsole { get; set; }
@@ -172,7 +174,7 @@ public bool IsReadOnly { get; }
 
 ### this[string]
 
-Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name/) property.
+Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name) property.
 
 ```csharp title="C#"
 public ControlBase this[string name] { get; }
@@ -221,7 +223,7 @@ The control instance found.
 
 ### GetNamedControl(string)
 
-Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name/) property.
+Gets a control by its [Name](../sadconsole.ui.controls.controlbase/#name) property.
 
 ```csharp title="C#"
 public ControlBase GetNamedControl(string name)
@@ -257,7 +259,7 @@ public void TabPreviousControl()
 
 ### TryTabPreviousConsole()
 
-Tries to tab to the console that comes before this one in the [Parent](../sadconsole.iscreenobject/#parent/) collection of [Children](../sadconsole.iscreenobject/#children/). Sets focus to the target console if found.
+Tries to tab to the console that comes before this one in the [Parent](../sadconsole.iscreenobject/#parent) collection of [Children](../sadconsole.iscreenobject/#children). Sets focus to the target console if found.
 
 ```csharp title="C#"
 protected bool TryTabPreviousConsole()
@@ -270,7 +272,7 @@ protected bool TryTabPreviousConsole()
 
 ### TryTabNextConsole()
 
-Tries to tab to the console that comes after this one in the [Parent](../sadconsole.iscreenobject/#parent/) collection of [Children](../sadconsole.iscreenobject/#children/). Sets focus to the target console if found.
+Tries to tab to the console that comes after this one in the [Parent](../sadconsole.iscreenobject/#parent) collection of [Children](../sadconsole.iscreenobject/#children). Sets focus to the target console if found.
 
 ```csharp title="C#"
 protected bool TryTabNextConsole()
@@ -329,7 +331,7 @@ The control that has focus.
 
 ### FocusedControlChanged(ControlBase?, ControlBase?)
 
-This method actually changes the variable that tracks which control is focused. It then sets the [IsFocused](../sadconsole.ui.controls.controlbase/#isfocused/) property to the appropriate value for both the previously focused control and the newly focused control.
+This method actually changes the variable that tracks which control is focused. It then sets the [IsFocused](../sadconsole.ui.controls.controlbase/#isfocused) property to the appropriate value for both the previously focused control and the newly focused control.
 
 ```csharp title="C#"
 protected virtual void FocusedControlChanged(ControlBase? newControl, ControlBase? oldControl)
@@ -346,7 +348,7 @@ The control that currently has focus.
 
 ### CanFocusControl(ControlBase?)
 
-Determins if a control is enabled and [CanFocus](../sadconsole.ui.controls.controlbase/#canfocus/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Determins if a control is enabled and [CanFocus](../sadconsole.ui.controls.controlbase/#canfocus) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 protected virtual bool CanFocusControl(ControlBase? control)
@@ -436,7 +438,7 @@ The index of the control in the backing collection.
 
 ### Insert(int, ControlBase)
 
-Inserts an item at the specified index and sets the [TabIndex](../sadconsole.ui.controls.controlbase/#tabindex/) to the specified index.
+Inserts an item at the specified index and sets the [TabIndex](../sadconsole.ui.controls.controlbase/#tabindex) to the specified index.
 
 ```csharp title="C#"
 public void Insert(int index, ControlBase control)
@@ -452,7 +454,7 @@ The control to insert.
 
 #### Remarks
 
-Index within the backing collection is always based on [TabIndex](../sadconsole.ui.controls.controlbase/#tabindex/) ranking. There may be conflicts so you're not guaranteed that the control will be available at the specified index.
+Index within the backing collection is always based on [TabIndex](../sadconsole.ui.controls.controlbase/#tabindex) ranking. There may be conflicts so you're not guaranteed that the control will be available at the specified index.
 
 ### RemoveAt(int)
 

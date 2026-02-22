@@ -3,6 +3,8 @@ title: ParseCommandMirror Class
 slug: reference/sadconsole.stringparser.parsecommandmirror
 sidebar:
   label: ParseCommandMirror
+editUrl: false
+description: Sets the mirror of a glyph.
 ---
 ## Definition
 
@@ -51,7 +53,7 @@ public Mirror Mirror
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

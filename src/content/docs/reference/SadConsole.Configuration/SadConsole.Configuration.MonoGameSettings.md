@@ -3,6 +3,7 @@ title: MonoGameSettings Class
 slug: reference/sadconsole.configuration.monogamesettings
 sidebar:
   label: MonoGameSettings
+editUrl: false
 ---
 ## Definition
 

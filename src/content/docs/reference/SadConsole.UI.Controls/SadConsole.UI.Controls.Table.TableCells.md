@@ -3,6 +3,8 @@ title: Table.TableCells Class
 slug: reference/sadconsole.ui.controls.table.tablecells
 sidebar:
   label: Table.TableCells
+editUrl: false
+description: A collection class that contains all the cells of the `SadConsole.UI.Controls.Table` and methods to modify them.
 ---
 ## Definition
 

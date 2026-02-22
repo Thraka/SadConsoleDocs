@@ -3,6 +3,8 @@ title: ColorPickerPopup Class
 slug: reference/sadconsole.ui.windows.colorpickerpopup
 sidebar:
   label: ColorPickerPopup
+editUrl: false
+description: A window that allows a user to select a color in various ways.
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: ParseCommandClearEffect Class
 slug: reference/sadconsole.stringparser.parsecommandcleareffect
 sidebar:
   label: ParseCommandClearEffect
+editUrl: false
+description: Clears the cell effect for the glyph.
 ---
 ## Definition
 
@@ -35,7 +37,7 @@ The current commands for the string.
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

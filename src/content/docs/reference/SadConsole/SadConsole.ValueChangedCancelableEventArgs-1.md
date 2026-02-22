@@ -3,6 +3,8 @@ title: ValueChangedCancelableEventArgs<T> Class
 slug: reference/sadconsole.valuechangedcancelableeventargs-1
 sidebar:
   label: ValueChangedCancelableEventArgs<T>
+editUrl: false
+description: Event arguments for an event fired when an object's properties are changed. The change can be cancelled.
 ---
 ## Definition
 

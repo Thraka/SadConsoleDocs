@@ -3,6 +3,8 @@ title: AsciiKey.ShiftedCharacterMapping Struct
 slug: reference/sadconsole.input.asciikey.shiftedcharactermapping
 sidebar:
   label: AsciiKey.ShiftedCharacterMapping
+editUrl: false
+description: A link between two characters, one unshifted and the other shifted.
 ---
 ## Definition
 

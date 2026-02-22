@@ -3,6 +3,8 @@ title: SmoothMove Class
 slug: reference/sadconsole.components.smoothmove
 sidebar:
   label: SmoothMove
+editUrl: false
+description: Animates the movement of an object.
 ---
 ## Definition
 
@@ -127,7 +129,7 @@ public override void OnAdded(IScreenObject host)
 #### Parameters
 
 `host` [IScreenObject](../sadconsole.iscreenobject/)  
-The <xref href="SadConsole.IScreenSurface" data-throw-if-not-resolved="false"></xref> or <xref href="SadConsole.Entities.Entity" data-throw-if-not-resolved="false"></xref>.
+The [IScreenSurface](../sadconsole.iscreensurface/) or [Entity](../sadconsole.entities.entity/).
 
 
 ### OnRemoved(IScreenObject)

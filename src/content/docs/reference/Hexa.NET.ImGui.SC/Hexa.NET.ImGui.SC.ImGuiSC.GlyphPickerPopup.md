@@ -3,6 +3,7 @@ title: ImGuiSC.GlyphPickerPopup Class
 slug: reference/hexa.net.imgui.sc.imguisc.glyphpickerpopup
 sidebar:
   label: ImGuiSC.GlyphPickerPopup
+editUrl: false
 ---
 ## Definition
 

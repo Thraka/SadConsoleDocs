@@ -3,6 +3,8 @@ title: IDrawCall Interface
 slug: reference/sadconsole.drawcalls.idrawcall
 sidebar:
   label: IDrawCall
+editUrl: false
+description: A draw call used by final rendering.
 ---
 ## Definition
 

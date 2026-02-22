@@ -3,6 +3,8 @@ title: CellDecorator Struct
 slug: reference/sadconsole.celldecorator
 sidebar:
   label: CellDecorator
+editUrl: false
+description: Decorates a cell with a colored glyph.
 ---
 ## Definition
 

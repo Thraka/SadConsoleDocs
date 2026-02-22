@@ -3,6 +3,8 @@ title: ScreenObjectCollection Class
 slug: reference/sadconsole.screenobjectcollection
 sidebar:
   label: ScreenObjectCollection
+editUrl: false
+description: Manages the parent and children relationship for `SadConsole.IScreenObject`.
 ---
 ## Definition
 

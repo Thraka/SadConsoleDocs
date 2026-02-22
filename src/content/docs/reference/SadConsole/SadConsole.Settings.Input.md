@@ -3,6 +3,8 @@ title: Settings.Input Class
 slug: reference/sadconsole.settings.input
 sidebar:
   label: Settings.Input
+editUrl: false
+description: Settings related to input.
 ---
 ## Definition
 

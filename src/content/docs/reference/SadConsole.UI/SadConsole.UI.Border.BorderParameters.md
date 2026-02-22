@@ -3,6 +3,8 @@ title: Border.BorderParameters Struct
 slug: reference/sadconsole.ui.border.borderparameters
 sidebar:
   label: Border.BorderParameters
+editUrl: false
+description: The settings to use when creating a `SadConsole.UI.Border`.
 ---
 ## Definition
 
@@ -26,7 +28,7 @@ public BorderParameters(bool drawBorder, ShapeParameters? borderBox, string? tit
 #### Parameters
 
 `drawBorder` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates the <code class="paramref">borderBox</code> should be used to draw a border.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates the `borderBox` should be used to draw a border.
 
 `borderBox` [ShapeParameters](../sadconsole.shapeparameters/)  
 The box drawn around the surface.
@@ -35,13 +37,13 @@ The box drawn around the surface.
 The title to display on the border.
 
 `titleAlignment` [HorizontalAlignment](../sadconsole.horizontalalignment/)  
-The alignment of the <code class="paramref">title</code>.
+The alignment of the `title`.
 
 `titleForeground` SadRogue.Primitives.Color  
-The foreground color of the <code class="paramref">title</code>.
+The foreground color of the `title`.
 
 `titleBackground` SadRogue.Primitives.Color  
-The background color of the <code class="paramref">title</code>.
+The background color of the `title`.
 
 `drawShadedArea` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
 When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates the 3d shaded area of the border should be drawn.
@@ -56,17 +58,17 @@ When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/built
 The glyph to use in the shaded area.
 
 `shadedGlyphForeground` SadRogue.Primitives.Color  
-The forground of the <code class="paramref">shadedGlyph</code>.
+The forground of the `shadedGlyph`.
 
 `shadedGlyphBackground` SadRogue.Primitives.Color  
-The background of the <code class="paramref">shadedGlyph</code>.
+The background of the `shadedGlyph`.
 
 
 ## Properties
 
 ### DrawBorder
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates the [BorderBox](../sadconsole.ui.border.borderparameters/#borderbox/) should be used to draw a border.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates the [BorderBox](../sadconsole.ui.border.borderparameters/#borderbox) should be used to draw a border.
 
 ```csharp title="C#"
 public bool DrawBorder { readonly get; set; }
@@ -106,7 +108,7 @@ public Color TitleBackground { readonly get; set; }
 
 ### TitleAlignment
 
-The alignment of the [Title](../sadconsole.ui.border.borderparameters/#title/).
+The alignment of the [Title](../sadconsole.ui.border.borderparameters/#title).
 
 ```csharp title="C#"
 public HorizontalAlignment TitleAlignment { readonly get; set; }
@@ -146,7 +148,7 @@ public int ShadedGlyph { readonly get; set; }
 
 ### ShadedGlyphForeground
 
-The forground of the [ShadedGlyph](../sadconsole.ui.border.borderparameters/#shadedglyph/).
+The forground of the [ShadedGlyph](../sadconsole.ui.border.borderparameters/#shadedglyph).
 
 ```csharp title="C#"
 public Color ShadedGlyphForeground { readonly get; set; }
@@ -154,7 +156,7 @@ public Color ShadedGlyphForeground { readonly get; set; }
 
 ### ShadedGlyphBackground
 
-The background of the [ShadedGlyph](../sadconsole.ui.border.borderparameters/#shadedglyph/).
+The background of the [ShadedGlyph](../sadconsole.ui.border.borderparameters/#shadedglyph).
 
 ```csharp title="C#"
 public Color ShadedGlyphBackground { readonly get; set; }
@@ -190,7 +192,7 @@ Title text.
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### AddTitle(string, Color, Color, HorizontalAlignment)
 
@@ -206,18 +208,18 @@ public Border.BorderParameters AddTitle(string title, Color foregroundColor, Col
 Title text.
 
 `foregroundColor` SadRogue.Primitives.Color  
-Title foreground <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Title foreground ``SadRogue.Primitives.Color``.
 
 `backgroundColor` SadRogue.Primitives.Color  
-Title background <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Title background ``SadRogue.Primitives.Color``.
 
 `horizontalAlignment` [HorizontalAlignment](../sadconsole.horizontalalignment/)  
-Title text <xref href="SadConsole.HorizontalAlignment" data-throw-if-not-resolved="false"></xref>.
+Title text [HorizontalAlignment](../sadconsole.horizontalalignment/).
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### AddShadow()
 
@@ -230,7 +232,7 @@ public Border.BorderParameters AddShadow()
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### AddShadow(int)
 
@@ -248,7 +250,7 @@ Glyph number to use as a shadow.
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### AddShadow(Color, Color)
 
@@ -261,15 +263,15 @@ public Border.BorderParameters AddShadow(Color foregroundColor, Color background
 #### Parameters
 
 `foregroundColor` SadRogue.Primitives.Color  
-ShadedGlyph new foreground <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+ShadedGlyph new foreground ``SadRogue.Primitives.Color``.
 
 `backgroundColor` SadRogue.Primitives.Color  
-ShadedGlyph new background <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+ShadedGlyph new background ``SadRogue.Primitives.Color``.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### AddShadow(int, Color, Color)
 
@@ -285,15 +287,15 @@ public Border.BorderParameters AddShadow(int shadedGlyph, Color foregroundColor,
 Glyph number to use as a shadow.
 
 `foregroundColor` SadRogue.Primitives.Color  
-ShadedGlyph new foreground <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+ShadedGlyph new foreground ``SadRogue.Primitives.Color``.
 
 `backgroundColor` SadRogue.Primitives.Color  
-ShadedGlyph new background <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+ShadedGlyph new background ``SadRogue.Primitives.Color``.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderStyle(ShapeParameters)
 
@@ -306,12 +308,12 @@ public Border.BorderParameters ChangeBorderStyle(ShapeParameters borderStyle)
 #### Parameters
 
 `borderStyle` [ShapeParameters](../sadconsole.shapeparameters/)  
-New <xref href="SadConsole.ShapeParameters" data-throw-if-not-resolved="false"></xref> to use for the border style.
+New [ShapeParameters](../sadconsole.shapeparameters/) to use for the border style.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderGlyph(int[])
 
@@ -329,7 +331,7 @@ Array of glyphs to be used as the border line.
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderGlyph(int[], Color, Color)
 
@@ -345,15 +347,15 @@ public Border.BorderParameters ChangeBorderGlyph(int[] borderStyle, Color foregr
 Array of glyphs to be used as the border line.
 
 `foregroundColor` SadRogue.Primitives.Color  
-Border line foreground <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line foreground ``SadRogue.Primitives.Color``.
 
 `backgroundColor` SadRogue.Primitives.Color  
-Border line background <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line background ``SadRogue.Primitives.Color``.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderGlyph(int)
 
@@ -371,7 +373,7 @@ The glyph to be used the border line.
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderGlyph(int, Color, Color)
 
@@ -387,15 +389,15 @@ public Border.BorderParameters ChangeBorderGlyph(int glyph, Color foregroundColo
 The glyph to be used the border line.
 
 `foregroundColor` SadRogue.Primitives.Color  
-Border line foreground <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line foreground ``SadRogue.Primitives.Color``.
 
 `backgroundColor` SadRogue.Primitives.Color  
-Border line background <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line background ``SadRogue.Primitives.Color``.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderGlyph(ColoredGlyphBase)
 
@@ -408,12 +410,12 @@ public Border.BorderParameters ChangeBorderGlyph(ColoredGlyphBase glyph)
 #### Parameters
 
 `glyph` [ColoredGlyphBase](../sadconsole.coloredglyphbase/)  
-The <xref href="SadConsole.ColoredGlyphBase" data-throw-if-not-resolved="false"></xref> to be used the border line.
+The [ColoredGlyphBase](../sadconsole.coloredglyphbase/) to be used the border line.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderColors(Color, Color)
 
@@ -426,15 +428,15 @@ public Border.BorderParameters ChangeBorderColors(Color foregroundColor, Color b
 #### Parameters
 
 `foregroundColor` SadRogue.Primitives.Color  
-Border line foreground <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line foreground ``SadRogue.Primitives.Color``.
 
 `backgroundColor` SadRogue.Primitives.Color  
-Border line background <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line background ``SadRogue.Primitives.Color``.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderForegroundColor(Color)
 
@@ -447,12 +449,12 @@ public Border.BorderParameters ChangeBorderForegroundColor(Color foregroundColor
 #### Parameters
 
 `foregroundColor` SadRogue.Primitives.Color  
-Border line foreground <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line foreground ``SadRogue.Primitives.Color``.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).
 
 ### ChangeBorderBackgroundColor(Color)
 
@@ -465,9 +467,9 @@ public Border.BorderParameters ChangeBorderBackgroundColor(Color backgroundColor
 #### Parameters
 
 `backgroundColor` SadRogue.Primitives.Color  
-Border line background <xref href="SadRogue.Primitives.Color" data-throw-if-not-resolved="false"></xref>.
+Border line background ``SadRogue.Primitives.Color``.
 
 #### Returns
 
 [Border.BorderParameters](../sadconsole.ui.border/)  
-The modified instance of [Border.BorderParameters](../sadconsole.ui.border/).
+The modified instance of [Border.BorderParameters](../sadconsole.ui.border.borderparameters/).

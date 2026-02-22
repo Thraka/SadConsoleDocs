@@ -3,6 +3,8 @@ title: DrawingArea Class
 slug: reference/sadconsole.ui.controls.drawingarea
 sidebar:
   label: DrawingArea
+editUrl: false
+description: A simple surface for drawing text that can be moved and sized like a control.
 ---
 ## Definition
 
@@ -38,7 +40,7 @@ Height of the control.
 
 ### UseNormalStateOnly
 
-When true, only uses [Normal](../sadconsole.ui.themestates/#normal/) for drawing.
+When true, only uses [Normal](../sadconsole.ui.themestates/#normal) for drawing.
 
 ```csharp title="C#"
 [DataMember]

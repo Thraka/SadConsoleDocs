@@ -3,6 +3,8 @@ title: FileDirectoryListboxItem Class
 slug: reference/sadconsole.ui.controls.filedirectorylistboxitem
 sidebar:
   label: FileDirectoryListboxItem
+editUrl: false
+description: Displays files and directories in various colors.
 ---
 ## Definition
 

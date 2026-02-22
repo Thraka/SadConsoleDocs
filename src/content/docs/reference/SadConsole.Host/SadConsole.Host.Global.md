@@ -3,6 +3,8 @@ title: Global Class
 slug: reference/sadconsole.host.global
 sidebar:
   label: Global
+editUrl: false
+description: Global variables used by the MonoGame host.
 ---
 ## Definition
 
@@ -66,7 +68,7 @@ public static GameTime RenderLoopGameTime { get; }
 
 ### RecreateRenderOutput
 
-Regenerates the [RenderOutput](../sadconsole.host.global/#renderoutput/) if the desired size doesn't match the current size.
+Regenerates the [RenderOutput](../sadconsole.host.global/#renderoutput) if the desired size doesn't match the current size.
 
 ```csharp title="C#"
 public static Global.RecreateRenderOutputDelegate RecreateRenderOutput { get; set; }
@@ -74,7 +76,7 @@ public static Global.RecreateRenderOutputDelegate RecreateRenderOutput { get; se
 
 ### ResizeGraphicsDeviceManager
 
-Resizes the [GraphicsDeviceManager](../sadconsole.host.global/#graphicsdevicemanager/) by the specified font size.
+Resizes the [GraphicsDeviceManager](../sadconsole.host.global/#graphicsdevicemanager) by the specified font size.
 
 ```csharp title="C#"
 public static Global.ResizeGraphicsDeviceManagerDelegate ResizeGraphicsDeviceManager { get; set; }
@@ -82,7 +84,7 @@ public static Global.ResizeGraphicsDeviceManagerDelegate ResizeGraphicsDeviceMan
 
 ### ResetRendering
 
-Resets the [RenderOutput](../sadconsole.host.global/#renderoutput/) target and determines the appropriate [RenderRect](../sadconsole.settings.rendering/#renderrect/) and `SadConsole.Settings.Rendering.RenderScale` based on the window or fullscreen state.
+Resets the [RenderOutput](../sadconsole.host.global/#renderoutput) target and determines the appropriate [RenderRect](../sadconsole.settings.rendering/#renderrect) and ``SadConsole.Settings.Rendering.RenderScale`` based on the window or fullscreen state.
 
 ```csharp title="C#"
 public static Action ResetRendering { get; set; }
@@ -108,7 +110,7 @@ public static GraphicsDeviceManager GraphicsDeviceManager { get; set; }
 
 ### ResetGraphicsDevice()
 
-Sets the [GraphicsDevice](../sadconsole.host.global/#graphicsdevice/) render target to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, targeting the app window.
+Sets the [GraphicsDevice](../sadconsole.host.global/#graphicsdevice) render target to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, targeting the app window.
 
 ```csharp title="C#"
 public static void ResetGraphicsDevice()
@@ -117,7 +119,7 @@ public static void ResetGraphicsDevice()
 
 ### ResizeGraphicsDeviceManagerHandler(Point, int, int, int, int)
 
-Resizes the [GraphicsDeviceManager](../sadconsole.host.global/#graphicsdevicemanager/) by the specified font size.
+Resizes the [GraphicsDeviceManager](../sadconsole.host.global/#graphicsdevicemanager) by the specified font size.
 
 ```csharp title="C#"
 public static void ResizeGraphicsDeviceManagerHandler(Point fontSize, int width, int height, int additionalWidth, int additionalHeight)
@@ -143,7 +145,7 @@ Additional pixel height to add to the resize.
 
 ### RecreateRenderOutputHandler(int, int)
 
-Regenerates the [RenderOutput](../sadconsole.host.global/#renderoutput/) if the desired size doesn't match the current size.
+Regenerates the [RenderOutput](../sadconsole.host.global/#renderoutput) if the desired size doesn't match the current size.
 
 ```csharp title="C#"
 public static void RecreateRenderOutputHandler(int width, int height)
@@ -160,7 +162,7 @@ The height of the render output.
 
 ### ResetRenderingHandler()
 
-Resets the [RenderOutput](../sadconsole.host.global/#renderoutput/) target and determines the appropriate [RenderRect](../sadconsole.settings.rendering/#renderrect/) and `SadConsole.Settings.Rendering.RenderScale` based on the window or fullscreen state.
+Resets the [RenderOutput](../sadconsole.host.global/#renderoutput) target and determines the appropriate [RenderRect](../sadconsole.settings.rendering/#renderrect) and ``SadConsole.Settings.Rendering.RenderScale`` based on the window or fullscreen state.
 
 ```csharp title="C#"
 public static void ResetRenderingHandler()

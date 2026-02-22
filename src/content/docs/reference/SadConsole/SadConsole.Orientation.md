@@ -3,6 +3,8 @@ title: Orientation Enum
 slug: reference/sadconsole.orientation
 sidebar:
   label: Orientation
+editUrl: false
+description: Orientation modes.
 ---
 ## Definition
 

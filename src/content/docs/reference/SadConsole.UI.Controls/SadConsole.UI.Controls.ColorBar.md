@@ -3,6 +3,8 @@ title: ColorBar Class
 slug: reference/sadconsole.ui.controls.colorbar
 sidebar:
   label: ColorBar
+editUrl: false
+description: A color bar control.
 ---
 ## Definition
 
@@ -86,7 +88,7 @@ public int SelectedPosition { get; }
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState info)
@@ -132,7 +134,7 @@ The duration of thecurrent frame.
 
 ### ColorChanged
 
-Raised when the [SelectedColor](../sadconsole.ui.controls.colorbar/#selectedcolor/) value changes.
+Raised when the [SelectedColor](../sadconsole.ui.controls.colorbar/#selectedcolor) value changes.
 
 ```csharp title="C#"
 public event EventHandler? ColorChanged

@@ -3,6 +3,8 @@ title: BlinkGlyph Class
 slug: reference/sadconsole.effects.blinkglyph
 sidebar:
   label: BlinkGlyph
+editUrl: false
+description: Switches between the glyph of a cell and a specified glyph for an amount of time, and then repeats.
 ---
 ## Definition
 

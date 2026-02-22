@@ -3,6 +3,7 @@ title: ColoredGlyphSerialized Class
 slug: reference/sadconsole.serializedtypes.coloredglyphserialized
 sidebar:
   label: ColoredGlyphSerialized
+editUrl: false
 ---
 ## Definition
 

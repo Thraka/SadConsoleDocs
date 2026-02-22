@@ -3,6 +3,8 @@ title: Playscii Class
 slug: reference/sadconsole.readers.playscii
 sidebar:
   label: Playscii
+editUrl: false
+description: Playscii converter. Check this excellent ascii editor out at http://vectorpoem.com/playscii/
 ---
 ## Definition
 
@@ -78,10 +80,10 @@ public static ScreenSurface ToScreenSurface(string fileName, IFont font, string 
 #### Parameters
 
 `fileName` [string](https://learn.microsoft.com/dotnet/api/system.string/)  
-Name and path of the <xref href="SadConsole.Readers.Playscii" data-throw-if-not-resolved="false"></xref> file (give only file name if <code class="paramref">zipArchiveName</code> is used).
+Name and path of the [Playscii](../sadconsole.readers.playscii/) file (give only file name if `zipArchiveName` is used).
 
 `font` [IFont](../sadconsole.ifont/)  
-<xref href="SadConsole.IFont" data-throw-if-not-resolved="false"></xref> to be used when converting the <xref href="SadConsole.Readers.Playscii" data-throw-if-not-resolved="false"></xref> file.
+[IFont](../sadconsole.ifont/) to be used when converting the [Playscii](../sadconsole.readers.playscii/) file.
 
 `paletteFileName` [string](https://learn.microsoft.com/dotnet/api/system.string/)  
 Path to an alternative palette file rather than the one specified in the playscii records.

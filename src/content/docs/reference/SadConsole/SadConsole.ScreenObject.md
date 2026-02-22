@@ -3,6 +3,8 @@ title: ScreenObject Class
 slug: reference/sadconsole.screenobject
 sidebar:
   label: ScreenObject
+editUrl: false
+description: A generic object processed by SadConsole. Provides parent/child, components, and position.
 ---
 ## Definition
 
@@ -33,7 +35,7 @@ public ScreenObject()
 
 ### ComponentsUpdate
 
-A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) where [IsUpdate](../sadconsole.components.icomponent/#isupdate/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) where [IsUpdate](../sadconsole.components.icomponent/#isupdate) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 protected List<IComponent> ComponentsUpdate
@@ -41,7 +43,7 @@ protected List<IComponent> ComponentsUpdate
 
 ### ComponentsRender
 
-A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) where [IsRender](../sadconsole.components.icomponent/#isrender/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) where [IsRender](../sadconsole.components.icomponent/#isrender) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 protected List<IComponent> ComponentsRender
@@ -49,7 +51,7 @@ protected List<IComponent> ComponentsRender
 
 ### ComponentsMouse
 
-A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) where [IsMouse](../sadconsole.components.icomponent/#ismouse/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) where [IsMouse](../sadconsole.components.icomponent/#ismouse) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 protected List<IComponent> ComponentsMouse
@@ -57,7 +59,7 @@ protected List<IComponent> ComponentsMouse
 
 ### ComponentsKeyboard
 
-A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) where [IsKeyboard](../sadconsole.components.icomponent/#iskeyboard/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) where [IsKeyboard](../sadconsole.components.icomponent/#iskeyboard) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 protected List<IComponent> ComponentsKeyboard
@@ -65,7 +67,7 @@ protected List<IComponent> ComponentsKeyboard
 
 ### ComponentsEmpty
 
-A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) that is not set for update, render, mouse, or keyboard.
+A filtered list from [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) that is not set for update, render, mouse, or keyboard.
 
 ```csharp title="C#"
 protected List<IComponent> ComponentsEmpty
@@ -75,7 +77,7 @@ protected List<IComponent> ComponentsEmpty
 
 ### SortOrder
 
-Indicates the sorting order this object should use when parented. Sorting is a manual operation on the [Children](../sadconsole.screenobject/#children/) collection.
+Indicates the sorting order this object should use when parented. Sorting is a manual operation on the [Children](../sadconsole.screenobject/#children) collection.
 
 ```csharp title="C#"
 [DataMember]
@@ -100,7 +102,7 @@ public IScreenObject? Parent { get; set; }
 
 ### Position
 
-A position that is based on the current [Position](../sadconsole.screenobject/#position/) and [Parent](../sadconsole.screenobject/#parent/) position, in pixels.
+A position that is based on the current [Position](../sadconsole.screenobject/#position) and [Parent](../sadconsole.screenobject/#parent) position, in pixels.
 
 ```csharp title="C#"
 public Point Position { get; set; }
@@ -108,18 +110,18 @@ public Point Position { get; set; }
 
 ### AbsolutePosition
 
-A position that's based on the current `SadRogue.Primitives.IPositionable.Position`, as interpreted by the implementing class, in pixels.
+A position that's based on the current ``SadRogue.Primitives.IPositionable.Position``, as interpreted by the implementing class, in pixels.
 
 ```csharp title="C#"
 public Point AbsolutePosition { get; protected set; }
 ```
-## Remarks
+#### Remarks
 
-Most objects will implement this property based on `SadRogue.Primitives.IPositionable.Position` which usually depends on the [Parent](../sadconsole.iscreenobject/#parent/) object's position.
+Most objects will implement this property based on ``SadRogue.Primitives.IPositionable.Position`` which usually depends on the [Parent](../sadconsole.iscreenobject/#parent) object's position.
 
 ### IgnoreParentPosition
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, this object should ignore it's parent position when calculating [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition/); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, this object should ignore it's parent position when calculating [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 [DataMember]
@@ -200,7 +202,7 @@ public ObservableCollection<IComponent> SadComponents { get; protected set; }
 
 ### Render(TimeSpan)
 
-Draws all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) and [Children](../sadconsole.iscreenobject/#children/).
+Draws all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) and [Children](../sadconsole.iscreenobject/#children).
 
 ```csharp title="C#"
 public virtual void Render(TimeSpan delta)
@@ -213,11 +215,11 @@ The time that has elapsed since the last call.
 
 #### Remarks
 
-Only processes if [IsVisible](../sadconsole.iscreenobject/#isvisible/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Only processes if [IsVisible](../sadconsole.iscreenobject/#isvisible) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ### Update(TimeSpan)
 
-Updates all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) and [Children](../sadconsole.iscreenobject/#children/).
+Updates all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) and [Children](../sadconsole.iscreenobject/#children).
 
 ```csharp title="C#"
 public virtual void Update(TimeSpan delta)
@@ -230,7 +232,7 @@ The time that has elapsed since the last call.
 
 #### Remarks
 
-Only processes if [IsEnabled](../sadconsole.iscreenobject/#isenabled/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Only processes if [IsEnabled](../sadconsole.iscreenobject/#isenabled) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ### ProcessKeyboard(Keyboard)
 
@@ -302,7 +304,7 @@ public virtual void OnFocused()
 
 ### OnParentChanged(IScreenObject?, IScreenObject?)
 
-Raises the [ParentChanged](../sadconsole.screenobject/#parentchanged/) event.
+Raises the [ParentChanged](../sadconsole.screenobject/#parentchanged) event.
 
 ```csharp title="C#"
 protected virtual void OnParentChanged(IScreenObject? oldParent, IScreenObject? newParent)
@@ -319,7 +321,7 @@ The new parent.
 
 ### OnPositionChanging(Point, Point)
 
-Raises the [PositionChanging](../sadconsole.screenobject/#positionchanging/) event.
+Raises the [PositionChanging](../sadconsole.screenobject/#positionchanging) event.
 
 ```csharp title="C#"
 protected virtual void OnPositionChanging(Point oldPosition, Point newPosition)
@@ -336,7 +338,7 @@ The new position.
 
 ### OnPositionChanged(Point, Point)
 
-Raises the [PositionChanged](../sadconsole.screenobject/#positionchanged/) event.
+Raises the [PositionChanged](../sadconsole.screenobject/#positionchanged) event.
 
 ```csharp title="C#"
 protected virtual void OnPositionChanged(Point oldPosition, Point newPosition)
@@ -371,7 +373,7 @@ protected virtual void OnEnabledChanged()
 
 ### UpdateAbsolutePosition()
 
-Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition/) based on the `SadRogue.Primitives.IPositionable.Position` of this instance and the [Parent](../sadconsole.iscreenobject/#parent/) instance.
+Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition) based on the ``SadRogue.Primitives.IPositionable.Position`` of this instance and the [Parent](../sadconsole.iscreenobject/#parent) instance.
 
 ```csharp title="C#"
 public virtual void UpdateAbsolutePosition()
@@ -391,7 +393,7 @@ public override string ToString()
 [string](https://learn.microsoft.com/dotnet/api/system.string/)  
 The string "ScreenObject".
 
-### GetSadComponents<TComponent>()
+### GetSadComponents\<TComponent>()
 
 Gets components of the specified types.
 
@@ -404,7 +406,7 @@ public IEnumerable<TComponent> GetSadComponents<TComponent>() where TComponent :
 [IEnumerable\<TComponent\>](https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1/)  
 The components found.
 
-### GetSadComponent<TComponent>()
+### GetSadComponent\<TComponent>()
 
 Gets the first component of the specified type.
 
@@ -417,9 +419,9 @@ public TComponent? GetSadComponent<TComponent>() where TComponent : class, IComp
 TComponent  
 The component if found, otherwise null.
 
-### HasSadComponent<TComponent>(out TComponent?)
+### HasSadComponent\<TComponent>(out TComponent?)
 
-Indicates whether or not the component exists in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) collection.
+Indicates whether or not the component exists in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) collection.
 
 ```csharp title="C#"
 public bool HasSadComponent<TComponent>(out TComponent? component) where TComponent : class, IComponent
@@ -436,7 +438,7 @@ public bool HasSadComponent<TComponent>(out TComponent? component) where TCompon
 
 ### OnSadComponentAdded(IComponent)
 
-Called when a component is added to the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) collection.
+Called when a component is added to the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) collection.
 
 ```csharp title="C#"
 protected virtual void OnSadComponentAdded(IComponent component)
@@ -450,7 +452,7 @@ The component added.
 
 ### OnSadComponentRemoved(IComponent)
 
-Called when a component is removed from the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) collection.
+Called when a component is removed from the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) collection.
 
 ```csharp title="C#"
 protected virtual void OnSadComponentRemoved(IComponent component)
@@ -464,14 +466,14 @@ The component removed.
 
 ### SortComponents()
 
-Sorts the components based on the [SortOrder](../sadconsole.components.icomponent/#sortorder/) value.
+Sorts the components based on the [SortOrder](../sadconsole.components.icomponent/#sortorder) value.
 
 ```csharp title="C#"
 public void SortComponents()
 ```
 
 
-### Components_FilterAddItem(IComponent, List<IComponent>, List<IComponent>, List<IComponent>, List<IComponent>, List<IComponent>)
+### Components_FilterAddItem(IComponent, List\<IComponent>, List\<IComponent>, List\<IComponent>, List\<IComponent>, List\<IComponent>)
 
 Adds a component to the provided collections, based on its configuration.
 
@@ -500,7 +502,7 @@ The mouse collection.
 The empty collection.
 
 
-### Components_FilterRemoveItem(IComponent, List<IComponent>, List<IComponent>, List<IComponent>, List<IComponent>, List<IComponent>)
+### Components_FilterRemoveItem(IComponent, List\<IComponent>, List\<IComponent>, List\<IComponent>, List\<IComponent>, List\<IComponent>)
 
 Removes a component to the provided collections, based on its configuration.
 
@@ -529,7 +531,7 @@ The mouse collection.
 The empty collection.
 
 
-### Components_Sort(List<IComponent>, List<IComponent>, List<IComponent>, List<IComponent>, List<IComponent>)
+### Components_Sort(List\<IComponent>, List\<IComponent>, List\<IComponent>, List\<IComponent>, List\<IComponent>)
 
 Helper to sort the components in the split collections.
 
@@ -574,7 +576,7 @@ Nothing.
 
 ### ParentChanged
 
-Raised when the [Parent](../sadconsole.iscreenobject/#parent/) property changes.
+Raised when the [Parent](../sadconsole.iscreenobject/#parent) property changes.
 
 ```csharp title="C#"
 public event EventHandler<ValueChangedEventArgs<IScreenObject?>>? ParentChanged
@@ -603,7 +605,7 @@ public event EventHandler<ValueChangedEventArgs<Point>>? PositionChanging
 [EventHandler\<ValueChangedEventArgs\<Point\>\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### IsVisibleChanged
 
-Raised when the [IsVisible](../sadconsole.iscreenobject/#isvisible/) property changes.
+Raised when the [IsVisible](../sadconsole.iscreenobject/#isvisible) property changes.
 
 ```csharp title="C#"
 public event EventHandler? IsVisibleChanged
@@ -614,7 +616,7 @@ public event EventHandler? IsVisibleChanged
 [EventHandler](https://learn.microsoft.com/dotnet/api/system.eventhandler/)
 ### IsEnabledChanged
 
-Raised when the [IsEnabled](../sadconsole.iscreenobject/#isenabled/) property changes.
+Raised when the [IsEnabled](../sadconsole.iscreenobject/#isenabled) property changes.
 
 ```csharp title="C#"
 public event EventHandler? IsEnabledChanged
@@ -625,7 +627,7 @@ public event EventHandler? IsEnabledChanged
 [EventHandler](https://learn.microsoft.com/dotnet/api/system.eventhandler/)
 ### FocusLost
 
-Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused/) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public event EventHandler? FocusLost
@@ -636,7 +638,7 @@ public event EventHandler? FocusLost
 [EventHandler](https://learn.microsoft.com/dotnet/api/system.eventhandler/)
 ### Focused
 
-Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused/) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public event EventHandler? Focused

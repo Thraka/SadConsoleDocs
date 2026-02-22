@@ -3,6 +3,8 @@ title: SelectionButton Class
 slug: reference/sadconsole.ui.controls.selectionbutton
 sidebar:
   label: SelectionButton
+editUrl: false
+description: Provides a button-like control that changes focus to a designated previous or next selection button when the arrow keys are pushed.
 ---
 ## Definition
 
@@ -68,7 +70,7 @@ public SelectionButton SetNextSelection(ref SelectionButton nextSelection, bool 
 The selection button to be used as next.
 
 `setPreviousOnNext` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Sets the PreviousSelection property on the <code class="paramref">nextSelection</code> instance to current selection button. Defaults to true.
+Sets the PreviousSelection property on the `nextSelection` instance to current selection button. Defaults to true.
 
 #### Returns
 

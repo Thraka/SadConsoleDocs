@@ -3,6 +3,8 @@ title: ScreenSurface Class
 slug: reference/sadconsole.screensurface
 sidebar:
   label: ScreenSurface
+editUrl: false
+description: An object that renders a `SadConsole.ICellSurface`.
 ---
 ## Definition
 
@@ -59,7 +61,7 @@ The initial cells to seed the surface.
 
 ### ScreenSurface(int, int, int, int)
 
-Creates a new surface with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new surface with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public ScreenSurface(int viewWidth, int viewHeight, int totalWidth, int totalHeight)
@@ -80,7 +82,7 @@ The total width of the surface in cells.
 The total height of the surface in cells.
 
 
-### ScreenSurface(IGridView<ColoredGlyphBase>, int, int)
+### ScreenSurface(IGridView\<ColoredGlyphBase>, int, int)
 
 Creates a new surface from a grid view. The cells between this object and the grid view are shared.
 
@@ -94,15 +96,15 @@ public ScreenSurface(IGridView<ColoredGlyphBase> surface, int visibleWidth = 0, 
 The surface to use as the source of cells.
 
 `visibleWidth` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Optional view width. If <code>0</code>, the view width matches the width of the surface.
+Optional view width. If `0`, the view width matches the width of the surface.
 
 `visibleHeight` [int](https://learn.microsoft.com/dotnet/api/system.int32/)  
-Optional view height. If <code>0</code>, the view width matches the height of the surface.
+Optional view height. If `0`, the view width matches the height of the surface.
 
 
 ### ScreenSurface(int, int, int, int, ColoredGlyphBase[]?)
 
-Creates a new surface with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new surface with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public ScreenSurface(int viewWidth, int viewHeight, int totalWidth, int totalHeight, ColoredGlyphBase[]? initialCells)
@@ -151,7 +153,7 @@ The font size.
 
 ### MouseState_EnteredWithButtonDown
 
-A cached value determined by [OnMouseEnter(MouseScreenObjectState)](../sadconsole.screensurface/#/). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the mouse entered the surface bounds with the mouse button down.
+A cached value determined by [OnMouseEnter(MouseScreenObjectState)](../sadconsole.screensurface/#onmouseentermousescreenobjectstate). <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the mouse entered the surface bounds with the mouse button down.
 
 ```csharp title="C#"
 protected bool MouseState_EnteredWithButtonDown
@@ -169,7 +171,7 @@ protected bool IsMouseOver
 
 ### ForceRendererRefresh
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the [Renderer](../sadconsole.iscreensurface/#renderer/) to refresh the backing texture with the latest state of the object.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the [Renderer](../sadconsole.iscreensurface/#renderer) to refresh the backing texture with the latest state of the object.
 
 ```csharp title="C#"
 public bool ForceRendererRefresh { get; set; }
@@ -195,7 +197,7 @@ public IRenderer? Renderer { get; protected set; }
 
 ### QuietSurfaceHandling
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, prevents the [Surface](../sadconsole.screensurface/#surface/) property from raising events and virtual methods when the surface changes.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, prevents the [Surface](../sadconsole.screensurface/#surface) property from raising events and virtual methods when the surface changes.
 
 ```csharp title="C#"
 [DataMember]
@@ -212,7 +214,7 @@ public ICellSurface Surface { get; set; }
 
 ### IsDirty
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that the [Surface](../sadconsole.screensurface/#surface/) needs to be redrawn; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates that the [Surface](../sadconsole.screensurface/#surface) needs to be redrawn; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool IsDirty { get; set; }
@@ -228,7 +230,7 @@ public IFont Font { get; set; }
 
 ### FontSize
 
-The size of the [Font](../sadconsole.iscreensurface/#font/) cells applied to the object when rendering.
+The size of the [Font](../sadconsole.iscreensurface/#font) cells applied to the object when rendering.
 
 ```csharp title="C#"
 public Point FontSize { get; set; }
@@ -252,7 +254,7 @@ public Rectangle AbsoluteArea { get; }
 
 ### UsePixelPositioning
 
-Treats the `SadRogue.Primitives.IPositionable.Position` of the object as if it is pixels and not cells.
+Treats the ``SadRogue.Primitives.IPositionable.Position`` of the object as if it is pixels and not cells.
 
 ```csharp title="C#"
 public bool UsePixelPositioning { get; set; }
@@ -325,7 +327,7 @@ public bool MoveToFrontOnMouseClick { get; set; }
 
 ### FocusOnMouseClick
 
-When true, this object will set [IsFocused](../sadconsole.iscreenobject/#isfocused/) to true when the mouse is clicked.
+When true, this object will set [IsFocused](../sadconsole.iscreenobject/#isfocused) to true when the mouse is clicked.
 
 ```csharp title="C#"
 [DataMember]
@@ -357,7 +359,7 @@ The maximum width of the surface.
 The maximum height of the surface.
 
 `clear` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the <xref href="SadConsole.ICellSurface.DefaultForeground" data-throw-if-not-resolved="false"></xref>, <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref> and glyph 0.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the [DefaultForeground](../sadconsole.icellsurface/#defaultforeground), [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) and glyph 0.
 
 
 ### Resize(int, int, bool)
@@ -377,12 +379,12 @@ The width of the surface and view.
 The height of the surface and view.
 
 `clear` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the <xref href="SadConsole.ICellSurface.DefaultForeground" data-throw-if-not-resolved="false"></xref>, <xref href="SadConsole.ICellSurface.DefaultBackground" data-throw-if-not-resolved="false"></xref> and glyph 0.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, resets every cell to the [DefaultForeground](../sadconsole.icellsurface/#defaultforeground), [DefaultBackground](../sadconsole.icellsurface/#defaultbackground) and glyph 0.
 
 
 ### UpdateAbsolutePosition()
 
-Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition/) based on the `SadRogue.Primitives.IPositionable.Position` of this instance and the [Parent](../sadconsole.iscreenobject/#parent/) instance.
+Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition) based on the ``SadRogue.Primitives.IPositionable.Position`` of this instance and the [Parent](../sadconsole.iscreenobject/#parent) instance.
 
 ```csharp title="C#"
 public override void UpdateAbsolutePosition()
@@ -391,7 +393,7 @@ public override void UpdateAbsolutePosition()
 
 ### Render(TimeSpan)
 
-Draws the [Surface](../sadconsole.screensurface/#surface/) and all [SadComponents](../sadconsole.screenobject/#sadcomponents/) and [Children](../sadconsole.screenobject/#children/).
+Draws the [Surface](../sadconsole.screensurface/#surface) and all [SadComponents](../sadconsole.screenobject/#sadcomponents) and [Children](../sadconsole.screenobject/#children).
 
 ```csharp title="C#"
 public override void Render(TimeSpan delta)
@@ -405,7 +407,7 @@ The time that has elapsed since the last call.
 
 ### Update(TimeSpan)
 
-Updates the [Surface](../sadconsole.screensurface/#surface/) effects and all [SadComponents](../sadconsole.screenobject/#sadcomponents/) and [Children](../sadconsole.screenobject/#children/).
+Updates the [Surface](../sadconsole.screensurface/#surface) effects and all [SadComponents](../sadconsole.screenobject/#sadcomponents) and [Children](../sadconsole.screenobject/#children).
 
 ```csharp title="C#"
 public override void Update(TimeSpan delta)
@@ -419,7 +421,7 @@ The time that has elapsed since this method was last called.
 
 ### OnIsDirtyChanged()
 
-Called when the [IsDirty](../sadconsole.screensurface/#isdirty/) property changes.
+Called when the [IsDirty](../sadconsole.screensurface/#isdirty) property changes.
 
 ```csharp title="C#"
 protected virtual void OnIsDirtyChanged()
@@ -428,7 +430,7 @@ protected virtual void OnIsDirtyChanged()
 
 ### OnFontChanged(IFont, Point)
 
-Called when the [Font](../sadconsole.screensurface/#font/) or [FontSize](../sadconsole.screensurface/#fontsize/) property changes.
+Called when the [Font](../sadconsole.screensurface/#font) or [FontSize](../sadconsole.screensurface/#fontsize) property changes.
 
 ```csharp title="C#"
 protected virtual void OnFontChanged(IFont oldFont, Point oldFontSize)
@@ -445,7 +447,7 @@ The font size prior to the change.
 
 ### OnSurfaceChanged(ICellSurface)
 
-Called when the [Surface](../sadconsole.screensurface/#surface/) property is changed.
+Called when the [Surface](../sadconsole.screensurface/#surface) property is changed.
 
 ```csharp title="C#"
 protected virtual void OnSurfaceChanged(ICellSurface oldSurface)
@@ -459,7 +461,7 @@ The previous surface.
 
 ### OnRendererChanged()
 
-Called when the [Renderer](../sadconsole.screensurface/#renderer/) property is changed.
+Called when the [Renderer](../sadconsole.screensurface/#renderer) property is changed.
 
 ```csharp title="C#"
 protected virtual void OnRendererChanged()
@@ -501,7 +503,7 @@ protected virtual void Dispose(bool disposing)
 
 ### ~ScreenSurface()
 
-Disposes [Renderer](../sadconsole.screensurface/#renderer/).
+Disposes [Renderer](../sadconsole.screensurface/#renderer).
 
 ```csharp title="C#"
 protected ~ScreenSurface()
@@ -517,7 +519,7 @@ public void Dispose()
 
 ### OnMouseEnter(MouseScreenObjectState)
 
-Raises the [MouseEnter](../sadconsole.screensurface/#mouseenter/) event.
+Raises the [MouseEnter](../sadconsole.screensurface/#mouseenter) event.
 
 ```csharp title="C#"
 protected virtual void OnMouseEnter(MouseScreenObjectState state)
@@ -531,7 +533,7 @@ Current mouse state in relation to this console.
 
 ### OnMouseExit(MouseScreenObjectState)
 
-Raises the [MouseExit](../sadconsole.screensurface/#mouseexit/) event.
+Raises the [MouseExit](../sadconsole.screensurface/#mouseexit) event.
 
 ```csharp title="C#"
 protected virtual void OnMouseExit(MouseScreenObjectState state)
@@ -545,7 +547,7 @@ Current mouse state in relation to this console.
 
 ### OnMouseMove(MouseScreenObjectState)
 
-Raises the [MouseMove](../sadconsole.screensurface/#mousemove/) event.
+Raises the [MouseMove](../sadconsole.screensurface/#mousemove) event.
 
 ```csharp title="C#"
 protected virtual void OnMouseMove(MouseScreenObjectState state)
@@ -559,7 +561,7 @@ Current mouse state in relation to this console.
 
 ### OnMouseLeftClicked(MouseScreenObjectState)
 
-Raises the [MouseButtonClicked](../sadconsole.screensurface/#mousebuttonclicked/) event. Possibly moves the console to the top of it's parent's children collection.
+Raises the [MouseButtonClicked](../sadconsole.screensurface/#mousebuttonclicked) event. Possibly moves the console to the top of it's parent's children collection.
 
 ```csharp title="C#"
 protected virtual void OnMouseLeftClicked(MouseScreenObjectState state)
@@ -573,7 +575,7 @@ Current mouse state in relation to this console.
 
 ### OnRightMouseClicked(MouseScreenObjectState)
 
-Raises the [MouseButtonClicked](../sadconsole.screensurface/#mousebuttonclicked/) event.
+Raises the [MouseButtonClicked](../sadconsole.screensurface/#mousebuttonclicked) event.
 
 ```csharp title="C#"
 protected virtual void OnRightMouseClicked(MouseScreenObjectState state)

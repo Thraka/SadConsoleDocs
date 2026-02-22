@@ -3,6 +3,8 @@ title: ParseCommandSetGlyph Class
 slug: reference/sadconsole.stringparser.parsecommandsetglyph
 sidebar:
   label: ParseCommandSetGlyph
+editUrl: false
+description: Prints a glyph.
 ---
 ## Definition
 
@@ -66,7 +68,7 @@ public int RandomGlyphMax { get; set; }
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

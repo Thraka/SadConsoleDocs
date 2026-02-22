@@ -3,6 +3,8 @@ title: ObjectComponentMove Class
 slug: reference/sadconsole.components.objectcomponentmove
 sidebar:
   label: ObjectComponentMove
+editUrl: false
+description: Moves a `SadConsole.IScreenObject` with the arrow keys.
 ---
 ## Definition
 
@@ -20,7 +22,7 @@ Implements [IComponent](../sadconsole.components.icomponent/)
 
 ### ObjectComponentMove()
 
-Creates a new instance of the object with an [Amount](../sadconsole.components.objectcomponentmove/#amount/) of 1.
+Creates a new instance of the object with an [Amount](../sadconsole.components.objectcomponentmove/#amount) of 1.
 
 ```csharp title="C#"
 public ObjectComponentMove()
@@ -39,7 +41,7 @@ public int Amount { get; set; }
 
 ### LeftKey
 
-The key to move the object `SadRogue.Primitives.Direction.Left` by [Amount](../sadconsole.components.objectcomponentmove/#amount/).
+The key to move the object ``SadRogue.Primitives.Direction.Left`` by [Amount](../sadconsole.components.objectcomponentmove/#amount).
 
 ```csharp title="C#"
 public Keys LeftKey { get; set; }
@@ -47,7 +49,7 @@ public Keys LeftKey { get; set; }
 
 ### RightKey
 
-The key to move the object `SadRogue.Primitives.Direction.Right` by [Amount](../sadconsole.components.objectcomponentmove/#amount/).
+The key to move the object ``SadRogue.Primitives.Direction.Right`` by [Amount](../sadconsole.components.objectcomponentmove/#amount).
 
 ```csharp title="C#"
 public Keys RightKey { get; set; }
@@ -55,7 +57,7 @@ public Keys RightKey { get; set; }
 
 ### UpKey
 
-The key to move the object `SadRogue.Primitives.Direction.Up` by [Amount](../sadconsole.components.objectcomponentmove/#amount/).
+The key to move the object ``SadRogue.Primitives.Direction.Up`` by [Amount](../sadconsole.components.objectcomponentmove/#amount).
 
 ```csharp title="C#"
 public Keys UpKey { get; set; }
@@ -63,7 +65,7 @@ public Keys UpKey { get; set; }
 
 ### DownKey
 
-The key to move the object `SadRogue.Primitives.Direction.Down` by [Amount](../sadconsole.components.objectcomponentmove/#amount/).
+The key to move the object ``SadRogue.Primitives.Direction.Down`` by [Amount](../sadconsole.components.objectcomponentmove/#amount).
 
 ```csharp title="C#"
 public Keys DownKey { get; set; }
@@ -73,7 +75,7 @@ public Keys DownKey { get; set; }
 
 ### ProcessKeyboard(IScreenObject, Keyboard, out bool)
 
-Moves the `host` by [Amount](../sadconsole.components.objectcomponentmove/#amount/) when the appropriate key is pressed.
+Moves the `host` by [Amount](../sadconsole.components.objectcomponentmove/#amount) when the appropriate key is pressed.
 
 ```csharp title="C#"
 public override void ProcessKeyboard(IScreenObject host, Keyboard keyboard, out bool handled)

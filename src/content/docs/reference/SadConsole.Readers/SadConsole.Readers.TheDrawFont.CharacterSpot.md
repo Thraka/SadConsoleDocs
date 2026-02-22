@@ -3,6 +3,8 @@ title: TheDrawFont.CharacterSpot Struct
 slug: reference/sadconsole.readers.thedrawfont.characterspot
 sidebar:
   label: TheDrawFont.CharacterSpot
+editUrl: false
+description: A individual glyph character.
 ---
 ## Definition
 

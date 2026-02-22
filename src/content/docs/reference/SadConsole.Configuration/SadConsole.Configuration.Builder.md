@@ -3,6 +3,8 @@ title: Builder Class
 slug: reference/sadconsole.configuration.builder
 sidebar:
   label: Builder
+editUrl: false
+description: Composes a game host object.
 ---
 ## Definition
 

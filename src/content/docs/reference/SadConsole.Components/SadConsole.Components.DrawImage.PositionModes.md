@@ -3,6 +3,8 @@ title: DrawImage.PositionModes Enum
 slug: reference/sadconsole.components.drawimage.positionmodes
 sidebar:
   label: DrawImage.PositionModes
+editUrl: false
+description: Indicates how positioning is intepreted.
 ---
 ## Definition
 

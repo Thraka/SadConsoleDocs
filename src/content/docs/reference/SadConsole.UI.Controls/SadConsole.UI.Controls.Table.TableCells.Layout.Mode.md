@@ -3,6 +3,8 @@ title: Table.TableCells.Layout.Mode Enum
 slug: reference/sadconsole.ui.controls.table.tablecells.layout.mode
 sidebar:
   label: Table.TableCells.Layout.Mode
+editUrl: false
+description: Defines several visual modes
 ---
 ## Definition
 

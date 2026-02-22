@@ -3,10 +3,12 @@ title: SplashScreenConfig Class
 slug: reference/sadconsole.configuration.splashscreenconfig
 sidebar:
   label: SplashScreenConfig
+editUrl: false
+description: A config object that adds splash screen objects with the `SadConsole.GameHost.SetSplashScreens(SadConsole.IScreenSurface%5b%5d)` method.
 ---
 ## Definition
 
-A config object that adds splash screen objects with the `SadConsole.GameHost.SetSplashScreens(SadConsole.IScreenSurface%5b%5d)` method.
+A config object that adds splash screen objects with the [SetSplashScreens(params IScreenSurface[])](../sadconsole.gamehost/#setsplashscreensparams-iscreensurface) method.
 
 ```csharp title="C#"
 public class SplashScreenConfig : IConfigurator

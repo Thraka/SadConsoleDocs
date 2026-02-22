@@ -3,6 +3,7 @@ title: Quad Class
 slug: reference/sadconsole.easingfunctions.quad
 sidebar:
   label: Quad
+editUrl: false
 ---
 ## Definition
 

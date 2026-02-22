@@ -3,6 +3,8 @@ title: Serializer Class
 slug: reference/sadconsole.serializer
 sidebar:
   label: Serializer
+editUrl: false
+description: Common serialization tasks for SadConsole.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ### Settings
 
-The settings to use during `SadConsole.Serializer.Save``1(``0%2cSystem.String%2cSystem.Boolean%2cNewtonsoft.Json.JsonSerializerSettings)` and `SadConsole.Serializer.Load``1(System.String%2cSystem.Boolean%2cNewtonsoft.Json.JsonSerializerSettings)`.
+The settings to use during [Save\<T\>(T, string, bool, JsonSerializerSettings)](../sadconsole.serializer/#savett-string-bool-jsonserializersettings) and [Load\<T\>(string, bool, JsonSerializerSettings)](../sadconsole.serializer/#loadtstring-bool-jsonserializersettings).
 
 ```csharp title="C#"
 public static JsonSerializerSettings Settings { get; set; }
@@ -26,9 +28,9 @@ public static JsonSerializerSettings Settings { get; set; }
 
 ## Methods
 
-### Serialize<T>(T)
+### Serialize\<T>(T)
 
-A shortcut for serialization that uses `Newtonsoft.Json.JsonConvert.SerializeObject(System.Object%2cSystem.Type%2cNewtonsoft.Json.JsonSerializerSettings)` with the [Settings](../sadconsole.serializer/#settings/) property defined by this class.
+A shortcut for serialization that uses [SerializeObject(object, Type, JsonSerializerSettings)](https://learn.microsoft.com/dotnet/api/system.object/) with the [Settings](../sadconsole.serializer/#settings) property defined by this class.
 
 ```csharp title="C#"
 public static string Serialize<T>(T instance)
@@ -44,9 +46,9 @@ The object to serialize.
 [string](https://learn.microsoft.com/dotnet/api/system.string/)  
 A json encoded string.
 
-### Deserialize<T>(string)
+### Deserialize\<T>(string)
 
-A shortcut for serialization that uses `Newtonsoft.Json.JsonConvert.DeserializeObject(System.String%2cSystem.Type%2cNewtonsoft.Json.JsonSerializerSettings)` with the [Settings](../sadconsole.serializer/#settings/) property defined by this class.
+A shortcut for serialization that uses [DeserializeObject(string, Type, JsonSerializerSettings)](https://learn.microsoft.com/dotnet/api/system.string/) with the [Settings](../sadconsole.serializer/#settings) property defined by this class.
 
 ```csharp title="C#"
 public static T Deserialize<T>(string json)
@@ -62,7 +64,7 @@ The json string to create an object from.
 T  
 An object created from the `json` parameter.
 
-### Save<T>(T, string, bool, JsonSerializerSettings?)
+### Save\<T>(T, string, bool, JsonSerializerSettings?)
 
 Serializes the `instance` to the specified file.
 
@@ -79,13 +81,13 @@ The object to serialize.
 The file to save the object to.
 
 `compress` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, uses GZIP compression on the json string saved to the <code class="paramref">file</code>
+When true, uses GZIP compression on the json string saved to the `file`
 
 `settings` Newtonsoft.Json.JsonSerializerSettings  
-Optional settings to use during serialization. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, uses the <xref href="SadConsole.Serializer.Settings" data-throw-if-not-resolved="false"></xref> property.
+Optional settings to use during serialization. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, uses the [Settings](../sadconsole.serializer/#settings) property.
 
 
-### Load<T>(string, bool, JsonSerializerSettings?)
+### Load\<T>(string, bool, JsonSerializerSettings?)
 
 Deserializes a new instance of `T` from the specified file.
 
@@ -99,17 +101,17 @@ public static T Load<T>(string file, bool isCompressed, JsonSerializerSettings? 
 The file to load from.
 
 `isCompressed` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, indicates that the json <code class="paramref">file</code> should be decompressed with GZIP compression.
+When true, indicates that the json `file` should be decompressed with GZIP compression.
 
 `settings` Newtonsoft.Json.JsonSerializerSettings  
-Optional settings to use during deserialization. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, uses the <xref href="SadConsole.Serializer.Settings" data-throw-if-not-resolved="false"></xref> property.
+Optional settings to use during deserialization. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, uses the [Settings](../sadconsole.serializer/#settings) property.
 
 #### Returns
 
 T  
 A new object instance.
 
-### TryLoad<T>(string, bool, out T?, JsonSerializerSettings?)
+### TryLoad\<T>(string, bool, out T?, JsonSerializerSettings?)
 
 Tries to load the file, returning it as the specified tyupe.
 
@@ -123,13 +125,13 @@ public static bool TryLoad<T>(string file, bool isCompressed, out T? obj, JsonSe
 The file to load from.
 
 `isCompressed` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, indicates that the json <code class="paramref">file</code> should be decompressed with GZIP compression.
+When true, indicates that the json `file` should be decompressed with GZIP compression.
 
 `obj` T  
 The loaded object.
 
 `settings` Newtonsoft.Json.JsonSerializerSettings  
-Optional settings to use during deserialization. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, uses the <xref href="SadConsole.Serializer.Settings" data-throw-if-not-resolved="false"></xref> property.
+Optional settings to use during deserialization. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, uses the [Settings](../sadconsole.serializer/#settings) property.
 
 #### Returns
 

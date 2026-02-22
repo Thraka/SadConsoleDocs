@@ -3,6 +3,8 @@ title: KeyboardHandledKeyEventArgs Class
 slug: reference/sadconsole.input.keyboardhandledkeyeventargs
 sidebar:
   label: KeyboardHandledKeyEventArgs
+editUrl: false
+description: Event handler to preview key presses and cancel them.
 ---
 ## Definition
 

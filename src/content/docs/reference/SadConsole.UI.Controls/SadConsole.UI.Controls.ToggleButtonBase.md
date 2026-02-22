@@ -3,6 +3,8 @@ title: ToggleButtonBase Class
 slug: reference/sadconsole.ui.controls.togglebuttonbase
 sidebar:
   label: ToggleButtonBase
+editUrl: false
+description: Base class for toggle button controls, such as `SadConsole.UI.Controls.CheckBox` and `SadConsole.UI.Controls.RadioButton`.
 ---
 ## Definition
 
@@ -52,7 +54,7 @@ Gets or sets the selected state of the radio button.
 ```csharp title="C#"
 public bool IsSelected { get; set; }
 ```
-## Remarks
+#### Remarks
 
 Radio buttons within the same group will set their IsSelected property to the opposite of this radio button when you set this property.
 
@@ -60,7 +62,7 @@ Radio buttons within the same group will set their IsSelected property to the op
 
 ### OnIsSelected()
 
-Raises the [IsSelectedChanged](../sadconsole.ui.controls.togglebuttonbase/#isselectedchanged/) event.
+Raises the [IsSelectedChanged](../sadconsole.ui.controls.togglebuttonbase/#isselectedchanged) event.
 
 ```csharp title="C#"
 protected virtual void OnIsSelected()

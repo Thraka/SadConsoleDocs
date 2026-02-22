@@ -3,10 +3,12 @@ title: ListBoxItemColorTheme Class
 slug: reference/sadconsole.ui.controls.listboxitemcolortheme
 sidebar:
   label: ListBoxItemColorTheme
+editUrl: false
+description: A theme for a `SadConsole.UI.Controls.ListBox` that displays a `SadRogue.Primitives.Color` object.
 ---
 ## Definition
 
-A theme for a [ListBox](../sadconsole.ui.controls.listbox/) that displays a `SadRogue.Primitives.Color` object.
+A theme for a [ListBox](../sadconsole.ui.controls.listbox/) that displays a ``SadRogue.Primitives.Color`` object.
 
 ```csharp title="C#"
 [DataContract]

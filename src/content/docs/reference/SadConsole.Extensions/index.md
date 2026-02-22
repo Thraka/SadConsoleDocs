@@ -3,6 +3,7 @@ title: SadConsole.Extensions
 slug: reference/sadconsole.extensions
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

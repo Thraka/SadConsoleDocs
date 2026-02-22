@@ -3,6 +3,7 @@ title: ImGuiSC.FontGlyph Class
 slug: reference/hexa.net.imgui.sc.imguisc.fontglyph
 sidebar:
   label: ImGuiSC.FontGlyph
+editUrl: false
 ---
 ## Definition
 

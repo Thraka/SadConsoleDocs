@@ -3,10 +3,12 @@ title: TextureConvertBackgroundStyle Enum
 slug: reference/sadconsole.textureconvertbackgroundstyle
 sidebar:
   label: TextureConvertBackgroundStyle
+editUrl: false
+description: The style applied when `SadConsole.TextureConvertMode.Background` is set.
 ---
 ## Definition
 
-The style applied when [Background](../sadconsole.textureconvertmode/#background/) is set.
+The style applied when [Background](../sadconsole.textureconvertmode/#background) is set.
 
 ```csharp title="C#"
 public enum TextureConvertBackgroundStyle

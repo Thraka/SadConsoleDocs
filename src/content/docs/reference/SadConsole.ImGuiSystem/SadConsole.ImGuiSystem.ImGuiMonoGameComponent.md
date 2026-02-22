@@ -3,6 +3,7 @@ title: ImGuiMonoGameComponent Class
 slug: reference/sadconsole.imguisystem.imguimonogamecomponent
 sidebar:
   label: ImGuiMonoGameComponent
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: Helpers Class
 slug: reference/sadconsole.helpers
 sidebar:
   label: Helpers
+editUrl: false
+description: General code helpers.
 ---
 ## Definition
 

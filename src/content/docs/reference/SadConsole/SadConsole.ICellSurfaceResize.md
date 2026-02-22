@@ -3,6 +3,8 @@ title: ICellSurfaceResize Interface
 slug: reference/sadconsole.icellsurfaceresize
 sidebar:
   label: ICellSurfaceResize
+editUrl: false
+description: Adds a method to support resizing a surface.
 ---
 ## Definition
 

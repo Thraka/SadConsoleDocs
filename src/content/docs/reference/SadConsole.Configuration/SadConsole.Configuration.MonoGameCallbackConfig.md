@@ -3,6 +3,7 @@ title: MonoGameCallbackConfig Class
 slug: reference/sadconsole.configuration.monogamecallbackconfig
 sidebar:
   label: MonoGameCallbackConfig
+editUrl: false
 ---
 ## Definition
 

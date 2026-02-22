@@ -3,6 +3,7 @@ title: SadConsole.UI
 slug: reference/sadconsole.ui
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 
@@ -11,7 +12,7 @@ sidebar:
 | [AdjustableColor](../sadconsole.ui.adjustablecolor/) | A color that can be adjusted by brightness and mapped to a [Colors](../sadconsole.ui.colors/) color. |
 | [Border](../sadconsole.ui.border/) | Creates a 3D border around a surface. |
 | [Colors](../sadconsole.ui.colors/) | Default colors used by control themes. |
-| [ControlHost](../sadconsole.ui.controlhost/) | Adds the ability for a host to contain and display controls from [SadConsole.UI.Controls](../sadconsole/). |
+| [ControlHost](../sadconsole.ui.controlhost/) | Adds the ability for a host to contain and display controls from [SadConsole.UI.Controls](../sadconsole.ui.controls/). |
 | [ControlsConsole](../sadconsole.ui.controlsconsole/) | A basic console that can contain controls. |
 | [KeyPressEventArgs](../sadconsole.ui.keypresseventargs/) | Event arguments to indicate that a key is being pressed on a control that allows keyboard key cancelling. |
 | [NamedColor](../sadconsole.ui.namedcolor/) | A color associated with a name. |

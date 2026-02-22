@@ -3,6 +3,8 @@ title: ILayeredData Interface
 slug: reference/sadconsole.renderers.ilayereddata
 sidebar:
   label: ILayeredData
+editUrl: false
+description: Provides the methods and properties used by the LayeredSurface renderer.
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: ControlBase.ControlMouseState Class
 slug: reference/sadconsole.ui.controls.controlbase.controlmousestate
 sidebar:
   label: ControlBase.ControlMouseState
+editUrl: false
+description: Mouse state based on a specific control.
 ---
 ## Definition
 
@@ -38,7 +40,7 @@ The original mouse state sent to the control.
 
 ### ControlMouseState(ControlBase, MouseScreenObjectState)
 
-Creates an instance of the mouse control state class and infers the [MousePosition](../sadconsole.ui.controls.controlbase.controlmousestate/#mouseposition/) from the control and state.
+Creates an instance of the mouse control state class and infers the [MousePosition](../sadconsole.ui.controls.controlbase.controlmousestate/#mouseposition) from the control and state.
 
 ```csharp title="C#"
 public ControlMouseState(ControlBase control, MouseScreenObjectState originalMouseState)
@@ -81,7 +83,7 @@ public MouseScreenObjectState OriginalMouseState { get; set; }
 
 ### IsMouseOver
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates the mouse is over the [Control](../sadconsole.ui.controls.controlbase.controlmousestate/#control/); othwerise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates the mouse is over the [Control](../sadconsole.ui.controls.controlbase.controlmousestate/#control); othwerise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool IsMouseOver { get; set; }

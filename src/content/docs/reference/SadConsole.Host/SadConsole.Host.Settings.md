@@ -3,6 +3,8 @@ title: Settings Class
 slug: reference/sadconsole.host.settings
 sidebar:
   label: Settings
+editUrl: false
+description: A settings class usually used when creating the host object.
 ---
 ## Definition
 

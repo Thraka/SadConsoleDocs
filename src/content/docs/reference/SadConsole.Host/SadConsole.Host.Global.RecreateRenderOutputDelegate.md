@@ -3,10 +3,12 @@ title: Global.RecreateRenderOutputDelegate Delegate
 slug: reference/sadconsole.host.global.recreaterenderoutputdelegate
 sidebar:
   label: Global.RecreateRenderOutputDelegate
+editUrl: false
+description: Regenerates the `SadConsole.Host.Global.RenderOutput` if the desired size doesn't match the current size.
 ---
 ## Definition
 
-Regenerates the [RenderOutput](../sadconsole.host.global/#renderoutput/) if the desired size doesn't match the current size.
+Regenerates the [RenderOutput](../sadconsole.host.global/#renderoutput) if the desired size doesn't match the current size.
 
 ```csharp title="C#"
 public delegate void Global.RecreateRenderOutputDelegate(int width, int height)

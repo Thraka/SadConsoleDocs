@@ -3,6 +3,8 @@ title: Table.Cell.Options.VerticalAlign Enum
 slug: reference/sadconsole.ui.controls.table.cell.options.verticalalign
 sidebar:
   label: Table.Cell.Options.VerticalAlign
+editUrl: false
+description: Alignment enum for the vertical axis
 ---
 ## Definition
 

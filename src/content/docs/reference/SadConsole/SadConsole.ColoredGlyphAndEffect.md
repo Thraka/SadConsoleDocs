@@ -3,6 +3,8 @@ title: ColoredGlyphAndEffect Class
 slug: reference/sadconsole.coloredglyphandeffect
 sidebar:
   label: ColoredGlyphAndEffect
+editUrl: false
+description: A `SadConsole.ColoredGlyphBase` with a `SadConsole.Effects.ICellEffect`.
 ---
 ## Definition
 
@@ -51,7 +53,7 @@ public static ColoredGlyphAndEffect FromColoredGlyph(ColoredGlyphBase glyph, ICe
 The glyph.
 
 `effect` [ICellEffect](../sadconsole.effects.icelleffect/)  
-When provided, sets the <xref href="SadConsole.ColoredGlyphAndEffect.Effect" data-throw-if-not-resolved="false"></xref>.
+When provided, sets the [Effect](../sadconsole.coloredglyphandeffect/#effect).
 
 #### Returns
 
@@ -71,8 +73,7 @@ public void CopyAppearanceTo(ColoredGlyphAndEffect cell, bool deepCopy = true)
 The target cell to copy to.
 
 `deepCopy` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old
-decorator array reference is moved directly.
+Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old decorator array reference is moved directly.
 
 
 ### CopyAppearanceFrom(ColoredGlyphAndEffect, bool)
@@ -89,8 +90,7 @@ public void CopyAppearanceFrom(ColoredGlyphAndEffect cell, bool deepCopy = true)
 The target cell to copy from.
 
 `deepCopy` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old
-decorator array reference is moved directly.
+Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old decorator array reference is moved directly.
 
 
 ### Clear()

@@ -3,6 +3,8 @@ title: SurfaceViewer.ScrollBarModes Enum
 slug: reference/sadconsole.ui.controls.surfaceviewer.scrollbarmodes
 sidebar:
   label: SurfaceViewer.ScrollBarModes
+editUrl: false
+description: Determines how the control draws the scroll bars.
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: ControlStates Enum
 slug: reference/sadconsole.ui.controls.controlstates
 sidebar:
   label: ControlStates
+editUrl: false
+description: Indicates the state of a control.
 ---
 ## Definition
 

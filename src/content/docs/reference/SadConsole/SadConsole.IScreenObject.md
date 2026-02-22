@@ -3,6 +3,8 @@ title: IScreenObject Interface
 slug: reference/sadconsole.iscreenobject
 sidebar:
   label: IScreenObject
+editUrl: false
+description: A generic object processed by SadConsole. Provides parent/child, components, position, and input callbacks.
 ---
 ## Definition
 
@@ -17,7 +19,7 @@ public interface IScreenObject : IPositionable, IComponentHost
 
 ### SortOrder
 
-Indicates the sorting order this object should use when parented. Sorting is a manual operation on the [Children](../sadconsole.iscreenobject/#children/) collection.
+Indicates the sorting order this object should use when parented. Sorting is a manual operation on the [Children](../sadconsole.iscreenobject/#children) collection.
 
 ```csharp title="C#"
 uint SortOrder { get; set; }
@@ -33,18 +35,18 @@ FocusBehavior FocusedMode { get; set; }
 
 ### AbsolutePosition
 
-A position that's based on the current `SadRogue.Primitives.IPositionable.Position`, as interpreted by the implementing class, in pixels.
+A position that's based on the current ``SadRogue.Primitives.IPositionable.Position``, as interpreted by the implementing class, in pixels.
 
 ```csharp title="C#"
 Point AbsolutePosition { get; }
 ```
-## Remarks
+#### Remarks
 
-Most objects will implement this property based on `SadRogue.Primitives.IPositionable.Position` which usually depends on the [Parent](../sadconsole.iscreenobject/#parent/) object's position.
+Most objects will implement this property based on ``SadRogue.Primitives.IPositionable.Position`` which usually depends on the [Parent](../sadconsole.iscreenobject/#parent) object's position.
 
 ### IgnoreParentPosition
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, this object should ignore it's parent position when calculating [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition/); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, this object should ignore it's parent position when calculating [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 bool IgnoreParentPosition { get; set; }
@@ -118,7 +120,7 @@ bool UseMouse { get; set; }
 
 ### Render(TimeSpan)
 
-Draws all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) and [Children](../sadconsole.iscreenobject/#children/).
+Draws all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) and [Children](../sadconsole.iscreenobject/#children).
 
 ```csharp title="C#"
 void Render(TimeSpan delta)
@@ -131,7 +133,7 @@ The time that has elapsed since the last call.
 
 #### Remarks
 
-Only processes if [IsVisible](../sadconsole.iscreenobject/#isvisible/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Only processes if [IsVisible](../sadconsole.iscreenobject/#isvisible) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ### OnFocused()
 
@@ -203,7 +205,7 @@ The current state of the mouse based on this object.
 
 ### Update(TimeSpan)
 
-Updates all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) and [Children](../sadconsole.iscreenobject/#children/).
+Updates all [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) and [Children](../sadconsole.iscreenobject/#children).
 
 ```csharp title="C#"
 void Update(TimeSpan delta)
@@ -216,11 +218,11 @@ The time that has elapsed since the last call.
 
 #### Remarks
 
-Only processes if [IsEnabled](../sadconsole.iscreenobject/#isenabled/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Only processes if [IsEnabled](../sadconsole.iscreenobject/#isenabled) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ### UpdateAbsolutePosition()
 
-Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition/) based on the `SadRogue.Primitives.IPositionable.Position` of this instance and the [Parent](../sadconsole.iscreenobject/#parent/) instance.
+Sets a value for [AbsolutePosition](../sadconsole.iscreenobject/#absoluteposition) based on the ``SadRogue.Primitives.IPositionable.Position`` of this instance and the [Parent](../sadconsole.iscreenobject/#parent) instance.
 
 ```csharp title="C#"
 void UpdateAbsolutePosition()
@@ -231,7 +233,7 @@ void UpdateAbsolutePosition()
 
 ### IsEnabledChanged
 
-Raised when the [IsEnabled](../sadconsole.iscreenobject/#isenabled/) property changes.
+Raised when the [IsEnabled](../sadconsole.iscreenobject/#isenabled) property changes.
 
 ```csharp title="C#"
 event EventHandler IsEnabledChanged
@@ -242,7 +244,7 @@ event EventHandler IsEnabledChanged
 [EventHandler](https://learn.microsoft.com/dotnet/api/system.eventhandler/)
 ### ParentChanged
 
-Raised when the [Parent](../sadconsole.iscreenobject/#parent/) property changes.
+Raised when the [Parent](../sadconsole.iscreenobject/#parent) property changes.
 
 ```csharp title="C#"
 event EventHandler<ValueChangedEventArgs<IScreenObject?>> ParentChanged
@@ -253,7 +255,7 @@ event EventHandler<ValueChangedEventArgs<IScreenObject?>> ParentChanged
 [EventHandler\<ValueChangedEventArgs\<IScreenObject\>\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### IsVisibleChanged
 
-Raised when the [IsVisible](../sadconsole.iscreenobject/#isvisible/) property changes.
+Raised when the [IsVisible](../sadconsole.iscreenobject/#isvisible) property changes.
 
 ```csharp title="C#"
 event EventHandler IsVisibleChanged
@@ -264,7 +266,7 @@ event EventHandler IsVisibleChanged
 [EventHandler](https://learn.microsoft.com/dotnet/api/system.eventhandler/)
 ### FocusLost
 
-Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused/) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 event EventHandler FocusLost
@@ -275,7 +277,7 @@ event EventHandler FocusLost
 [EventHandler](https://learn.microsoft.com/dotnet/api/system.eventhandler/)
 ### Focused
 
-Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused/) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Raised when the [IsFocused](../sadconsole.iscreenobject/#isfocused) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 event EventHandler Focused

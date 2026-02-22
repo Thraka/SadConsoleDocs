@@ -3,6 +3,8 @@ title: TextureToSurfaceReader Class
 slug: reference/sadconsole.readers.texturetosurfacereader
 sidebar:
   label: TextureToSurfaceReader
+editUrl: false
+description: Reads a texture to a cached surface. Used for animation.
 ---
 ## Definition
 

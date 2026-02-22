@@ -3,6 +3,8 @@ title: InstructionBase Class
 slug: reference/sadconsole.instructions.instructionbase
 sidebar:
   label: InstructionBase
+editUrl: false
+description: Base class for all instructions.
 ---
 ## Definition
 
@@ -29,7 +31,7 @@ protected InstructionBase()
 
 ### RemoveOnFinished
 
-When true, this instruction will automatically remove itself from the parent's [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) collection.
+When true, this instruction will automatically remove itself from the parent's [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) collection.
 
 ```csharp title="C#"
 public bool RemoveOnFinished { get; set; }
@@ -37,7 +39,7 @@ public bool RemoveOnFinished { get; set; }
 
 ### IsFinished
 
-Flags the instruction as completed or not. If completed, the [Finished](../sadconsole.instructions.instructionbase/#finished/) event will be raised.
+Flags the instruction as completed or not. If completed, the [Finished](../sadconsole.instructions.instructionbase/#finished) event will be raised.
 
 ```csharp title="C#"
 public bool IsFinished { get; set; }
@@ -50,7 +52,7 @@ Indicates how many times this set will repeat. Use 0 to not repeat and -1 to rep
 ```csharp title="C#"
 public int RepeatCount { get; set; }
 ```
-## Remarks
+#### Remarks
 
 This property counts down each time the instruction finishes. If set to -1 it will repeat forever. As this represents how many times to repeat, setting this value to 1 would allow the instruction to execute twice, once for the original time, and again for the repeat counter of 1.
 
@@ -66,11 +68,11 @@ public virtual void Reset()
 
 #### Remarks
 
-On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished/) to false. Override this method to reset the derived class' counters and status flags for the instruction.
+On the base class, resets the [IsFinished](../sadconsole.instructions.instructionbase/#isfinished) to false. Override this method to reset the derived class' counters and status flags for the instruction.
 
 ### Repeat()
 
-Repeats the current instruction. Decrements the [RepeatCount](../sadconsole.instructions.instructionbase/#repeatcount/) value (if applicable), and raises the [Repeating](../sadconsole.instructions.instructionbase/#repeating/) event. This method should be overridden in derived classes to customize how the object is reset for a repeat.
+Repeats the current instruction. Decrements the [RepeatCount](../sadconsole.instructions.instructionbase/#repeatcount) value (if applicable), and raises the [Repeating](../sadconsole.instructions.instructionbase/#repeating) event. This method should be overridden in derived classes to customize how the object is reset for a repeat.
 
 ```csharp title="C#"
 public virtual void Repeat()

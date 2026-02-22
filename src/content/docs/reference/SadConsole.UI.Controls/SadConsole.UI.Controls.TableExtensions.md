@@ -3,6 +3,8 @@ title: TableExtensions Class
 slug: reference/sadconsole.ui.controls.tableextensions
 sidebar:
   label: TableExtensions
+editUrl: false
+description: Extensions used for the `SadConsole.UI.Controls.Table`
 ---
 ## Definition
 
@@ -40,7 +42,7 @@ public static IEnumerable<Table.Cell> Range(this Table.TableCells cells, int sta
 
 [IEnumerable\<Table.Cell\>](https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1/)
 
-### ForEach(IEnumerable<Cell>, Action<Cell>)
+### ForEach(IEnumerable\<Cell>, Action\<Cell>)
 
 Executes an action on each cell.
 

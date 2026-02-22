@@ -3,6 +3,8 @@ title: MouseDragViewPort Class
 slug: reference/sadconsole.components.mousedragviewport
 sidebar:
   label: MouseDragViewPort
+editUrl: false
+description: Enables dragging a scrollable surface around by mouse.
 ---
 ## Definition
 

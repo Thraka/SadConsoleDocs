@@ -3,6 +3,8 @@ title: EffectsManager.ColoredGlyphEffectData Class
 slug: reference/sadconsole.effects.effectsmanager.coloredglypheffectdata
 sidebar:
   label: EffectsManager.ColoredGlyphEffectData
+editUrl: false
+description: Represents a mapping of a single effect and associated cells.
 ---
 ## Definition
 

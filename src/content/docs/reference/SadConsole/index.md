@@ -3,6 +3,7 @@ title: SadConsole
 slug: reference/sadconsole
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 
@@ -12,7 +13,7 @@ sidebar:
 | [Algorithms.NodeConnections<TNode>\<TNode\>](../sadconsole.algorithms.nodeconnections-1/) | Describes the 4-way connections of a node. |
 | [AnimatedScreenObject](../sadconsole.animatedscreenobject/) | A [ScreenObject](../sadconsole.screenobject/) that displays an animated set of [ICellSurface](../sadconsole.icellsurface/) surfaces. |
 | [AnimatedScreenObject.AnimationStateChangedEventArgs](../sadconsole.animatedscreenobject.animationstatechangedeventargs/) | Event args for when the animation state changes |
-| [CellDecoratorHelpers](../sadconsole.celldecoratorhelpers/) | Helpers for [CellDecorator](../sadconsole.celldecorator/) and [Decorators](../sadconsole.coloredglyphbase/#decorators/) which manages null on the property. |
+| [CellDecoratorHelpers](../sadconsole.celldecoratorhelpers/) | Helpers for [CellDecorator](../sadconsole.celldecorator/) and [Decorators](../sadconsole.coloredglyphbase/#decorators) which manages null on the property. |
 | [CellSurface](../sadconsole.cellsurface/) | An array of [ColoredGlyphBase](../sadconsole.coloredglyphbase/) objects used to represent a 2D surface. |
 | [CellSurfaceEditor](../sadconsole.cellsurfaceeditor/) | Methods to interact with a [ICellSurface](../sadconsole.icellsurface/). |
 | [ColoredGlyph](../sadconsole.coloredglyph/) | Represents an individual piece of a [ICellSurface](../sadconsole.icellsurface/) containing a glyph, foreground color, background color, and a mirror effect. |
@@ -31,13 +32,13 @@ sidebar:
 | [Helpers](../sadconsole.helpers/) | General code helpers. |
 | [LayeredScreenSurface](../sadconsole.layeredscreensurface/) | A basic console that can contain controls. |
 | [MonoGame_MirrorExtensions](../sadconsole.monogame_mirrorextensions/) | Extensions for [Mirror](../sadconsole.mirror/). |
-| [PointExtensions](../sadconsole.pointextensions/) | Extensions for the `SadRogue.Primitives.Point` type. |
-| [RectangleExtensions](../sadconsole.rectangleextensions/) | Extensions for the `SadRogue.Primitives.Rectangle` type. |
+| [PointExtensions](../sadconsole.pointextensions/) | Extensions for the ``SadRogue.Primitives.Point`` type. |
+| [RectangleExtensions](../sadconsole.rectangleextensions/) | Extensions for the ``SadRogue.Primitives.Rectangle`` type. |
 | [SadFont](../sadconsole.sadfont/) | Represents a graphical font used by SadConsole. |
 | [ScreenObject](../sadconsole.screenobject/) | A generic object processed by SadConsole. Provides parent/child, components, and position. |
 | [ScreenObjectCollection](../sadconsole.screenobjectcollection/) | Manages the parent and children relationship for [IScreenObject](../sadconsole.iscreenobject/). |
 | [ScreenObjectCollection<TScreenObject>\<TScreenObject\>](../sadconsole.screenobjectcollection-1/) | Manages the parent and children relationship for [IScreenObject](../sadconsole.iscreenobject/). |
-| [ScreenObjectComparer](../sadconsole.screenobjectcomparer/) | Compares [IScreenObject](../sadconsole.iscreenobject/) with the [SortOrder](../sadconsole.iscreenobject/#sortorder/) property. |
+| [ScreenObjectComparer](../sadconsole.screenobjectcomparer/) | Compares [IScreenObject](../sadconsole.iscreenobject/) with the [SortOrder](../sadconsole.iscreenobject/#sortorder) property. |
 | [ScreenSurface](../sadconsole.screensurface/) | An object that renders a [ICellSurface](../sadconsole.icellsurface/). |
 | [Serializer](../sadconsole.serializer/) | Common serialization tasks for SadConsole. |
 | [Serializer.Contracts](../sadconsole.serializer.contracts/) | Registers the default converters for SadConsole objects, when needed. |
@@ -77,15 +78,15 @@ sidebar:
 | | |
 | --- | --- |
 | [AnimatedScreenObject.AnimationState](../sadconsole.animatedscreenobject.animationstate/) | Represents what state the animation is in. |
-| [FocusBehavior](../sadconsole.focusbehavior/) | How the console handles becoming focused and added to the [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects/) collection. |
+| [FocusBehavior](../sadconsole.focusbehavior/) | How the console handles becoming focused and added to the [FocusedScreenObjects](../sadconsole.gamehost/#focusedscreenobjects) collection. |
 | [HorizontalAlignment](../sadconsole.horizontalalignment/) | Horizontal alignment modes. |
 | [ICellSurface.ConnectedLineIndex](../sadconsole.icellsurface.connectedlineindex/) | Array index enum for line glyphs. |
 | [IFont.Sizes](../sadconsole.ifont.sizes/) | The size options of a font. |
 | [Mirror](../sadconsole.mirror/) | The mirroring mode |
 | [Orientation](../sadconsole.orientation/) | Orientation modes. |
 | [Settings.WindowResizeOptions](../sadconsole.settings.windowresizeoptions/) | Resize modes for the final SadConsole render pass. |
-| [TextureConvertBackgroundStyle](../sadconsole.textureconvertbackgroundstyle/) | The style applied when [Background](../sadconsole.textureconvertmode/#background/) is set. |
-| [TextureConvertForegroundStyle](../sadconsole.textureconvertforegroundstyle/) | The style applied when [Foreground](../sadconsole.textureconvertmode/#foreground/) is set. |
+| [TextureConvertBackgroundStyle](../sadconsole.textureconvertbackgroundstyle/) | The style applied when [Background](../sadconsole.textureconvertmode/#background) is set. |
+| [TextureConvertForegroundStyle](../sadconsole.textureconvertforegroundstyle/) | The style applied when [Foreground](../sadconsole.textureconvertmode/#foreground) is set. |
 | [TextureConvertMode](../sadconsole.textureconvertmode/) | The conversion mode from [ITexture](../sadconsole.itexture/) to [ICellSurface](../sadconsole.icellsurface/). |
 | [VerticalAlignment](../sadconsole.verticalalignment/) | Vertical alignment modes. |
 ## Delegates

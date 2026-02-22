@@ -3,6 +3,7 @@ title: ExtensionsSystem Class
 slug: reference/sadconsole.extensionssystem
 sidebar:
   label: ExtensionsSystem
+editUrl: false
 ---
 ## Definition
 

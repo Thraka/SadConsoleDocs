@@ -3,6 +3,8 @@ title: Game Class
 slug: reference/sadconsole.game
 sidebar:
   label: Game
+editUrl: false
+description: The MonoGame implementation of the SadConsole Game Host.
 ---
 ## Definition
 
@@ -20,7 +22,7 @@ Implements [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposab
 
 ### UseTitleContainer
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the `SadConsole.Game.OpenStream(System.String%2cSystem.IO.FileMode%2cSystem.IO.FileAccess)` method to use <pre>`TitleContainer`</pre> when creating a stream to read a file.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, forces the [OpenStream(string, FileMode, FileAccess)](../sadconsole.game/#openstreamstring-filemode-fileaccess) method to use <pre>`TitleContainer`</pre> when creating a stream to read a file.
 
 ```csharp title="C#"
 public bool UseTitleContainer { get; set; }
@@ -28,7 +30,7 @@ public bool UseTitleContainer { get; set; }
 
 ### MonoGameInstance
 
-The `Microsoft.Xna.Framework.Game` instance.
+The ``Microsoft.Xna.Framework.Game`` instance.
 
 ```csharp title="C#"
 public Game MonoGameInstance { get; set; }
@@ -36,7 +38,7 @@ public Game MonoGameInstance { get; set; }
 
 ### Instance
 
-Strongly typed version of `SadConsole.GameHost.Instance`.
+Strongly typed version of ``SadConsole.GameHost.Instance``.
 
 ```csharp title="C#"
 public static Game Instance { get; set; }
@@ -70,7 +72,7 @@ The width of the screen, in cells.
 The height of the screen, in cells.
 
 
-### Create(int, int, EventHandler<GameHost>)
+### Create(int, int, EventHandler\<GameHost>)
 
 Creates a new game with an initialization callback and a console set to the specific cell count that uses the specified font.
 
@@ -90,7 +92,7 @@ The height of the screen, in cells.
 An event handler to be invoked when the game starts.
 
 
-### Create(int, int, string, EventHandler<GameHost>)
+### Create(int, int, string, EventHandler\<GameHost>)
 
 Creates a new game with the specific screen size, and an initialization callback. Loads the specified font as the default.
 
@@ -115,7 +117,7 @@ An event handler to be invoked when the game starts.
 
 ### Create(Builder)
 
-Creates a new game and assigns it to the [MonoGameInstance](../sadconsole.game/#monogameinstance/) property.
+Creates a new game and assigns it to the [MonoGameInstance](../sadconsole.game/#monogameinstance) property.
 
 ```csharp title="C#"
 public static void Create(Builder configuration)

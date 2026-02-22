@@ -3,6 +3,8 @@ title: C64KeyboardHandler Class
 slug: reference/sadconsole.components.c64keyboardhandler
 sidebar:
   label: C64KeyboardHandler
+editUrl: false
+description: A console prompt keyboard handler that acts like the text editor on the Commodore 64 and VIC-20 computers.
 ---
 ## Definition
 
@@ -17,7 +19,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/) → 
 Implements [IComponent](../sadconsole.components.icomponent/)
 ## Remarks
 
-This handler lets the user move the cursor with the keyboard arrow keys. When the <kbd>ENTER</kbd> key is pressed, the current line is sent to the [EnterPressedAction](../sadconsole.components.c64keyboardhandler/#enterpressedaction/) callback. All empty characters are trimmed from the start and end of the string.
+This handler lets the user move the cursor with the keyboard arrow keys. When the <kbd>ENTER</kbd> key is pressed, the current line is sent to the [EnterPressedAction](../sadconsole.components.c64keyboardhandler/#enterpressedaction) callback. All empty characters are trimmed from the start and end of the string.
 
 ## Constructors
 
@@ -65,7 +67,7 @@ public char EraseGlyph { get; set; }
 
 ### ReplaceEmptyGlyph
 
-The glyph used to replace the empty characters that may be in the string sent to [EnterPressedAction](../sadconsole.components.c64keyboardhandler/#enterpressedaction/).
+The glyph used to replace the empty characters that may be in the string sent to [EnterPressedAction](../sadconsole.components.c64keyboardhandler/#enterpressedaction).
 
 ```csharp title="C#"
 public char ReplaceEmptyGlyph { get; set; }
@@ -88,7 +90,7 @@ The host object for the component.
 
 #### Remarks
 
-Makes the cursor visible, disables word breaks and the string parser, and prints the prompt. If the host is a [Console](../sadconsole.console/), it uses the `SadConsole.Components.C64KeyboardHandler._attachedCursor` property, caching reference to it. You can't change the cursor reference unless you re-add this component. If the host is a [IScreenObject](../sadconsole.iscreenobject/), the first instance of a cursor in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents/) collection is used. If there is no cursor, an exception is thrown.
+Makes the cursor visible, disables word breaks and the string parser, and prints the prompt. If the host is a [Console](../sadconsole.console/), it uses the ``SadConsole.Components.C64KeyboardHandler._attachedCursor`` property, caching reference to it. You can't change the cursor reference unless you re-add this component. If the host is a [IScreenObject](../sadconsole.iscreenobject/), the first instance of a cursor in the [SadComponents](../sadconsole.components.icomponenthost/#sadcomponents) collection is used. If there is no cursor, an exception is thrown.
 
 ### PrintPrompt()
 

@@ -3,6 +3,8 @@ title: IWindowData Interface
 slug: reference/sadconsole.renderers.iwindowdata
 sidebar:
   label: IWindowData
+editUrl: false
+description: Provides the methods and properties used by the Window renderer.
 ---
 ## Definition
 

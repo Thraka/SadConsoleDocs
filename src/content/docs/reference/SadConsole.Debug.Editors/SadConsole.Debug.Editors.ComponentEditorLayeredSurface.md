@@ -3,6 +3,7 @@ title: ComponentEditorLayeredSurface Class
 slug: reference/sadconsole.debug.editors.componenteditorlayeredsurface
 sidebar:
   label: ComponentEditorLayeredSurface
+editUrl: false
 ---
 ## Definition
 

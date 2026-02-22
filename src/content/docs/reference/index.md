@@ -2,6 +2,7 @@
 title: API Reference
 sidebar:
   hidden: true
+editUrl: false
 ---
 
 ## [Hexa.NET.ImGui](./hexa.net.imgui/)

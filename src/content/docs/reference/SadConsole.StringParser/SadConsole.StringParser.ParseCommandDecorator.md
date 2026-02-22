@@ -3,6 +3,8 @@ title: ParseCommandDecorator Class
 slug: reference/sadconsole.stringparser.parsecommanddecorator
 sidebar:
   label: ParseCommandDecorator
+editUrl: false
+description: Sets the mirror of a glyph.
 ---
 ## Definition
 
@@ -77,7 +79,7 @@ public bool Replace { get; set; }
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

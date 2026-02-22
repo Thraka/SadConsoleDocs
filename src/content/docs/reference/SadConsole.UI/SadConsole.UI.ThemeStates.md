@@ -3,6 +3,8 @@ title: ThemeStates Class
 slug: reference/sadconsole.ui.themestates
 sidebar:
   label: ThemeStates
+editUrl: false
+description: Has the basic appearances of each control state.
 ---
 ## Definition
 

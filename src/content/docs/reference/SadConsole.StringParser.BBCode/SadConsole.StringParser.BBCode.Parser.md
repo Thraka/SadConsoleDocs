@@ -3,6 +3,8 @@ title: Parser Class
 slug: reference/sadconsole.stringparser.bbcode.parser
 sidebar:
   label: Parser
+editUrl: false
+description: A BBCode string parser.
 ---
 ## Definition
 
@@ -39,7 +41,7 @@ public Dictionary<string, Type> Tags { get; set; }
 
 ## Methods
 
-### Parse(ReadOnlySpan<char>, int, ICellSurface?, ParseCommandStacks?)
+### Parse(ReadOnlySpan\<char>, int, ICellSurface?, ParseCommandStacks?)
 
 Creates a colored string by parsing BBCode commands embedded in the string.
 

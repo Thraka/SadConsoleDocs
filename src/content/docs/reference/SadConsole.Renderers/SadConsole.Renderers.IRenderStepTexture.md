@@ -3,6 +3,8 @@ title: IRenderStepTexture Interface
 slug: reference/sadconsole.renderers.irendersteptexture
 sidebar:
   label: IRenderStepTexture
+editUrl: false
+description: Indicates the render step has an associated texture.
 ---
 ## Definition
 

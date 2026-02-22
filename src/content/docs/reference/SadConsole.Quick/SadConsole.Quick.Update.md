@@ -3,6 +3,8 @@ title: Update Class
 slug: reference/sadconsole.quick.update
 sidebar:
   label: Update
+editUrl: false
+description: Adds logic extension methods for `SadConsole.IScreenObject`.
 ---
 ## Definition
 
@@ -16,7 +18,7 @@ Inheritance [object](https://learn.microsoft.com/dotnet/api/system.object/)
 
 ## Methods
 
-### WithUpdate(IScreenObject, Action<IScreenObject, TimeSpan>)
+### WithUpdate(IScreenObject, Action\<IScreenObject, TimeSpan>)
 
 Adds a keyboard handler to a [IScreenObject](../sadconsole.iscreenobject/).
 
@@ -38,7 +40,7 @@ The handler callback.
 
 ### RemoveUpdateHooks(IScreenObject)
 
-Removes all of the keyboard hooks added with `SadConsole.Quick.Update.WithUpdate(SadConsole.IScreenObject%2cSystem.Action%7bSadConsole.IScreenObject%2cSystem.TimeSpan%7d)`.
+Removes all of the keyboard hooks added with [WithUpdate(IScreenObject, Action\<IScreenObject, TimeSpan\>)](../sadconsole.quick.update/#withupdateiscreenobject-actioniscreenobject-timespan).
 
 ```csharp title="C#"
 public static IScreenObject RemoveUpdateHooks(this IScreenObject screenObject)
@@ -53,9 +55,9 @@ The object to use.
 
 [IScreenObject](../sadconsole.iscreenobject/)
 
-### RemoveUpdateHook(IScreenObject, Action<IScreenObject, TimeSpan>)
+### RemoveUpdateHook(IScreenObject, Action\<IScreenObject, TimeSpan>)
 
-Removes the specified handler that was added with `SadConsole.Quick.Update.WithUpdate(SadConsole.IScreenObject%2cSystem.Action%7bSadConsole.IScreenObject%2cSystem.TimeSpan%7d)`.
+Removes the specified handler that was added with [WithUpdate(IScreenObject, Action\<IScreenObject, TimeSpan\>)](../sadconsole.quick.update/#withupdateiscreenobject-actioniscreenobject-timespan).
 
 ```csharp title="C#"
 public static IScreenObject RemoveUpdateHook(this IScreenObject screenObject, Action<IScreenObject, TimeSpan> handler)

@@ -3,6 +3,8 @@ title: ExtendedLib_StringExtensions2 Class
 slug: reference/sadconsole.extendedlib_stringextensions2
 sidebar:
   label: ExtendedLib_StringExtensions2
+editUrl: false
+description: Extensions for the `System.String` type.
 ---
 ## Definition
 

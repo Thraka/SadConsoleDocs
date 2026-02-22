@@ -3,6 +3,8 @@ title: ParseCommandRecolor Class
 slug: reference/sadconsole.stringparser.parsecommandrecolor
 sidebar:
   label: ParseCommandRecolor
+editUrl: false
+description: Recolors a glyph.
 ---
 ## Definition
 
@@ -43,7 +45,7 @@ public ParseCommandRecolor()
 
 ### Default
 
-Use the default foreground and background based on the [CommandType](../sadconsole.stringparser.parsecommandbase/#commandtype/).
+Use the default foreground and background based on the [CommandType](../sadconsole.stringparser.parsecommandbase/#commandtype).
 
 ```csharp title="C#"
 public bool Default
@@ -117,7 +119,7 @@ public byte A { get; set; }
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

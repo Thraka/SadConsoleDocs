@@ -3,6 +3,8 @@ title: PredicateInstruction Class
 slug: reference/sadconsole.instructions.predicateinstruction
 sidebar:
   label: PredicateInstruction
+editUrl: false
+description: Instruction that waits until the code callback returns true.
 ---
 ## Definition
 
@@ -18,7 +20,7 @@ Implements [IComponent](../sadconsole.components.icomponent/)
 
 ## Constructors
 
-### PredicateInstruction(Func<bool>)
+### PredicateInstruction(Func\<bool>)
 
 Creates a new instruction with the specified callback.
 
@@ -29,7 +31,7 @@ public PredicateInstruction(Func<bool> callback)
 #### Parameters
 
 `callback` [Func\<bool\>](https://learn.microsoft.com/dotnet/api/system.func-1/)  
-The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set <xref href="SadConsole.Instructions.InstructionBase.IsFinished" data-throw-if-not-resolved="false"></xref>.
+The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set [IsFinished](../sadconsole.instructions.instructionbase/#isfinished).
 
 
 ## Properties
@@ -61,7 +63,7 @@ The object that hosts this instruction.
 The time that has elapsed since this method was last called.
 
 
-### SetCallback(Func<bool>)
+### SetCallback(Func\<bool>)
 
 Sets the callback used by the instruction.
 
@@ -72,4 +74,4 @@ public void SetCallback(Func<bool> callback)
 #### Parameters
 
 `callback` [Func\<bool\>](https://learn.microsoft.com/dotnet/api/system.func-1/)  
-The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set <xref href="SadConsole.Instructions.InstructionBase.IsFinished" data-throw-if-not-resolved="false"></xref>.
+The code invoked by this instruction. Return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to set [IsFinished](../sadconsole.instructions.instructionbase/#isfinished).

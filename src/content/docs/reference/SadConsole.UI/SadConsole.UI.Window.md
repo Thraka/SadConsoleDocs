@@ -3,6 +3,8 @@ title: Window Class
 slug: reference/sadconsole.ui.window
 sidebar:
   label: Window
+editUrl: false
+description: Represents a windowed controls console.
 ---
 ## Definition
 
@@ -59,7 +61,7 @@ The initial cells to seed the surface.
 
 ### Window(int, int, int, int)
 
-Creates a new window with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a new window with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public Window(int width, int height, int bufferWidth, int bufferHeight)
@@ -82,7 +84,7 @@ The total height of the window in cells.
 
 ### Window(int, int, int, int, ColoredGlyphBase[]?)
 
-Creates a window with the specified width and height, with `SadRogue.Primitives.Color.Transparent` for the background and `SadRogue.Primitives.Color.White` for the foreground.
+Creates a window with the specified width and height, with ``SadRogue.Primitives.Color.Transparent`` for the background and ``SadRogue.Primitives.Color.White`` for the foreground.
 
 ```csharp title="C#"
 public Window(int width, int height, int bufferWidth, int bufferHeight, ColoredGlyphBase[]? initialCells)
@@ -193,7 +195,7 @@ protected Point CellAtDragPosition { get; set; }
 
 ### PreviousMouseExclusiveDrag
 
-Temporary value to hold the state of [IsExclusiveMouse](../sadconsole.iscreenobject/#isexclusivemouse/) prior to dragging.
+Temporary value to hold the state of [IsExclusiveMouse](../sadconsole.iscreenobject/#isexclusivemouse) prior to dragging.
 
 ```csharp title="C#"
 [IgnoreDataMember]
@@ -265,7 +267,7 @@ public bool DialogResult { get; set; }
 
 ### IsModalDefault
 
-Indicates that when this window is shown by the [Show()](../sadconsole.ui.window/#show/) method or by setting the [IsVisible](../sadconsole.iscreenobject/#isvisible/) property to true, the window will be shown as modal.
+Indicates that when this window is shown by the [Show()](../sadconsole.ui.window/#show) method or by setting the [IsVisible](../sadconsole.iscreenobject/#isvisible) property to true, the window will be shown as modal.
 
 ```csharp title="C#"
 [DataMember]
@@ -326,7 +328,7 @@ Keyboard state.
 
 ### OnVisibleChanged()
 
-Depending on if the window is visible, calls [Show(bool)](../sadconsole.ui.window/#/) or [Hide()](../sadconsole.ui.window/#hide/).
+Depending on if the window is visible, calls [Show(bool)](../sadconsole.ui.window/#showbool) or [Hide()](../sadconsole.ui.window/#hide).
 
 ```csharp title="C#"
 protected override void OnVisibleChanged()
@@ -353,7 +355,7 @@ protected virtual void OnHidden()
 
 ### Show()
 
-Displays this window using the modal value of the [IsModalDefault](../sadconsole.ui.window/#ismodaldefault/) property.
+Displays this window using the modal value of the [IsModalDefault](../sadconsole.ui.window/#ismodaldefault) property.
 
 ```csharp title="C#"
 public void Show()
@@ -385,7 +387,7 @@ public virtual void Hide()
 
 ### Center()
 
-Centers the window within the bounds of [RenderWidth](../sadconsole.settings.rendering/#renderwidth/) and [RenderHeight](../sadconsole.settings.rendering/#renderheight/)
+Centers the window within the bounds of [RenderWidth](../sadconsole.settings.rendering/#renderwidth) and [RenderHeight](../sadconsole.settings.rendering/#renderheight)
 
 ```csharp title="C#"
 public void Center()
@@ -405,7 +407,7 @@ public override string ToString()
 [string](https://learn.microsoft.com/dotnet/api/system.string/)  
 The string "Window".
 
-### Ask(string, string, string, Action<bool, string>?, Validator?, string?, Colors?)
+### Ask(string, string, string, Action\<bool, string>?, Validator?, string?, Colors?)
 
 Displays a window with an input box and an optional validator with a text prompt.
 
@@ -437,7 +439,7 @@ An optional default value of the input text box.
 An optional set of colors to apply to the window.
 
 
-### Ask(ColoredString, string, string, Action<bool, string>?, Validator?, string?, Colors?)
+### Ask(ColoredString, string, string, Action\<bool, string>?, Validator?, string?, Colors?)
 
 Displays a window with an input box and an optional validator, using a [ColoredString](../sadconsole.coloredstring/) as the prompt text.
 
@@ -469,7 +471,7 @@ An optional default value of the input text box.
 An optional set of colors to apply to the window.
 
 
-### Prompt(string, string, string, Action<bool>?, Colors?)
+### Prompt(string, string, string, Action\<bool>?, Colors?)
 
 Shows a window prompt with two buttons for the user to click.
 
@@ -495,7 +497,7 @@ Callback with the yes (true) or no (false) result.
 The colors to apply for the message box and buttons. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
 
 
-### Prompt(ColoredString, string, string, Action<bool>?, Colors?)
+### Prompt(ColoredString, string, string, Action\<bool>?, Colors?)
 
 Shows a window prompt with two buttons for the user to click.
 

@@ -3,6 +3,8 @@ title: ImGuiListEnum<TEnum> Class
 slug: reference/sadconsole.imguisystem.imguilistenum-1
 sidebar:
   label: ImGuiListEnum<TEnum>
+editUrl: false
+description: Wraps an enum type for ImGui controls, like listboxes.
 ---
 ## Definition
 

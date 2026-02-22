@@ -3,6 +3,8 @@ title: Debugger Class
 slug: reference/sadconsole.debug.debugger
 sidebar:
   label: Debugger
+editUrl: false
+description: The SadConsole debugger class.
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: VerticalAlignment Enum
 slug: reference/sadconsole.verticalalignment
 sidebar:
   label: VerticalAlignment
+editUrl: false
+description: Vertical alignment modes.
 ---
 ## Definition
 

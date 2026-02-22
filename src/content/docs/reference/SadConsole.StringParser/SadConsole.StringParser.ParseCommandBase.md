@@ -3,6 +3,8 @@ title: ParseCommandBase Class
 slug: reference/sadconsole.stringparser.parsecommandbase
 sidebar:
   label: ParseCommandBase
+editUrl: false
+description: Base class for a string processor behavior.
 ---
 ## Definition
 
@@ -35,7 +37,7 @@ public CommandTypes CommandType
 
 ## Methods
 
-### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan<char>, ParseCommandStacks)
+### Build(ref ColoredGlyphAndEffect, ColoredGlyphAndEffect[], int, ICellSurface?, ref int, ReadOnlySpan\<char>, ParseCommandStacks)
 
 Builds a glyph.
 

@@ -3,6 +3,8 @@ title: FileDirectoryListbox Class
 slug: reference/sadconsole.ui.controls.filedirectorylistbox
 sidebar:
   label: FileDirectoryListbox
+editUrl: false
+description: A listbox control that displays the file system.
 ---
 ## Definition
 
@@ -75,7 +77,7 @@ public string FileFilter { get; set; }
 
 ### OnlyRootAndSubDirs
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, only allows navigation from the root folder of the original value provided to [CurrentFolder](../sadconsole.ui.controls.filedirectorylistbox/#currentfolder/) and below; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, only allows navigation from the root folder of the original value provided to [CurrentFolder](../sadconsole.ui.controls.filedirectorylistbox/#currentfolder) and below; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool OnlyRootAndSubDirs { get; set; }
@@ -83,7 +85,7 @@ public bool OnlyRootAndSubDirs { get; set; }
 
 ### HideNonFilterFiles
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, only displays files that match [FileFilter](../sadconsole.ui.controls.filedirectorylistbox/#filefilter/); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to display all files.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, only displays files that match [FileFilter](../sadconsole.ui.controls.filedirectorylistbox/#filefilter); otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to display all files.
 
 ```csharp title="C#"
 public bool HideNonFilterFiles { get; set; }
@@ -101,7 +103,7 @@ public string? HighlightedExtentions { get; set; }
 
 ### OnItemAction()
 
-Navigates a directory if a directory is selected. Raises the [SelectedItemExecuted](../sadconsole.ui.controls.listbox/#selecteditemexecuted/) event.
+Navigates a directory if a directory is selected. Raises the [SelectedItemExecuted](../sadconsole.ui.controls.listbox/#selecteditemexecuted) event.
 
 ```csharp title="C#"
 protected override void OnItemAction()

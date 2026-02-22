@@ -3,6 +3,8 @@ title: ITexture Interface
 slug: reference/sadconsole.itexture
 sidebar:
   label: ITexture
+editUrl: false
+description: Represents a texture provided by a game host.
 ---
 ## Definition
 
@@ -75,7 +77,7 @@ void SetPixels(Color[] colors)
 The individual pixel colors to set.
 
 
-### SetPixels(ReadOnlySpan<Color>)
+### SetPixels(ReadOnlySpan\<Color>)
 
 Sets colors in the texture.
 
@@ -177,16 +179,16 @@ How many cells wide the returned surface is.
 How many cells high the returned surface is.
 
 `backgroundStyle` [TextureConvertBackgroundStyle](../sadconsole.textureconvertbackgroundstyle/)  
-The style to use when <code class="paramref">mode</code> is <xref href="SadConsole.TextureConvertMode.Background" data-throw-if-not-resolved="false"></xref>.
+The style to use when `mode` is [Background](../sadconsole.textureconvertmode/#background).
 
 `foregroundStyle` [TextureConvertForegroundStyle](../sadconsole.textureconvertforegroundstyle/)  
-The style to use when <code class="paramref">mode</code> is <xref href="SadConsole.TextureConvertMode.Foreground" data-throw-if-not-resolved="false"></xref>.
+The style to use when `mode` is [Foreground](../sadconsole.textureconvertmode/#foreground).
 
 `cachedColorArray` SadRogue.Primitives.Color[]  
-When provided, this array is used for color data. It must match the texture's expected <xref href="SadConsole.ITexture.GetPixels" data-throw-if-not-resolved="false"></xref> bounds. Used with <code class="paramref">cachedColorArray</code>.
+When provided, this array is used for color data. It must match the texture's expected [GetPixels()](../sadconsole.itexture/#getpixels) bounds. Used with `cachedColorArray`.
 
 `cachedSurface` [ICellSurface](../sadconsole.icellsurface/)  
-The cell surface to use instead of creating a new one. Used with <code class="paramref">cachedColorArray</code>.
+The cell surface to use instead of creating a new one. Used with `cachedColorArray`.
 
 #### Returns
 

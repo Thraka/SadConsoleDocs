@@ -3,6 +3,8 @@ title: OtherColorsPopup Class
 slug: reference/sadconsole.ui.windows.othercolorspopup
 sidebar:
   label: OtherColorsPopup
+editUrl: false
+description: A window that displays all known colors.
 ---
 ## Definition
 

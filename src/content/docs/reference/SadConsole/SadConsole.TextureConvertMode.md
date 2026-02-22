@@ -3,6 +3,8 @@ title: TextureConvertMode Enum
 slug: reference/sadconsole.textureconvertmode
 sidebar:
   label: TextureConvertMode
+editUrl: false
+description: The conversion mode from `SadConsole.ITexture` to `SadConsole.ICellSurface`.
 ---
 ## Definition
 

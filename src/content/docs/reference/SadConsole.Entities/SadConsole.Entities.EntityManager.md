@@ -3,6 +3,8 @@ title: EntityManager Class
 slug: reference/sadconsole.entities.entitymanager
 sidebar:
   label: EntityManager
+editUrl: false
+description: Manages a set of entities. Adds a render step and only renders the entities that are in the parent `SadConsole.IScreenSurface` visible area.
 ---
 ## Definition
 
@@ -71,7 +73,7 @@ protected Rectangle _offsetAreaPixels
 
 ### _screenCachedView
 
-A cached copy of the [View](../sadconsole.icellsurface/#view/) of the hosting screen surface.
+A cached copy of the [View](../sadconsole.icellsurface/#view) of the hosting screen surface.
 
 ```csharp title="C#"
 protected Rectangle _screenCachedView
@@ -79,7 +81,7 @@ protected Rectangle _screenCachedView
 
 ### _screenCachedFont
 
-A cached copy of the [Font](../sadconsole.iscreensurface/#font/) of the hosting screen surface.
+A cached copy of the [Font](../sadconsole.iscreensurface/#font) of the hosting screen surface.
 
 ```csharp title="C#"
 protected IFont? _screenCachedFont
@@ -87,7 +89,7 @@ protected IFont? _screenCachedFont
 
 ### _screenCachedFontSize
 
-A cached copy of the [FontSize](../sadconsole.iscreensurface/#fontsize/) of the hosting screen surface.
+A cached copy of the [FontSize](../sadconsole.iscreensurface/#fontsize) of the hosting screen surface.
 
 ```csharp title="C#"
 protected Point _screenCachedFontSize
@@ -129,7 +131,7 @@ public bool IsDirty { get; set; }
 
 ### DoEntityUpdate
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates this manager should call [Update(TimeSpan)](../sadconsole.iscreenobject/#/) on each entity; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, indicates this manager should call [Update(TimeSpan)](../sadconsole.iscreenobject/#updatetimespan) on each entity; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
 
 ```csharp title="C#"
 public bool DoEntityUpdate { get; set; }
@@ -137,7 +139,7 @@ public bool DoEntityUpdate { get; set; }
 
 ### SkipExistsChecks
 
-When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the [Add(Entity)](../sadconsole.entities.entitymanager/#/) and [Remove(Entity)](../sadconsole.entities.entitymanager/#/) won't check if the entity exists before doing its operation.
+When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the [Add(Entity)](../sadconsole.entities.entitymanager/#addentity) and [Remove(Entity)](../sadconsole.entities.entitymanager/#removeentity) won't check if the entity exists before doing its operation.
 
 ```csharp title="C#"
 public bool SkipExistsChecks { get; set; }
@@ -191,7 +193,7 @@ public void Add(Entity entity)
 The entity to add.
 
 
-### AddRange(IEnumerable<Entity>)
+### AddRange(IEnumerable\<Entity>)
 
 Adds a collection of entities to this manager.
 
@@ -207,7 +209,7 @@ The entities to add.
 
 ### AddEntity(Entity, bool)
 
-Adds an entity to the collection, subscribes to events, and calls [OnEntityAdded(Entity)](../sadconsole.entities.entitymanager/#/) and `SadConsole.Entities.EntityManager.OnEntityChangedPosition(SadConsole.Entities.Entity%2cSadRogue.Primitives.ValueChangedEventArgs%7bSadRogue.Primitives.Point%7d)`.
+Adds an entity to the collection, subscribes to events, and calls [OnEntityAdded(Entity)](../sadconsole.entities.entitymanager/#onentityaddedentity) and [OnEntityChangedPosition(Entity, ValueChangedEventArgs\<Point\>)](../sadconsole.entities.entitymanager/#onentitychangedpositionentity-valuechangedeventargspoint).
 
 ```csharp title="C#"
 protected void AddEntity(Entity entity, bool skipSort)
@@ -219,12 +221,12 @@ protected void AddEntity(Entity entity, bool skipSort)
 The entity to remove.
 
 `skipSort` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-When true, skips sorting when <xref href="SadConsole.Entities.EntityManager.CalculateEntityVisibilityProtected(SadConsole.Entities.Entity%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> is called inside this method.
+When true, skips sorting when [CalculateEntityVisibilityProtected(Entity, bool)](../sadconsole.entities.entitymanager/#calculateentityvisibilityprotectedentity-bool) is called inside this method.
 
 
 ### RemoveEntity(Entity)
 
-Adds an entity to the collection, unsubscribes to events, and calls [OnEntityRemoved(Entity)](../sadconsole.entities.entitymanager/#/).
+Adds an entity to the collection, unsubscribes to events, and calls [OnEntityRemoved(Entity)](../sadconsole.entities.entitymanager/#onentityremovedentity).
 
 ```csharp title="C#"
 protected bool RemoveEntity(Entity entity)
@@ -332,14 +334,14 @@ SadRogue.Primitives.Rectangle
 
 ### SortVisibleEntities()
 
-Sorts the [EntitiesVisible](../sadconsole.entities.entitymanager/#entitiesvisible/) collection according to the [ZIndex](../sadconsole.entities.entity/#zindex/) value.
+Sorts the [EntitiesVisible](../sadconsole.entities.entitymanager/#entitiesvisible) collection according to the [ZIndex](../sadconsole.entities.entity/#zindex) value.
 
 ```csharp title="C#"
 public void SortVisibleEntities()
 ```
 
 
-### OnEntityChangedPosition(Entity, ValueChangedEventArgs<Point>)
+### OnEntityChangedPosition(Entity, ValueChangedEventArgs\<Point>)
 
 Called when an entity changes position.
 

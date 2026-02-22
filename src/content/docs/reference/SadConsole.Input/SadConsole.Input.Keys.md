@@ -3,6 +3,8 @@ title: Keys Enum
 slug: reference/sadconsole.input.keys
 sidebar:
   label: Keys
+editUrl: false
+description: Defines the keys on a keyboard.
 ---
 ## Definition
 

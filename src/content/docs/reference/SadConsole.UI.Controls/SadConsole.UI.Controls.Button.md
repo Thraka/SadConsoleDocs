@@ -3,6 +3,8 @@ title: Button Class
 slug: reference/sadconsole.ui.controls.button
 sidebar:
   label: Button
+editUrl: false
+description: Simple button control with a height of 1.
 ---
 ## Definition
 
@@ -89,7 +91,7 @@ public ThemeStates EndsThemeState { get; protected set; }
 
 ### RefreshThemeStateColors(Colors)
 
-Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#/) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate/).
+Updates the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate) by calling [RefreshTheme(Colors)](../sadconsole.ui.themestates/#refreshthemecolors) with the provided colors. Override this method to adjust how colors are used by the [ThemeState](../sadconsole.ui.controls.controlbase/#themestate).
 
 ```csharp title="C#"
 protected override void RefreshThemeStateColors(Colors colors)
@@ -117,7 +119,7 @@ The duration of thecurrent frame.
 
 ### CreateControlSurface()
 
-Resizes the control surface based on [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize/) or the [Width](../sadconsole.ui.controls.controlbase/#width/) and [Height](../sadconsole.ui.controls.controlbase/#height/) properties.
+Resizes the control surface based on [AutoSize](../sadconsole.ui.controls.buttonbase/#autosize) or the [Width](../sadconsole.ui.controls.controlbase/#width) and [Height](../sadconsole.ui.controls.controlbase/#height) properties.
 
 ```csharp title="C#"
 protected override ICellSurface CreateControlSurface()

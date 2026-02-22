@@ -3,10 +3,12 @@ title: Delay Class
 slug: reference/sadconsole.effects.delay
 sidebar:
   label: Delay
+editUrl: false
+description: An effect that doesn't do anything except run the `SadConsole.Effects.CellEffectBase.StartDelay` timer. Usually used with the `SadConsole.Effects.EffectSet` effect.
 ---
 ## Definition
 
-An effect that doesn't do anything except run the [StartDelay](../sadconsole.effects.celleffectbase/#startdelay/) timer. Usually used with the [EffectSet](../sadconsole.effects.effectset/) effect.
+An effect that doesn't do anything except run the [StartDelay](../sadconsole.effects.celleffectbase/#startdelay) timer. Usually used with the [EffectSet](../sadconsole.effects.effectset/) effect.
 
 ```csharp title="C#"
 [DataContract]

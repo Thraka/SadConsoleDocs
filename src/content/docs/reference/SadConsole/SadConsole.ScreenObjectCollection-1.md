@@ -3,6 +3,8 @@ title: ScreenObjectCollection<TScreenObject> Class
 slug: reference/sadconsole.screenobjectcollection-1
 sidebar:
   label: ScreenObjectCollection<TScreenObject>
+editUrl: false
+description: Manages the parent and children relationship for `SadConsole.IScreenObject`.
 ---
 ## Definition
 
@@ -161,7 +163,7 @@ The child object.
 #### Exceptions
 
 [Exception](https://learn.microsoft.com/dotnet/api/system.exception/)  
-Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked/) property is set to true.
+Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked) property is set to true.
 
 
 ### Insert(int, TScreenObject)
@@ -183,7 +185,7 @@ The child object.
 #### Exceptions
 
 [Exception](https://learn.microsoft.com/dotnet/api/system.exception/)  
-Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked/) property is set to true.
+Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked) property is set to true.
 
 
 ### Remove(TScreenObject)
@@ -202,12 +204,12 @@ The child object.
 #### Exceptions
 
 [Exception](https://learn.microsoft.com/dotnet/api/system.exception/)  
-Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked/) property is set to true.
+Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked) property is set to true.
 
 
-### Sort(IComparer<IScreenObject>)
+### Sort(IComparer\<IScreenObject>)
 
-Sorts the collection based on [SortOrder](../sadconsole.iscreenobject/#sortorder/).
+Sorts the collection based on [SortOrder](../sadconsole.iscreenobject/#sortorder).
 
 ```csharp title="C#"
 public void Sort(IComparer<IScreenObject> comparer)
@@ -221,7 +223,7 @@ The comparer to use
 #### Exceptions
 
 [Exception](https://learn.microsoft.com/dotnet/api/system.exception/)  
-Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked/) property is set to true.
+Thrown when the [IsLocked](../sadconsole.screenobjectcollection-1/#islocked) property is set to true.
 
 
 ### ToArray()

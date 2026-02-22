@@ -3,6 +3,8 @@ title: Colors.Brightness Enum
 slug: reference/sadconsole.ui.colors.brightness
 sidebar:
   label: Colors.Brightness
+editUrl: false
+description: A brightness value that can be applied to a color.
 ---
 ## Definition
 

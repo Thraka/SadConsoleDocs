@@ -3,6 +3,8 @@ title: Debugger.Settings Class
 slug: reference/sadconsole.debug.debugger.settings
 sidebar:
   label: Debugger.Settings
+editUrl: false
+description: The settings used by the debugger.
 ---
 ## Definition
 

@@ -3,10 +3,12 @@ title: AnimatedAppearanceComponent Class
 slug: reference/sadconsole.entities.animatedappearancecomponent
 sidebar:
   label: AnimatedAppearanceComponent
+editUrl: false
+description: A component for `SadConsole.Entities.Entity` that animates the `SadConsole.Entities.Entity.AppearanceSingle` property.
 ---
 ## Definition
 
-A component for [Entity](../sadconsole.entities.entity/) that animates the [AppearanceSingle](../sadconsole.entities.entity/#appearancesingle/) property.
+A component for [Entity](../sadconsole.entities.entity/) that animates the [AppearanceSingle](../sadconsole.entities.entity/#appearancesingle) property.
 
 ```csharp title="C#"
 [DataContract]
@@ -39,7 +41,7 @@ public ColoredGlyphAndEffect[] Frames { get; set; }
 
 ### AnimationTime
 
-The total time it takes to play all [Frames](../sadconsole.entities.animatedappearancecomponent/#frames/).
+The total time it takes to play all [Frames](../sadconsole.entities.animatedappearancecomponent/#frames).
 
 ```csharp title="C#"
 public TimeSpan AnimationTime { get; set; }

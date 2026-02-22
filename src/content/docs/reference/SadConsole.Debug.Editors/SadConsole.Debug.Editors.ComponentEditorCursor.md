@@ -3,6 +3,7 @@ title: ComponentEditorCursor Class
 slug: reference/sadconsole.debug.editors.componenteditorcursor
 sidebar:
   label: ComponentEditorCursor
+editUrl: false
 ---
 ## Definition
 

@@ -3,6 +3,8 @@ title: AnimatedScreenObject.AnimationState Enum
 slug: reference/sadconsole.animatedscreenobject.animationstate
 sidebar:
   label: AnimatedScreenObject.AnimationState
+editUrl: false
+description: Represents what state the animation is in.
 ---
 ## Definition
 

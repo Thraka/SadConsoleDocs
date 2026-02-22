@@ -3,10 +3,12 @@ title: Table.TableCells.Layout.RangeEnumerable Class
 slug: reference/sadconsole.ui.controls.table.tablecells.layout.rangeenumerable
 sidebar:
   label: Table.TableCells.Layout.RangeEnumerable
+editUrl: false
+description: An enumerable range that contains the layouts of all the rows and columns defined by the size of the range method within `SadConsole.UI.Controls.Table.Cells`
 ---
 ## Definition
 
-An enumerable range that contains the layouts of all the rows and columns defined by the size of the range method within [Cells](../sadconsole.ui.controls.table/#cells/)
+An enumerable range that contains the layouts of all the rows and columns defined by the size of the range method within [Cells](../sadconsole.ui.controls.table/#cells)
 
 ```csharp title="C#"
 public class Table.TableCells.Layout.RangeEnumerable : IEnumerable<Table.TableCells.Layout>, IEnumerable

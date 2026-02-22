@@ -3,6 +3,7 @@ title: SadConsole.Readers
 slug: reference/sadconsole.readers
 sidebar:
   order: 0
+editUrl: false
 ---
 ## Classes
 

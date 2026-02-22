@@ -3,6 +3,8 @@ title: TextBox Class
 slug: reference/sadconsole.ui.controls.textbox
 sidebar:
   label: TextBox
+editUrl: false
+description: InputBox control that allows text input.
 ---
 ## Definition
 
@@ -35,7 +37,7 @@ The width of the input box.
 
 ### _cachedBuilder
 
-String builder used while processing text in the [ProcessKeyboard(Keyboard)](../sadconsole.ui.controls.textbox/#/) method.
+String builder used while processing text in the [ProcessKeyboard(Keyboard)](../sadconsole.ui.controls.textbox/#processkeyboardkeyboard) method.
 
 ```csharp title="C#"
 protected StringBuilder? _cachedBuilder
@@ -105,7 +107,7 @@ public int MaxLength { get; set; }
 
 ### Validator
 
-When set, validates the [Text](../sadconsole.ui.controls.textbox/#text/) property after [TextChangedPreview](../sadconsole.ui.controls.textbox/#textchangedpreview/) has allowed the result.
+When set, validates the [Text](../sadconsole.ui.controls.textbox/#text) property after [TextChangedPreview](../sadconsole.ui.controls.textbox/#textchangedpreview) has allowed the result.
 
 ```csharp title="C#"
 public StringValidation.Validator? Validator { get; set; }
@@ -146,7 +148,7 @@ public bool UseDifferentTextAreaWidth { get; set; }
 
 ### TextAreaWidth
 
-The width to display the text area at when [UseDifferentTextAreaWidth](../sadconsole.ui.controls.textbox/#usedifferenttextareawidth/) is true.
+The width to display the text area at when [UseDifferentTextAreaWidth](../sadconsole.ui.controls.textbox/#usedifferenttextareawidth) is true.
 
 ```csharp title="C#"
 public int TextAreaWidth { get; set; }
@@ -156,7 +158,7 @@ public int TextAreaWidth { get; set; }
 
 ### Resize(int, int)
 
-Resizes the control if the [CanResize](../sadconsole.ui.controls.controlbase/#canresize/) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Resizes the control if the [CanResize](../sadconsole.ui.controls.controlbase/#canresize) property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public override void Resize(int width, int height)
@@ -186,7 +188,7 @@ protected void ValidateCursorPosition(string text)
 
 ### CheckKeyPressCancel(AsciiKey)
 
-Raises the [KeyPressed](../sadconsole.ui.controls.textbox/#keypressed/) event and returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the keypress was cancelled.
+Raises the [KeyPressed](../sadconsole.ui.controls.textbox/#keypressed) event and returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the keypress was cancelled.
 
 ```csharp title="C#"
 protected bool CheckKeyPressCancel(AsciiKey key)
@@ -303,7 +305,7 @@ public event EventHandler<KeyPressEventArgs>? KeyPressed
 [EventHandler\<KeyPressEventArgs\>](https://learn.microsoft.com/dotnet/api/system.eventhandler-1/)
 ### TextValidated
 
-Raised when the [Validator](../sadconsole.ui.controls.textbox/#validator/) validates the [Text](../sadconsole.ui.controls.textbox/#text/) property.
+Raised when the [Validator](../sadconsole.ui.controls.textbox/#validator) validates the [Text](../sadconsole.ui.controls.textbox/#text) property.
 
 ```csharp title="C#"
 public event EventHandler<StringValidation.Result>? TextValidated

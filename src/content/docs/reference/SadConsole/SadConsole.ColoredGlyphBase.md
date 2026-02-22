@@ -3,6 +3,8 @@ title: ColoredGlyphBase Class
 slug: reference/sadconsole.coloredglyphbase
 sidebar:
   label: ColoredGlyphBase
+editUrl: false
+description: Represents an individual piece of a `SadConsole.ICellSurface` containing a glyph, foreground color, background color, and a mirror effect.
 ---
 ## Definition
 
@@ -108,8 +110,7 @@ public virtual void CopyAppearanceTo(ColoredGlyphBase cell, bool deepCopy = true
 The target cell to copy to.
 
 `deepCopy` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old
-decorator array reference is moved directly.
+Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old decorator array reference is moved directly.
 
 
 ### CopyAppearanceFrom(ColoredGlyphBase, bool)
@@ -126,8 +127,7 @@ public virtual void CopyAppearanceFrom(ColoredGlyphBase cell, bool deepCopy = tr
 The target cell to copy from.
 
 `deepCopy` [bool](https://learn.microsoft.com/dotnet/api/system.boolean/)  
-Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old
-decorator array reference is moved directly.
+Whether to perform a deep copy.  Decorators are copied to a new array when true; when false, the old decorator array reference is moved directly.
 
 
 ### Clear()
@@ -190,7 +190,7 @@ public static ColoredGlyphBase[] CreateArray(int size)
 
 ### IsDirtySet
 
-An event that is raised when the [IsDirty](../sadconsole.coloredglyphbase/#isdirty/) property is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+An event that is raised when the [IsDirty](../sadconsole.coloredglyphbase/#isdirty) property is set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public event EventHandler? IsDirtySet

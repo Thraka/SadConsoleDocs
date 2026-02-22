@@ -3,6 +3,8 @@ title: CellEffectBase Class
 slug: reference/sadconsole.effects.celleffectbase
 sidebar:
   label: CellEffectBase
+editUrl: false
+description: A base class for cell effects.
 ---
 ## Definition
 

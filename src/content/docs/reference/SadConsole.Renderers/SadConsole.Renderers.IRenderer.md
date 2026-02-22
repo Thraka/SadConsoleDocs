@@ -3,6 +3,8 @@ title: IRenderer Interface
 slug: reference/sadconsole.renderers.irenderer
 sidebar:
   label: IRenderer
+editUrl: false
+description: Draws a surface.
 ---
 ## Definition
 

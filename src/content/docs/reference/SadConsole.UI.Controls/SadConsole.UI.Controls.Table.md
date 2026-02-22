@@ -3,6 +3,8 @@ title: Table Class
 slug: reference/sadconsole.ui.controls.table
 sidebar:
   label: Table
+editUrl: false
+description: A scrollable table control.
 ---
 ## Definition
 
@@ -135,7 +137,7 @@ public bool UseMouse { get; set; }
 
 ### CurrentMouseCell
 
-Returns the cell the mouse is over, if [UseMouse](../sadconsole.ui.controls.table/#usemouse/) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
+Returns the cell the mouse is over, if [UseMouse](../sadconsole.ui.controls.table/#usemouse) is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.
 
 ```csharp title="C#"
 public Table.Cell? CurrentMouseCell { get; }
@@ -217,7 +219,7 @@ public bool AutoScrollOnCellSelection { get; set; }
 
 ### SetupScrollBar(Orientation, int, Point)
 
-Configures the associated [VerticalScrollBar](../sadconsole.ui.controls.table/#verticalscrollbar/).
+Configures the associated [VerticalScrollBar](../sadconsole.ui.controls.table/#verticalscrollbar).
 
 ```csharp title="C#"
 public void SetupScrollBar(Orientation orientation, int size, Point position)
@@ -245,7 +247,7 @@ public void ScrollToSelectedItem()
 
 ### OnMouseIn(ControlMouseState)
 
-Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called as the mouse moves around the control area. Raises the MouseMove event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseIn(ControlBase.ControlMouseState state)
@@ -259,7 +261,7 @@ The current mouse data
 
 ### OnLeftMouseClicked(ControlMouseState)
 
-Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the left mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnLeftMouseClicked(ControlBase.ControlMouseState state)
@@ -273,7 +275,7 @@ The current mouse data
 
 ### OnRightMouseClicked(ControlMouseState)
 
-Called when the right mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the right mouse button is clicked. Raises the MouseButtonClicked event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnRightMouseClicked(ControlBase.ControlMouseState state)
@@ -287,7 +289,7 @@ The current mouse data.
 
 ### OnMouseExit(ControlMouseState)
 
-Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate/) method.
+Called when the mouse exits the area of the control. Raises the MouseExit event and calls the [DetermineState()](../sadconsole.ui.controls.controlbase/#determinestate) method.
 
 ```csharp title="C#"
 protected override void OnMouseExit(ControlBase.ControlMouseState state)
@@ -313,7 +315,7 @@ public override void UpdateAndRedraw(TimeSpan time)
 The game frame time delta.
 
 
-### GetOldRowAndColumnValues(List<((int x, int y), (int row, int col))>?, Point, ref int, ref int)
+### GetOldRowAndColumnValues(List\<((int x, int y), (int row, int col))>?, Point, ref int, ref int)
 
 ```csharp title="C#"
 protected void GetOldRowAndColumnValues(List<((int x, int y), (int row, int col))>? fakeCells, Point cellPosition, ref int oldRow, ref int oldCol)
