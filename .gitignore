@@ -33,3 +33,6 @@ bin/
 obj/
 *.csproj.user
 *.suo
+
+# Migration folder for old doc site
+migration/
