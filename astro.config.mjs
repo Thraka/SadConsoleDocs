@@ -42,8 +42,8 @@ export default defineConfig({
                       icon: 'open-book',
                       items: [
                           // Each item here is one entry in the navigation menu.
-                          { label: 'Getting Started', slug: 'getting-started/cli' },
-                          { label: 'Terminal demo', slug: 'guides/terminal-demo' },
+                          { label: 'Getting Started with templates', slug: 'getting-started/cli' },
+                          { label: 'Use Visual Studio', slug: 'getting-started/visualstudio' },
                       ],
                   },
                   {
@@ -51,9 +51,13 @@ export default defineConfig({
                       link: '/guides/how-to-use-imgui',
                       icon: 'open-book',
                       items: [
-                          // Each item here is one entry in the navigation menu.
-                          { label: 'How to use ImGui', slug: 'guides/how-to-use-imgui' },
-                          { label: 'How to use the debugger', slug: 'guides/how-to-use-debugger' },
+                        {
+                            label: 'ImGui and the Debugger', items: [
+                                // Each item here is one entry in the navigation menu.
+                                { label: 'How to use ImGui', slug: 'guides/how-to-use-imgui' },
+                                { label: 'How to use the debugger', slug: 'guides/how-to-use-debugger' },
+                            ]
+                        }
                       ],
                   },
                   {

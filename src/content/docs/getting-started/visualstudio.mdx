@@ -1,0 +1,181 @@
+---
+title: Create a SadConsole project with Visual Studio
+description: Create a SadConsole project with Visual Studio.
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+This page describes how to create a new project based on SadConsole using .NET 8.0 (or later) and Visual Studio.
+
+Before using Visual Studio, you'll need to install the SadConsole project templates. The first few sections of the [Create a SadConsole project with the templates](/getting-started/cli/) article describes how to do this. Follow those instructions and then come back to this article.
+
+<Aside type="tip">
+It's much faster to [create a project with the templates](/getting-started/cli/) and then open it in Visual Studio.
+</Aside>
+
+## Prerequisites
+
+<Steps>
+01. [Download and install Visual Studio 2026](https://visualstudio.microsoft.com/vs/).
+02. During install, make sure that you select the **.NET Desktop development** workload.
+
+    <Aside type="tip">
+    If you have already installed Visual Studio, modify your installation with the **Visual Studio Installer** app.
+    </Aside>
+
+03. Install the SadConsole templates with the dotnet command: `dotnet new install SadConsole.Templates`. For more information on how to install the templates, see [Create a SadConsole project with the templates](/getting-started/cli/).
+</Steps>
+
+## Create a new project
+
+Start Visual Studio.
+
+<Steps>
+01. In the **Create a new project** dialog, type `sadconsole` into the search box and select the **SadConsole Game (MonoGame)** project template.
+
+    ![create a new SadConsole project in visual studio](images/visualstudio/template.png)
+
+    The `SadConsole Game (MonoGame)` template creates a SadConsole game that uses [MonoGame](https://www.monogame.net/) and the `SadConsole Game (SFML)` template creates a game that uses [SFML](https://www.sfml-dev.org/).
+    
+    MonoGame and SFML are the backend renderers for SadConsole. In general, the code you use for SadConsole doesn't care which rendering system you use. However, as your game progresses, which renderer you choose is very important. Currently, it's recommended that you use the MonoGame renderer as it has the following benefits:
+
+    - Easier cross-platform targeting.
+    - Supports 3D rendering: models, scenes, etc.
+    - Built for .NET coding
+
+    SFML is cross-platform, but it takes more work on your side to get that working.
+
+02. Press **Next** and then set the **Project name** to `SadConsoleGame` and choose a **location** on your computer to save the project.
+</Steps>
+
+Congratulations, you have a new project! Press <kbd>F5</kbd> to run the game:
+
+![a new console in SadConsole with hello text](images/visualstudio/hello-window.png)
+
+## Creating a project without a template
+
+If you want to create a project without using the SadConsole templates, it's also pretty easy to do.
+
+<Steps>
+01. Create a new **Console App** with either C# or VB.NET.
+
+    <Aside type="caution">
+    Don't create a **Console App (.NET Framework)** project!
+    </Aside>
+
+01. Press **Next** and follow the wizard to set the name of the project to `SadConsoleGame`.
+01. Set the **Location** of your project code, and then press **Next**.
+01. Set the **Framework** to **.NET 8.0** or later.
+
+    <Aside type="caution">
+    Make sure that **Do not use top-level statements** is **unchecked**, unless you know what you're doing and can convert the code in the next section.
+    </Aside>
+
+01. Press **Create**.
+01. Next, add the **NuGet SadConsole MonoGame** renderer package to the project.
+
+    01. In the **Solution Explorer**, right-click on the project and select **Manage NuGet Packages**. This will display the NuGet package manager.
+    01. Search for **SadConsole** and install the `SadConsole.Host.MonoGame` package.
+    01. Search for **MonoGame.Framework** and install the `MonoGame.Framework.DesktopGL` package.
+
+</Steps>
+
+Congratulations, you have all of the required libraries to start creating a SadConsole game!
+
+## Configure the startup code
+
+You need perform a minor modification to the project file, and then change the startup code that was automatically generated for your project.
+
+### Project file
+
+Open the project file, which is probably named _SadConsoleGame.csproj_. Replace the content with the following snippet:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SadConsoleGame</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="SadConsole" />
+    <Using Include="SadRogue.Primitives" />
+    <Using Include="SadConsole.Console" Alias="Console" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.3" />
+    <PackageReference Include="SadConsole.Host.MonoGame" Version="10.6.0" />
+    <PackageReference Include="SadConsole.Extended" Version="10.6.0" />
+  </ItemGroup>
+
+</Project>
+```
+
+### Root screen
+
+The startup code will designate a startup object, known as the "root screen." That object is a `ScreenObject` type, or any type derived from `ScreenObject` such as `ScreenSurface`. Create a new root screen:
+
+01. In the **Solution Explorer** window, right-click on the project and select **Add** > **Class**.
+01. Name the class `RootScreen` and create it. The code editor for the class is opened.
+01. Replace the generated code with the following:
+
+    ```csharp
+    class RootScreen : ScreenObject
+    {
+        private ScreenSurface _mainSurface;
+    
+        public RootScreen()
+        {
+            // Create a surface that's the same size as the screen.
+            _mainSurface = new ScreenSurface(Game.Instance.ScreenCellsX, Game.Instance.ScreenCellsY);
+    
+            // Fill the surface with random characters and colors
+            _mainSurface.FillWithRandomGarbage(_mainSurface.Font);
+    
+            // Create a rectangle box that has a violet foreground and black background.
+            // Characters are reset to 0 and mirroring is set to none.
+            _mainSurface.Fill(new Rectangle(3, 3, 23, 3), Color.Violet, Color.Black, 0, Mirror.None);
+    
+            // Print some text at (4, 4) using the foreground and background already there (violet and black)
+            _mainSurface.Print(4, 4, "Hello from SadConsole");
+    
+            // Add _mainSurface as a child object of this one. This object, RootScreen, is a simple object
+            // and doesn't display anything itself. Since _mainSurface is going to be a child of it, _mainSurface
+            // will be displayed when RootScreen is either the starting screen or somewhere in that collection of objects.
+            Children.Add(_mainSurface);
+        }
+    }
+    ```
+
+### Program startup code
+
+01. In the **Solution Explorer** window, double-click the _Program.cs_. This opens the code editor.
+01. Replace the code with the following:
+
+```csharp
+using SadConsole.Configuration;
+
+Settings.WindowTitle = "My SadConsole Game";
+
+Builder
+    .GetBuilder()
+    .SetWindowSizeInCells(90, 30)
+    .SetStartingScreen<RootScreen>()
+    .IsStartingScreenFocused(true)
+    .ConfigureFonts(true)
+    .Run();
+```
+
+Press the <kbd>F5</kbd> key to run your SadConsole program. You should be presented with the following screen:
+
+![a new console in SadConsole with hello text](images/visualstudio/hello-window.png)
+
+## Next steps
+
+Now that you have the project created and working, check out the [Get Started](tutorials/getting-started/part-1-drawing.md) tutorial series.
