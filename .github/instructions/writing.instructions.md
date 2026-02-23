@@ -8,6 +8,8 @@ description: 'Follow these comprehensive writing style guidelines when creating 
 
 When writing or editing Markdown documentation, follow these style guidelines:
 
+**ALWAYS** read this entire fill.
+
 ## Voice and Tone Requirements
 
 ALWAYS write using:
