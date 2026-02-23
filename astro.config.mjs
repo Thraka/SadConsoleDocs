@@ -5,6 +5,7 @@ import astroExpressiveCode from 'astro-expressive-code'
 import starlightSidebarTopics from 'starlight-sidebar-topics'
 import starlightGitHubAlerts from 'starlight-github-alerts'
 
+
 import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
@@ -65,26 +66,44 @@ export default defineConfig({
                   },
                   {
                       label: 'Concepts',
-                      link: '/guides/how-to-use-imgui',
+                      link: 'guides/host-overview',
                       icon: 'puzzle',
                       items: [
                         {
                             label: 'Game host', items: [
-                                // Each item here is one entry in the navigation menu.
                                 { label: 'Overview', slug: 'guides/host-overview' },
                                 { label: 'Startup screen', slug: 'guides/host-screen' },
                             ]
                         },
                         {
+                            label: 'Fonts', items: [
+                                { label: 'Overview', slug: 'guides/fonts-overview' },
+                            ]
+                        },
+                        {
+                            label: 'Startup config', items: [
+                                { label: 'Overview', slug: 'guides/config-overview' },
+                            ]
+                        },
+                        {
+                            label: 'Surfaces and Consoles', items: [
+                                { label: 'Connect line glyphs', slug: 'guides/how-to-connect-lines' },
+                            ]
+                        },
+                        {
                             label: 'String parser', items: [
-                                // Each item here is one entry in the navigation menu.
                                 { label: 'Overview', slug: 'guides/string-parser-overview' },
                                 { label: 'Syntax reference', slug: 'guides/string-parser-syntax' },
                             ]
                         },
                         {
+                            label: 'Controls', items: [
+                                { label: 'Overview', slug: 'guides/controls-overview' },
+                                { label: 'Change colors', slug: 'guides/how-to-change-control-colors' },
+                            ]
+                        },
+                        {
                             label: 'ImGui and the Debugger', items: [
-                                // Each item here is one entry in the navigation menu.
                                 { label: 'How to use ImGui', slug: 'guides/how-to-use-imgui' },
                                 { label: 'How to use the debugger', slug: 'guides/how-to-use-debugger' },
                             ]
@@ -113,6 +132,12 @@ export default defineConfig({
           theme: 'nord',
       },
 	},
+
+  image: {
+    service: {
+        entrypoint: './src/imageService.ts'
+    }
+  },
 
   site: 'https://sadconsole.com'
 });

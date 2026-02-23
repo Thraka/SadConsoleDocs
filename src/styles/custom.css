@@ -35,6 +35,10 @@
   --sl-text-6xl: 2.625rem;  /* ~42px (was 4rem) */
   --sl-line-height: 1.4;
 
+  --sl-text-h2: var(--sl-text-3xl);
+  --sl-text-h3: var(--sl-text-2xl);
+  --sl-text-h4: var(--sl-text-lg);
+
   --sl-text-body: 0.9375rem; /* ~15px */
   --sl-content-width: 55rem;
 }
@@ -45,6 +49,11 @@ html, body{
 
 .sl-markdown-content {
   font-family: 'Hack';
+}
+
+/* Aside styling */
+.starlight-aside__title {
+  font-size: var(--sl-text-sm-big);
 }
 
 /* Various list settings */
