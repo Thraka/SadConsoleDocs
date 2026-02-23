@@ -1,11 +1,14 @@
 ---
-name: DocFX to Astro Starlight Migration
-description: 'Follow these rules when migrating old DocFX markdown (.md) content into Astro Starlight MDX (.mdx) content. Covers front matter, components, links, voice, and structural changes.'
+name: migrate
+description: Migrate content from the old DocFX markdown format to the new Astro Starlight MDX format. Follow the instructions in the migration guide and use the provided examples to ensure a smooth transition.
+agent: agent
 ---
 
 # DocFX to Astro Starlight migration instructions
 
 Use these rules when converting DocFX `.md` files into Astro Starlight `.mdx` files.
+
+**IMPORTANT**: Unless otherwise directed, **don't** edit the content of the file. Just change the formatting and structure to match the new MDX format. The content will be edited later for voice, tone, style, and clarity in a separate pass. The only exception to this is in the front matter.
 
 ## File and extension
 
@@ -66,7 +69,6 @@ Because of the added complexity, avoid creating a MonoGame project.
 
 - Add a blank line before and after each `<Aside>` block.
 - The content inside the `<Aside>` must NOT be prefixed with `>`.
-- Rewrite the content inside the aside to match the active voice and tone rules.
 
 ## XREF links to API docs
 
@@ -186,7 +188,6 @@ When migrating a file, verify each of these items:
 - [ ] All "we/our/let's" rewritten to "you/your" or imperative mood
 - [ ] "may" replaced with "might" or "can"
 - [ ] Gerunds removed from headings
-- [ ] Passive voice rewritten to active voice
 - [ ] Typos and code errors fixed
 - [ ] Oxford commas applied in all lists
 - [ ] No consecutive headings without content between them
