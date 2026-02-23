@@ -1,0 +1,129 @@
+---
+title: Change control colors in SadConsole
+description: Learn how to change the default colors used by controls in SadConsole through the Colors.Default property, a control host, or individual controls.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Controls get their colors from a priority chain. First, the control checks its own colors. If the control doesn't define any colors, it checks the control host, and finally falls back to the default colors. For more information, see [Controls overview](/guides/controls-overview/).
+
+The following sections demonstrate how to change a control's colors.
+
+UI-related types live in these two namespaces:
+
+- `SadConsole.UI`—Basic supporting objects, such as the controls host, colors, and window types.
+- `SadConsole.UI.Controls`—All of the controls provided by SadConsole.
+
+{/*
+## Adjustable colors
+
+The [Colors](/reference/sadconsole.ui.colors/) type uses [AdjustableColor](/reference/sadconsole.ui.adjustablecolor/) for the various control color schemes, such as [Colors.ControlForegroundNormal](/reference/sadconsole.ui.colors/#controlforegroundnormal) and [Colors.ControlBackgroundNormal](/reference/sadconsole.ui.colors/#controlbackgroundnormal). Adjustable colors are colors that are computed with a brightness when they're actually used. They're based on an existing color or defined by the [Colors.ColorNames](/reference/sadconsole.ui.colors.colornames/) enum. This enum maps to the individual color properties provided by the `Colors` type, such as `Colors.Red`.
+
+The benefit of an adjustable color and the predefined colors, is that you can update the predefined colors object with say a new shade of red, then ask the adjustable color to refresh itself. If that adjustable color used the **red** color name, it refreshes itself with that new shade.
+*/}
+
+## How to edit the default colors
+
+All controls, unless overridden, get their colors from the [SadConsole.UI.Colors.Default](/reference/sadconsole.ui.colors/#default) property. Set that property to a new [Colors](/reference/sadconsole.ui.colors/) instance, or change the individual properties on the existing instance.
+
+After changing the `Colors.Default.Control*` color properties, call [RebuildAppearances](/reference/sadconsole.ui.colors/#rebuildappearances) to rebuild the specific `Colors.Default.Appearance_*` appearance states.
+
+```csharp
+Colors.Default.ControlForegroundNormal.SetColor(Color.Purple);
+Colors.Default.RebuildAppearances();
+```
+
+## How to set the colors for a host
+
+Setting colors on the control host applies those colors to all controls in that host, overriding the defaults. Assign the [ControlHost.ThemeColors](/reference/sadconsole.ui.controlhost/#themecolors) property to an instance of the [Colors](/reference/sadconsole.ui.colors/) type. To clear those colors and use the defaults, set `ThemeColors` to `null`.
+
+```csharp
+// Create the new colors
+Colors newColors = Colors.Default.Clone();
+
+newColors.Red = Color.Red.GetBrightest();
+newColors.ControlForegroundNormal.SetColor(Color.Purple);
+newColors.RebuildAppearances();
+
+// Create the controls console, which has a controls host
+ControlsConsole console = new(GameHost.Instance.ScreenCellsX, GameHost.Instance.ScreenCellsY);
+
+// Update the controls host
+console.Controls.ThemeColors = newColors;
+
+// Add a single control
+Button button1 = new("Button 1");
+button1.Position = new Point(1, 1);
+
+console.Controls.Add(button1);
+
+// Show the console
+GameHost.Instance.Screen = console;
+```
+
+![A SadConsole window showing a button where the foreground is purple.](./images/how-to-change-control-colors/change-host-colors.png)
+
+## How to set the colors for a control
+
+Colors set directly on a control override all other color sources. Call [SetThemeColors(Colors)](/reference/sadconsole.ui.controls.controlbase/#setthemecolorscolors) on the control, passing in the colors you want to use. Pass `null` to remove previously set colors from the control.
+
+```csharp
+// Create the new colors
+Colors newColors = Colors.Default.Clone();
+
+newColors.Red = Color.Red.GetBrightest();
+newColors.ControlForegroundNormal.SetColor(Color.Purple);
+newColors.RebuildAppearances();
+
+// Create the controls console, which has a controls host
+ControlsConsole console = new(GameHost.Instance.ScreenCellsX, GameHost.Instance.ScreenCellsY);
+
+// Add first button with custom colors
+Button button1 = new("Button 1");
+button1.SetThemeColors(newColors);
+button1.Position = new Point(1, 1);
+console.Controls.Add(button1);
+
+// Add second button without custom colors
+Button button2 = new("Button 2");
+button2.Position = new Point(1, 2);
+console.Controls.Add(button2);
+
+// Show the console
+GameHost.Instance.Screen = console;
+```
+
+![A SadConsole window showing two buttons where one has a purple foreground.](./images/how-to-change-control-colors/change-control-colors.png)
+
+## How to reset the colors to the default
+
+If you change the [SadConsole.UI.Colors.Default](/reference/sadconsole.ui.colors/#default) colors and want to revert them, set the property to the return value of the [CreateAnsi](/reference/sadconsole.ui.colors/#createansi) method. SadConsole calls this method to generate its initial colors.
+
+```csharp
+Colors.Default = Colors.CreateAnsi();
+```
+
+<Aside type="tip">
+SadConsole also defines a set of colors based on a blue tone, which you can use instead of the `CreateAnsi` colors which are based on black.
+
+```csharp
+Colors.Default = Colors.CreateSadConsoleBlue();
+```
+</Aside>
+
+## How to get the colors used by a control or host
+
+Sometimes you need to find the colors a control or host uses, so you can match them. This is most common when you've created your own control and need to know what colors to use. Another common scenario is drawing something that matches a control's colors. For example, the `Colors` type defines a `Lines` color, which colors various parts of controls, such as the `RadioButton`'s brackets or the `ListBox`'s surrounding box. Use this color when drawing other lines on the surface host to match the controls.
+
+Call the control's [FindThemeColors](/reference/sadconsole.ui.controls.controlbase/#findthemecolors) method. This searches the control and then the host for colors. If no colors exist, it returns the defaults.
+
+```csharp
+Colors assignedColors = someControl.FindThemeColors();
+```
+
+Get the colors of a control host with the [GetThemeColors](/reference/sadconsole.ui.controlhost/#getthemecolors) method. This method checks whether the host has a colors value assigned to the [ThemeColors](/reference/sadconsole.ui.controlhost/#themecolors) property and returns it. If the property is `null`, it returns the default colors.
+
+```csharp
+// Using a ControlsConsole which provides a ControlHost
+Colors hostColors = console.Controls.GetThemeColors();
+```
