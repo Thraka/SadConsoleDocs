@@ -56,6 +56,9 @@ export default defineConfig({
                                 // Each item here is one entry in the navigation menu.
                                 { label: 'Part 1: Drawing', slug: 'tutorials/first-game/part-1-drawing' },
                                 { label: 'Part 2: Cursors and parents', slug: 'tutorials/first-game/part-2-cursor-parents' },
+                                { label: 'Part 3: Input', slug: 'tutorials/first-game/part-3-input' },
+                                { label: 'Part 4: Game objects and maps', slug: 'tutorials/first-game/part-4-mapobject' },
+                                { label: 'Part 5: More objects', slug: 'tutorials/first-game/part-5-more-objects' },
                             ]
                         }
                       ],
