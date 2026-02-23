@@ -1,14 +1,13 @@
 ---
-title: String parser syntax
-description: Learn about the SadConsole string parsers syntax.
-ms.date: 09/13/2023
+title: 'String parser: Built-in commands and syntax'
+description: Explore the built-in commands and syntax available in the SadConsole string parser.
 ---
 
-# String parser built-in commands and syntax
+import { Aside } from '@astrojs/starlight/components';
 
-SadConsole provides 6 commands by default. A command is built with this string format: `[c:{command} {parameters}]`. The `[c:` text starts the command sequence. The sequence ends when `]` is encountered. If the command is invalid for some reason, it will not be processed and the text of the command will show up in the string. Once a command is created in the string, it is put on a stack and applied to each character encountered. Most commands can be applied for a specific count of characters, but otherwise apply until the end of the string. There is a special command, `[c:undo]` which stops the last command added to the stack of commands.
+SadConsole provides six commands by default. Build a command with this string format: `[c:{command} {parameters}]`. The `[c:` text starts the command sequence, and the sequence ends when `]` is encountered. If the command is invalid, it isn't processed and the command text appears in the string. Once you create a command in the string, SadConsole puts it on a stack and applies it to each character encountered. Most commands can be applied for a specific count of characters, but otherwise apply until the end of the string. Use the `[c:undo]` command to stop the last command added to the stack.
 
-Some commands have optional or mandatory parameters. There is a space character between the **command** and the **parameters**.
+Some commands have optional or mandatory parameters. Place a space character between the **command** and the **parameters**.
 
 | Command   | Format                                                            | Description                          |
 | --------- | ----------------------------------------------------------------- | ------------------------------------ |
@@ -67,7 +66,7 @@ static void Init()
 }
 ```
 
-The above code results in the following console.
+The code above produces the following console output.
 
 ![string parser demonstration window](./images/string-parser-syntax/demo.png)
 
@@ -77,7 +76,7 @@ Syntax: `[c:r|recolor f|b:color[:count]]`
 
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
-| 1                  | False    | Picks color area.<br>f = foreground<br>b = background |
+| 1                  | False    | Picks color area.<br />f = foreground<br />b = background |
 | 2                  | False    | Chooses the color to use. See [color parameters](#color-parameters) down below for more information. |
 | 3                  | True     | Amount of characters to affect. If omitted, goes on indefinitely. |
 
@@ -95,7 +94,7 @@ Syntax: `[c:m 0|1|2|None|FlipHorizontally|FlipVertically[:count]]`
 
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
-| 1                  | False    | Mirror type<br>0 or None = Do not mirror<br>1 or FlipHorizontally = Mirror horizontal<br>2 or FlipVertically = Mirror vertical |
+| 1                  | False    | Mirror type<br/>0 or None = Do not mirror<br/>1 or FlipHorizontally = Mirror horizontal<br/>2 or FlipVertically = Mirror vertical |
 | 2                  | True     | Amount of characters to affect. If omitted, goes on indefinitely. | 
 
 ### Examples
@@ -114,7 +113,7 @@ Syntax: `[c:undo [count:f|b|g|e|m|a]]`
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
 | 1                  | True     | Count of items to undo. |
-| 2                  | False*   | <br>f = undo foreground<br>b = undo background<br>g = undo glyph<br>e = undo cell effect<br>m = undo mirror<br>a = undo previous item (default when parameter 1 is omitted) |
+| 2                  | False*   | <br/>f = undo foreground<br/>b = undo background<br/>g = undo glyph<br/>e = undo cell effect<br/>m = undo mirror<br/>a = undo previous item (default when parameter 1 is omitted) |
 
 *Parameter 2 is required if parameter 1 is provided.
 
@@ -150,7 +149,7 @@ Syntax: `[c:g f|b:color[:color]:count]`
 
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
-| 1                  | False    | <br>f = apply gradient to the foreground<br>b = apply gradient to the background |
+| 1                  | False    | <br/>f = apply gradient to the foreground<br/>b = apply gradient to the background |
 | 2                  | False    | The color step to apply to the gradient. Repeat as many times as needed. See [color parameters](#color-parameters) down below for more information. |
 | Last               | False    | How many characters for the gradient to apply to |
 
@@ -182,22 +181,23 @@ Syntax: `[c:sg glyph index[:count]]`
 
 ## Color parameters
 
-If a command uses a color parameter, it can be specified in the following ways.
+If a command uses a color parameter, you can specify it in the following ways:
 
-1. `rgb`  
-red,green,blue as a byte value.
+- `rgb`\
+red, green, blue as a byte value.
 
-2. `rgba`  
-red,green,blue,alpha as a byte value.
+- `rgba`\
+red, green, blue, alpha as a byte value.
 
-3. `name`  
-A named color from the MonoGame Color type (supported in SFML)
+- `name`\
+A named color from the MonoGame Color type (supported in SFML).
 
-4. `default`  
-use the default color of the surface.
+- `default`\
+Use the default color of the surface.
 
-> [!TIP]
->If you use the *rgb* or *rgba* color values, you can use `x` in place of any color channel to skip it and use the existing color channel on the surface.
+<Aside type="tip">
+If you use the *rgb* or *rgba* color values, you can use `x` in place of any color channel to skip it and use the existing color channel on the surface.
+</Aside>
 
 [cr]: #command-recolor
 [cm]: #command-mirror

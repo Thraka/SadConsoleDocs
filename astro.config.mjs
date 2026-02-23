@@ -64,17 +64,24 @@ export default defineConfig({
                       ],
                   },
                   {
-                      label: 'Advanced',
+                      label: 'Concepts',
                       link: '/guides/how-to-use-imgui',
                       icon: 'puzzle',
                       items: [
+                        {
+                            label: 'String parser', items: [
+                                // Each item here is one entry in the navigation menu.
+                                { label: 'Overview', slug: 'guides/string-parser-overview' },
+                                { label: 'Syntax reference', slug: 'guides/string-parser-syntax' },
+                            ]
+                        },
                         {
                             label: 'ImGui and the Debugger', items: [
                                 // Each item here is one entry in the navigation menu.
                                 { label: 'How to use ImGui', slug: 'guides/how-to-use-imgui' },
                                 { label: 'How to use the debugger', slug: 'guides/how-to-use-debugger' },
                             ]
-                        }
+                        },
                       ],
                   },
                   {
