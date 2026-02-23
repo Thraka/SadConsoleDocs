@@ -5,22 +5,50 @@ description: Explore the built-in commands and syntax available in the SadConsol
 
 import { Aside } from '@astrojs/starlight/components';
 
-SadConsole provides six commands by default. Build a command with this string format: `[c:{command} {parameters}]`. The `[c:` text starts the command sequence, and the sequence ends when `]` is encountered. If the command is invalid, it isn't processed and the command text appears in the string. Once you create a command in the string, SadConsole puts it on a stack and applies it to each character encountered. Most commands can be applied for a specific count of characters, but otherwise apply until the end of the string. Use the `[c:undo]` command to stop the last command added to the stack.
+SadConsole provides six commands by default. Build a command with this string format: `[c:{command} {parameters}]`. The `[c:` text starts the command sequence, and `]` ends it. If the command is invalid, SadConsole doesn't process it and the command text appears in the string. Once you create a command in the string, SadConsole puts it on a stack and applies it to each character. Most commands apply to a specific count of characters but otherwise affect the rest of the string. Use the `[c:undo]` command to stop the last command added to the stack.
 
 Some commands have optional or mandatory parameters. Place a space character between the **command** and the **parameters**.
 
 | Command   | Format                                                            | Description                          |
 | --------- | ----------------------------------------------------------------- | ------------------------------------ |
-| [r,recolor][cr]  | `[c:r f|b:color[:count]]`                                  | Recolor the foreground or background |
-| [m,mirror][cm]   | `[c:m 0|1|2|None|FlipHorizontally|FlipVertically[:count]]` | Set SpriteEffect (mirroring)         |
-| [u,undo][cu]     | `[c:undo [count:f|b|g|e|m|a]]`                             | Remove the last command on the command stack  |
+| [r,recolor][cr]  | `[c:r f\|b:color[:count]]`                                  | Recolor the foreground or background |
+| [m,mirror][cm]   | `[c:m 0\|1\|2\|None\|FlipHorizontally\|FlipVertically[:count]]` | Set SpriteEffect (mirroring)         |
+| [u,undo][cu]     | `[c:undo [count:f\|b\|g\|e\|m\|a]]`                             | Remove the last command on the command stack  |
 | [b,blink][cb]    | `[c:b [count:speed]]`                                      | Blinks a set of characters           |
-| [g,grad][cg]     | `[c:g f|b:color[:color]:count]`                            | Applies a gradient across a set of characters |
+| [g,grad][cg]     | `[c:g f\|b:color[:color]:count]`                            | Applies a gradient across a set of characters |
 | [sg,sglyph][csg] | `[c:sg glyph index[:count]]`                               | Sets the glyph for the `count` of characters  |
+
+
+## Color parameters
+
+If a command uses a color parameter, you can specify it in the following ways:
+
+- `rgb`\
+Red, green, and blue as a byte value.
+
+- `rgba`\
+Red, green, blue, and alpha as a byte value.
+
+- `name`\
+A named color from the MonoGame `Color` type (also supported in SFML).
+
+- `default`\
+The default color of the surface.
+
+<Aside type="tip">
+When using *rgb* or *rgba* color values, substitute `x` for any color channel to skip it and keep the existing color channel on the surface.
+</Aside>
+
+[cr]: #command-recolor
+[cm]: #command-mirror
+[cu]: #command-undo
+[cb]: #command-blink
+[cg]: #command-gradient
+[csg]: #command-set-glyph
 
 ## Examples
 
-Here are some example strings.
+The following examples demonstrate common command usage.
 
 - Set foreground to **Color.Blue** and background to **Color.Yellow**\
 `"Normal [c:r f:Blue][c:r b:Yellow]and colored"`
@@ -37,7 +65,7 @@ Here are some example strings.
 - Remove last two commands at different spots\
 `"Normal and [c:r f:blue][c:r b:yellow]colored and [c:undo]undo [c:undo]text"`
 
-Here is the code that would print these strings:
+This code prints the example strings:
 
 ```csharp
 static void Init()
@@ -66,7 +94,7 @@ static void Init()
 }
 ```
 
-The code above produces the following console output.
+The previous code produces the following output:
 
 ![string parser demonstration window](./images/string-parser-syntax/demo.png)
 
@@ -76,17 +104,17 @@ Syntax: `[c:r|recolor f|b:color[:count]]`
 
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
-| 1                  | False    | Picks color area.<br />f = foreground<br />b = background |
-| 2                  | False    | Chooses the color to use. See [color parameters](#color-parameters) down below for more information. |
-| 3                  | True     | Amount of characters to affect. If omitted, goes on indefinitely. |
+| 1                  | False    | The color area to target.<br />f = foreground<br />b = background |
+| 2                  | False    | The color to apply. See [color parameters](#color-parameters) for more information. |
+| 3                  | True     | Number of characters to affect. If omitted, applies to the rest of the string. |
 
 ### Examples
 
 | String             | Description                 |
 | ------------------ | --------------------------- |
-| `[c:r f:blue]`     | Sets the foreground to blue |
-| `[c:r f:x,200,x]`  | Sets the foreground (r,g,b) green channel to 200, and does not change red and blue |
-| `[c:r b:yellow:5]` | Sets the background to yellow for 5 characters |
+| `[c:r f:blue]`     | Sets the foreground to blue. |
+| `[c:r f:x,200,x]`  | Sets the foreground green channel to 200 without changing red and blue. |
+| `[c:r b:yellow:5]` | Sets the background to yellow for 5 characters. |
 
 ## Command: Mirror
 
@@ -94,14 +122,14 @@ Syntax: `[c:m 0|1|2|None|FlipHorizontally|FlipVertically[:count]]`
 
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
-| 1                  | False    | Mirror type<br/>0 or None = Do not mirror<br/>1 or FlipHorizontally = Mirror horizontal<br/>2 or FlipVertically = Mirror vertical |
-| 2                  | True     | Amount of characters to affect. If omitted, goes on indefinitely. | 
+| 1                  | False    | The mirror type.<br/>0 or None = No mirror<br/>1 or FlipHorizontally = Mirror horizontal<br/>2 or FlipVertically = Mirror vertical |
+| 2                  | True     | Number of characters to affect. If omitted, applies to the rest of the string. | 
 
 ### Examples
 
 | String                 | Description                 |
 | ---------------------- | --------------------------- |
-| `[c:m 0]`              | Sets the mirror to None.     |
+| `[c:m 0]`              | Sets the mirror to none.     |
 | `[c:m FlipVertically]` | Sets the mirror to vertical. |
 | `[c:m 2]`              | Sets the mirror to vertical. |
 | `[c:m 1:3]`            | Sets the mirror to horizontal for 3 characters. |
@@ -112,18 +140,18 @@ Syntax: `[c:undo [count:f|b|g|e|m|a]]`
 
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
-| 1                  | True     | Count of items to undo. |
+| 1                  | True     | The number of items to undo. |
 | 2                  | False*   | <br/>f = undo foreground<br/>b = undo background<br/>g = undo glyph<br/>e = undo cell effect<br/>m = undo mirror<br/>a = undo previous item (default when parameter 1 is omitted) |
 
-*Parameter 2 is required if parameter 1 is provided.
+*Provide parameter 2 when you specify parameter 1.
 
 ### Examples
 
 | String       | Description                 |
 | -----------  | --------------------------- |
-| `[c:u]`      | Remove the last command, no matter the type.     |
+| `[c:u]`      | Removes the last command, regardless of type.     |
 | `[c:u 2:f]`  | Removes the last two foreground commands. |
-| `[c:u 99:a]` | Most likely will remove every command. |
+| `[c:u 99:a]` | Removes every command in most cases. |
 
 ## Command: Blink
 
@@ -131,10 +159,10 @@ Syntax: `[c:b [count:speed]`
 
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
-| 1                  | True     | Count of glyphs to blink. |
-| 2                  | False*   | Speed of the blink. Default is 0.35 in seconds. |
+| 1                  | True     | The number of glyphs to blink. |
+| 2                  | False*   | The blink speed in seconds. Defaults to 0.35. |
 
-*Parameter 2 is required if parameter 1 is provided.
+*Provide parameter 2 when you specify parameter 1.
 
 ### Examples
 
@@ -150,15 +178,15 @@ Syntax: `[c:g f|b:color[:color]:count]`
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
 | 1                  | False    | <br/>f = apply gradient to the foreground<br/>b = apply gradient to the background |
-| 2                  | False    | The color step to apply to the gradient. Repeat as many times as needed. See [color parameters](#color-parameters) down below for more information. |
-| Last               | False    | How many characters for the gradient to apply to |
+| 2                  | False    | The color step to apply to the gradient. Repeat as many times as needed. See [color parameters](#color-parameters) for more information. |
+| Last               | False    | The number of characters the gradient covers. |
 
 ### Examples
 
 | String         | Description                 |
 | -----------    | --------------------------- |
-| `[c:g f:LimeGreen:Orange:9]`            | Applies a Lime->Orange gradient to the foreground of the next 9 characters. |
-| `[c:g b:0,0,0:Red:Yellow:Red:Black:15]` | Applies a Black->Red->Yellow->Red->Black gradient to the background of the next 15 characters. |
+| `[c:g f:LimeGreen:Orange:9]`            | Applies a Lime to Orange gradient to the foreground of the next 9 characters. |
+| `[c:g b:0,0,0:Red:Yellow:Red:Black:15]` | Applies a Black to Red to Yellow to Red to Black gradient to the background of the next 15 characters. |
 
 ## Command: Set Glyph
 
@@ -169,39 +197,12 @@ Syntax: `[c:sg glyph index[:count]]`
 | Parameter Position | Optional | Description |
 | ------------------ | -------- | ----------- |
 | 1                  | False    | The glyph index to apply. |
-| 2                  | True     | The count of characters to apply the glyph to. If omitted, defaults to 1. Use * to indicate the rest of the string. |
+| 2                  | True     | The number of characters to apply the glyph to. Defaults to 1 if omitted. Use * to indicate the rest of the string. |
 
 ### Examples
 
 | String          | Description                 |
 | -----------     | --------------------------- |
-| `[c:sg 67]`     | Sets the next 1 characters to the letter `C` |
-| `[c:sg 32:*]`   | Sets the rest of the string to the space character |
-| `[c:sg 120:5]`  | Sets the next 5 characters to `x` |
-
-## Color parameters
-
-If a command uses a color parameter, you can specify it in the following ways:
-
-- `rgb`\
-red, green, blue as a byte value.
-
-- `rgba`\
-red, green, blue, alpha as a byte value.
-
-- `name`\
-A named color from the MonoGame Color type (supported in SFML).
-
-- `default`\
-Use the default color of the surface.
-
-<Aside type="tip">
-If you use the *rgb* or *rgba* color values, you can use `x` in place of any color channel to skip it and use the existing color channel on the surface.
-</Aside>
-
-[cr]: #command-recolor
-[cm]: #command-mirror
-[cu]: #command-undo
-[cb]: #command-blink
-[cg]: #command-gradient
-[csg]: #command-set-glyph
+| `[c:sg 67]`     | Sets the next character to the letter `C`. |
+| `[c:sg 32:*]`   | Sets the rest of the string to the space character. |
+| `[c:sg 120:5]`  | Sets the next 5 characters to `x`. |
