@@ -1,0 +1,54 @@
+---
+title: SadConsole game host overview
+description: Discover what a SadConsole game host does and how your game targets a specific host for rendering and input processing.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+A SadConsole host is the graphics engine that draws to the screen, processes input, and handles the game logic-loop. SadConsole doesn't draw or handle input natively. It's a generic library that relies on a "host" to provide the rendering engine and input processing.
+
+SadConsole supports three game hosts: [MonoGame](https://www.monogame.net/), [SFML](https://www.sfml-dev.org/), and FNA.
+
+## MonoGame
+
+The MonoGame host is [NuGet package `SadConsole.Host.MonoGame`](https://www.nuget.org/packages/SadConsole.Host.MonoGame/).
+
+MonoGame is a community-driven game engine that supports 2D and 3D. The main SadConsole library only describes objects rendered in 2D; however, you can still use MonoGame's 3D capabilities. MonoGame has the following features:
+
+- 3D and 2D rendering capabilities.
+- Cross-platform support for other operating systems.
+- Built for .NET.
+- Large community of users.
+
+## SFML
+
+The SFML host is [NuGet package `SadConsole.Host.SFML`](https://www.nuget.org/packages/SadConsole.Host.SFML/).
+
+SFML is a C engine built for 2D games. SFML has bindings for multiple languages, including .NET languages. SFML does work cross-platform, but requires significant effort to configure for other operating systems. SadConsole with SFML is currently built for Windows.
+
+## The host interface
+
+SadConsole is designed to be unaware of the host rendering engine. The [SadConsole.GameHost](/reference/sadconsole.gamehost/) base class defines common functionality for all host renderers. A host might provide specific capabilities and types, but you generally don't need them unless you want to do something specific with the host renderer, like using MonoGame's 3D capabilities.
+
+After starting a game, access the host through the [GameHost.Instance](/reference/sadconsole.gamehost/#instance) property.
+
+## Input processing
+
+SadConsole performs many operations during the **update** frame, including input processing. The input processor handles keyboard and mouse state. Mouse-related input events are continually processed on the object under the mouse cursor, but keyboard input works differently. Only the currently _focused_ object receives keyboard input. The [GameHost.FocusedScreenObjects](/reference/sadconsole.gamehost/#focusedscreenobjects) property designates the focused object.
+
+<Aside type="tip">
+You can easily have an object set itself as focused by setting [IsFocused](/reference/sadconsole.iscreenobject/#isfocused) to `true`.
+</Aside>
+
+### Mouse
+
+Mouse input scans the [GameHost.Screen](/reference/sadconsole.gamehost/#screen) object hierarchy and determines which object is under the mouse. That object's [ProcessMouse(MouseScreenObjectState)](/reference/sadconsole.iscreenobject/#processmousemousescreenobjectstate) method is called. This method checks the [UseMouse](/reference/sadconsole.iscreenobject/#usemouse) property, and if it's `true`, the object handles the mouse. When the object processes the mouse, it raises the following input events:
+
+- [MouseEnter](/reference/sadconsole.iscreensurface/#mouseenter)
+- [MouseMove](/reference/sadconsole.iscreensurface/#mousemove)
+- [MouseButtonClicked](/reference/sadconsole.iscreensurface/#mousebuttonclicked)
+- [MouseExit](/reference/sadconsole.iscreensurface/#mouseexit)
+
+### Keyboard
+
+Keyboard input is always sent to the "focused" object. An object is considered focused when its [IsFocused](/reference/sadconsole.iscreenobject/#isfocused) property is set to `true` and it's the top-most object in the [GameHost.FocusedScreenObjects](/reference/sadconsole.gamehost/#focusedscreenobjects) collection. When focused, SadConsole calls the object's [ProcessKeyboard(Keyboard)](/reference/sadconsole.iscreenobject/#processkeyboardkeyboard) method every **update** frame. If the object's [UseKeyboard](/reference/sadconsole.iscreenobject/#usekeyboard) property is `true`, the keyboard input is processed.

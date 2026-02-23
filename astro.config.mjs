@@ -69,6 +69,13 @@ export default defineConfig({
                       icon: 'puzzle',
                       items: [
                         {
+                            label: 'Game host', items: [
+                                // Each item here is one entry in the navigation menu.
+                                { label: 'Overview', slug: 'guides/host-overview' },
+                                { label: 'Startup screen', slug: 'guides/host-screen' },
+                            ]
+                        },
+                        {
                             label: 'String parser', items: [
                                 // Each item here is one entry in the navigation menu.
                                 { label: 'Overview', slug: 'guides/string-parser-overview' },

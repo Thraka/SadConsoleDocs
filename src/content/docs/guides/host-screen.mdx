@@ -1,0 +1,52 @@
+---
+title: 'SadConsole GameHost.Screen: Overview and startup'
+description: Learn how the GameHost.Screen property controls what's visible and processed in your SadConsole game.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+The [`SadConsole.GameHost.Screen`](/reference/sadconsole.gamehost#screen) property is one of the most important properties in SadConsole. It determines what's displayed and what receives keyboard and mouse input.
+
+<Aside type="tip">
+Access the host through the `SadConsole.GameHost.Instance` property.
+</Aside>
+
+## What does the Screen represent?
+
+`GameHost.Screen` represents the consoles and surfaces displayed to the user. It's the single root object; all other objects are children of it. Objects can have unlimited children at any depth.
+
+Swap `GameHost.Screen` to transition between parts of your game. For example, when your game starts, show a title screen with all its logic. Based on the user's selection, swap `GameHost.Screen` to an instance that represents the settings menu or the game itself.
+
+## Designate the startup screen
+
+The game configuration object sets the startup screen. {/* TODO: Link to game startup/config guide once migrated */}
+
+Create a class that inherits from `IScreenObject` and configure it with your consoles, surfaces, and input handling code. Then, call the [`SetStartingScreen<TRootObject>(Builder)`](/reference/sadconsole.configuration.extensions#setstartingscreentrootobjectbuilder) configuration method with your type. Your startup code assigns [`SadConsole.GameHost.Screen`](/reference/sadconsole.gamehost#screen) automatically through this configuration.
+
+**Configuration setting**
+
+```csharp
+using SadConsole.Configuration;
+
+Game.Configuration gameStartup = new Game.Configuration()
+    .SetScreenSize(120, 38)
+    .SetStartingScreen<RootScreen>() // Startup object type is here
+    ;
+
+Game.Create(gameStartup);
+Game.Instance.Run();
+Game.Instance.Dispose();
+```
+
+**Starting screen type**
+
+```csharp
+class RootScreen : ScreenObject
+{
+    public RootScreen()
+    {
+        // Code here to create consoles, objects, and arrange them.
+        // Each object should be added to the Children collection.
+    }
+}
+```
