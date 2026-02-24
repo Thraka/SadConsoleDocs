@@ -1,5 +1,6 @@
 :root {
   
+  /* Colors */
   --ansi-black: #000;
   --ansi-black-bright: #555;
   --ansi-blue: #0000b4;
@@ -44,11 +45,43 @@
 }
 
 html, body{
-    font-size: var(--sl-text-sm-big);
+  font-size: var(--sl-text-sm-big);
+  background-color: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .sl-markdown-content {
   font-family: 'Hack';
+}
+
+/* Headers */
+h1#_top {
+  color: var(--ansi-cyan-foreground);
+  background: var(--ansi-cyan-background);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 0 1px var(--ansi-cyan-foreground);
+  width: 100%;
+  margin:10px 0px 10px -5px;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Headings: prefer Starlight heading colors (high contrast) */
+.sl-markdown-content h1, h2, h3, h4, h5, h6 {
+  color: var(--sl-color-white);
+}
+
+.sl-markdown-content ul {
+  list-style-type: none;
+}
+
+.sl-markdown-content ul li::marker {
+    content: "\2666\a0\A0";
+    color: #0a0;
 }
 
 /* Aside styling */
@@ -70,149 +103,133 @@ html, body{
   margin-inline-start: var(--sl-anchor-icon-size);
 }
 
-/* MSDOS-like rules scoped to dark theme only (attribute-driven by Starlight) */
+.sl-markdown-content h2 {
+  color: var(--ansi-white-bright);
+  background: var(--ansi-blue-background);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 0 1px var(--ansi-blue-foreground);
+  width: fit-content;
+  margin: 0px 0px 30px -5px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.sl-markdown-content h2::after {
+  /*content: " ]\2500\2500\2500\2500\2500\2500\2500\2500\2500\2500\2500\a0\2500\a0\B7";*/
+  /*content: "]\2500";*/
+  color: var(--ansi-cyan-foreground);
+}
+
+/* LinkButton styles */
+.sl-link-button.primary {
+  background: var(--ansi-red-background);
+  border-color: var(--ansi-red-foreground);
+  color: var(--ansi-red-foreground);
+}
+
+/* fancy links */
+.sl-markdown-content {
+  --sc-link: var(--ansi-yellow-foreground);
+  --sc-link-hover: var(--ansi-yellow-foreground);
+  --sc-link-hover-back: var(--ansi-yellow-background);
+}
+
+.sl-markdown-content a:hover,
+.sl-markdown-content a:focus {
+  color: var(--sc-link-hover);
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  background: var(--sc-link-hover-back);
+}
+
+.sl-markdown-content a {
+  color: var(--sc-link);
+  text-decoration: underline;
+}
+
+/* Markdown: ** and _  */
+.sl-markdown-content strong {
+  color: var(--ansi-green);
+}
+
+.sl-markdown-content em {
+  color: var(--ansi-blue-bright);
+}
+
+/* Selection: prefer user's ANSI green for retro authenticity */
+::selection {
+  background: var(--ansi-green-foreground);
+  color: var(--ansi-black-background);
+}
+
+/* Inline code and preformatted blocks — use Starlight inline-code bg token where available */
+.sl-markdown-content pre, code {
+  background-color: var(--sl-color-bg-inline-code);
+  color: inherit;
+  border-radius: 3px;
+}
+
+/* Inline code: pop a bit using the same token but with slight inset */
+.sl-markdown-content code {
+  background-color: var(--sl-color-bg-inline-code);
+  color: var(--sc-inline-code-color);
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.45);
+}
+
+/* Block code: adopt Starlight hairline color for borders and keep spacing */
+.sl-markdown-content pre {
+  background-color: var(--sl-color-bg-inline-code);
+  color: inherit;
+  border-radius: 6px;
+  padding: 0.6em;
+  overflow: auto;
+  border: 1px solid var(--sl-color-hairline);
+  box-shadow: var(--sl-shadow-sm);
+}
 
 /* Also support explicit data-theme="dark" toggles */
 [data-theme="dark"] {
-  /* Basic MSDOS-like theme: background, text, and small UI touches */
-  html, body {
-    /* use Starlight's page background & text tokens where appropriate */
-    background-color: var(--sl-color-bg);
-    color: var(--sl-color-text);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
 
-  /* Local, maintainable tokens for markdown link palette (EGA colors kept) */
-  .sl-markdown-content {
-    --sc-link: var(--ansi-yellow-bright);
-    --sc-link-hover: var(--ansi-yellow-bright);
-    --sc-link-hover-back: var(--ansi-yellow);
-    --sc-inline-code-color: var(--ansi-white-bright);
-  }
-
-  /* Links inside Starlight-rendered markdown content only */
-  .sl-markdown-content a {
-    color: var(--sc-link);
-    text-decoration: underline;
-  }
-
-  .sl-markdown-content a:hover,
-  .sl-markdown-content a:focus {
-    color: var(--sc-link-hover);
-    transition: background-color 0.2s ease;
-    text-transform: uppercase;
-    background: var(--sc-link-hover-back);
-  }
-
-  /* Headings: prefer Starlight heading colors (high contrast) */
-  .sl-markdown-content h1, h2, h3, h4, h5, h6 {
-    color: var(--sl-color-white);
-  }
-
-  h1#_top {
-    color: var(--ansi-cyan-bright);
-    background: var(--ansi-cyan);
-    padding: 8px 10px;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 0 1px var(--ansi-cyan-bright);
-    width: 100%;
-    margin:10px 0px 10px -5px;
-    text-transform: uppercase;
-    text-align: center;
-    display: inline-block;
-  }
-
-  .sl-markdown-content h2 {
-    color: var(--ansi-white-bright);
-    background: var(--ansi-blue);
-    padding: 8px 10px;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 0 1px var(--ansi-blue-bright);
-    width: fit-content;
-    margin: 0px 0px 30px -5px;
-    text-transform: uppercase;
-    display: inline-block;
-  }
-  .sl-markdown-content h2::after {
-    /*content: " ]\2500\2500\2500\2500\2500\2500\2500\2500\2500\2500\2500\a0\2500\a0\B7";*/
-    /*content: "]\2500";*/
-    color: var(--ansi-cyan-bright);
-  }
-
-  .sl-markdown-content ul {
-    list-style-type: none;
-  }
-
-  .sl-markdown-content ul li::marker {
-      content: "\2666\a0\A0";
-      color: #0a0;
-  }
-
-  /* Inline code and preformatted blocks — use Starlight inline-code bg token where available */
-  .sl-markdown-content pre, code {
-    background-color: var(--sl-color-bg-inline-code);
-    color: inherit;
-    border-radius: 3px;
-  }
-
-  /* Block code: adopt Starlight hairline color for borders and keep spacing */
-  .sl-markdown-content pre {
-    background-color: var(--sl-color-bg-inline-code);
-    color: inherit;
-    border-radius: 6px;
-    padding: 0.6em;
-    overflow: auto;
-    border: 1px solid var(--sl-color-hairline);
-    box-shadow: var(--sl-shadow-sm);
-  }
-
-  /* Inline code: pop a bit using the same token but with slight inset */
-  .sl-markdown-content code {
-    background-color: var(--sl-color-bg-inline-code);
-    color: var(--sc-inline-code-color);
-    border-radius: 4px;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.45);
-  }
-
-  .sl-markdown-content strong {
-    color: var(--ansi-green);
-  }
-
-  .sl-markdown-content em {
-    color: var(--ansi-blue-bright);
-  }
-
-  /* Selection: prefer user's ANSI green for retro authenticity */
-  ::selection {
-    background: var(--ansi-green-bright);
-    color: var(--ansi-black);
-  }
-
-  /* LinkButton styles */
-  .sl-link-button.primary {
-    background: var(--ansi-red);
-    border-color: var(--ansi-red-bright);
-    color: var(--ansi-red-bright);
-  }
-
+  --ansi-black-background: var(--ansi-black);
+  --ansi-black-foreground: var(--ansi-black-bright);
+  --ansi-blue-background: var(--ansi-blue);
+  --ansi-blue-foreground: var(--ansi-blue-bright);
+  --ansi-green-background: var(--ansi-green);
+  --ansi-green-foreground: var(--ansi-green-bright);
+  --ansi-cyan-background: var(--ansi-cyan);
+  --ansi-cyan-foreground: var(--ansi-cyan-bright);
+  --ansi-red-background: var(--ansi-red);
+  --ansi-red-foreground: var(--ansi-red-bright);
+  --ansi-magenta-background: var(--ansi-magenta);
+  --ansi-magenta-foreground: var(--ansi-magenta-bright);
+  --ansi-yellow-background: var(--ansi-yellow);
+  --ansi-yellow-foreground: var(--ansi-yellow-bright);
+  --ansi-white-background: var(--ansi-white);
+  --ansi-white-foreground: var(--ansi-white-bright);
 }
 
 [data-theme="light"] {
 
-  h1#_top {
-    color: var(--ansi-cyan);
-    background: var(--ansi-cyan-bright);
-    padding: 8px 10px;
-    box-sizing: border-box;
-    box-shadow: 8px 8px 0 1px var(--ansi-cyan);
-    width: 100%;
-    margin:10px 0px 10px -5px;
-    text-transform: uppercase;
-    text-align: center;
-    display: inline-block;
-  }
+  --ansi-black-background: var(--ansi-black-bright);
+  --ansi-black-foreground: var(--ansi-black);
+  --ansi-blue-background: var(--ansi-blue-bright);
+  --ansi-blue-foreground: var(--ansi-blue);
+  --ansi-green-background: var(--ansi-green-bright);
+  --ansi-green-foreground: var(--ansi-green);
+  --ansi-cyan-background: var(--ansi-cyan-bright);
+  --ansi-cyan-foreground: var(--ansi-cyan);
+  --ansi-red-background: var(--ansi-red-bright);
+  --ansi-red-foreground: var(--ansi-red);
+  --ansi-magenta-background: var(--ansi-magenta-bright);
+  --ansi-magenta-foreground: var(--ansi-magenta);
+  --ansi-yellow-background: var(--ansi-yellow-bright);
+  --ansi-yellow-foreground: var(--ansi-yellow);
+  --ansi-white-background: var(--ansi-white-bright);
+  --ansi-white-foreground: var(--ansi-white);
 
+  --sc-inline-code-color: var(--ansi-black);
 }
 
 
