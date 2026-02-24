@@ -4,6 +4,7 @@ description: Create a basic map object and handle keyboard input. Part 3 of the 
 ---
 
 import { Aside, Steps } from '@astrojs/starlight/components';
+import { SaveFile } from "starlight-save-file-component";
 
 In this part of the tutorial, you'll explore how input works in SadConsole. You'll learn how to create a basic map with a player that you can use the mouse and keyboard to interact with.
 
@@ -143,7 +144,7 @@ Next, add a basic map surface to the screen.
 
     The `FontSize` used helps stretch the gradient evenly over the surface. The default font used by SadConsole has a 2:1 ratio in width to height. The following image illustrates how the gradient is laid out, it uses a smaller window for the purpose of the illustration:
 
-    ![SadConsole gradient diagram](images/part-3-input/gradient.png)
+    ![SadConsole gradient diagram](/article-assets/images/tutorials/first-game/part-3-input/gradient.png)
 
 01. Call the `FillBackground` method from the `RootScreen` constructor:
 
@@ -261,7 +262,7 @@ Now that the `GameObject` type has been created, use it to represent the player.
     This creates a black and white glyph "2", the smiley face glyph. It's placed at the center of the map surface. Run your project and you'll see the smiley face!
 </Steps>
 
-![Smiley face glyph 2](images/part-3-input/smileyface.png)
+![Smiley face glyph 2](/article-assets/images/tutorials/first-game/part-3-input/smileyface.png)
 
 Now that you have a player on the screen, you'll need to get the keyboard working.
 
@@ -341,7 +342,7 @@ Here's a look at this code:
 
 Now run the game and try moving the character around the screen:
 
-![Moving the player](images/part-3-input/move-player.gif)
+![Moving the player](/article-assets/images/tutorials/first-game/part-3-input/move-player.gif)
 
 Notice that you can move the character around the map, but the character is leaving a trail behind it. When the character moves, the code copies the appearance of the character to the new position on the surface directly, which changes what's on the surface. It doesn't restore what used to be on the surface.
 
@@ -400,10 +401,10 @@ For this code, edit the _GameObject.cs_ file.
 
 Run the game and you'll see that there's no trail left behind the player:
 
-![Moving the player](images/part-3-input/move-player-clean.gif)
+![Moving the player](/article-assets/images/tutorials/first-game/part-3-input/move-player-clean.gif)
 
 ## Conclusion
 
 Now you understand a bit more about how input works, and you have a basic map and game object. These are just the basics; there's a lot more you can do with input, but you'll explore that when you work with the user interface controls provided by SadConsole. The next part of the tutorial series explores how to create more map objects and display feedback to the user.
 
-<SaveFile title="Download example project" href="/article-assets/tutorials/first-game/projects/part3.zip" />
+<SaveFile title="Download example project" href="/article-assets/files/tutorials/first-game/part3.zip" />

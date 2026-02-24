@@ -4,6 +4,7 @@ description: Learn how to create a proper map object to hold all game objects, a
 ---
 
 import { Steps } from '@astrojs/starlight/components';
+import { SaveFile } from "starlight-save-file-component";
 
 In this part of the tutorial, you upgrade the map from a simple surface to a dedicated class that creates and manages game objects.
 
@@ -17,7 +18,7 @@ Previous articles in this tutorial:
 
 This part of the tutorial continues where the previous one left off. If you don't have your code handy, you can download it now.
 
-<SaveFile title="Download starting project" href="/article-assets/tutorials/first-game/projects/part3.zip" />
+<SaveFile title="Download starting project" href="/article-assets/files/tutorials/first-game/part3.zip" />
 
 ## Check bounds
 
@@ -317,7 +318,7 @@ Similar to the treasure, add a method to create a monster object:
 
 Now when you run the game, you'll see both the monster and the treasure on the map.
 
-![A monster and treasure object on the game map](images/part-4-mapobject/monster-and-treasure.png)
+![A monster and treasure object on the game map](/article-assets/images/tutorials/first-game/part-4-mapobject/monster-and-treasure.png)
 
 ## Collision
 
@@ -433,6 +434,6 @@ Now try running the game. When you move the player character to the same positio
 
 After all these updates, your game is starting to take shape. In the next part of the tutorial, you explore how to create new types based on `GameObject` that know how to react to the `Touched` method.
 
-<SaveFile title="Download example project" href="/article-assets/tutorials/first-game/projects/part4.zip" />
+<SaveFile title="Download example project" href="/article-assets/files/tutorials/first-game/part4.zip" />
 
 [csharp-nullableaware]: https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/nullable-reference-types

@@ -24,7 +24,7 @@ export default defineConfig({
       starlight({
           title: 'SadConsole',
           logo: {
-              src: '/src/assets/SadConsoleLogo.gif'
+              src: '/public/SadConsoleLogo.gif'
           },
           social: [
               { icon: 'discord', label: 'Discord', href: 'https://discord.gg/pAFNKYjczM' },

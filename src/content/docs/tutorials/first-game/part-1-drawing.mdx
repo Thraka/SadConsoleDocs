@@ -84,7 +84,7 @@ Regardless of whether you used the [CLI templates](/getting-started/cli/) or [Vi
 </Steps>
 You should be able to run this code and see the following output. You can run your program by pressing the <kbd>F5</kbd> key. If you're using the terminal, run `dotnet run`:
 
-![a new console in SadConsole with hello text](images/part-1-drawing/new-core-hello-window.png)
+![a new console in SadConsole with hello text](/article-assets/images/tutorials/first-game/part-1-drawing/new-core-hello-window.png)
 
 ## Explore the sample code
 
@@ -160,7 +160,7 @@ After the `Print` line that prints _"Hello from SadConsole"_, add the following 
 startingConsole.DrawBox(new Rectangle(3, 3, 23, 3), ShapeParameters.CreateBorder(new ColoredGlyph(Color.Violet, Color.Black, 176)));
 ```
 
-![box shape in SadConsole](images/part-1-drawing/part1-shapes-1.png)
+![box shape in SadConsole](/article-assets/images/tutorials/first-game/part-1-drawing/part1-shapes-1.png)
 
 The `DrawBox` method takes a region and a `ShapeParameters` object. The `ShapeParameters` object defines the style in which to create a shape, and in this case, the box. The code uses it in a simple mode, just providing a `ColoredGlyph` for the border. A `ColoredGlyph` type represents a foreground color, a background color, and a glyph character—all in a single type. This glyph is what gets drawn as the border of the box. A `ColoredGlyph` also specifies the fill of the shape, but skip that for now.
 
@@ -176,7 +176,7 @@ startingConsole.DrawBox(new Rectangle(3, 3, 23, 3), ShapeParameters.CreateStyled
                                                     new ColoredGlyph(Color.Violet, Color.Black)));
 ```
 
-![line shape in SadConsole](images/part-1-drawing/part1-shapes-2.png)
+![line shape in SadConsole](/article-assets/images/tutorials/first-game/part-1-drawing/part1-shapes-2.png)
 
 `ShapeParameters` describes many ways to create the box. While the `ShapeParameters.CreateBorder` method used a `ColoredGlyph` to set the foreground, background, and symbol used to draw the whole border, `ShapeParameters.CreateStyledBox` instead uses a _connected line style_ for the symbols used to draw the box. A `ColoredGlyph` is still used to set the foreground and background of the border. A few line styles exist, and you can create your own. Here are two of the most common:
 
@@ -198,7 +198,7 @@ The code above is using a black background to fill the box.
 
 Run your game and you'll see the following screen:
 
-![circle shape in SadConsole](images/part-1-drawing/part1-shapes-3.png)
+![circle shape in SadConsole](/article-assets/images/tutorials/first-game/part-1-drawing/part1-shapes-3.png)
 
 #### Line
 
@@ -232,7 +232,7 @@ static void Startup(object? sender, GameHost host)
 
 Run your game and you'll see the following screen:
 
-![line shape in SadConsole](images/part-1-drawing/part1-shapes-4.png)
+![line shape in SadConsole](/article-assets/images/tutorials/first-game/part-1-drawing/part1-shapes-4.png)
 
 ## Other basics
 

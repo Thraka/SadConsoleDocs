@@ -13,7 +13,7 @@ The image file of the font must use a transparent background, _not_ a colored ke
 
 Here is an example of the standard font graphic included in SadConsole.
 
-![font sample](images/fonts/font-sample.png)
+![font sample](/article-assets/images/guides/fonts-overview/font-sample.png)
 
 <Aside type="note">
 Normally, the background of the font texture is transparent, not black. In this article, it's black so that you can see the glyphs.
@@ -23,7 +23,7 @@ Normally, the background of the font texture is transparent, not black. In this 
 
 The font breaks down into glyph cells referenced by index. Index **0** represents the top-left cell and counts up moving right, where the next cell is **1**. Once the index reaches the end of the row, it moves to the next row and continues counting.
 
-![font indexing](images/fonts/how-font-works.png)
+![font indexing](/article-assets/images/guides/fonts-overview/how-font-works.png)
 
 When text is written to a surface or console, all characters land on the surface at the appropriate positions. Surfaces and consoles draw font glyphs by index. All English characters in the font file sit at their matching keyboard keycode index. Character `A` (code 65) sits at index 65, while character `z` (code 122) sits at index 122. If you place index 66 at **(0,0)** on a surface, you'll see the `B` character at **(0,0)**.
 
