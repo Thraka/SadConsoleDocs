@@ -7,6 +7,10 @@ import { Aside } from '@astrojs/starlight/components';
 
 A "font" in SadConsole displays characters on the screen. The font can be a mix of textual glyphs or graphical tiles. Fonts consist of two parts: the image file and the config file. The image can be in any format that the current [host](/guides/host-overview/) supports, most likely MonoGame. Both the MonoGame and SFML hosts support loading _.png_ images, making that format a safe choice.
 
+<Aside type="tip">
+Community user **tf01** has created a [font generator tool](https://github.com/tfi01/SadFontsUtil) that can help you create font image and config files.
+</Aside>
+
 ## Image file
 
 The image file of the font must use a transparent background, _not_ a colored key file. The glyphs in the font graphic should use a pure white color `(255, 255, 255)` for the foreground. The image file should have two very specific glyphs: a fully transparent glyph, and a fully filled-in glyph.
