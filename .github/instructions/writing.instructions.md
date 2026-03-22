@@ -45,6 +45,7 @@ ALWAYS:
 - **REQUIRED: Use bullets for unordered lists - NEVER use numbers for unordered content**
 - **ESSENTIAL: Write complete sentences in lists with proper punctuation**
 - Skip end punctuation on titles, headings, and UI elements (3 words or fewer)
+- Avoid using emdash in lists - colons instead.
 
 ### Spacing and Layout
 - Add blank lines around Markdown elements (but don't add extra if they exist)
