@@ -79,7 +79,7 @@ surfaceObj.FontSize = surfaceObj.Font.GetFontSize(IFont.Sizes.Two);
 
 SadConsole uses the IBM 8x16 Code Page 437 font by default. The default font, set by the [GameHost.DefaultFont](/reference/sadconsole.gamehost#defaultfont) property, applies automatically to every SadConsole surface object unless you designate a different font when creating the object.
 
-To use a custom font on startup, adjust the game config that starts SadConsole. For more information, see [Use your own font as the default font](/guides/config/#use-your-own-font-as-the-default-font).
+To use a custom font on startup, adjust the game config that starts SadConsole. For more information, see [Use your own font as the default font](/guides/config-overview/#use-your-own-font-as-the-default-font).
 
 ```csharp
 using SadConsole.Configuration;
@@ -101,10 +101,10 @@ static void SetupFont(Game.ConfigurationFontLoader loader)
 
 ### Changing the default font after SadConsole has started
 
-To change the default font after SadConsole starts, set the `SadConsole.Game.Instance.DefaultFont` property to a different font instance. Any object created **after** the default font changes uses the new default font.
+To change the default font after SadConsole starts, set the `SadConsole.Game.Instance.DefaultFont` property to a different font instance. Changing the default font **only** affects object created after the change.
 
 ## Load a font
 
 The game host loads fonts with the [GameHost.LoadFont(string)](/reference/sadconsole.gamehost#loadfontstring) method. When you load a font, SadConsole registers it with the [GameHost.Fonts](/reference/sadconsole.gamehost#fonts) dictionary, which uses the font name as the key, and then returns the instance.
 
-Fonts can be preloaded with the game config before your game starts. For more information, see [Use a delegate to configure the font options](/guides/config/#use-a-delegate-to-configure-the-font-options).
+Fonts can be preloaded with the game config. For more information, see [Use a delegate to configure the font options](/guides/config-overview/#use-a-delegate-to-configure-the-font-options).

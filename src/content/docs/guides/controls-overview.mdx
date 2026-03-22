@@ -65,7 +65,7 @@ All of the controls share a color scheme that each control uses to draw itself. 
 
 When a control draws itself, it calls the [`FindThemeColors`](/reference/sadconsole.ui.controls.controlbase/#findthemecolors) method. As indicated by the method name, this method finds the color scheme used in drawing the control. Colors are set globally by default by the [`Colors.Default`](/reference/sadconsole.ui.colors/#default) property. You can edit these colors to customize the colors for all controls. But, you can set the colors separately from the default set of colors by setting them on the control's host or the control itself. When set on the host, all controls added to that host use those colors instead of the default. Further, if set directly on the control, those colors are used. To summarize, when a control draws itself, it uses the first set of colors it finds based on the following order:
 
-- The control itself. (Colors are set with the [`SetThemeColors`](/reference/sadconsole.ui.controls.controlbase/#setthemecolors) method)
+- The control itself. (Colors are set with the [`SetThemeColors`](/reference/sadconsole.ui.controls.controlbase/#setthemecolorscolors) method)
 - The control's host's [`ThemeColors`](/reference/sadconsole.ui.controlhost/#themecolors) property.
 - [`Colors.Default`](/reference/sadconsole.ui.colors/#default) property.
 
