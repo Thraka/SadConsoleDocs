@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 import astroExpressiveCode from 'astro-expressive-code'
 import starlightSidebarTopics from 'starlight-sidebar-topics'
 import starlightGitHubAlerts from 'starlight-github-alerts'
-
+import starlightLinksValidator from 'starlight-links-validator'
 
 import netlify from '@astrojs/netlify';
 
@@ -36,6 +36,9 @@ export default defineConfig({
           ],
           plugins: [
               starlightGitHubAlerts(),
+              starlightLinksValidator({
+                errorOnRelativeLinks: false,
+              }),
               starlightSidebarTopics([
                   {
                       label: 'Getting Started',
@@ -87,7 +90,13 @@ export default defineConfig({
                         },
                         {
                             label: 'Surfaces and Consoles', items: [
-                                { label: 'Connect line glyphs', slug: 'guides/how-to-connect-lines' },
+                                {label: 'Overview', slug: 'guides/surfaces-overview' },
+                                {label: 'ScreenObject', slug: 'guides/screenobject-basics' },
+                                {
+                                    label: 'How to', items: [
+                                        { label: 'Connect line glyphs', slug: 'guides/how-to-connect-lines' },
+                                    ]
+                                }
                             ]
                         },
                         {

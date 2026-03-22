@@ -1,0 +1,307 @@
+---
+title: IScreenObject and ScreenObject overview
+description: Learn how IScreenObject and ScreenObject form the foundation of every object in SadConsole, providing position, parent-child relationships, components, and input processing.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Every object in SadConsole—surfaces, consoles, windows, and animated objects—shares a common foundation: [`IScreenObject`](/reference/sadconsole.iscreenobject/). This interface defines the contract for positioning, parent-child relationships, components, input, and the update/render loop. The [`ScreenObject`](/reference/sadconsole.screenobject/) class is the standard implementation you use directly or subclass when building your own types.
+
+Understanding `IScreenObject` and `ScreenObject` helps you reason about how all SadConsole objects behave, even before you get to surfaces or cells.
+
+## What IScreenObject defines
+
+`IScreenObject` inherits from two other interfaces and adds its own members on top:
+
+- `IPositionable`: provides `Position`, `PositionChanging`, and `PositionChanged`.
+- [`IComponentHost`](/reference/sadconsole.components.icomponenthost/): provides `SadComponents`, `GetSadComponent<T>`, `GetSadComponents<T>`, and `HasSadComponent<T>`.
+
+On top of those, `IScreenObject` defines:
+
+- **Position and layout**: `AbsolutePosition`, `IgnoreParentPosition`
+- **Object graph**: `Parent`, `Children`
+- **Lifecycle flags**: `IsVisible`, `IsEnabled`
+- **Input flags**: `UseKeyboard`, `UseMouse`, `IsFocused`, `IsExclusiveMouse`, `FocusedMode`
+- **Ordering**: `SortOrder`
+- **Loop methods**: `Update(TimeSpan)`, `Render(TimeSpan)`
+- **Input methods**: `ProcessKeyboard`, `ProcessMouse`, `LostMouse`
+- **Focus callbacks**: `OnFocused()`, `OnFocusLost()`
+- **Position utility**: `UpdateAbsolutePosition()`
+- **Events**: `IsVisibleChanged`, `IsEnabledChanged`, `ParentChanged`, `Focused`, `FocusLost`
+
+`ScreenObject` implements all of this and adds virtual overrides so you can hook into each part of the lifecycle in a subclass.
+
+## Position: relative and absolute
+
+Every screen object has two aspects to its position.
+
+### Relative position
+
+The `Position` property holds the object's position relative to its parent. When you place an object at `(5, 3)` and its parent is at `(10, 10)`, the object draws at `(15, 13)` in screen space.
+
+```csharp
+ScreenSurface parent = new(40, 20);
+parent.Position = new Point(10, 10);
+
+ScreenSurface child = new(10, 5);
+child.Position = new Point(5, 3);  // Draws at (15, 13) on screen
+
+parent.Children.Add(child);
+```
+
+### Absolute position
+
+The `AbsolutePosition` property holds the resolved pixel-space position after accounting for the parental hierarchy. SadConsole recalculates this automatically when `Position` changes or when the parent moves. Call `UpdateAbsolutePosition()` manually if you need to force a recalculation outside of normal updates.
+
+### Ignoring parent position
+
+Set `IgnoreParentPosition = true` to decouple an object from its parent's position. The object treats `(0, 0)` as the top-left corner of the screen and positions itself accordingly. This is useful for overlays or UI elements that stay fixed on screen while their parent moves.
+
+```csharp
+ScreenSurface overlay = new(80, 25);
+overlay.IgnoreParentPosition = true;
+overlay.Position = new Point(0, 0);  // Always top-left of screen
+```
+
+## Parent-child relationships
+
+All screen objects connect to each other through the `Parent` property and the `Children` collection. Adding an object to `Children` automatically sets its `Parent`:
+
+```csharp
+ScreenObject root = new();
+ScreenSurface panel = new(20, 10);
+
+root.Children.Add(panel);
+// panel.Parent is now 'root'
+```
+
+The SadConsole engine calls `Update` and `Render` on the root object (`GameHost.Instance.Screen`) each frame, then propagates those calls down the entire child tree automatically. You don't call `Update` or `Render` on children yourself—just add them to the hierarchy.
+
+<Aside type="note">
+The `Children` collection is a [`ScreenObjectCollection`](/reference/sadconsole.screenobjectcollection/). Adding an object to one parent automatically removes it from any previous parent.
+</Aside>
+
+### Sort order
+
+Children render in the order they appear in the `Children` collection by default. The `SortOrder` property provides a numeric hint for manual sorting. Call `Children.Sort()` to reorder children by their `SortOrder` values when you need custom depth control.
+
+## Visibility and enabled state
+
+Two independent flags control whether an object participates in the frame loop:
+
+| Property | Controls |
+| --- | --- |
+| `IsVisible` | Whether `Render` runs on this object and its children. |
+| `IsEnabled` | Whether `Update` runs on this object and its children. |
+
+Both default to `true`. Setting `IsVisible = false` hides the object and all its children without removing them from the hierarchy. Setting `IsEnabled = false` pauses updates without affecting rendering.
+
+```csharp
+ScreenSurface panel = new(20, 10);
+panel.IsVisible = false;   // Hidden, not rendered
+panel.IsEnabled = false;   // Paused, not updated
+```
+
+Both properties fire change events (`IsVisibleChanged`, `IsEnabledChanged`) and call virtual protected methods (`OnVisibleChanged`, `OnEnabledChanged`) that you can override in a subclass.
+
+## The update and render loop
+
+SadConsole drives each frame by calling `Update(TimeSpan)` and `Render(TimeSpan)` on the root object. Both propagate through the child hierarchy automatically.
+
+- `Update` runs when `IsEnabled` is `true`. It processes all update-capable components and then calls `Update` on each child.
+- `Render` runs when `IsVisible` is `true`. It processes all render-capable components and then calls `Render` on each child.
+
+Override these methods in a subclass to run custom logic each frame:
+
+```csharp
+public class MyObject : ScreenObject
+{
+    public override void Update(TimeSpan delta)
+    {
+        base.Update(delta);  // Processes components and children
+        // Your per-frame logic here
+    }
+}
+```
+
+<Aside type="tip">
+Always call `base.Update(delta)` and `base.Render(delta)` in overrides unless you intentionally want to suppress component or child processing.
+</Aside>
+
+## The component system
+
+Every `IScreenObject` hosts a `SadComponents` collection. Components let you attach reusable behavior to any screen object without subclassing. The engine calls component methods during `Update` and `Render` based on which interfaces the component implements.
+
+Components opt into specific phases by implementing one or more of these interfaces from the `SadConsole.Components` namespace:
+
+- `IsUpdate`: component runs during `Update`.
+- `IsRender`: component runs during `Render`.
+- `IsKeyboard`: component processes keyboard input.
+- `IsMouse`: component processes mouse input.
+
+`ScreenObject` maintains separate filtered lists (`ComponentsUpdate`, `ComponentsRender`, `ComponentsKeyboard`, `ComponentsMouse`) for efficient dispatch—only the relevant components run during each phase.
+
+Add a component to any object through `SadComponents`:
+
+```csharp
+ScreenObject obj = new();
+obj.SadComponents.Add(new Timer(TimeSpan.FromSeconds(1)));
+```
+
+Retrieve a component by type when you need to interact with it later:
+
+```csharp
+if (obj.HasSadComponent<Timer>(out Timer? timer))
+    timer.Restart();
+
+// Or get the first match directly
+Timer? t = obj.GetSadComponent<Timer>();
+```
+
+## Input: keyboard and mouse
+
+`IScreenObject` defines flags and methods for both keyboard and mouse input.
+
+### Keyboard
+
+- `UseKeyboard`: opt this object into keyboard processing. Defaults to `false` on `ScreenObject`.
+- `IsFocused`: set this to `true` to route keyboard input to this object.
+- `FocusedMode`: controls how the object behaves when it receives focus (a [`FocusBehavior`](/reference/sadconsole.focusbehavior/) value).
+- `ProcessKeyboard(Keyboard)`: called each frame when this object is focused and `UseKeyboard` is `true`. Return `true` to mark the input as handled and stop further processing.
+
+```csharp
+public override bool ProcessKeyboard(Keyboard keyboard)
+{
+    if (keyboard.IsKeyPressed(Keys.Space))
+    {
+        // Handle spacebar
+        return true;
+    }
+    return base.ProcessKeyboard(keyboard);
+}
+```
+
+### Mouse
+
+- `UseMouse`: opt this object into mouse processing.
+- `IsExclusiveMouse`: when `true`, the engine routes all mouse events to this object, bypassing other objects.
+- `ProcessMouse(MouseScreenObjectState)`: called each frame when the mouse is over this object and `UseMouse` is `true`. Return `true` to halt further mouse processing for this frame.
+- `LostMouse(MouseScreenObjectState)`: called when another object takes over mouse processing.
+
+```csharp
+public override bool ProcessMouse(MouseScreenObjectState state)
+{
+    if (state.Mouse.LeftClicked)
+    {
+        // Handle click
+        return true;
+    }
+    return base.ProcessMouse(state);
+}
+```
+
+### Focus events
+
+When `IsFocused` changes on an object, the engine calls `OnFocused()` or `OnFocusLost()` as appropriate. It also raises the `Focused` and `FocusLost` events. Override the virtual methods in a subclass to respond without subscribing to events:
+
+```csharp
+public override void OnFocused()
+{
+    // Highlight border, start cursor blink, etc.
+}
+
+public override void OnFocusLost()
+{
+    // Restore normal appearance
+}
+```
+
+## Quick hooks
+
+The `SadConsole.Quick` namespace provides extension methods that attach inline delegates to any `IScreenObject` without subclassing. Use them for small, one-off behaviors:
+
+```csharp
+ScreenObject obj = new();
+
+// Run code every update frame
+obj.WithUpdate((host, delta) =>
+{
+    // host is the IScreenObject, delta is elapsed time
+});
+
+// Handle keyboard input inline
+obj.WithKeyboard((host, keyboard) =>
+{
+    if (keyboard.IsKeyPressed(Keys.Escape))
+        GameHost.Instance.Screen = previousScreen;
+    return false;
+});
+
+// Handle mouse input inline
+obj.WithMouse((host, state) =>
+{
+    if (state.Mouse.LeftClicked)
+        DoSomething();
+    return false;
+});
+```
+
+Remove hooks with the corresponding `Remove*Hook` and `Remove*Hooks` methods.
+
+## Using ScreenObject directly
+
+`ScreenObject` itself renders nothing—it has no cells, no font, and no texture. Use it as an invisible container to group and position other objects:
+
+```csharp
+// Group a label and a panel together so they move as one unit
+ScreenObject group = new();
+group.Position = new Point(10, 5);
+
+ScreenSurface label = new(20, 1);
+label.Surface.Print(0, 0, "Score:");
+label.Position = new Point(0, 0);
+
+ScreenSurface scoreBox = new(10, 1);
+scoreBox.Position = new Point(7, 0);
+
+group.Children.Add(label);
+group.Children.Add(scoreBox);
+
+GameHost.Instance.Screen = group;
+```
+
+Moving `group.Position` repositions both children together without touching their individual positions.
+
+## Subclassing ScreenObject
+
+Subclass `ScreenObject` when you want a custom non-rendering object that participates in the game loop:
+
+```csharp
+public class GameStateManager : ScreenObject
+{
+    public override void Update(TimeSpan delta)
+    {
+        base.Update(delta);
+        // Manage game state, transitions, etc.
+    }
+
+    public override bool ProcessKeyboard(Keyboard keyboard)
+    {
+        // Global hotkeys
+        if (keyboard.IsKeyPressed(Keys.F1))
+        {
+            ToggleHelp();
+            return true;
+        }
+        return base.ProcessKeyboard(keyboard);
+    }
+}
+```
+
+## Implementing IScreenObject
+
+Implement `IScreenObject` directly only when you're building a type that can't or shouldn't extend `ScreenObject`. For example, a third-party ECS entity type that needs to participate in SadConsole's rendering pipeline could implement `IScreenObject` directly. In most cases, subclassing `ScreenObject` or one of its derived types is the right choice.
+
+<Aside type="tip">
+For most use cases, start with [`ScreenSurface`](/reference/sadconsole.screensurface/) or [`Console`](/reference/sadconsole.console/) rather than `ScreenObject` directly. Use `ScreenObject` as a container or as a base when you need custom non-rendering behavior. See [Surfaces and consoles overview](/guides/surfaces-overview) for a full comparison.
+</Aside>

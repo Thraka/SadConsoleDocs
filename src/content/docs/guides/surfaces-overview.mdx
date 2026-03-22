@@ -1,0 +1,294 @@
+---
+title: Surfaces and consoles overview
+description: Learn about surfaces and consoles in SadConsole, the core display objects used to render cells, text, and UI controls on screen.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Everything you see in a SadConsole game draws through a **surface**. A surface is a 2D grid of cells, where each cell holds a glyph, a foreground color, and a background color. Surfaces are the foundation of every visual object in SadConsole, from simple text displays to full windowed UIs.
+
+## Choosing the right type
+
+Pick the type that matches what you need:
+
+| Type | Use it when you want to... |
+| --- | --- |
+| [`ScreenObject`](#screenobject) | Organize children without rendering any cells. |
+| [`ScreenSurface`](#screensurface) | Display glyphs, draw shapes, or show static content. |
+| [`Console`](#console) | Accept keyboard input or use a cursor for text printing. |
+| [`ControlsConsole`](#controlsconsole) | Host UI controls like buttons, text boxes, and checkboxes. |
+| [`Window`](#window) | Show a bordered, titled, draggable panel or dialog. |
+| [`AnimatedScreenObject`](#animatedscreenobject) | Play a frame-by-frame cell animation. |
+| [`LayeredScreenSurface`](#layeredscreensurface) | Stack multiple independent cell layers on one surface. |
+
+<Aside type="tip">
+Start with `ScreenSurface` for most display needs. Move to `Console` only if you need cursor-based text input, and use `ControlsConsole` or `Window` when you need UI controls.
+</Aside>
+
+## Object hierarchy
+
+SadConsole organizes its display objects in a clear hierarchy. Each type builds on the one before it, adding more capability:
+
+```
+ScreenObject
+  ├─ AnimatedScreenObject
+  └─ ScreenSurface
+       ├─ LayeredScreenSurface
+       └─ Console
+            ├─ ControlsConsole
+            └─ Window
+```
+
+- [`ScreenObject`](/reference/sadconsole.screenobject/): the base of every SadConsole object. Provides positioning, parent/child relationships, components, and input processing. It doesn't render any cells on its own.
+- [`ScreenSurface`](/reference/sadconsole.screensurface/): adds a cell surface, a font, and a renderer. This is the most common type you'll use when you just want to display something on screen.
+- [`Console`](/reference/sadconsole.console/): extends `ScreenSurface` with a cursor for text input and keyboard handling.
+- [`ControlsConsole`](/reference/sadconsole.ui.controlsconsole/): extends `Console` with a built-in control host for UI controls like buttons, checkboxes, and lists.
+- [`Window`](/reference/sadconsole.ui.window/): extends `Console` with a title bar, border, dragging support, and modal display. Also includes a built-in control host.
+- [`AnimatedScreenObject`](/reference/sadconsole.animatedscreenobject/): extends `ScreenObject` directly and implements `IScreenSurface`. Holds a list of cell surface frames and plays them back over time.
+- [`LayeredScreenSurface`](/reference/sadconsole.layeredscreensurface/): extends `ScreenSurface` with a `LayeredSurface` component, allowing multiple independent cell layers to be stacked and rendered together.
+
+## Cells and CellSurface
+
+At the lowest level, a surface is an array of [`ColoredGlyph`](/reference/sadconsole.coloredglyph/) objects managed by an [`ICellSurface`](/reference/sadconsole.icellsurface/). Each cell stores three pieces of information:
+
+- **Foreground color**: the color of the glyph character.
+- **Background color**: the color behind the glyph.
+- **Glyph index**: the index into the font texture that determines which character or tile to display.
+
+The [`CellSurface`](/reference/sadconsole.cellsurface/) class implements `ICellSurface` and provides the actual cell array. You can set individual cells, print text, draw shapes, and apply effects through the surface.
+
+```csharp
+// Access individual cells on a surface
+screenSurface.Surface[5, 3].Glyph = (int)'A';
+screenSurface.Surface[5, 3].GlyphCharacter = 'A';
+screenSurface.Surface[5, 3].Foreground = Color.Yellow;
+screenSurface.Surface[5, 3].Background = Color.DarkBlue;
+```
+
+## Parent-child relationships
+
+All screen objects support a parent-child hierarchy through the `Children` collection. Child objects render relative to their parent's position and inherit visibility and update behavior.
+
+```csharp
+ScreenSurface parent = new(80, 25);
+ScreenSurface child = new(20, 10);
+child.Position = new Point(5, 5);
+
+parent.Children.Add(child);
+
+GameHost.Instance.Screen = parent;
+```
+
+Any `ScreenObject`-based type can serve as a child of another. This lets you compose complex layouts by nesting surfaces, consoles, and windows together.
+
+<Aside type="note">
+The root object that SadConsole renders every frame is set through `GameHost.Instance.Screen`. All children of that object render automatically.
+</Aside>
+
+## ScreenObject
+
+[`ScreenObject`](/reference/sadconsole.screenobject/) is the base class for everything in SadConsole. It doesn't draw any cells—it exists purely to provide the shared infrastructure all other types depend on:
+
+- **Position**: tracks where the object sits on screen, both relative to its parent and absolute in screen space.
+- **Children**: a collection of child `IScreenObject` instances that render and update along with their parent.
+- **Components**: a list of [`IComponent`](/reference/sadconsole.components.icomponent/) objects that extend behavior without subclassing.
+- **Input**: routes keyboard and mouse events to the object and its components.
+- **Visibility and focus**: controls whether the object renders and whether it receives keyboard input.
+
+Use `ScreenObject` directly when you need an invisible container to group and position other objects without rendering anything itself.
+
+```csharp
+ScreenObject container = new();
+container.Position = new Point(10, 5);
+
+ScreenSurface panel = new(20, 10);
+container.Children.Add(panel);
+
+GameHost.Instance.Screen = container;
+```
+
+## ScreenSurface
+
+The [`ScreenSurface`](/reference/sadconsole.screensurface/) type is the most commonly used object in SadConsole. It wraps a `CellSurface` with everything needed to display it on screen: a font, a font size, a renderer, and a position.
+
+Create a `ScreenSurface` by specifying the width and height in cells:
+
+```csharp
+ScreenSurface surface = new(80, 25);
+surface.Surface.Print(1, 1, "Hello, SadConsole!");
+surface.Position = new Point(5, 5);
+
+GameHost.Instance.Screen = surface;
+```
+
+### View and buffer
+
+A `ScreenSurface` can have a total buffer size larger than the visible area. The **view** controls which portion of the buffer you see. This is useful for scrolling maps or large text areas:
+
+```csharp
+// Create a surface with a 40x20 visible area, backed by a 200x100 buffer
+ScreenSurface bigSurface = new(40, 20, 200, 100);
+
+// Scroll the view
+bigSurface.ViewPosition = new Point(10, 5);
+```
+
+### Key properties
+
+| Property | Description |
+| --- | --- |
+| `Surface` | The underlying `ICellSurface` containing all cells. |
+| `Font` | The font used to render glyphs. |
+| `FontSize` | The pixel size of each cell. |
+| `Tint` | A color overlay applied to the entire surface. |
+| `UsePixelPositioning` | When `true`, positions the surface by pixel instead of by cell. |
+
+## Console
+
+The [`Console`](/reference/sadconsole.console/) type inherits from `ScreenSurface` and adds a [`Cursor`](/reference/sadconsole.components.cursor/) component. The cursor lets you print text at a tracked position, handle keyboard input, and create classic terminal-style interactions.
+
+```csharp
+Console console = new(80, 25);
+console.Cursor.IsVisible = true;
+console.Cursor.IsEnabled = true;
+console.Cursor.PrintAppearanceMatchesHost = false;
+console.Cursor.Print("Type something: ");
+
+GameHost.Instance.Screen = console;
+```
+
+Key differences from `ScreenSurface`:
+
+- Has a `Cursor` property for text input and printing.
+- Keyboard input is enabled by default.
+- Supports `AutoCursorOnFocus` to show or hide the cursor based on focus state.
+
+<Aside type="tip">
+If you don't need a cursor or keyboard handling, use `ScreenSurface` instead. It's lighter and better suited for pure display objects.
+</Aside>
+
+## ControlsConsole
+
+The [`ControlsConsole`](/reference/sadconsole.ui.controlsconsole/) type combines a `Console` with a [`ControlHost`](/reference/sadconsole.ui.controlhost/) component. This gives you a surface that can display and manage UI controls like buttons, text boxes, checkboxes, and list boxes.
+
+```csharp
+ControlsConsole controlsConsole = new(60, 20);
+
+Button button = new("Click Me", 12);
+button.Position = new Point(2, 2);
+button.Click += (s, e) => controlsConsole.Cursor.Print("Button clicked!");
+
+controlsConsole.Controls.Add(button);
+
+GameHost.Instance.Screen = controlsConsole;
+```
+
+The `Controls` property exposes the `ControlHost`, where you add, remove, and manage controls. You can also add a `ControlHost` manually to any `ScreenSurface` without using `ControlsConsole`:
+
+```csharp
+ScreenSurface surface = new(60, 20);
+ControlHost controls = new();
+surface.SadComponents.Add(controls);
+
+Button button = new("OK", 6);
+controls.Add(button);
+```
+
+For more details about UI controls, see the [controls overview](/guides/controls-overview/).
+
+## Window
+
+The [`Window`](/reference/sadconsole.ui.window/) type provides a bordered, titled surface that you can drag, show modally, and dismiss. It inherits from `Console` and includes its own `ControlHost`, making it ideal for dialog boxes, settings panels, and popup menus.
+
+```csharp
+Window window = new(40, 15);
+window.Title = "Settings";
+window.CanDrag = true;
+window.CloseOnEscKey = true;
+window.Center();
+window.Show(true); // Show as modal
+```
+
+### Window features
+
+- **Title bar**: displays a title string along the top border. Control alignment with the `TitleAlignment` property.
+- **Dragging**: set `CanDrag` to `true` to let users move the window with the mouse.
+- **Modal display**: call `Show(true)` to display the window modally, blocking input to objects behind it.
+- **Close on Escape**: set `CloseOnEscKey` to `true` so pressing Escape hides the window.
+- **Built-in controls**: access the `Controls` property to add UI controls directly.
+
+```csharp
+Window dialog = new(30, 10);
+dialog.Title = "Confirm";
+dialog.CanDrag = false;
+
+Button yesButton = new("Yes", 6);
+yesButton.Position = new Point(5, 5);
+yesButton.Click += (s, e) => { dialog.DialogResult = true; dialog.Hide(); };
+
+Button noButton = new("No", 6);
+noButton.Position = new Point(15, 5);
+noButton.Click += (s, e) => { dialog.DialogResult = false; dialog.Hide(); };
+
+dialog.Controls.Add(yesButton);
+dialog.Controls.Add(noButton);
+dialog.Center();
+dialog.Show(true);
+```
+
+## LayeredScreenSurface
+
+[`LayeredScreenSurface`](/reference/sadconsole.layeredscreensurface/) extends `ScreenSurface` and adds a [`LayeredSurface`](/reference/sadconsole.components.layeredsurface/) component. This lets you stack multiple independent cell layers on a single surface—useful for tile maps with separate foreground, background, and decoration layers.
+
+The base surface from `ScreenSurface` automatically becomes the first layer. Add more layers through the `Layers` property:
+
+```csharp
+LayeredScreenSurface layered = new(80, 25);
+
+// The base surface is layer 0 automatically
+// Add a second layer
+ICellSurface layer1 = layered.Layers.Add();
+layer1.Print(5, 5, "Overlay text");
+
+GameHost.Instance.Screen = layered;
+```
+
+Each layer is a full `ICellSurface` rendered in order, with transparent cells letting layers below show through. Resize operations on `LayeredScreenSurface` propagate to all layers through the `Layers` component.
+
+## AnimatedScreenObject
+
+[`AnimatedScreenObject`](/reference/sadconsole.animatedscreenobject/) extends `ScreenObject` directly and implements `IScreenSurface`. Instead of a single cell surface, it holds a `Frames` collection of `ICellSurface` objects and advances through them automatically based on a configurable `AnimationDuration`.
+
+Create an animation by adding frames and then calling `Start()`:
+
+```csharp
+AnimatedScreenObject animation = new("walk", 4, 4);
+
+// Add frames and draw content into each one
+ICellSurface frame1 = animation.CreateFrame();
+frame1.SetGlyph(1, 1, '@');
+
+ICellSurface frame2 = animation.CreateFrame();
+frame2.SetGlyph(2, 1, '@');
+
+animation.AnimationDuration = TimeSpan.FromSeconds(0.5);
+animation.Repeat = true;
+animation.Start();
+
+GameHost.Instance.Screen = animation;
+```
+
+SadConsole also provides a static helper to generate noise-effect animations:
+
+```csharp
+AnimatedScreenObject noise = AnimatedScreenObject.CreateStatic(20, 10, 8, 0.3);
+GameHost.Instance.Screen = noise;
+```
+
+Key properties and methods:
+
+- **`Frames`**: The list of `ICellSurface` objects that make up the animation.
+- **`AnimationDuration`**: The total time to play through all frames once.
+- **`Repeat`**: When `true`, the animation loops.
+- **`Start()` / `Stop()` / `Restart()`**: Control playback.
+- **`CurrentFrameIndex`**: The index of the frame currently displayed.
